@@ -1,12 +1,33 @@
-import Image from 'next/image';
 import { Button } from '../shared';
 import SplitType from 'split-type';
 import { useRef, useEffect } from 'react';
+import CelebrationCard, { CelebrationCardProps } from './CelebrationCard';
 import {
   celebrationHeaderTextAnimation,
   celebrationSubTextAnimation,
   celebrationImageGalleryAnimation,
 } from '@/utils/animations/pages/homeAnimations';
+
+const devfestTopics = [
+  {
+    text: 'Free Swag',
+    state: 'green',
+  },
+  {
+    text: 'Free Swag',
+    size: 'lg',
+    state: 'blue',
+  },
+  {
+    text: 'Community',
+  },
+  {
+    text: 'Fun Activities',
+  },
+  {
+    text: 'Fun Activities',
+  },
+] as CelebrationCardProps[];
 
 export const Celebration = () => {
   const headerTextRef = useRef<HTMLDivElement>(null);
@@ -41,8 +62,12 @@ export const Celebration = () => {
         </a>
       </div>
       <div className='celebration-image-gallery-wrapper'>
-        <div className='celebration-image-gallery' ref={imageGallerRef}>
-          <div className='celebration-image-one'>
+        <div className='celebration-image-gallery'>
+          {devfestTopics.map((devFestTopic) => (
+            <CelebrationCard {...devFestTopic} />
+          ))}
+
+          {/* <div className='celebration-image-one'>
             <Image src='/images/png/free-swag-white.png' fill alt='Free swag' />
           </div>
           <div className='celebration-image-two'>
@@ -53,10 +78,10 @@ export const Celebration = () => {
           </div>
           <div className='celebration-image-four'>
             <Image src='/images/png/free-swag-white.png' fill alt='Free swag' />
-          </div>
-          <div className='celebration-image-five'>
+          </div> */}
+          {/* <div className='celebration-image-five'>
             <Image src='/images/png/fun-activities.png' fill alt='Fun activities' />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -1,0 +1,65 @@
+.item-card {
+    height: 232px;
+    width: 289px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1.5rem 1.2rem 2rem;
+
+    .text-containers {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        padding: 1.2rem;
+        gap: .5rem;
+        display: flex;
+        justify-content: center;
+
+        p {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -.5px;
+        }
+    }
+
+    .bottom-icon-container {
+        text-align: center;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-color: #ffffff;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    //Color variants
+
+    &-white {
+        background-color: #ffffff;
+
+        .text-containers {
+            background-color: #FFFAEB
+        }
+    }
+
+    &-blue {
+        background-color: #D3F1F8
+    }
+
+    &-green {
+        background-color: #D8F8D3;
+    }
+
+    //Size variants 
+
+    &-lg {
+        width: 367px;
+        height: 232px;
+    }
+
+}
