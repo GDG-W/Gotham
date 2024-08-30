@@ -85,8 +85,8 @@ export const Footer = () => {
                 style={{ width: '100%', height: 'auto' }}
               />
             </div>
-            <a href={'https://dflagos24-trivia.netlify.app/'}>
-              <Button label='Play Trivia' size='lg' animate={false} />
+            <a href={'/apply-to-speak/'}>
+              <Button label='Apply To Speak' size='lg' animate={false} />
             </a>
 
             <div className='footer-links'>

@@ -44,8 +44,8 @@ export const HomeBanner = (/*{ ScrollToSubscription }: { ScrollToSubscription: (
               width={167}
             />
           </div>
-          <a href={'https://dflagos24-trivia.netlify.app/'}>
-            <Button label='Play Trivia' size='sm' />
+          <a href={'/apply-to-speak/'}>
+            <Button label='Apply To Speak' size='sm' />
           </a>
         </div>
         <div className='hero-text-container'>
@@ -67,8 +67,8 @@ export const HomeBanner = (/*{ ScrollToSubscription }: { ScrollToSubscription: (
           </p>
         </div>
         <div className='text-center'>
-          <a href={'/apply-to-speak'}>
-            <Button label='Apply To Speak' size='lg' />
+          <a href={'https://tickets.devfestlagos.com/'}>
+            <Button label='Get Early Bird Tickets' size='lg' />
           </a>
         </div>
         {process.env.NEXT_PUBLIC_EVENT_TIME && <CountdownTimer />}
