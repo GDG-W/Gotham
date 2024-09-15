@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import { Button } from './Button';
 
+type TFooterProps = {
+  type?: 'ComingSoon' | 'DpGen';
+};
+
 const currentYear = new Date().getFullYear();
 
 const socials = [
@@ -16,26 +20,42 @@ const socials = [
 
 const footerLinks = [
   {
+    link: '',
+    title: 'Claim Ticket',
+  },
+  {
+    link: 'https://gdg.community.dev/gdg-lagos/',
+    title: 'Join the Community',
+  },
+  {
     link: 'https://policies.google.com/privacy',
     title: 'Privacy Policy',
   },
   {
-    link: 'mailto:team@gdglagos.com',
-    title: 'Contact Us',
+    link: '',
+    title: 'Upgrade Ticket',
   },
   {
     link: 'https://developers.google.com/community-guidelines',
     title: 'Community Guidelines',
   },
   {
-    link: 'https://gdg.community.dev/gdg-lagos/',
-    title: 'Join the Community',
+    link: 'mailto:team@gdglagos.com',
+    title: 'Contact Us',
+  },
+  {
+    link: '',
+    title: 'Ticket FAQ',
   },
 ];
 
-export const Footer = () => {
+export const Footer = ({ type = 'ComingSoon' }: TFooterProps) => {
+  const bgStyle = {
+    backgroundColor: type === 'ComingSoon' ? '#c3ecf6' : '#FFFAEB',
+  };
+
   return (
-    <footer className='footer-wrapper'>
+    <footer className='footer-wrapper' style={bgStyle}>
       <div className='container'>
         <div className='footer-main'>
           <div>
@@ -85,9 +105,17 @@ export const Footer = () => {
                 style={{ width: '100%', height: 'auto' }}
               />
             </div>
-            <a href={'/apply-to-speak/'}>
-              <Button label='Apply To Speak' size='lg' animate={false} />
-            </a>
+            {type === 'ComingSoon' && (
+              <a href={'/apply-to-speak/'}>
+                <Button label='Apply To Speak' size='lg' animate={false} />
+              </a>
+            )}
+
+            {type === 'DpGen' && (
+              <a href={'/'}>
+                <Button label='Get Early Bird Tickets' size='lg' animate={false} />
+              </a>
+            )}
 
             <div className='footer-links'>
               <ul>
@@ -110,6 +138,15 @@ export const Footer = () => {
               </ul>
               <ul>
                 {footerLinks.slice(4, 6).map(({ link, title }, key) => (
+                  <li className='text-sm' key={key}>
+                    <a href={link} target='_blank' rel='noopener noreferrer' aria-label={title}>
+                      {title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <ul>
+                {footerLinks.slice(6, 10).map(({ link, title }, key) => (
                   <li className='text-sm' key={key}>
                     <a href={link} target='_blank' rel='noopener noreferrer' aria-label={title}>
                       {title}
