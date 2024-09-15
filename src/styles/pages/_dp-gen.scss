@@ -1,0 +1,391 @@
+.dp-gen {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 850px;
+    position: relative;
+
+    .color-tiles-banner {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      .row {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .row-1 {
+        height: 250px;
+
+        @include media('<=phone') {
+          height: 225px;
+        }
+      }
+
+      .row-2 {
+        height: 350px;
+      }
+
+      .row-3 {
+        height: 250px;
+      }
+
+      .tile {
+        border-width: 3px;
+        border-style: solid;
+      }
+    }
+
+    .shapes-wrapper {
+      overflow-x: hidden;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 300px;
+
+      .shape-1,
+      .shape-2,
+      .shape-3,
+      .shape-4,
+      .shape-5,
+      .shape-6,
+      .shape-7 {
+        position: absolute;
+        bottom: 0;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      .shape-1 {
+        width: 280px;
+        height: 280px;
+        left: 10%;
+
+        @include media('<=tablet') {
+          width: 128px;
+          height: 128px;
+          left: -7%;
+        }
+      }
+
+      .shape-2 {
+        width: 325px;
+        height: 260px;
+        left: 20%;
+
+        @include media('<=tablet') {
+          width: 128px;
+          height: 120px;
+          left: 5%;
+        }
+      }
+
+      .shape-3 {
+        width: 380px;
+        height: 330px;
+        left: 30%;
+        z-index: 3;
+
+        @include media('<=tablet') {
+          width: 150px;
+          height: 150px;
+          left: 20%;
+        }
+      }
+
+      .shape-4 {
+        width: 270px;
+        height: 280px;
+        right: 39%;
+        z-index: 2;
+
+        @include media('<=tablet') {
+          width: 110px;
+          height: 130px;
+          right: 33%;
+        }
+      }
+
+      .shape-5 {
+        width: 200px;
+        height: 360px;
+        right: 30%;
+
+        @include media('<=tablet') {
+          width: 90px;
+          height: 160px;
+          right: 15%;
+          z-index: 1;
+        }
+      }
+
+      .shape-6 {
+        width: 300px;
+        height: 320px;
+        right: 20%;
+        z-index: 1;
+
+        @include media('<=tablet') {
+          width: 100px;
+          height: 150px;
+          right: -2%;
+        }
+      }
+
+      .shape-7 {
+        width: 280px;
+        height: 260px;
+        right: 10%;
+
+        @include media('<=tablet') {
+          width: 128px;
+          height: 120px;
+          right: -150px;
+        }
+      }
+    }
+
+    .text-section {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: -7rem;
+
+      @include media('<=tablet') {
+        width: 90%;
+        margin-top: -10rem;
+      }
+
+      .sub {
+        font-size: 1.75rem;
+        font-weight: 500;
+
+        @include media('<=tablet') {
+          font-size: 0.875rem;
+        }
+      }
+
+      .title {
+        font-size: 3.875rem;
+        font-weight: 700;
+
+        @include media('<=tablet') {
+          font-size: 1.5rem;
+        }
+      }
+
+      button {
+        width: 240px;
+
+        @include media('<=tablet') {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .input-details {
+    padding: 6rem 0;
+
+    @include media('<=tablet') {
+      padding: 3rem 0;
+    }
+
+    .flex-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+
+      @include media('<=tablet') {
+        flex-wrap: wrap;
+      }
+
+      .col {
+        width: 50%;
+
+        @include media('<=tablet') {
+          width: 100%;
+        }
+      }
+
+      .sample-dp {
+        position: relative;
+        width: 714px;
+        height: 714re;
+      }
+    }
+
+    .title {
+      font-size: 1.75rem;
+      font-weight: 500;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #b3b3b3;
+      margin-bottom: 1.5rem;
+
+      @include media('<=tablet') {
+        font-size: 1.375rem;
+        font-weight: 600;
+        padding: 0.5rem 0;
+      }
+    }
+
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+
+        .label-wrapper {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+
+          label {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #333333;
+          }
+
+          small {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #b3b3b3;
+
+            .info-icon {
+              position: relative;
+              width: 1rem;
+              height: 1rem;
+
+              @include media('<=tablet') {
+                width: 0.75rem;
+                height: 0.75rem;
+              }
+            }
+          }
+
+          @include media('<=tablet') {
+            label {
+              font-size: 0.875rem;
+            }
+
+            small {
+              font-size: 0.65rem;
+            }
+          }
+        }
+
+        .text-field {
+          border-radius: 0.5rem;
+          border: 0.5px solid #b3b3b3;
+        }
+
+        .upload-wrapper {
+          height: 287px;
+          width: 100%;
+          box-shadow: 0px 4px 34.3px 0px #0000001c;
+          border-radius: 1rem;
+          padding: 1rem;
+          position: relative;
+          cursor: pointer;
+
+          @include media('<=tablet') {
+            height: 180px;
+          }
+
+          input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+          }
+
+          .drop-wrapper {
+            border-radius: 0.5rem;
+            border: 2px dashed #cccccc;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .text-wrapper {
+              text-align: center;
+              width: 210px;
+              display: inline-flex;
+              flex-direction: column;
+              gap: 0.5rem;
+
+              .upload-icon {
+                position: relative;
+                width: 4rem;
+                height: 4rem;
+                margin: 0 auto;
+
+                @include media('<=tablet') {
+                  width: 1.75rem;
+                  height: 1.75rem;
+                }
+              }
+
+              .text {
+                font-size: 1rem;
+                font-weight: 500;
+                color: #666666;
+
+                span {
+                  color: #81c995;
+                }
+              }
+
+              @include media('<=tablet') {
+                width: 150px;
+
+                .text {
+                  font-size: 0.65rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      button {
+        width: 100% !important;
+        border-radius: 0.5rem !important;
+        margin-top: 3rem;
+
+        @include media('<=tablet') {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
