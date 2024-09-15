@@ -57,7 +57,12 @@ export default function DPGSlug() {
                 </div>
               </div>
 
-              <div className='col box-3'></div>
+              {/* Picture center */}
+              <div className='col box-3'>
+                <div className='img-frame rounded-rectangle'>
+                  <Image src='/images/png/Tsticks.JPG' alt='dp picture' fill quality={100} />
+                </div>
+              </div>
             </div>
             <div className='row r2'>
               <div className='col box-4'>
