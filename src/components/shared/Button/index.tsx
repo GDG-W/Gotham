@@ -30,7 +30,7 @@ type ButtonState = 'primary' | 'secondary';
 interface ButtonProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'disabled'>,
     VariantProps<typeof buttonVariants> {
-  label: string;
+  label: string | React.JSX.Element;
   onClick?: () => void;
   className?: string;
   isLoading?: boolean;
