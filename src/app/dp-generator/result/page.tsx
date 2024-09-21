@@ -112,7 +112,12 @@ export default function DPGResult() {
               {/* Picture center */}
               <div className='col box-3'>
                 <div className='img-frame rounded-rectangle'>
-                  <Image src='/images/png/Tsticks.JPG' alt='dp picture' fill quality={100} />
+                  <Image
+                    src={dpDataObj?.picture as string}
+                    alt={dpDataObj?.name as string}
+                    fill
+                    quality={100}
+                  />
                 </div>
               </div>
             </div>
