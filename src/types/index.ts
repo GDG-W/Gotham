@@ -5,3 +5,9 @@ export interface apiRequestParams {
   onError?: (err: string) => void;
   onSuccess?: (res: UnknownObjectType) => void;
 }
+
+export interface IDpObj {
+  name: string;
+  hook: string;
+  picture: string;
+}
