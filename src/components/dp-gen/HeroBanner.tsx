@@ -62,6 +62,13 @@ const colorTiles = [
 ];
 
 export const Banner = () => {
+  const scrollToSection = () => {
+    const element = document.getElementById('input_section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header>
       <div className='color-tiles-banner'>
@@ -110,7 +117,7 @@ export const Banner = () => {
         <div className='text-section'>
           <p className='sub'>Spread the word, you’ll be there!</p>
           <h5 className='title'>Customise your Devfest DP</h5>
-          <Button fullWidth label="LET'S COOK" size='lg' animate={false} />
+          <Button fullWidth label="LET'S COOK" size='lg' animate onClick={scrollToSection} />
         </div>
       </div>
     </header>

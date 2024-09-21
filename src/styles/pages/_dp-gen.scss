@@ -7,6 +7,10 @@
     height: 850px;
     position: relative;
 
+    @include media('<=phone') {
+      height: 720px;
+    }
+
     .color-tiles-banner {
       position: absolute;
       width: 100%;
@@ -23,16 +27,24 @@
         height: 250px;
 
         @include media('<=phone') {
-          height: 225px;
+          height: 210px;
         }
       }
 
       .row-2 {
         height: 350px;
+
+        @include media('<=phone') {
+          height: 300px;
+        }
       }
 
       .row-3 {
         height: 250px;
+
+        @include media('<=phone') {
+          height: 210px;
+        }
       }
 
       .tile {
@@ -47,7 +59,7 @@
       bottom: 0;
       right: 0;
       left: 0;
-      height: 300px;
+      height: 350px;
 
       .shape-1,
       .shape-2,
@@ -69,6 +81,12 @@
         height: 280px;
         left: 10%;
 
+        @include media('<=big_tablet') {
+          width: 200px;
+          height: 200px;
+          left: -2%;
+        }
+
         @include media('<=tablet') {
           width: 128px;
           height: 128px;
@@ -80,6 +98,12 @@
         width: 325px;
         height: 260px;
         left: 20%;
+
+        @include media('<=big_tablet') {
+          width: 300px;
+          height: 200px;
+          left: 10%;
+        }
 
         @include media('<=tablet') {
           width: 128px;
@@ -94,6 +118,12 @@
         left: 30%;
         z-index: 3;
 
+        @include media('<=big_tablet') {
+          width: 300px;
+          height: 200px;
+          left: 20%;
+        }
+
         @include media('<=tablet') {
           width: 150px;
           height: 150px;
@@ -107,6 +137,12 @@
         right: 39%;
         z-index: 2;
 
+        @include media('<=big_tablet') {
+          width: 200px;
+          height: 200px;
+          left: 40%;
+        }
+
         @include media('<=tablet') {
           width: 110px;
           height: 130px;
@@ -119,11 +155,17 @@
         height: 360px;
         right: 30%;
 
+        @include media('<=big_tablet') {
+          width: 150px;
+          height: 200px;
+          right: 25%;
+          z-index: 1;
+        }
+
         @include media('<=tablet') {
           width: 90px;
           height: 160px;
           right: 15%;
-          z-index: 1;
         }
       }
 
@@ -132,6 +174,12 @@
         height: 320px;
         right: 20%;
         z-index: 1;
+
+        @include media('<=big_tablet') {
+          width: 150px;
+          height: 200px;
+          right: 10%;
+        }
 
         @include media('<=tablet') {
           width: 100px;
@@ -144,6 +192,12 @@
         width: 280px;
         height: 260px;
         right: 10%;
+
+        @include media('<=big_tablet') {
+          width: 200px;
+          height: 150px;
+          right: -50px;
+        }
 
         @include media('<=tablet') {
           width: 128px;
@@ -174,6 +228,10 @@
         font-size: 1.75rem;
         font-weight: 500;
 
+        @include media('<=big_tablet') {
+          font-size: 1.25rem;
+        }
+
         @include media('<=tablet') {
           font-size: 0.875rem;
         }
@@ -182,6 +240,10 @@
       .title {
         font-size: 3.875rem;
         font-weight: 700;
+
+        @include media('<=big_tablet') {
+          font-size: 2.75rem;
+        }
 
         @include media('<=tablet') {
           font-size: 1.5rem;
@@ -209,14 +271,14 @@
       display: flex;
       flex-wrap: nowrap;
 
-      @include media('<=tablet') {
+      @include media('<=big_tablet') {
         flex-wrap: wrap;
       }
 
       .col {
-        width: 50%;
+        width: 60%;
 
-        @include media('<=tablet') {
+        @include media('<=big_tablet') {
           width: 100%;
         }
       }
@@ -224,7 +286,10 @@
       .sample-dp {
         position: relative;
         width: 714px;
-        height: 714re;
+
+        img {
+          object-fit: cover;
+        }
       }
     }
 

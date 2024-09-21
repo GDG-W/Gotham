@@ -46,7 +46,7 @@ export const InputDetails = () => {
   };
 
   return (
-    <section className='input-details'>
+    <section className='input-details' id='input_section'>
       <div className='container'>
         <div className='flex-wrapper'>
           <div className='col'>
