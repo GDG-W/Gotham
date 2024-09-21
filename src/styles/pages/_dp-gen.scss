@@ -36,6 +36,20 @@
 
         @include media('<=phone') {
           height: 300px;
+
+          .tile:nth-child(1),
+          .tile:nth-child(5) {
+            display: none;
+          }
+
+          .tile:nth-child(2),
+          .tile:nth-child(4) {
+            width: 25% !important;
+          }
+
+          .tile:nth-child(3) {
+            width: 50% !important;
+          }
         }
       }
 
@@ -44,6 +58,15 @@
 
         @include media('<=phone') {
           height: 210px;
+
+          .tile:nth-child(1),
+          .tile:nth-child(3) {
+            width: 18% !important;
+          }
+
+          .tile:nth-child(2) {
+            width: 64% !important;
+          }
         }
       }
 
