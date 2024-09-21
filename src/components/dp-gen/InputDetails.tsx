@@ -14,6 +14,7 @@ export const InputDetails = () => {
   const router = useRouter();
   const pathname = usePathname();
   const { setDpDataObj } = useDpObj();
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [picture, setPicture] = React.useState<string>('');
   const [formValues, setFormValues] = React.useState<TFormValue>({
     name: '',
@@ -35,9 +36,13 @@ export const InputDetails = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = { ...formValues, picture };
-    setDpDataObj(data);
-    router.push(`${pathname}/result`);
+    setIsLoading(true);
+    setTimeout(() => {
+      const data = { ...formValues, picture };
+      setDpDataObj(data);
+      setIsLoading(false);
+      router.push(`${pathname}/result`);
+    }, 2000);
   };
 
   return (
@@ -64,6 +69,7 @@ export const InputDetails = () => {
                   className='text-field'
                   placeholder='Your Name'
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -130,10 +136,19 @@ export const InputDetails = () => {
                   className='text-field'
                   placeholder='Input hook'
                   onChange={handleChange}
+                  required
                 />
               </div>
-
-              <Button fullWidth={true} label='Generate' size='lg' animate={true} type='submit' />
+              <>{console.log(!formValues.hook || !formValues.name || !picture)}</>
+              <Button
+                fullWidth={true}
+                label='Generate'
+                size='lg'
+                animate={true}
+                type='submit'
+                disabled={!formValues.hook || !formValues.name || !picture}
+                isLoading={isLoading}
+              />
             </form>
           </div>
           <div className='sample-dp'>
