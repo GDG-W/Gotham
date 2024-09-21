@@ -235,10 +235,11 @@
       border-right-width: calc(5.46px * 2);
     }
 
-    @include media('<=tablet') {
+    @include media('<=big_tablet') {
       border: 2.07px solid #ffffff;
       box-shadow: -3.61px 2.41px 18.1px 0px #00000021;
       margin: 1.25rem auto 0;
+      max-width: 400px;
 
       .r1 {
         .col {
