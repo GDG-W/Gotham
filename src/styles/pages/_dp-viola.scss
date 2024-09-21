@@ -93,7 +93,7 @@
       .masked {
         right: 0;
         left: 0;
-        bottom: 0;
+        bottom: 0.3rem;
         height: 145px;
         position: absolute;
         object-fit: cover;
@@ -184,6 +184,7 @@
         color: #fffaeb;
         font-size: 5rem;
         font-weight: 500;
+        text-align: center;
 
         span {
           font-size: 2.5rem;
@@ -210,7 +211,7 @@
 
     .box-6 {
       .schedule-text {
-        width: 60%;
+        width: 80%;
       }
     }
 
@@ -225,6 +226,15 @@
       border: 5.46px solid #fffaeb;
     }
 
+    .box-1 {
+      border-bottom-width: 0;
+    }
+
+    .box-2 {
+      border-top-width: calc(5.46px * 2);
+      border-right-width: calc(5.46px * 2);
+    }
+
     @include media('<=tablet') {
       border: 2.07px solid #ffffff;
       box-shadow: -3.61px 2.41px 18.1px 0px #00000021;
@@ -232,7 +242,7 @@
 
       .r1 {
         .col {
-          height: 280px;
+          height: 210px;
         }
       }
 
@@ -252,11 +262,12 @@
 
       .r3 {
         .masked {
-          height: 65px;
+          height: 45px;
+          bottom: 2px;
         }
 
         .col {
-          height: 40px;
+          height: 30px;
         }
       }
 
@@ -272,8 +283,8 @@
 
       .img-frame {
         height: 180px;
-        width: 45%;
-        border: 3.29px solid #fffaeb;
+        width: 100px;
+        border: 3.28px solid #fffaeb;
       }
 
       .box-1 {
@@ -329,7 +340,7 @@
 
       .box-6 {
         .schedule-text {
-          width: 50%;
+          width: 65%;
         }
       }
 
@@ -342,6 +353,15 @@
       .box-7,
       .box-8 {
         border: 1.64px solid #fffaeb;
+      }
+
+      .box-1 {
+        border-bottom-width: 0;
+      }
+
+      .box-2 {
+        border-top-width: 2.46px;
+        border-right-width: 2.46px;
       }
     }
   }

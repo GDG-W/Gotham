@@ -355,22 +355,45 @@
                 }
               }
 
-              .text {
-                font-size: 1rem;
-                font-weight: 500;
-                color: #666666;
-
-                span {
-                  color: #81c995;
-                }
-              }
-
               @include media('<=tablet') {
                 width: 150px;
 
                 .text {
                   font-size: 0.65rem;
                 }
+              }
+            }
+
+            .text {
+              font-size: 1rem;
+              font-weight: 500;
+              color: #666666;
+
+              span {
+                color: #81c995;
+              }
+
+              @include media('<=tablet') {
+                .text {
+                  font-size: 0.65rem;
+                }
+              }
+            }
+
+            .img-wrapper {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+
+              img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 0.5rem;
+              }
+
+              .text {
+                text-align: center;
               }
             }
           }

@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/index.scss';
 import { Metadata } from 'next';
 import { Footer, Navbar } from '@/components/shared';
+import { DpProvider } from '@/context/dp-context';
 
 export const metadata: Metadata = {
   title: 'DevFest 2024 | DP Generator',
@@ -12,10 +13,12 @@ export const metadata: Metadata = {
 
 export default function DPGLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className=''>
-      <Navbar />
-      {children}
-      <Footer type='DpGen' />
-    </div>
+    <DpProvider>
+      <div className=''>
+        <Navbar />
+        {children}
+        <Footer type='DpGen' />
+      </div>
+    </DpProvider>
   );
 }
