@@ -17,94 +17,94 @@
 }
 
 // Header styles
-.header-h1 {
+@mixin header-h1 {
   @include header(80px, 84px);
 }
-.header-h2 {
+@mixin header-h2 {
   @include header(62px, 76px);
 }
-.header-h3 {
+@mixin header-h3 {
   @include header(56px, 70px);
 }
-.header-h4 {
+@mixin header-h4 {
   @include header(40px, 48px);
 }
-.header-h5 {
+@mixin header-h5 {
   @include header(32px, 40px);
 }
-.header-h6 {
+@mixin header-h6 {
   @include header(28px, 36px);
 }
 
 // Title styles
-.title1-semibold {
+@mixin title1-semibold {
   @include body(24px, 600, 32px);
 }
-.title1-medium {
+@mixin title1-medium {
   @include body(24px, 500, 32px);
 }
-.title1-regular {
+@mixin title1-regular {
   @include body(24px, 400, 32px);
 }
 
-.title2-semibold {
+@mixin title2-semibold {
   @include body(22px, 600, 32px);
 }
-.title2-medium {
+@mixin title2-medium {
   @include body(22px, 500, 32px);
 }
-.title2-regular {
+@mixin title2-regular {
   @include body(22px, 400, 32px);
 }
 
 // Body styles
-.body1-semibold {
+@mixin body1-semibold {
   @include body(18px, 600, 36px);
 }
-.body1-medium {
+@mixin body1-medium {
   @include body(18px, 500, 36px);
 }
-.body1-regular {
+@mixin body1-regular {
   @include body(18px, 400, 36px);
 }
 
-.body2-semibold {
+@mixin body2-semibold {
   @include body(16px, 600, 22px);
 }
-.body2-medium {
+@mixin body2-medium {
   @include body(16px, 500, 22px);
 }
-.body2-regular {
+@mixin body2-regular {
   @include body(16px, 400, 22px);
 }
 
-.body3-semibold {
+@mixin body3-semibold {
   @include body(14px, 600, 20px);
 }
-.body3-medium {
+@mixin body3-medium {
   @include body(14px, 500, 20px);
 }
-.body3-regular {
+@mixin body3-regular {
   @include body(14px, 400, 20px);
 }
 
-.body4-semibold {
+@mixin body4-semibold {
   @include body(12px, 600, 20px);
 }
-.body4-medium {
+@mixin body4-medium {
   @include body(12px, 500, 20px);
 }
-.body4-regular {
+@mixin body4-regular {
   @include body(12px, 400, 20px);
 }
 
-.body5-semibold {
+@mixin body5-semibold {
   @include body(10px, 600, 20px);
 }
-.body5-medium {
+@mixin body5-medium {
   @include body(10px, 500, 20px);
 }
-.body5-regular {
+@mixin body5-regular {
   @include body(10px, 400, 20px);
 }
 
