@@ -1,6 +1,5 @@
 // NEW MIXINS
-@mixin font($family, $size, $weight, $lineHeight: null) {
-  font-family: $family;
+@mixin font($size, $weight, $lineHeight: null) {
   font-size: $size;
   font-weight: $weight;
   @if $lineHeight {
@@ -9,11 +8,11 @@
 }
 
 @mixin header($size, $lineHeight) {
-  @include font('GeistSans', $size, 700, $lineHeight);
+  @include font($size, 700, $lineHeight);
 }
 
 @mixin body($size, $weight, $lineHeight) {
-  @include font('GeneralSans', $size, $weight, $lineHeight);
+  @include font($size, $weight, $lineHeight);
 }
 
 // Header styles
