@@ -1,3 +1,7 @@
+// .GeistSans {
+//   @include font.mixin(GeistSans); // Use the font mixin for GeistSans
+// }
+
 .subscribe-wrapper {
   background: black;
   padding: 53px 59px;
@@ -24,8 +28,7 @@
       line-height: 20px;
 
       @media (min-width: 1024px) {
-        font-size: 16px;
-        line-height: 22px;
+        @include body2-medium();
       }
     }
     .subscribe-gdg-tag {

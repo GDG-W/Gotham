@@ -1,0 +1,56 @@
+.faq-component-wrapper {
+  background: $yellow-primary-100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 80px 300px;
+  flex-direction: column;
+  gap: 2rem;
+
+  ul li {
+    list-style: none;
+  }
+
+  .faq-pill {
+    @include body4-semibold();
+    padding: 12px 37px;
+    border-radius: 2em;
+    width: fit-content;
+    border: 1px solid $grey-20;
+  }
+
+  .faq-heading {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    h3 {
+      @include header-h3();
+    }
+    p {
+      @include body2-medium();
+      color: $grey-50;
+    }
+  }
+
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+      border: 1px solid black;
+      border-radius: 1em;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .is-opened {
+      background: $yellow-primary-90;
+    }
+  }
+}
