@@ -1,0 +1,113 @@
+.subscribe-wrapper {
+  background: black;
+  padding: 53px 59px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+
+  .subscribe-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+
+    * {
+      width: fit-content;
+    }
+    @mixin subscribe-smText {
+      font-weight: 500;
+      color: white;
+      font-size: 10px;
+      line-height: 20px;
+
+      @media (min-width: 1024px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    .subscribe-gdg-tag {
+      @include subscribe-smText();
+      line-height: 20px;
+      border: 1px solid white;
+      padding: 12px 10px;
+      border-radius: 32px;
+
+      @media (min-width: 1024px) {
+        padding: 12px 27px;
+      }
+    }
+    .subscribe-title {
+      color: #fff6e0;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+
+      @media (min-width: 1024px) {
+        font-size: 56px;
+        line-height: 70px;
+      }
+    }
+    .subscribe-text {
+      @include subscribe-smText();
+    }
+    .subscribe-btn {
+      background-color: #f8ad00;
+      color: black;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      border-radius: 15.56px;
+      padding: 7.5px 38.5px;
+      border: none;
+
+      img {
+        width: 16px;
+        height: 16px;
+
+        @media (min-width: 1024px) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        padding: 14px 96px;
+        gap: 8px;
+        border-radius: 32px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      gap: 24px;
+      width: 592px;
+    }
+  }
+
+  .subscribe-image {
+    border-radius: 7.78px;
+    width: 312px;
+    height: 303px;
+
+    @media (min-width: 1024px) {
+      width: 450px;
+      height: 450px;
+      border-radius: 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 97px 145px;
+    flex-direction: row;
+    gap: 125px;
+    justify-content: space-between;
+  }
+}
