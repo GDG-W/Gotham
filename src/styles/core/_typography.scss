@@ -9,10 +9,12 @@
 
 @mixin header($size, $lineHeight) {
   @include font($size, 700, $lineHeight);
+  font-family: var(--font-geist-sans);
 }
 
 @mixin body($size, $weight, $lineHeight) {
   @include font($size, $weight, $lineHeight);
+  font-family: var(--font-generalSans);
 }
 
 // Header styles
