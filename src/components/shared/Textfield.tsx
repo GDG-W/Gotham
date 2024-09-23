@@ -11,6 +11,7 @@ interface TextfieldProps {
   placeholder?: string;
   required?: boolean;
   [key: string]: any;
+  icon?: React.JSX.Element;
 }
 
 export const Textfield: React.FC<TextfieldProps> = ({
@@ -21,6 +22,7 @@ export const Textfield: React.FC<TextfieldProps> = ({
   register,
   error,
   required = false,
+  icon,
   ...rest
 }) => {
   const textFieldClassName = classNames('textfield', className);
@@ -44,6 +46,7 @@ export const Textfield: React.FC<TextfieldProps> = ({
         {...rest}
         {...rest}
       />
+      {icon && <div className='icon'>{icon}</div>}
       {error && <p className='text-sm text-error'>{error as string}</p>}
     </div>
   );

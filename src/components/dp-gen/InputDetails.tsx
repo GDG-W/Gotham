@@ -2,8 +2,9 @@ import { Textfield, Button } from '../shared';
 import Image from 'next/image';
 import React from 'react';
 import { useRouter, usePathname } from 'next/navigation';
-import { fileToBase64 } from '@/utils/helper';
+import { fileToBase64, getRandomFrame } from '@/utils/helper';
 import { useDpObj } from '@/context/dp-context';
+import { hookLines } from '@/utils/hookLines';
 
 type TFormValue = {
   name: string;
@@ -43,6 +44,14 @@ export const InputDetails = () => {
       setIsLoading(false);
       router.push(`${pathname}/result`);
     }, 2000);
+  };
+
+  const handleWandSuggestion = () => {
+    const suggestedHook = hookLines[getRandomFrame(10)];
+    setFormValues((prevState) => ({
+      ...prevState,
+      hook: suggestedHook,
+    }));
   };
 
   return (
@@ -137,9 +146,19 @@ export const InputDetails = () => {
                   placeholder='Input hook'
                   onChange={handleChange}
                   required
+                  icon={
+                    <span onClick={handleWandSuggestion} className='wand'>
+                      <Image
+                        src='/images/png/black-wand.png'
+                        alt='wand icon'
+                        width={24}
+                        height={24}
+                      />
+                    </span>
+                  }
                 />
               </div>
-              <>{console.log(!formValues.hook || !formValues.name || !picture)}</>
+
               <Button
                 fullWidth={true}
                 label='Generate'

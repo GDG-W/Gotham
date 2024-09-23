@@ -1,4 +1,7 @@
 .textfield-wrapper {
+  position: relative;
+  height: fit-content;
+
   .textfield {
     padding: 10px 16px;
     background-color: #ffffff;
@@ -19,6 +22,16 @@
       opacity: 0.5;
       font-weight: 100;
     }
+  }
+
+  .icon {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    margin-top: -0.75rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    right: 1rem;
   }
 
   .text-error {
