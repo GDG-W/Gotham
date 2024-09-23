@@ -1,3 +1,114 @@
+// NEW MIXINS
+@mixin font($family, $size, $weight, $lineHeight: null) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  @if $lineHeight {
+    line-height: $lineHeight;
+  }
+}
+
+@mixin header($size, $lineHeight) {
+  @include font('GeistSans', $size, 700, $lineHeight);
+}
+
+@mixin body($size, $weight, $lineHeight) {
+  @include font('GeneralSans', $size, $weight, $lineHeight);
+}
+
+// Header styles
+.header-h1 {
+  @include header(80px, 84px);
+}
+.header-h2 {
+  @include header(62px, 76px);
+}
+.header-h3 {
+  @include header(56px, 70px);
+}
+.header-h4 {
+  @include header(40px, 48px);
+}
+.header-h5 {
+  @include header(32px, 40px);
+}
+.header-h6 {
+  @include header(28px, 36px);
+}
+
+// Title styles
+.title1-semibold {
+  @include body(24px, 600, 32px);
+}
+.title1-medium {
+  @include body(24px, 500, 32px);
+}
+.title1-regular {
+  @include body(24px, 400, 32px);
+}
+
+.title2-semibold {
+  @include body(22px, 600, 32px);
+}
+.title2-medium {
+  @include body(22px, 500, 32px);
+}
+.title2-regular {
+  @include body(22px, 400, 32px);
+}
+
+// Body styles
+.body1-semibold {
+  @include body(18px, 600, 36px);
+}
+.body1-medium {
+  @include body(18px, 500, 36px);
+}
+.body1-regular {
+  @include body(18px, 400, 36px);
+}
+
+.body2-semibold {
+  @include body(16px, 600, 22px);
+}
+.body2-medium {
+  @include body(16px, 500, 22px);
+}
+.body2-regular {
+  @include body(16px, 400, 22px);
+}
+
+.body3-semibold {
+  @include body(14px, 600, 20px);
+}
+.body3-medium {
+  @include body(14px, 500, 20px);
+}
+.body3-regular {
+  @include body(14px, 400, 20px);
+}
+
+.body4-semibold {
+  @include body(12px, 600, 20px);
+}
+.body4-medium {
+  @include body(12px, 500, 20px);
+}
+.body4-regular {
+  @include body(12px, 400, 20px);
+}
+
+.body5-semibold {
+  @include body(10px, 600, 20px);
+}
+.body5-medium {
+  @include body(10px, 500, 20px);
+}
+.body5-regular {
+  @include body(10px, 400, 20px);
+}
+
+// OLD CODE
 @mixin text-sm {
   font-size: 14px;
   line-height: 24px;
