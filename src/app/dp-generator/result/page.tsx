@@ -12,6 +12,7 @@ export default function DPGResult() {
   const router = useRouter();
   const { dpDataObj } = useDpObj();
   const sectionRef = React.useRef<HTMLDivElement | null>(null);
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [frameType, setFrameType] = React.useState<string>(frames[getRandomFrame()]);
 
   React.useLayoutEffect(() => {
@@ -23,7 +24,7 @@ export default function DPGResult() {
   const handleDownload = () => {
     if (sectionRef.current) {
       const sectionElement = sectionRef.current;
-
+      setIsLoading(true);
       const loadImages = () => {
         const imageElements = Array.from(sectionElement.querySelectorAll('img, svg'));
 
@@ -50,8 +51,9 @@ export default function DPGResult() {
           // Create a download link for the captured image
           const downloadLink = document.createElement('a');
           downloadLink.href = image;
-          downloadLink.download = `${name}-devfest-lagos-2024.png`;
+          downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.png`;
           downloadLink.click();
+          setIsLoading(false);
         });
       });
     }
@@ -66,92 +68,94 @@ export default function DPGResult() {
             <h3 className='title'>Here’s your DP</h3>
           </div>
 
-          <div ref={sectionRef} className={`dp-frame ${frameType}`}>
-            <div className='row r1'>
-              <div className='col'>
-                <div className='in-col ic-1 box-1'>
-                  <div className='text'>{dpDataObj?.hook}</div>
-                  <Image
-                    src='/images/icons/Arrow.svg'
-                    alt='arrow icon'
-                    width={130}
-                    height={80}
-                    className='arrow'
-                  />
-                  <Image
-                    src='/images/icons/Elipses.svg'
-                    alt='ellipse icon'
-                    width={140}
-                    height={40}
-                    className='Ellipses'
-                  />
-                  <Image
-                    src='/images/icons/Opening-double-quotes.svg'
-                    alt='double quotes icon'
-                    width={107}
-                    height={75}
-                    className='double-quotes'
-                  />
-                  <Image
-                    src='/images/icons/Double-forward-slashes.svg'
-                    alt='forward slash icon'
-                    width={119}
-                    height={121}
-                    className='forward-slash'
-                  />
-                </div>
-                <div className='in-col ic-2 box-2'>
-                  <div className='name-text'>
-                    {dpDataObj?.name}
-                    <br />
-                    <span>WILL BE AT</span>
+          <div className='frame-wrapper'>
+            <div ref={sectionRef} className={`dp-frame ${frameType}`}>
+              <div className='row r1'>
+                <div className='col'>
+                  <div className='in-col ic-1 box-1'>
+                    <div className='text'>{dpDataObj?.hook}</div>
+                    <Image
+                      src='/images/png/arrow.png'
+                      alt='arrow icon'
+                      width={130}
+                      height={90}
+                      className='arrow'
+                    />
+                    <Image
+                      src='/images/png/elipses.png'
+                      alt='ellipse icon'
+                      width={140}
+                      height={52}
+                      className='Ellipses'
+                    />
+                    <Image
+                      src='/images/png/double-quotes.png'
+                      alt='double quotes icon'
+                      width={107}
+                      height={75}
+                      className='double-quotes'
+                    />
+                    <Image
+                      src='/images/png/forward-slashes.png'
+                      alt='forward slash icon'
+                      width={119}
+                      height={121}
+                      className='forward-slash'
+                    />
+                  </div>
+                  <div className='in-col ic-2 box-2'>
+                    <div className='name-text'>
+                      {dpDataObj?.name}
+                      <br />
+                      <span>WILL BE AT</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Picture center */}
-              <div className='col box-3'>
-                <div className='img-frame rounded-rectangle'>
+                {/* Picture center */}
+                <div className='col box-3'>
+                  <div className='img-frame rounded-rectangle'>
+                    <Image
+                      src={dpDataObj?.picture as string}
+                      alt={dpDataObj?.name as string}
+                      fill
+                      quality={100}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className='row r2'>
+                <div className='col box-4'>
                   <Image
-                    src={dpDataObj?.picture as string}
-                    alt={dpDataObj?.name as string}
-                    fill
-                    quality={100}
+                    src={'/images/svg/DF24-Logo.svg'}
+                    alt='DevFest Lagos Logo'
+                    width={300}
+                    height={94}
+                    className='logo'
                   />
                 </div>
-              </div>
-            </div>
-            <div className='row r2'>
-              <div className='col box-4'>
-                <Image
-                  src={'/images/svg/DF24-Logo.svg'}
-                  alt='DevFest Lagos Logo'
-                  width={300}
-                  height={94}
-                  className='logo'
-                />
-              </div>
-              <div className='col'>
-                <div className='in-col ic-1 box-5'>
-                  <div className='schedule-text'>
-                    <small className='name'>Date</small>
-                    <div className='value'>15 - 16th Nov</div>
+                <div className='col'>
+                  <div className='in-col ic-1 box-5'>
+                    <div className='schedule-text'>
+                      <small className='name'>Date</small>
+                      <div className='value'>15 - 16th Nov</div>
+                    </div>
                   </div>
-                </div>
-                <div className='in-col ic-2 box-6'>
-                  <div className='schedule-text'>
-                    <small className='name'>Venue</small>
-                    <div className='value'>Landmark Event Center</div>
+                  <div className='in-col ic-2 box-6'>
+                    <div className='schedule-text'>
+                      <small className='name'>Venue</small>
+                      <div className='value'>Landmark Event Center</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className='row r3'>
-              <div className='masked'>
-                <Image src='/images/png/buildings.png' alt='buildings in cities' fill />
+              <div className='row r3'>
+                <div className='masked'>
+                  <Image src='/images/png/buildings.png' alt='buildings in cities' fill />
+                </div>
+                <div className='col box-7'></div>
+                <div className='col box-8'></div>
               </div>
-              <div className='col box-7'></div>
-              <div className='col box-8'></div>
             </div>
           </div>
         </div>
@@ -174,6 +178,7 @@ export default function DPGResult() {
             />
             <Button
               size='sm'
+              isLoading={isLoading}
               onClick={handleDownload}
               label={
                 <Image
