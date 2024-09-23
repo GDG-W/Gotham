@@ -1,7 +1,6 @@
 import React from 'react';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ReactQueryProvider from '@/lib/reactQuery/providers';
-import { classNames } from '@/utils/classNames';
 import localFont from 'next/font/local';
 import { GeistSans } from 'geist/font/sans';
 import '../styles/index.scss';
@@ -37,11 +36,12 @@ const GeneralSans = localFont({
       style: 'normal',
     },
   ],
+  variable: '--font-generalSans',
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' className={classNames(GeistSans.className, GeneralSans.className)}>
+    <html lang='en' className={`${GeistSans.variable} ${GeneralSans.variable}`}>
       <body>
         <ReactQueryProvider>
           {/* Your layout content, including header, main content, footer, etc goes here. */}
