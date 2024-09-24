@@ -17,9 +17,9 @@
     bottom: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(28, 1fr);
+    grid-template-columns: repeat(21, 2fr);
     gap: 18px;
-    padding-left: 40px;
+    padding-left: 38px;
     z-index: -1;
   }
 
