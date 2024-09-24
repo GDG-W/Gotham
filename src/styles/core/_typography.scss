@@ -109,6 +109,42 @@
   @include body(10px, 400, 20px);
 }
 
+// Button styles
+@mixin button-large-medium {
+  @include body(18px, 500, null);
+}
+@mixin button-large-semibold {
+  @include body(18px, 700, null);
+}
+@mixin button-large-bold {
+  @include body(18px, 900, null);
+}
+
+@mixin button-medium-medium {
+  @include body(16px, 500, null);
+}
+@mixin button-medium-semibold {
+  @include body(16px, 700, null);
+}
+@mixin button-medium-bold {
+  @include body(16px, 900, null);
+}
+
+@mixin button-small-medium {
+  @include body(12px, 500, null);
+}
+@mixin button-small-semibold {
+  @include body(12px, 700, null);
+}
+@mixin button-small-bold {
+  @include body(12px, 900, null);
+}
+
+@mixin decorated-text {
+  @include body(16px, 700, 22px);
+  text-decoration: underline;
+}
+
 // OLD CODE
 @mixin text-sm {
   font-size: 14px;
