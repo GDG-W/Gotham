@@ -1,0 +1,53 @@
+.reservationContainer {
+  background-color: #34a853;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  min-height: 640px;
+  width: 100vw;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 328px;
+    text-align: center;
+    z-index: 1;
+
+    .btnContent {
+      font-size: 0.8rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    .download {
+      font-size: 0.8rem;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .phoneBottom {
+    position: absolute;
+    bottom: 0;
+    left: 13%;
+    transform: translateY(1%);
+  }
+
+  .phoneTop {
+    position: absolute;
+    top: 0;
+    right: 13%;
+    transform: translateY(-10%);
+  }
+}

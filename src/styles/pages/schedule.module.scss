@@ -1,0 +1,57 @@
+@import 'utils/breakpoints';
+
+.scheduleContainer {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--dv-light-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding-top: 12rem;
+
+  .container {
+    display: flex;
+    position: relative;
+    width: 80%;
+    text-align: center;
+
+    .top-left {
+      position: absolute;
+      top: 2rem;
+      left: 0;
+    }
+
+    .bottom-right {
+      position: absolute;
+      bottom: -4.5rem;
+      right: 5rem;
+    }
+  }
+
+  .cta-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    width: 80%;
+  }
+
+  .ctaButton {
+    padding: 16px 24px;
+    width: 30%;
+  }
+
+  .scheduleItemsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin: 3rem 0;
+  }
+}

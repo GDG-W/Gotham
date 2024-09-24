@@ -44,6 +44,11 @@
   line-height: 90px;
 }
 
+@mixin text-7xl {
+  font-size: 128px;
+  line-height: 128px;
+}
+
 .text-sm {
   @include text-sm();
 }
@@ -90,4 +95,8 @@
   @include media('<=tablet') {
     @include text-2xl();
   }
+}
+
+.text-7xl {
+  @include text-7xl();
 }
