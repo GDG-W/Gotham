@@ -39,7 +39,7 @@ const FaqItem = ({
 
   return (
     <li key={index} className='faq-accordion-item' onClick={() => setIsOpened(!isOpened)}>
-      <div>
+      <div className='item-question'>
         <p>
           {index + 1}. {faq.question}
         </p>
@@ -50,7 +50,7 @@ const FaqItem = ({
           width={24}
         />
       </div>
-      <div className=''>
+      <div className='item-answer'>
         <p>{faq.answer}</p>
       </div>
     </li>
@@ -70,7 +70,7 @@ const FAQs = () => {
           return <FaqItem index={index} faq={faq} key={index} />;
         })}
       </ul>
-      <button>
+      <button className='faq-action-btn'>
         <p>I still have more questions</p>
         <Image
           src={'/images/svg/message-question-icon.svg'}

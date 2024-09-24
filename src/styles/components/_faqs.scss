@@ -48,9 +48,36 @@
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      width: 836px;
+
+      .item-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include body2-medium();
+      }
+
+      .item-answer {
+        @include body4-medium();
+        color: $grey-50;
+        width: 517px;
+        padding-left: 1rem;
+      }
     }
     .is-opened {
       background: $yellow-primary-90;
     }
+  }
+
+  .faq-action-btn {
+    @include body2-medium();
+    color: black;
+    display: flex;
+    align-items: center;
+    border: none;
+    // background: ;
   }
 }
