@@ -13,22 +13,58 @@
   gap: 5rem;
   padding-top: 12rem;
 
+  @include media('<=phone') {
+    padding-top: 6rem;
+  }
+
   .container {
     display: flex;
     position: relative;
     width: 80%;
     text-align: center;
 
+    @include media('<=phone') {
+      width: 80%;
+    }
+
     .top-left {
       position: absolute;
       top: 2rem;
-      left: 0;
+      left: -2rem;
+      width: 72px;
+      height: 82px;
+
+      @include media('<=tablet') {
+        width: 60px;
+        height: auto;
+      }
+
+      @include media('<=phone') {
+        width: 30px;
+        height: auto;
+        top: 0;
+        left: -1.5rem;
+      }
     }
 
     .bottom-right {
       position: absolute;
       bottom: -4.5rem;
       right: 5rem;
+      width: 107px;
+      height: 107px;
+
+      @include media('<=tablet') {
+        width: 85px;
+        height: auto;
+      }
+
+      @include media('<=phone') {
+        width: 50px;
+        height: auto;
+        bottom: -2.5rem;
+        right: 0rem;
+      }
     }
   }
 
@@ -38,12 +74,31 @@
     justify-content: center;
     margin-top: 2rem;
     gap: 1rem;
-    width: 80%;
+    width: 100%;
+
+    @include media('<=phone') {
+      width: 90%;
+      margin-top: 0rem;
+    }
+
+    @include media('<=tablet') {
+      width: 90%;
+    }
   }
 
   .ctaButton {
     padding: 16px 24px;
     width: 30%;
+
+    @include media('<=phone') {
+      width: 50%;
+      padding: 12px 8px;
+      font-size: 0.65rem;
+    }
+
+    @include media('<=tablet') {
+      width: 60%;
+    }
   }
 
   .scheduleItemsContainer {
@@ -53,5 +108,10 @@
     flex-direction: column;
     height: 100%;
     margin: 3rem 0;
+
+    @include media('<=phone') {
+      margin: 0;
+      width: 90%;
+    }
   }
 }

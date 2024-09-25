@@ -8,7 +8,7 @@ const Reservation = () => {
   return (
     <div className={styles.reservationContainer}>
       <div className={styles.phoneBottom}>
-        <Image src='/images/png/phone-mockup1.png' alt='phone' width={303} height={350} />
+        <img src='/images/png/phone-mockup1.png' alt='phone' className={styles.responsiveImage} />
       </div>
       <div className={styles.container}>
         <Button
@@ -27,15 +27,21 @@ const Reservation = () => {
         <Button
           backgroundColor='#FFFFFF'
           textColor='#000000'
-          borderColor='#00000'
+          borderColor='#000000'
           className={styles.download}
         >
           <p>Download the mobile app</p>
-          <Image src='/images/svg/download.svg' alt='download' width={20} height={20} />
+          <Image
+            src='/images/svg/download.svg'
+            alt='download'
+            layout='intrinsic'
+            width={20}
+            height={20}
+          />
         </Button>
       </div>
       <div className={styles.phoneTop}>
-        <Image src='/images/png/phone-mockup2.png' alt='phone' width={303} height={325} />
+        <img src='/images/png/phone-mockup2.png' alt='phone' className={styles.responsiveImage} />
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ const SchedulePage = () => {
           alt='arrow'
           width={72}
           height={82}
-          className={styles['top-left']}
+          className={`${styles['top-left']} responsive-image`}
         />
         <h1 className='text-7xl'>Explore our very demure schedule</h1>
         <Image
@@ -35,7 +35,7 @@ const SchedulePage = () => {
           alt='hash'
           width={107}
           height={107}
-          className={styles['bottom-right']}
+          className={`${styles['bottom-right']} responsive-image`}
         />
       </div>
 
