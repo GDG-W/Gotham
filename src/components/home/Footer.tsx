@@ -1,53 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { footerLinks } from '@/components/home/footer-links';
+import { footerLinks2 } from '@/components/home/footer-links';
+import { socialLinks } from '@/components/home/footer-links';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const footerLinks = [
-    {
-      link: '/schedule',
-      title: 'Schedule',
-    },
-    {
-      link: '/speakers',
-      title: 'Speakers',
-    },
-    {
-      link: '/faqs',
-      title: 'FAQs',
-    },
-    {
-      link: '/dp-generator',
-      title: 'DP Generator',
-    },
-  ];
-
-  const footerLinks2 = [
-    {
-      href: '/venue-info',
-      title: 'Venue Information',
-    },
-    {
-      href: '/view-ticket',
-      title: 'View Ticket',
-    },
-    {
-      href: '/play-trivia',
-      title: 'Play Trivia',
-    },
-    {
-      href: 'https://gdg.community.dev/gdg-lagos/',
-      title: 'Join the Community',
-    },
-  ];
 
   return (
     <footer className='footer'>
       <div className='footer__content'>
         <div className='footer__about'>
-          <h5 className='text-base'>About DevFest Lagos</h5>
+          <div className='footer__header'>
+            <h5 className='text-base'>About DevFest Lagos</h5>
+          </div>
           <p className='text-base'>
             DevFest Lagos is an annual conference for tech enthusiasts from novices to industry
             leaders organized by the Google Developer Group Lagos (GDG Lagos). The event features
@@ -83,65 +50,17 @@ const Footer = () => {
           <p>Contact Us</p>
           <p>Follow Us:</p>
           <div className='footer__socials'>
-            <div className='footer__icon'>
-              <Link href='https://x.com/gdglagos'>
+            {socialLinks.map((social, index) => (
+              <Link key={index} href={social.href} className='footer__icon'>
                 <Image
-                  className='footer__img'
-                  src='/images/icons/twitter-icon.svg'
-                  alt='Twitter Icon'
+                  src={`/images/icons/${social.icon}`}
+                  alt={`${social.icon.split('-')[0]} Icon`}
                   width={40}
                   height={40}
-                />
-              </Link>
-            </div>
-
-            <div className='footer__icon'>
-              <Link href='https://www.instagram.com/gdglagos'>
-                <Image
                   className='footer__img'
-                  src='/images/icons/instagram-icon.svg'
-                  alt='Instagram Icon'
-                  width={40}
-                  height={40}
                 />
               </Link>
-            </div>
-
-            <div className='footer__icon'>
-              <Link href='https://m.facebook.com/100075612535619'>
-                <Image
-                  className='footer__img'
-                  src='/images/icons/facebook-icon.svg'
-                  alt='Facebook Icon'
-                  width={40}
-                  height={40}
-                />
-              </Link>
-            </div>
-
-            <div className='footer__icon'>
-              <Link href='https://www.youtube.com/@GDGLagos'>
-                <Image
-                  className='footer__img'
-                  src='/images/icons/youtube-icon.svg'
-                  alt='Youtube Icon'
-                  width={40}
-                  height={40}
-                />
-              </Link>
-            </div>
-
-            <div className='footer__icon'>
-              <Link href='https://www.linkedin.com/company/gdg-lagos'>
-                <Image
-                  className='footer__img'
-                  src='/images/icons/linkedin-icon.svg'
-                  alt='LinkedIn Icon'
-                  width={40}
-                  height={40}
-                />
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -157,8 +76,8 @@ const Footer = () => {
             <Image
               src='/images/svg/footer-logo.svg'
               alt='DevFest Logo'
-              width={223}
-              height={133}
+              width={200}
+              height={100}
               className='footer__logo-img'
             />
           </div>
