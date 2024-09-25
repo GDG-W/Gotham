@@ -1,11 +1,8 @@
 .footer {
-  background-color: $background-dark;
+  background: $background-dark;
   color: #ffffff;
   padding: 2rem 1rem;
-  font-family:
-    General Sans,
-    sans-serif;
-
+  font-family: var(--font-generalSans);
   &__about {
     display: flex-column;
     justify-content: center;
