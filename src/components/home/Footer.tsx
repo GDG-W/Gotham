@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
-  //   const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
   const footerLinks = [
     {
@@ -79,7 +79,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className='footer__link text-base'>
+        <div className='footer__link footer__link-socials text-base'>
           <p>Contact Us</p>
           <p>Follow Us:</p>
           <div className='footer__socials'>
@@ -145,11 +145,30 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='footer__link text-base'>
+        <div className='footer__link footer__link-policy text-base'>
           <Link href='https://policies.google.com/privacy'>Privacy Policy</Link>
           <Link href='https://developers.google.com/community-guidelines'>
             Community Guidelines
           </Link>
+        </div>
+
+        <div className='footer__logo'>
+          <div>
+            <Image
+              src='/images/svg/footer-logo.svg'
+              alt='DevFest Logo'
+              width={223}
+              height={133}
+              className='footer__logo-img'
+            />
+          </div>
+          <div>
+            <p>{`DevFest Lagos ${currentYear}`}</p>
+          </div>
+        </div>
+
+        <div className='footer__copyright'>
+          <p>© {`${currentYear} DevFestLagos. All Rights Reserved.`}</p>
         </div>
       </div>
     </footer>

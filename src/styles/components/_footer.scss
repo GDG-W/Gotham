@@ -3,8 +3,10 @@
   color: #ffffff;
   padding: 2rem 1rem;
   font-family: var(--font-generalSans);
+
   &__about {
-    display: flex-column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -32,7 +34,7 @@
   &__links {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 120px;
     margin-left: 150px;
   }
   &__link {
@@ -60,5 +62,82 @@
     color: $grey-100;
     background: $grey-30;
     border-radius: 50%;
+  }
+  &__logo {
+    display: flex;
+    margin-top: 50px;
+
+    p {
+      color: $grey-100;
+      font-size: 100px;
+      font-weight: 800;
+    }
+  }
+  &__copyright {
+    visibility: hidden;
+  }
+
+  @media (max-width: 768px) {
+    &__about {
+      h5 {
+        width: 50%;
+      }
+      p {
+        max-width: 90%;
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      margin-left: 10px;
+    }
+
+    &__link {
+      flex: 1 1 calc(50% - 1rem);
+    }
+    &__link:nth-child(n + 3) {
+      flex-basis: 100%;
+    }
+
+    &__link-socials {
+      margin-top: 3rem;
+    }
+
+    &__link-policy {
+      margin-top: 2rem;
+    }
+
+    &__socials {
+      justify-content: flex-start;
+    }
+    &__logo {
+      margin-top: 2px;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+
+      p {
+        font-size: 26px;
+      }
+    }
+    &__logo-img {
+      width: 70px;
+      height: 40px;
+    }
+
+    &__copyright {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      visibility: visible;
+      margin-top: 14px;
+
+      p {
+        color: $background-softlight;
+        font-weight: normal;
+      }
+    }
   }
 }
