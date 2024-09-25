@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const Subscribe = () => {
   return (
-    <section className='subscribe-wrapper text-sm'>
+    <section className='subscribe-wrapper'>
       <div className='subscribe-content'>
-        <div className='subscribe-gdg-tag'>GDG LAGOS</div>
+        <div className='subscribe-pill'>GDG LAGOS</div>
         <h3 className='subscribe-title'>Stay updated on GDG Lagos activities</h3>
         <p className='subscribe-text'>
           Get updated on all our activities, events, webinars. Be the first to know what the GDG

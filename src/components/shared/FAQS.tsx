@@ -38,7 +38,11 @@ const FaqItem = ({
   const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <li key={index} className='faq-accordion-item' onClick={() => setIsOpened(!isOpened)}>
+    <li
+      key={index}
+      className={`faq-accordion-item ${isOpened && 'is-opened'}`}
+      onClick={() => setIsOpened(!isOpened)}
+    >
       <div className='item-question'>
         <p>
           {index + 1}. {faq.question}
@@ -46,13 +50,16 @@ const FaqItem = ({
         <Image
           src={'/images/svg/chevron-arrow-down.svg'}
           alt='Arrow Down Icon'
+          className='arrow-icon'
           height={24}
           width={24}
         />
       </div>
-      <div className='item-answer'>
-        <p>{faq.answer}</p>
-      </div>
+      {isOpened && (
+        <div className='item-answer'>
+          <p>{faq.answer}</p>
+        </div>
+      )}
     </li>
   );
 };
