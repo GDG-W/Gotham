@@ -1,0 +1,216 @@
+@import '/src/styles/core/variables';
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 46px;
+  height: 100vh;
+  overflow: hidden;
+  max-height: 900px;
+  justify-content: space-around;
+  background-color: $yellow-primary-100;
+
+  .headerText {
+    width: 641px;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    h2 {
+      font-family: var(--font-generalSans);
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 100px;
+
+      @include media('<=desktop') {
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      @include media('>tablet', '<desktop') {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      @include media('<=tablet') {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 50px;
+        text-align: center;
+      }
+    }
+
+    .greenArrow {
+      position: absolute;
+      top: 5%;
+      right: 40%;
+
+      @include media('<=tablet') {
+        width: 40px;
+        height: 45px;
+        top: 10%;
+        right: 10%;
+      }
+    }
+    .blueArrow {
+      position: absolute;
+      top: 10%;
+      left: 8%;
+
+      @include media('<=tablet') {
+        width: 41px;
+        height: 47px;
+        left: 0;
+        top: 30%;
+      }
+    }
+    .yellowHashtag {
+      position: absolute;
+      bottom: 5%;
+      left: 8%;
+
+      @include media('<=tablet') {
+        width: 59px;
+        height: 59px;
+        left: 80%;
+        bottom: 12%;
+      }
+    }
+
+    @include media('>=desktop', '<1440px') {
+      width: 400px;
+    }
+
+    @include media('>tablet', '<desktop') {
+      width: 50%;
+    }
+
+    @include media('<=tablet') {
+      width: 100%;
+      height: 40vh;
+      padding: 0 40px;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .marqueeItem {
+    position: relative;
+    border: 4px solid $core-yellow;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .speakerName {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.836);
+      color: white;
+      @include body4-medium();
+      padding: 12px 20px;
+      border-radius: 2rem;
+      bottom: 12px;
+      left: 12px;
+    }
+  }
+
+  .verticalMarquee {
+    display: flex;
+    gap: 36px;
+    user-select: none;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+
+    .marqueeContent {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      height: max-content;
+
+      .marqueeItem {
+        aspect-ratio: 3/4;
+        height: 400px;
+
+        @include media('>=desktop', '<1440px') {
+          height: 300px;
+        }
+        @include media('>tablet', '<=desktop') {
+          height: 200px;
+        }
+      }
+    }
+
+    .marqueeContent_up {
+      animation: vertical_scroll 30s forwards linear infinite;
+    }
+    .marqueeContent_down {
+      animation: vertical_scroll 30s reverse linear infinite;
+    }
+
+    .marqueeContent_down:hover,
+    .marqueeContent_up:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .horizontalMarquee {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    width: 100vw;
+    overflow: hidden;
+
+    .marqueeContent {
+      display: flex;
+      width: max-content;
+      align-items: center;
+      gap: 16px;
+      animation: horizontal_scroll 30s forwards linear infinite;
+
+      .marqueeItem {
+        aspect-ratio: 1;
+        height: 300px;
+
+        .speakerName {
+          padding: 10px 16px;
+        }
+      }
+    }
+  }
+
+  @keyframes vertical_scroll {
+    to {
+      transform: translateY(calc(-50% - 12px));
+    }
+  }
+
+  @keyframes horizontal_scroll {
+    to {
+      transform: translateX(calc(-50% - 8px));
+    }
+  }
+
+  @include media('>tablet', '<=desktop') {
+    max-height: 700px;
+    gap: 2px;
+    justify-content: space-between;
+  }
+
+  @include media('<=tablet') {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
+    height: fit-content;
+  }
+}
