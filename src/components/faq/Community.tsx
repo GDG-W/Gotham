@@ -18,7 +18,7 @@ const Community = () => {
         </div>
         <div className='button'>
           <Link className='link' href='/community'>
-            Let`&aspos;`s go
+            Let&#39;s go
           </Link>
           <Image src='/images/icons/arrow.svg' alt='Arrow Icon' width={24} height={24} />
         </div>

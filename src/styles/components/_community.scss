@@ -1,6 +1,6 @@
 .community {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 40px;
   background-color: $background-dark;
   width: 100%;
@@ -45,6 +45,7 @@
       background-color: $core-yellow;
       color: $background-dark;
       font-size: 15px;
+      font-weight: 500;
       border-radius: 25px;
       width: 50%;
       padding: 13px 0;
