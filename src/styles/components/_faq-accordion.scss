@@ -1,0 +1,127 @@
+.faqs-accordion {
+  font-family: var(--font-generalSans);
+  .faqs-buttons {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    .faqs-button {
+      width: 210px;
+      padding: 13px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background-color: transparent;
+      border: 1px solid $core-yellow;
+      border-radius: 25px;
+      color: $grey-10;
+      font-weight: 500;
+
+      &.active {
+        background-color: $core-yellow;
+        color: $grey-10;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .faqs-items {
+    width: 700px;
+    margin: 0 auto;
+    border: none;
+
+    .faqs-item {
+      margin-bottom: 13px;
+      overflow: hidden;
+      border: 1px solid #000;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+
+      .faqs-question {
+        width: 100%;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        font-weight: 600;
+        color: #333;
+        font-size: 16px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: #292d32;
+          transition: transform 0.3s ease;
+        }
+        .chevron-icon {
+          transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+        }
+      }
+
+      .faqs-answer {
+        padding: 0 20px 15px 30px;
+        overflow: hidden;
+        font-size: 14px;
+        color: $grey-50;
+        line-height: 1.5;
+        transition:
+          max-height 0.3s ease,
+          background-color 0.3s ease,
+          padding 0.3s ease;
+      }
+
+      &.open {
+        .faqs-question,
+        .faqs-answer {
+          background-color: $yellow-primary-90;
+        }
+        .faqs-answer {
+          max-height: 1000px;
+          opacity: 1;
+          transition:
+            max-height 0.5s ease-in,
+            opacity 0.3s ease-in;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .faqs-buttons {
+      gap: 10px;
+      .faqs-button {
+        width: 190px;
+      }
+    }
+
+    .faqs-items {
+      width: 360px;
+
+      .faqs-item {
+        .faqs-question {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
