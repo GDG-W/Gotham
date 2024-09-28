@@ -164,39 +164,15 @@
     }
   }
 
-  .horizontalMarquee {
-    margin-top: 1rem;
-    margin-bottom: 4rem;
-    width: 100vw;
-    overflow: hidden;
-
-    .marqueeContent {
-      display: flex;
-      width: max-content;
-      align-items: center;
-      gap: 16px;
-      animation: horizontal_scroll 30s forwards linear infinite;
-
-      .marqueeItem {
-        aspect-ratio: 1;
-        height: 300px;
-
-        .speakerName {
-          padding: 10px 16px;
-        }
-      }
-    }
+  .horizontalMarqueeItem {
+    height: 300px;
+    aspect-ratio: 1;
+    margin: 0 8px;
   }
 
   @keyframes vertical_scroll {
     to {
       transform: translateY(calc(-50% - 12px));
-    }
-  }
-
-  @keyframes horizontal_scroll {
-    to {
-      transform: translateX(calc(-50% - 8px));
     }
   }
 

@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from '../styles/SpeakersList.module.scss';
-import { fullSpeakerData, Speaker } from '../mockData/mock';
+import { fullSpeakerData, Speaker } from '../mockData/SpeakerData';
 import Image from 'next/image';
 
 const SpeakerItem = ({ speaker }: { speaker: Speaker }) => {

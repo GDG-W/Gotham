@@ -11,11 +11,14 @@ const DaysAndFilter = () => {
     if (key === 'All') {
       setSelectedFilters([key]);
     } else {
-      setSelectedFilters((prevFilters) =>
-        prevFilters.includes(key)
-          ? prevFilters.filter((filter) => filter !== key)
-          : [...prevFilters.filter((filter) => filter !== 'All'), key],
-      );
+      setSelectedFilters((prevFilters) => {
+        if (prevFilters.includes(key)) {
+          return prevFilters.length !== 1
+            ? prevFilters.filter((filter) => filter !== key)
+            : ['All'];
+        }
+        return [...prevFilters.filter((filter) => filter !== 'All'), key];
+      });
     }
   };
 

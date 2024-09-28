@@ -55,11 +55,9 @@ const FaqItem = ({
           width={24}
         />
       </div>
-      {isOpened && (
-        <div className='item-answer'>
-          <p>{faq.answer}</p>
-        </div>
-      )}
+      <div className='item-answer'>
+        <p>{faq.answer}</p>
+      </div>
     </li>
   );
 };
