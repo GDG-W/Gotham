@@ -87,7 +87,7 @@ const Hero = () => {
           </ul>
         </div>
       ) : (
-        <Marquee speed={20} pauseOnHover aria-label='Scrolling images of DevFest 2024 Speakers'>
+        <Marquee speed={20} aria-label='Scrolling images of DevFest 2024 Speakers'>
           {speakersSlideData.map((speaker, index) => {
             return (
               <div className={`${styles.marqueeItem} ${styles.horizontalMarqueeItem}`} key={index}>
