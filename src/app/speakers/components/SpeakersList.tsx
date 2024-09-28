@@ -12,7 +12,7 @@ const SpeakerItem = ({ speaker }: { speaker: Speaker }) => {
       <div className={`${styles.flipInner}  ${isFlipped ? styles.isFlipped : ''}`}>
         <div className={styles.flipFront}>
           <div className={styles.frontHead}>
-            <p>{speaker.letter}</p>
+            <p>{speaker.name.slice(0, 1)}</p>
             <div className={styles.speakerImageWrap} style={{ position: 'relative' }}>
               <Image src={speaker.image} fill alt={speaker.name + "'s Image"} />
             </div>
@@ -86,7 +86,7 @@ const SpeakersList = () => {
     <section className={styles.speakersListWrapper}>
       <ul className={styles.speakersList}>
         {fullSpeakerData.map((speaker) => {
-          return <SpeakerItem speaker={speaker} key={speaker.letter} />;
+          return <SpeakerItem speaker={speaker} key={speaker.name} />;
         })}
       </ul>
       <button className={styles.loadBtn}>

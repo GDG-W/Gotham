@@ -1,5 +1,4 @@
 export interface Speaker {
-  letter: string;
   career: string;
   name: string;
   image: string;
@@ -16,7 +15,6 @@ export interface Speaker {
 
 export const fullSpeakerData: Speaker[] = [
   {
-    letter: 'a',
     career: 'senior software engineer',
     name: 'Adora Hack',
     image: '/images/speakers/image-13.png',
@@ -37,7 +35,6 @@ ging dApp: A Technical Deep Building a Secure Interchain`,
     },
   },
   {
-    letter: 'b',
     career: 'senior software engineer',
     name: 'Babatunde A.K.A Lala',
     image: '/images/speakers/image-14.png',
@@ -58,7 +55,6 @@ ging dApp: A Technical Deep Building a Secure Interchain`,
     },
   },
   {
-    letter: 'c',
     name: 'Cassandra Casanova',
     career: 'senior software engineer',
     image: '/images/speakers/image-15.png',
@@ -79,7 +75,6 @@ ging dApp: A Technical Deep Building a Secure Interchain`,
     },
   },
   {
-    letter: 'd',
     name: 'Dayo The Striker',
     career: 'senior software engineer',
     image: '/images/speakers/image-17.png',
@@ -100,8 +95,7 @@ ging dApp: A Technical Deep Building a Secure Interchain`,
     },
   },
   {
-    letter: 'e',
-    name: 'Adora Hack',
+    name: 'Eve Encryption',
     career: 'senior software engineer',
     image: '/images/speakers/image-19.png',
     topic: `Building a Secure Interchain Messa
@@ -121,8 +115,7 @@ ging dApp: A Technical Deep Building a Secure Interchain`,
     },
   },
   {
-    letter: 'f',
-    name: 'Adora Hack',
+    name: 'Frankie Function',
     career: 'senior software engineer',
     image: '/images/speakers/image-20.png',
     topic: `Building a Secure Interchain Messa
@@ -142,8 +135,7 @@ ging dApp: A Technical Deep Building a Secure Interchain`,
     },
   },
   {
-    letter: 'g',
-    name: 'Adora Hack',
+    name: 'Grace Grid',
     career: 'senior software engineer',
     image: '/images/speakers/image-23.png',
     topic: `Building a Secure Interchain Messa
@@ -163,8 +155,7 @@ ging dApp: A Technical Deep Building a Secure Interchain`,
     },
   },
   {
-    letter: 'h',
-    name: 'Adora Hack',
+    name: 'Hank Hash',
     career: 'senior software engineer',
     image: '/images/speakers/image-14.png',
     topic: `Building a Secure Interchain Messa
@@ -184,8 +175,7 @@ ging dApp: A Technical Deep Building a Secure Interchain`,
     },
   },
   {
-    letter: 'i',
-    name: 'Dayo The Striker',
+    name: 'Ian interface',
     career: 'senior software engineer',
     image: '/images/speakers/image-15.png',
     topic: `Building a Secure Interchain Messa
