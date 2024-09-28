@@ -33,7 +33,7 @@ const FAQAccordion: React.FC = () => {
     <div className='faqs-accordion'>
       <div className='faqs-buttons'>
         <button
-          className={`faqs-button ${activeCategory === 'devfest' ? 'active' : ''}`}
+          className={`faqs-button faqs-devfest ${activeCategory === 'devfest' ? 'active' : ''}`}
           onClick={() => toggleCategory('devfest')}
         >
           DevFest Lagos 2024
