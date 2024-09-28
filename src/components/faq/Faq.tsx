@@ -9,8 +9,8 @@ const Faq = () => {
     <div className='faqs'>
       <div className='faqs__text'>
         <p>
-          We Have <Image src='/images/svg/faq-img.svg' alt='Faq Icon' width={80} height={80} />{' '}
-          Answers To Your Questions
+          We Have <Image src='/images/image 47.png' alt='Faq Icon' width={80} height={80} /> Answers
+          To Your Questions
         </p>
       </div>
 

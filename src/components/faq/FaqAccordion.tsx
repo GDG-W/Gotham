@@ -39,7 +39,7 @@ const FAQAccordion: React.FC = () => {
           DevFest Lagos 2024
         </button>
         <button
-          className={`faqs-button ${activeCategory === 'tickets' ? 'active' : ''}`}
+          className={`faqs-button faqs-ticket ${activeCategory === 'tickets' ? 'active' : ''}`}
           onClick={() => toggleCategory('tickets')}
         >
           Tickets
@@ -50,7 +50,11 @@ const FAQAccordion: React.FC = () => {
           <div key={item.id} className={`faqs-item ${openItems[item.id] ? 'open' : ''}`}>
             <button className='faqs-question' onClick={() => toggleItem(item.id)}>
               {item.question}
-              {openItems[item.id] ? <ChevronUp /> : <ChevronDown />}
+              {openItems[item.id] ? (
+                <ChevronUp className='chevron-icon' />
+              ) : (
+                <ChevronDown className='chevron-icon' />
+              )}
             </button>
             {openItems[item.id] && <div className='faqs-answer'>{item.answer}</div>}
           </div>

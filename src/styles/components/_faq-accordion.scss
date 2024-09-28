@@ -9,7 +9,7 @@
     gap: 14px;
 
     .faqs-button {
-      width: 210px;
+      width: 190px;
       padding: 13px 20px;
       font-size: 16px;
       cursor: pointer;
@@ -57,13 +57,10 @@
         color: #333;
         font-size: 16px;
 
-        svg {
-          width: 20px;
-          height: 20px;
-          color: #292d32;
-          transition: transform 0.3s ease;
-        }
         .chevron-icon {
+          flex-shrink: 0;
+          width: 24px;
+          height: 24px;
           transition:
             transform 0.3s ease,
             opacity 0.3s ease;
@@ -109,8 +106,9 @@
   @media (max-width: 768px) {
     .faqs-buttons {
       gap: 10px;
-      .faqs-button {
-        width: 190px;
+
+      .faqs-ticket {
+        width: 165px;
       }
     }
 
@@ -119,6 +117,7 @@
 
       .faqs-item {
         .faqs-question {
+          max-width: 450px;
           font-size: 15px;
         }
       }

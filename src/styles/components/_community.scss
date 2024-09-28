@@ -26,14 +26,19 @@
       color: #fff;
     }
     .community-header {
-      font-size: 20px;
+      font-size: 17px;
       color: $yellow-primary-100;
       max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       p {
         font-size: 14px;
         padding-top: 15px;
         color: $grey-100;
+        width: 350px;
       }
     }
     .button {
@@ -61,11 +66,13 @@
     display: flex;
     flex-direction: column;
 
+    .community-header {
+    }
     .community-img {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 40px;
+      margin-top: 50px;
     }
   }
 }

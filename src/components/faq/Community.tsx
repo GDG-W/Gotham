@@ -24,7 +24,7 @@ const Community = () => {
         </div>
       </div>
       <div className='community-img'>
-        <Image src='/images/svg/community.svg' alt='Community' width={350} height={350} />
+        <Image src='/images/image 45.png' alt='Community' width={350} height={350} />
       </div>
     </div>
   );

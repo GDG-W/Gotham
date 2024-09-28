@@ -5,11 +5,12 @@
   font-family: var(--font-generalSans);
 
   &__about {
-    margin-top: 50px;
+    padding-top: 75px;
     p {
-      max-width: 60%;
+      max-width: 65%;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
     }
   }
   &__header {
@@ -25,7 +26,7 @@
       background: transparent;
       border: 1px solid $grey-100;
       border-radius: 32px;
-      width: 200px;
+      width: 13%;
       margin-bottom: 15px;
       padding: 10px 8px;
     }
@@ -65,15 +66,12 @@
   }
   &__logo {
     display: flex;
-    margin-right: auto;
-    margin-left: auto;
     margin-top: 50px;
 
     p {
       color: $grey-100;
-      font-size: 70px;
+      font-size: 80px;
       font-weight: 800;
-      text-align: center;
     }
   }
   &__copyright {
