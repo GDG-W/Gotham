@@ -45,7 +45,7 @@ const Hero = () => {
           height={72}
           className={styles.blueArrow}
         />
-        <h2>Meet The DevFest 2024 Speakers!</h2>
+        <h2>Meet The DevFest Lagos 2024 Speakers!</h2>
         <Image
           src={'/images/svg/yellow_hashtag.svg'}
           alt='blue icon'
