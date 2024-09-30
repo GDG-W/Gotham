@@ -1,0 +1,140 @@
+.subscribe-wrapper {
+  background: black;
+  padding: 53px 59px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+
+  .subscribe-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+
+    * {
+      width: fit-content;
+    }
+    @mixin subscribe-smText {
+      color: white;
+      @include body5-medium();
+
+      @media (min-width: 768px) {
+        @include body3-medium();
+      }
+
+      @media (min-width: 1024px) {
+        @include body2-medium();
+      }
+    }
+    .subscribe-pill {
+      @include subscribe-smText();
+      line-height: 20px;
+      border: 1px solid white;
+      padding: 12px 10px;
+      border-radius: 32px;
+
+      @media (min-width: 768px) {
+        padding: 12px 15px;
+      }
+
+      @media (min-width: 1024px) {
+        padding: 12px 27px;
+      }
+    }
+    .subscribe-title {
+      color: #fff6e0;
+      @include title1-semibold();
+
+      @media (min-width: 768px) {
+        @include header-h5();
+      }
+
+      @media (min-width: 1024px) {
+        @include header-h4();
+      }
+
+      @media (min-width: 1440px) {
+        @include header-h3();
+      }
+    }
+    .subscribe-text {
+      @include subscribe-smText();
+    }
+    .subscribe-btn {
+      background-color: #f8ad00;
+      color: black;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      border-radius: 15.56px;
+      padding: 7.5px 38.5px;
+      border: none;
+
+      img {
+        width: 16px;
+        height: 16px;
+
+        @media (min-width: 1024px) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        padding: 14px 96px;
+        gap: 8px;
+        border-radius: 32px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+      }
+    }
+
+    @media (min-width: 768px) {
+      gap: 14px;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 24px;
+      width: 592px;
+    }
+  }
+
+  .subscribe-image {
+    border-radius: 7.78px;
+    width: 312px;
+    height: 303px;
+
+    @media (min-width: 768px) {
+      width: 400px;
+      height: 400px;
+      border-radius: 16px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 450px;
+      height: 450px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 90px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 97px;
+    flex-direction: row;
+    gap: 125px;
+    justify-content: center;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 97px 145px;
+  }
+}
