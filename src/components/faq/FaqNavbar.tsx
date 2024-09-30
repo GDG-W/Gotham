@@ -51,7 +51,9 @@ const FaqNavbar = () => {
       </div>
 
       <div className='faq__tickets-btn'>
-        <Link href='/get-tickets'>Get Tickets</Link>
+        <Link href='https://tickets.devfestlagos.com' target='__blank'>
+          Get Tickets
+        </Link>
         <Image
           className='faq__tickets-btn__icon'
           src={'/images/icons/ticket.svg'}
