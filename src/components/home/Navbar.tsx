@@ -44,7 +44,9 @@ const Navbar = () => {
       </div>
 
       <div className='navbar__tickets-btn'>
-        <Link href='/get-tickets'>Get Tickets</Link>
+        <Link href='https://tickets.devfestlagos.com' target='__blank'>
+          Get Tickets
+        </Link>
         <Image
           className='navbar__tickets-btn__icon'
           src={'/images/icons/ticket.svg'}
