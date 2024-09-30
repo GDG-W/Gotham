@@ -12,7 +12,7 @@ export const footerLinks = [
     title: 'FAQs',
   },
   {
-    link: '/dp-generator',
+    link: '/dp',
     title: 'DP Generator',
   },
 ];
@@ -23,11 +23,11 @@ export const footerLinks2 = [
     title: 'Venue Information',
   },
   {
-    href: '/view-ticket',
+    href: 'https://tickets.devfestlagos.com/login',
     title: 'View Ticket',
   },
   {
-    href: '/play-trivia',
+    href: 'https://dflagos24-trivia.netlify.app/',
     title: 'Play Trivia',
   },
   {

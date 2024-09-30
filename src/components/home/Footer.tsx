@@ -32,7 +32,7 @@ const Footer = () => {
       <div className='footer__links'>
         <div className='footer__link text-base'>
           {footerLinks.map((link, index) => (
-            <Link key={index} href={link.link}>
+            <Link key={index} href={link.link} target='__blank'>
               {link.title}
             </Link>
           ))}
@@ -40,7 +40,7 @@ const Footer = () => {
 
         <div className='footer__link text-base'>
           {footerLinks2.map((link, index) => (
-            <Link key={index} href={link.href}>
+            <Link key={index} href={link.href} target='__blank'>
               {link.title}
             </Link>
           ))}
@@ -51,7 +51,7 @@ const Footer = () => {
           <p>Follow Us:</p>
           <div className='footer__socials'>
             {socialLinks.map((social, index) => (
-              <Link key={index} href={social.href} className='footer__icon'>
+              <Link key={index} href={social.href} className='footer__icon' target='__blank'>
                 <Image
                   src={`/images/icons/${social.icon}`}
                   alt={`${social.icon.split('-')[0]} Icon`}
@@ -65,8 +65,10 @@ const Footer = () => {
         </div>
 
         <div className='footer__link footer__link-policy text-base'>
-          <Link href='https://policies.google.com/privacy'>Privacy Policy</Link>
-          <Link href='https://developers.google.com/community-guidelines'>
+          <Link href='https://policies.google.com/privacy' target='__blank'>
+            Privacy Policy
+          </Link>
+          <Link href='https://developers.google.com/community-guidelines' target='__blank'>
             Community Guidelines
           </Link>
         </div>
