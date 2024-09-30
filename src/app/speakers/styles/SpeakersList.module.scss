@@ -1,0 +1,261 @@
+@import '/src/styles/core/variables';
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
+
+.speakersListWrapper {
+  background: $yellow-primary-100;
+  padding: 48px 44px;
+
+  li {
+    list-style: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  .speakersList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 3rem;
+    column-gap: 1rem;
+
+    li {
+      --ImageBorder: #f9ab00;
+      background: transparent;
+      height: 29rem;
+      max-width: 450px;
+      perspective: 1000px;
+
+      .flipInner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+
+        .flipFront,
+        .flipBack {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          -webkit-backface-visibility: hidden; /* For Safari */
+          backface-visibility: hidden;
+        }
+
+        .flipFront {
+          background: white;
+          display: flex;
+          overflow: hidden;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: left;
+          padding: 2.25rem 1.25rem;
+          padding-top: 0;
+          transition: background-color ease 0.2s;
+
+          .frontHead {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+              font-size: 90px;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+
+            .speakerImageWrap {
+              height: 11.5rem;
+              width: 12rem;
+              top: -2rem;
+              border: 2.54px solid var(--ImageBorder);
+              border-radius: 0.8em;
+              overflow: hidden;
+
+              img {
+                object-fit: cover;
+                object-position: top;
+              }
+            }
+          }
+
+          .frontContent {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .speakerName {
+              @include title1-semibold();
+            }
+
+            .topic {
+              font-size: 20px;
+              line-height: 25px;
+
+              @include media('<=desktop') {
+                font-size: 16px;
+                line-height: 20px;
+              }
+            }
+
+            .date {
+              @include body1-medium();
+            }
+          }
+
+          .flipBtn {
+            width: fit-content;
+            border: 1px solid $grey-50;
+            background: black;
+            color: white;
+            border-radius: 2em;
+            @include body2-medium();
+            padding: 1rem 3.3rem;
+          }
+        }
+
+        .flipBack {
+          background: white;
+          transform: rotateY(180deg);
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 1.5rem;
+
+          .cancelBtn {
+            border: none;
+            width: fit-content;
+            background: inherit;
+            align-self: flex-end;
+
+            @include media('<=desktop') {
+              img {
+                width: 25px;
+                height: 25px;
+              }
+            }
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .speakerName {
+              font-size: 2rem;
+              font-weight: 700;
+
+              @include media('<=desktop') {
+                font-size: 1.4rem;
+              }
+            }
+
+            .career {
+              text-transform: capitalize;
+              font-size: 20px;
+
+              @include media('<=desktop') {
+                font-size: 14px;
+              }
+            }
+
+            .bio {
+              @include body2-regular();
+              font-size: 15px;
+
+              @include media('<=desktop') {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .socialsWrapper {
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+
+            p {
+              color: $grey-50;
+              text-transform: uppercase;
+              @include body3-medium();
+
+              @include media('<=desktop') {
+                font-size: 10px;
+              }
+            }
+
+            .socialLinksContainer {
+              display: flex;
+              width: 100%;
+              justify-content: space-between;
+
+              a {
+                border-radius: 4rem;
+                padding: 1rem 2rem;
+                background: $yellow-primary-100;
+                display: grid;
+                place-items: center;
+
+                @include media('<=desktop') {
+                  img {
+                    height: 16.8px;
+                    width: 16.8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .isFlipped {
+        transform: rotateY(-180deg);
+      }
+    }
+
+    li:hover {
+      .flipFront {
+        --ImageBorder: white;
+        background-color: $core-yellow;
+      }
+    }
+
+    @include media('<1250px') {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+
+      li {
+        width: 100%;
+      }
+    }
+    @include media('<=tablet') {
+      grid-template-columns: 1fr;
+      justify-items: center;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  .loadBtn {
+    background: inherit;
+    @include body4-medium();
+    padding: 0.8rem 1.5rem;
+    border-radius: 2em;
+    margin: 3rem auto;
+    margin-bottom: 0;
+    color: black;
+    width: fit-content;
+    display: block;
+    border: 1px solid $grey-20;
+  }
+
+  @include media('<=tablet') {
+    padding: 40px 20px;
+  }
+}
