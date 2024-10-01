@@ -23,7 +23,7 @@ const FaqNavbar = () => {
   return (
     <nav className={`faq ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className='faq__logo'>
-        <Link href='/'>
+        <Link href='/faqs'>
           <Image
             src={'/images/svg/faq-devfest-logo.svg'}
             alt='DevFest Logo'
