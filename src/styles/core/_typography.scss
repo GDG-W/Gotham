@@ -77,6 +77,10 @@
 
 .text-3xl {
   @include text-3xl();
+  @include media('<=phone') {
+    font-size: 28px;
+    line-height: 30px;
+  }
 }
 
 .text-4xl {
