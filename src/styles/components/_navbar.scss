@@ -10,6 +10,30 @@
   z-index: 10;
   font-family: var(--font-geist-sans);
 
+  &.navbar-faq {
+    background-color: $yellow-primary-100;
+  }
+
+  &.faq-logo {
+  }
+
+  &.faq-links {
+    color: $background-dark;
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &.active {
+        background-color: $yellow-primary-50;
+        color: $grey-100;
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid #000;
+      }
+    }
+  }
+
   &__logo {
     display: flex;
     align-items: center;

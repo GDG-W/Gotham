@@ -17,16 +17,19 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (path: string) => pathname === path;
+  const isFaqPage = pathname === '/faqs';
 
-  const navbarClass = pathname === '/faqs' ? 'navbar navbar-faq' : 'navbar';
+  const navbarClass = isFaqPage ? 'navbar navbar-faq faq-links' : 'navbar';
+
+  const logoSrc = isFaqPage ? '/images/svg/devfest-logo.svg' : '/images/svg/devfest--logo.svg';
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <nav className={`${navbarClass} navbar ${isMenuOpen ? 'menu-open' : ''}`}>
-      <div className='navbar__logo'>
-        <Image src={'/images/svg/devfest--logo.svg'} alt='DevFest Logo' width={137} height={49} />
-      </div>
+      <Link href='/' className='navbar__logo'>
+        <Image src={logoSrc} alt='DevFest Logo' width={137} height={49} />
+      </Link>
 
       <div className='navbar__menu-icon' onClick={toggleMenu}>
         <Image
