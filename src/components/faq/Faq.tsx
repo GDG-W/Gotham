@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import FAQAccordion from './FaqAccordion';
-import Footer from '../home/Footer';
 import Community from './Community';
 
 const Faq = () => {
@@ -16,7 +15,6 @@ const Faq = () => {
 
       <FAQAccordion />
       <Community />
-      <Footer />
     </div>
   );
 };
