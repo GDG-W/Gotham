@@ -17,14 +17,18 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (path: string) => pathname === path;
-  const isFaqPage = pathname === '/faqs';
+  const isFaqOrSpeakersPage = pathname === '/faqs' || pathname === '/speakers';
 
-  const navbarClass = isFaqPage ? 'navbar navbar-faq faq-links' : 'navbar';
+  const navbarClass = isFaqOrSpeakersPage ? 'navbar navbar-faq faq-links' : 'navbar';
 
-  const logoSrc = isFaqPage ? '/images/svg/devfest-logo.svg' : '/images/svg/devfest--logo.svg';
+  const logoSrc = isFaqOrSpeakersPage
+    ? '/images/svg/devfest-logo.svg'
+    : '/images/svg/devfest--logo.svg';
 
-  const closeIcon = isFaqPage ? '/images/icons/close-icon.png' : '/images/icons/close-icon.svg';
-  const Menu = isFaqPage ? '/images/icons/faq-menu-icon.svg' : '/images/icons/menu.svg';
+  const closeIcon = isFaqOrSpeakersPage
+    ? '/images/icons/close-icon.png'
+    : '/images/icons/close-icon.svg';
+  const Menu = isFaqOrSpeakersPage ? '/images/icons/faq-menu-icon.svg' : '/images/icons/menu.svg';
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
