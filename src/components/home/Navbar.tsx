@@ -23,6 +23,9 @@ const Navbar = () => {
 
   const logoSrc = isFaqPage ? '/images/svg/devfest-logo.svg' : '/images/svg/devfest--logo.svg';
 
+  const closeIcon = isFaqPage ? '/images/icons/close-icon.png' : '/images/icons/close-icon.svg';
+  const Menu = isFaqPage ? '/images/icons/faq-menu-icon.svg' : '/images/icons/menu.svg';
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
@@ -33,7 +36,7 @@ const Navbar = () => {
 
       <div className='navbar__menu-icon' onClick={toggleMenu}>
         <Image
-          src={isMenuOpen ? '/images/icons/close-icon.svg' : '/images/icons/menu.svg'}
+          src={isMenuOpen ? `${closeIcon}` : `${Menu}`}
           alt={isMenuOpen ? 'Close Menu' : 'Open Menu'}
           width={30}
           height={30}
