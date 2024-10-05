@@ -5,10 +5,12 @@
   font-family: var(--font-generalSans);
 
   &__about {
+    padding-top: 75px;
     p {
-      max-width: 60%;
+      max-width: 65%;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
     }
   }
   &__header {
