@@ -18,10 +18,12 @@ const Navbar = () => {
 
   const isActive = (path: string) => pathname === path;
 
+  const navbarClass = pathname === '/faqs' ? 'navbar navbar-faq' : 'navbar';
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className={`navbar ${isMenuOpen ? 'menu-open' : ''}`}>
+    <nav className={`${navbarClass} navbar ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className='navbar__logo'>
         <Image src={'/images/svg/devfest--logo.svg'} alt='DevFest Logo' width={137} height={49} />
       </div>
