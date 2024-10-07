@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 import { GeistSans } from 'geist/font/sans';
 import '../styles/index.scss';
 import { Metadata } from 'next';
+import Footer from '@/components/home/Footer';
 
 export const metadata: Metadata = {
   title: 'DevFest 2024 | Coming Soon',
@@ -45,8 +46,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ReactQueryProvider>
           {/* Your layout content, including header, main content, footer, etc goes here. */}
-
           {children}
+          <Footer />
         </ReactQueryProvider>
       </body>
       <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />

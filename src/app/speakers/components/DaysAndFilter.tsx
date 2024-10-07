@@ -33,13 +33,13 @@ const DaysAndFilter = () => {
           onClick={() => handleDays('friday')}
           className={`${styles.dayBtn} ${selectedDay === 'friday' ? styles.activeDayBtn : ''}`}
         >
-          <p>Day 1 - Friday, Nov 15</p>
+          <p>Day 1 - Friday</p>
         </button>
         <button
           onClick={() => handleDays('saturday')}
           className={`${styles.dayBtn} ${selectedDay === 'saturday' ? styles.activeDayBtn : ''}`}
         >
-          <p>Day 2 - Saturday, Nov 16</p>
+          <p>Day 2 - Saturday</p>
         </button>
       </div>
       <div className={styles.FilterBtnsContainer}>

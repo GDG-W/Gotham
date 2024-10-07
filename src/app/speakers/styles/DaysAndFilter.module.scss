@@ -33,12 +33,12 @@
 
       @include media('<=tablet') {
         @include body3-medium();
-        padding: 1rem;
+        padding: 1rem 2rem;
       }
 
       @include media('<=400px') {
         @include body4-medium();
-        padding: 0.8rem;
+        padding: 0.8rem 1.5rem;
       }
     }
     .activeDayBtn {
