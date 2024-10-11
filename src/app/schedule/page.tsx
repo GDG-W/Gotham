@@ -29,7 +29,7 @@ const SchedulePage = () => {
           height={82}
           className={`${styles['top-left']} responsive-image`}
         />
-        <h1 className='text-7xl'>Explore our very demure schedule</h1>
+        <h1 className='text-7xl'>Explore Our Very Demure Schedule</h1>
         <Image
           src='/images/svg/path.svg'
           alt='hash'
@@ -47,7 +47,7 @@ const SchedulePage = () => {
           externalStyles={styles.ctaButton}
           onClick={() => handleDayClick('friday')}
         >
-          Day 1 - Friday, Nov 15
+          Day 1 - Friday
         </Button>
         <Button
           backgroundColor={currentSchedule === saturdayScheduleData ? '#F9AB00' : 'transparent'}
@@ -56,7 +56,7 @@ const SchedulePage = () => {
           externalStyles={styles.ctaButton}
           onClick={() => handleDayClick('saturday')}
         >
-          Day 2 - Saturday, Nov 16
+          Day 2 - Saturday
         </Button>
       </div>
 

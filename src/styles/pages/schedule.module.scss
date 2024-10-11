@@ -77,8 +77,9 @@
     width: 100%;
 
     @include media('<=phone') {
-      width: 90%;
+      width: 95%;
       margin-top: 0rem;
+      gap: 0.5rem;
     }
 
     @include media('<=tablet') {
