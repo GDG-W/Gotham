@@ -87,7 +87,7 @@
             left: 1rem;
             background: transparent;
             box-shadow: 0px 8px 32px 4px rgba(0, 0, 0, 0.32);
-            z-index: 10;
+            // z-index: 10;
             background: white;
             display: grid;
             place-items: center;
@@ -109,7 +109,7 @@
             justify-content: space-between;
             bottom: 0;
             padding: 1rem;
-            z-index: 10;
+            // z-index: 10;
 
             a {
               background: $background-light;
