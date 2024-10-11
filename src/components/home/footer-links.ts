@@ -19,7 +19,7 @@ export const footerLinks = [
 
 export const footerLinks2 = [
   {
-    href: '/venue-info',
+    href: 'https://maps.app.goo.gl/t2Y9ffC78hoAYXA8A',
     title: 'Venue Information',
   },
   {
