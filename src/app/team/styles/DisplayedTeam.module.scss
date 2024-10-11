@@ -20,5 +20,6 @@
   }
   @include media('<=500px') {
     padding: 0 1rem;
+    padding-bottom: 10rem;
   }
 }
