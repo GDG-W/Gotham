@@ -186,6 +186,7 @@
 
             .flipBackImage {
               border-radius: 50%;
+              filter: opacity(100%) saturate(10%) sepia(40%) saturate(1.5);
             }
           }
         }
