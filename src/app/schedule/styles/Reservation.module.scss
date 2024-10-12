@@ -35,7 +35,7 @@
     z-index: 1;
 
     @include media('<=phone') {
-      gap: 1rem;
+      gap: 0.5rem;
     }
 
     .btnContent {
