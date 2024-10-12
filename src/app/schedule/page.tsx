@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from '../styles/Schedule.module.scss';
+import styles from '@/stlyles/pages/schedule.module.scss';
 import Image from 'next/image';
 import { Button } from './components/button';
 import ScheduleItem from './components/scheduleData';
