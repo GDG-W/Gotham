@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from '@/stlyles/pages/schedule.module.scss';
+import styles from './styles/schedule.module.scss';
 import Image from 'next/image';
 import { Button } from './components/button';
 import ScheduleItem from './components/scheduleData';
-import { scheduleData, saturdayScheduleData } from '@/app/schedule/mock/schedule';
+import { scheduleData, saturdayScheduleData } from './mock/schedule';
 import Reservation from './components/reservation';
 
 const SchedulePage = () => {
@@ -20,8 +20,8 @@ const SchedulePage = () => {
   };
 
   return (
-    <main className={`${styles}.scheduleContainer`}>
-      <div className={`${styles}.container`}>
+    <main className={`${styles.scheduleContainer}`}>
+      <div className={`${styles.container}`}>
         <Image
           src='/images/svg/blue_arrow.svg'
           alt='arrow'
@@ -29,7 +29,7 @@ const SchedulePage = () => {
           height={82}
           className={`${styles['top-left']} responsive-image`}
         />
-        <h1 className='text-6xl'>Explore Our Very Demure Schedule</h1>
+        <h1 className=''>Explore our very demure schedule</h1>
         <Image
           src='/images/svg/path.svg'
           alt='hash'
@@ -39,12 +39,12 @@ const SchedulePage = () => {
         />
       </div>
 
-      <div className={`${styles}['cta-button-container']`}>
+      <div className={`${styles['cta-button-container']}`}>
         <Button
           backgroundColor={currentSchedule === scheduleData ? '#F9AB00' : 'transparent'}
           textColor='#000000'
           borderColor='#000000'
-          externalStyles={`${styles}.ctaButton`}
+          externalStyles={`${styles.ctaButton}`}
           onClick={() => handleDayClick('friday')}
         >
           Day 1 - Friday
@@ -53,14 +53,14 @@ const SchedulePage = () => {
           backgroundColor={currentSchedule === saturdayScheduleData ? '#F9AB00' : 'transparent'}
           borderColor='#000000'
           textColor='#000000'
-          externalStyles={`${styles}.ctaButton`}
+          externalStyles={`${styles.ctaButton}`}
           onClick={() => handleDayClick('saturday')}
         >
           Day 2 - Saturday
         </Button>
       </div>
 
-      <div className={`${styles}.scheduleItemsContainer`}>
+      <div className={`${styles.scheduleItemsContainer}`}>
         {currentSchedule.map((item, index) => (
           <ScheduleItem key={index} {...item} isLastItem={index === currentSchedule.length - 1} />
         ))}

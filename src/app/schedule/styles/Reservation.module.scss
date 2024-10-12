@@ -16,6 +16,7 @@
 
   @include media('<=phone') {
     flex-direction: row;
+    min-height: 400px;
     gap: 0;
   }
 
@@ -28,7 +29,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     width: 90%;
     max-width: 328px;
     text-align: center;
@@ -48,6 +49,7 @@
 
     p {
       font-size: 0.9rem;
+      font-weight: lighter;
     }
 
     .download {
@@ -56,6 +58,8 @@
       gap: 8px;
       align-items: center;
       justify-content: center;
+      border: none;
+      margin-top: 3px;
     }
   }
 
