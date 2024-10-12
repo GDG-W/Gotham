@@ -1,4 +1,4 @@
-@import 'utils/breakpoints';
+@import '/src/styles/utils/breakpoints';
 
 .scheduleContainer {
   min-height: 100vh;
@@ -12,6 +12,10 @@
   flex-direction: column;
   gap: 5rem;
   padding-top: 12rem;
+
+  h1 {
+    width: 1100px;
+  }
 
   @include media('<=phone') {
     padding-top: 6rem;
