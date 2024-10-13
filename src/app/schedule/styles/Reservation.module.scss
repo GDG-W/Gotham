@@ -95,7 +95,7 @@
       bottom: 0;
     }
 
-    @include media('<=largeTablet') {
+    @include media('<=1024px') {
       left: 2%;
       width: 20%;
       transform: translateY(50%);
@@ -116,7 +116,7 @@
       width: 25%;
     }
 
-    @include media('<=largeTablet') {
+    @include media('<=1024px') {
       right: 2%;
       width: 20%;
     }
