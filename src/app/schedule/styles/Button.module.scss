@@ -1,0 +1,27 @@
+@import '/src/styles/utils/breakpoints';
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.default {
+    color: white;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 2px solid;
+  }
+
+  @include media('<=phone') {
+    font-size: 10px;
+  }
+}
