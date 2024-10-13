@@ -1,0 +1,25 @@
+@import '/src/styles/core/variables';
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
+
+.TeamWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  background: $yellow-primary-100;
+  column-gap: 1.4rem;
+  row-gap: 3.63rem;
+  padding: 0 2.5rem;
+  padding-bottom: 22.6rem;
+
+  @include media('<1200px') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media('<=tablet') {
+    grid-template-columns: 1fr;
+  }
+  @include media('<=500px') {
+    padding: 0 1rem;
+    padding-bottom: 10rem;
+  }
+}
