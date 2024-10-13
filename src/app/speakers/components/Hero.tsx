@@ -54,7 +54,7 @@ const Hero = () => {
           className={styles.yellowHashtag}
         />
       </div>
-      {/* DISPLAY VERTICAL OR HORIZONTAL SLIDERS BASED ON SCREEN WIDTH */}
+      {/* DISPLAY VERTICAL OR HORIZONTAL SLIDERS BASED ON SCREEN WIDTHH */}
       {screenWidth > 768 ? (
         // Vertical React fast Marquee is buggy. Hence a manual implementation...
         <div
