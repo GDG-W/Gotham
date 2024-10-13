@@ -1,3 +1,5 @@
+@import '/src/styles/utils/breakpoints';
+
 // NEW MIXINS
 @mixin font($size, $weight, $lineHeight: null) {
   font-size: $size;
@@ -192,6 +194,11 @@
   line-height: 90px;
 }
 
+@mixin text-7xl {
+  font-size: 128px;
+  line-height: 120px;
+}
+
 .text-sm {
   @include text-sm();
 }
@@ -218,6 +225,10 @@
 
 .text-3xl {
   @include text-3xl();
+  @include media('<=phone') {
+    font-size: 28px;
+    line-height: 30px;
+  }
 }
 
 .text-4xl {
@@ -237,5 +248,18 @@
 
   @include media('<=tablet') {
     @include text-2xl();
+  }
+}
+
+.text-7xl {
+  @include text-7xl();
+
+  @include media('<=tablet') {
+    @include text-6xl();
+  }
+
+  @include media('<=phone') {
+    font-size: 39px;
+    line-height: 40px;
   }
 }

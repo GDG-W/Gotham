@@ -1,0 +1,127 @@
+@import '/src/styles/utils/breakpoints';
+
+.scheduleContainer {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--dv-light-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding-top: 7rem;
+
+  @include media('<=phone') {
+    padding-top: 3rem;
+  }
+
+  .container {
+    display: flex;
+    position: relative;
+    width: 70%;
+    text-align: center;
+
+    h1 {
+      font-size: 80px;
+      line-height: 1.3;
+    }
+
+    @include media('<=phone') {
+      width: 75%;
+
+      h1 {
+        font-size: 45px;
+      }
+    }
+
+    .top-left {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 65px;
+      height: 75px;
+
+      @include media('<=tablet') {
+        width: 60px;
+        height: auto;
+      }
+
+      @include media('<=phone') {
+        width: 30px;
+        height: auto;
+        top: 0;
+        left: -1.5rem;
+      }
+    }
+
+    .bottom-right {
+      position: absolute;
+      bottom: -4.5rem;
+      right: 5rem;
+      width: 107px;
+      height: 107px;
+
+      @include media('<=tablet') {
+        width: 85px;
+        height: auto;
+      }
+
+      @include media('<=phone') {
+        width: 50px;
+        height: auto;
+        bottom: -2.5rem;
+        right: 0rem;
+      }
+    }
+  }
+
+  .cta-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    width: 90%;
+
+    @include media('<=phone') {
+      width: 85%;
+      margin-top: 0rem;
+      gap: 0.5rem;
+    }
+
+    @include media('<=tablet') {
+      width: 80%;
+    }
+  }
+
+  .ctaButton {
+    padding: 16px 24px;
+    width: 30%;
+
+    @include media('<=phone') {
+      width: 50%;
+      padding: 12px 8px;
+      font-size: 0.65rem;
+    }
+
+    @include media('<=tablet') {
+      width: 60%;
+    }
+  }
+
+  .scheduleItemsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin: 3rem 0;
+
+    @include media('<=phone') {
+      margin: 0;
+      width: 90%;
+    }
+  }
+}
