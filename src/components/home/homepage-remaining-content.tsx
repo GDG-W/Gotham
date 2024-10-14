@@ -12,6 +12,7 @@ import DownloadIcon from '@/assets/icons/download.svg';
 import FAQs from '@/components/shared/FAQS';
 import stayUpdated from '@/assets/images/stay-updated.png';
 import generateDp from '@/assets/images/generate-dp.png';
+import Footer from '@/components/home/Footer';
 
 /**
  * Only the first three sections of the homepage are being deployed in the initial release
@@ -135,6 +136,7 @@ const HomepageRemainingContent = () => {
           </button>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

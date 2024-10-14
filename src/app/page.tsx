@@ -8,7 +8,6 @@ import GalleryIcon from '@/assets/icons/gallery.svg';
 import ticketImage from '@/assets/images/ticket.png';
 import throwbackImage from '@/assets/images/homepage-throwback.png';
 import homeHero from '@/assets/images/home-hero.png';
-import Footer from '@/components/home/Footer';
 
 const Ticket = ({ className = '' }: { className?: string }) => (
   <div className={`ticket ${className}`}>
@@ -165,8 +164,6 @@ const Homepage = () => {
           </a>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
