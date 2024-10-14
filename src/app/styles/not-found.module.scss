@@ -1,0 +1,54 @@
+@import '/src/styles/utils/breakpoints';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff6e0;
+  padding: 8rem 0;
+
+  @include media('<=phone') {
+    padding: 4rem 0;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  h2 {
+    max-width: 560px;
+    text-align: center;
+    font-size: 28px;
+
+    @include media('<=phone') {
+      font-size: 20px;
+    }
+  }
+
+  .nfcta {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .ctaButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: row;
+
+    @include media('<=phone') {
+      font-size: 0.65rem;
+    }
+
+    @include media('<=tablet') {
+      font-size: 0.65rem;
+    }
+  }
+}
