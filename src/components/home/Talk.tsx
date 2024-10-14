@@ -9,9 +9,18 @@ type Props = {
   title: string;
   description: string;
   hideLine?: boolean;
-}
+};
 
-const Talk = ({ speakerImage, speakerName, description, endTime, startTime, room, title, hideLine }: Props) => {
+const Talk = ({
+  speakerImage,
+  speakerName,
+  description,
+  endTime,
+  startTime,
+  room,
+  title,
+  hideLine,
+}: Props) => {
   return (
     <div className='talk'>
       <div className='talk__side'>

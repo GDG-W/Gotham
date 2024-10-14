@@ -1,58 +1,58 @@
-.talk{
+.talk {
   display: flex;
   column-gap: 28px;
   margin-bottom: 16px;
 
-  &__side{
+  &__side {
     display: flex;
     flex-direction: column;
   }
 
-  &__time{
+  &__time {
     @include header-h5;
     color: $grey-50;
     padding-top: 8px;
   }
 
-  &__timeline{
+  &__timeline {
     width: 2px;
     background: $grey-50;
     margin: 0 auto;
     flex-grow: 1;
   }
 
-  &__details{
+  &__details {
     display: flex;
     align-items: center;
     column-gap: 12px;
     margin-bottom: 12px;
   }
 
-  %pill{
+  %pill {
     padding: 12px 28px;
     border: 1px solid $grey-20;
     @include body4-medium;
     border-radius: 32px;
   }
 
-  &__room{
+  &__room {
     @extend %pill;
     color: $background-dark;
   }
 
-  &__speaker{
+  &__speaker {
     @extend %pill;
     background: $core-green;
     color: $background-light;
   }
 
-  &__content{
+  &__content {
     display: flex;
     align-items: flex-start;
     padding-bottom: 24px;
   }
 
-  &__image{
+  &__image {
     border-radius: 8px;
     border: 1px solid $background-dark;
     overflow: hidden;
@@ -61,15 +61,15 @@
     margin-right: 12px;
   }
 
-  &__title{
+  &__title {
     @include header-h5;
     color: $grey-50;
     margin-bottom: 12px;
     max-width: 420px;
   }
 
-  &__description{
-   @include body2-medium;
+  &__description {
+    @include body2-medium;
     color: $grey-50;
     max-width: 556px;
   }

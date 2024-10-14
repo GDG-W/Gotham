@@ -1,23 +1,23 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import TicketIcon from '@/assets/icons/ticket.svg'
-import DownloadIcon from '@/assets/icons/download.svg'
-import TicketQrIcon from '@/assets/icons/ticket-qr.svg'
-import VideoIcon from '@/assets/icons/video.svg'
-import GalleryIcon from '@/assets/icons/gallery.svg'
-import ticketImage from '@/assets/images/ticket.png'
-import appMockup1 from '@/assets/images/app-mockup-1.png'
-import appMockup2 from '@/assets/images/app-mockup-2.png'
-import PopoutLeft from '@/assets/icons/pill-popout-left.svg'
-import PopoutRight from '@/assets/icons/pill-popout-right.svg'
-import throwbackImage from '@/assets/images/homepage-throwback.png'
-import homeHero from '@/assets/images/home-hero.png'
-import ArrowLeft from '@/assets/icons/arrow-left.svg'
-import ArrowRight from '@/assets/icons/arrow-right.svg'
-import Speakers from '@/assets/icons/speakers.svg'
-import stayUpdated from '@/assets/images/stay-updated.png'
-import generateDp from '@/assets/images/generate-dp.png'
+import TicketIcon from '@/assets/icons/ticket.svg';
+import DownloadIcon from '@/assets/icons/download.svg';
+import TicketQrIcon from '@/assets/icons/ticket-qr.svg';
+import VideoIcon from '@/assets/icons/video.svg';
+import GalleryIcon from '@/assets/icons/gallery.svg';
+import ticketImage from '@/assets/images/ticket.png';
+import appMockup1 from '@/assets/images/app-mockup-1.png';
+import appMockup2 from '@/assets/images/app-mockup-2.png';
+import PopoutLeft from '@/assets/icons/pill-popout-left.svg';
+import PopoutRight from '@/assets/icons/pill-popout-right.svg';
+import throwbackImage from '@/assets/images/homepage-throwback.png';
+import homeHero from '@/assets/images/home-hero.png';
+import ArrowLeft from '@/assets/icons/arrow-left.svg';
+import ArrowRight from '@/assets/icons/arrow-right.svg';
+import Speakers from '@/assets/icons/speakers.svg';
+import stayUpdated from '@/assets/images/stay-updated.png';
+import generateDp from '@/assets/images/generate-dp.png';
 import Talk from '@/components/home/Talk';
 import Footer from '@/components/home/Footer';
 import FAQs from '@/components/shared/FAQS';
@@ -139,7 +139,7 @@ const Homepage = () => {
         />
         <div className='throwback__pill'>THROWBACK</div>
         <h3 className='throwback__title'>
-          Throwback to DevFest Lagos '23: Vibes and Tech All the Way
+          Throwback to DevFest Lagos &apos;23: Vibes and Tech All the Way
         </h3>
         <p className='throwback__description'>
           Remember the energy? The pictures, the jollof, the pure tech vibes? Last year, we turned
@@ -200,6 +200,7 @@ const Homepage = () => {
         </div>
         {Array.from({ length: 6 }).map((_, index) => (
           <Talk
+            key={index}
             startTime='1:50PM'
             endTime='2:30PM'
             room='ROOM 2'
@@ -249,7 +250,7 @@ const Homepage = () => {
             Lagos community is up to.
           </p>
           <button className='gdg-lagos__download-app'>
-            Let's go
+            Let&apos;s go
             <ArrowRight />
           </button>
         </div>

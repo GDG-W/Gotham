@@ -2,6 +2,7 @@ import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js';
+import tsParser from '@typescript-eslint/parser';
 
 /** @type {import('eslint').Linter.Config} */
 
@@ -16,7 +17,7 @@ export default [
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
-      parser: require('@typescript-eslint/parser'),
+      parser: tsParser,
       parserOptions: {
         project: './tsconfig.json',
         ecmaVersion: 2020,
