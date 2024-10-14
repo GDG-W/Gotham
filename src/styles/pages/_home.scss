@@ -12,6 +12,11 @@
   column-gap: 8px;
   border-radius: 32px;
   border: none;
+  text-decoration: none;
+
+  @include media('<=tablet') {
+    @include body3-medium;
+  }
 }
 
 %button-primary {
@@ -36,7 +41,11 @@
     align-items: center;
     width: 100%;
     position: relative;
-    padding-top: 100px;
+    padding: 100px 20px 40px;
+
+    @include media('<=tablet') {
+      min-height: 70vh;
+    }
 
     &__overlay {
       background: $overlay;
@@ -52,6 +61,11 @@
       width: 100%;
       height: 100%;
       z-index: -1;
+
+      @include media('<=tablet') {
+        width: 300% !important;
+        left: -100% !important;
+      }
     }
 
     &__presents {
@@ -61,17 +75,25 @@
       border-radius: 32px;
       @include body4-medium;
       margin-bottom: 32px;
+
+      @include media('<=tablet') {
+        @include body5-medium;
+        margin-bottom: 24px;
+      }
     }
 
     &__title {
       font-size: 184px;
-      line-height: 80%;
+      line-height: 90%;
       font-weight: 600;
-      letter-spacing: -3%;
       color: $yellow-primary-100;
       max-width: 88%;
       text-align: center;
       margin-bottom: 32px;
+
+      @include media('<=tablet') {
+        @include header-h1;
+      }
     }
 
     &__buttons {
@@ -98,6 +120,9 @@
       padding: 0 80px;
       justify-content: center;
       width: 100%;
+      @include media('<=tablet') {
+        display: none;
+      }
     }
 
     &__details-divider {
@@ -140,8 +165,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 72px;
-    padding-bottom: 126px;
+    padding: 72px 20px 126px;
+
+    @include media('<=tablet') {
+      padding-bottom: 0;
+    }
 
     &__pill {
       padding: 12px 26px;
@@ -150,6 +178,11 @@
       color: $background-dark;
       @include body4-medium;
       margin-bottom: 8px;
+
+      @include media('<=tablet') {
+        @include body5-medium;
+        margin-bottom: 16px;
+      }
     }
 
     &__title {
@@ -158,6 +191,11 @@
       max-width: 656px;
       margin-bottom: 16px;
       text-align: center;
+
+      @include media('<=tablet') {
+        @include header-h6;
+        margin-bottom: 8px;
+      }
     }
 
     &__description {
@@ -166,6 +204,12 @@
       max-width: 656px;
       text-align: center;
       margin-bottom: 24px;
+
+      @include media('<=tablet') {
+        @include body3-medium;
+        margin-bottom: 12px;
+        max-width: 320px;
+      }
     }
 
     &__get-tickets {
@@ -176,6 +220,7 @@
 
     .ticket-group-wrapper {
       position: relative;
+      margin-top: -120px;
     }
 
     .ticket {
@@ -187,15 +232,29 @@
       z-index: 2;
       position: relative;
 
+      --transform-scale: 0.5;
+
+      @include media('<=tablet') {
+        transform: scale(var(--transform-scale));
+      }
+
       &.tilt-left {
         position: absolute;
         transform: rotate(-22deg) translate(-210px, -58px);
+
+        @include media('<=tablet') {
+          transform: rotate(-22deg) translate(-100px, -38px) scale(var(--transform-scale));
+        }
       }
 
       &.tilt-right {
         position: absolute;
         transform: rotate(10deg) translate(240px, -10px);
         z-index: 3;
+
+        @include media('<=tablet') {
+          transform: rotate(14deg) translate(120px, -30px) scale(var(--transform-scale));
+        }
       }
 
       &__top-image-wrapper {
@@ -275,6 +334,11 @@
     position: relative;
     width: 100vw;
 
+    @include media('<=tablet') {
+      height: unset;
+      padding: 40px 20px;
+    }
+
     &__bg-image {
       position: absolute;
       top: 0;
@@ -290,6 +354,11 @@
       border-radius: 32px;
       @include body4-medium;
       margin-bottom: 8px;
+
+      @include media('<=tablet') {
+        @include body5-medium;
+        margin-bottom: 24px;
+      }
     }
 
     &__title {
@@ -298,6 +367,11 @@
       margin-bottom: 16px;
       max-width: 920px;
       text-align: center;
+
+      @include media('<=tablet') {
+        @include header-h6;
+        margin-bottom: 12px;
+      }
     }
 
     &__description {
@@ -306,18 +380,32 @@
       color: $background-light;
       max-width: 560px;
       text-align: center;
+
+      @include media('<=tablet') {
+        @include body3-regular;
+        margin-bottom: 20px;
+      }
     }
 
     &__buttons {
       display: flex;
       align-items: center;
       column-gap: 16px;
+
+      @include media('<=tablet') {
+        row-gap: 16px;
+        flex-direction: column;
+      }
     }
 
     &__highlights {
       @extend %button-primary;
       padding-left: 32px;
       padding-right: 32px;
+
+      @include media('<=tablet') {
+        width: 100%;
+      }
     }
 
     &__photos {
@@ -495,6 +583,7 @@
       top: 0;
       left: 0;
     }
+
     &__popout-right {
       position: absolute;
       bottom: 0;
@@ -625,6 +714,7 @@
       flex-direction: column;
       align-items: center;
     }
+
     &__pill {
       padding: 12px 26px;
       border-radius: 32px;
