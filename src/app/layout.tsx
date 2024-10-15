@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'DevFest Lagos 2024',
   description: 'The Biggest Tech Festival in Nigeria',
   keywords: 'devfest, devfest lagos, coming soon, date, venue',
-  metadataBase: new URL('https://devfestlagos.com/'), // synonymous to the base URL
+  metadataBase: new URL('https://deploy-preview-42--devfestlagos.netlify.app/'), // synonymous to the base URL
 };
 
 const GeneralSans = localFont({
