@@ -9,10 +9,10 @@ import { Metadata } from 'next';
 // import Footer from '@/components/home/Footer';
 
 export const metadata: Metadata = {
-  title: 'DevFest 2024 | Coming Soon',
+  title: 'DevFest 2024',
   description: 'The Biggest Tech Festival in Nigeria',
   keywords: 'devfest, devfest lagos, coming soon, date, venue',
-  metadataBase: new URL('https://devfest-coming-soon.vercel.app/'), // synonymous to the base URL
+  metadataBase: new URL('https://devfestlagos.com/'), // synonymous to the base URL
 };
 
 const GeneralSans = localFont({
