@@ -232,7 +232,7 @@
         width: 100%;
       }
     }
-    @include media('<=tablet') {
+    @include media('<=850px') {
       grid-template-columns: 1fr;
       justify-items: center;
 
