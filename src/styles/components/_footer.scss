@@ -112,7 +112,8 @@
     }
 
     &__logo {
-      padding: 10px;
+      padding-top: 1rem;
+      padding-left: 0.8rem;
       p {
         font-size: 40px;
       }
@@ -174,6 +175,7 @@
       justify-content: flex-start;
     }
     &__logo {
+      padding-top: 1rem;
       padding: 0;
 
       p {
