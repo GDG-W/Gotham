@@ -6,13 +6,13 @@ export const mockData: FAQData = {
       id: 1,
       question: '1. So, what is DevFest Lagos 2024?',
       answer:
-        'DevFest Lagos 2023 is a community-led developer event hosted by Google Developer Groups Lagos. It features talks, workshops, and networking opportunities focused on Google technologies and beyond.',
+        'DevFest Lagos 2024 is a community-led developer event hosted by Google Developer Groups Lagos. It features talks, workshops, and networking opportunities focused on Google technologies and beyond.',
     },
     {
       id: 2,
       question: '2. When and where is DevFest Lagos 2024 taking place?',
       answer:
-        'DevFest Lagos 2023 will be held on November 15th and 16th, 2024, starting at 9:00 AM each day. The venue is Landmark, Oniru, Lagos.',
+        'DevFest Lagos 2024 will be held on November 15th and 16th, 2024, starting at 9:00 AM each day. The venue is Landmark, Oniru, Lagos.',
     },
     {
       id: 3,

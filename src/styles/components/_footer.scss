@@ -3,6 +3,7 @@
   color: #ffffff;
   padding: 2rem 1rem;
   font-family: var(--font-generalSans);
+  width: 100%;
 
   &__about {
     padding-top: 75px;
@@ -51,6 +52,7 @@
   &__socials {
     height: 40px;
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
   }
 
@@ -60,6 +62,8 @@
   }
   &__icon {
     color: $grey-100;
+    display: flex;
+    justify-content: center;
     background: $grey-30;
     border-radius: 50%;
   }
@@ -83,7 +87,7 @@
   @media (max-width: 1024px) {
     &__about {
       p {
-        max-width: 80%;
+        max-width: 90%;
         margin-left: auto;
         margin-right: auto;
       }
@@ -129,7 +133,7 @@
   }
 
   //Mobile styles
-  @media (max-width: 769px) {
+  @media (max-width: 760px) {
     &__about {
       p {
         max-width: 90%;
