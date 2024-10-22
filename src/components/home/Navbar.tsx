@@ -5,38 +5,52 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const navLinks = [
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+const navLinks: NavLink[] = [
   { href: '/speakers', label: 'Speakers' },
   { href: '/schedule', label: 'Schedule' },
   { href: '/team', label: 'Team' },
   { href: '/faqs', label: 'FAQs' },
 ];
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const isActive = (path: string) => pathname === path;
-  const isFaqPage = pathname === '/faqs';
+  const isActive = (path: string): boolean => pathname === path;
+  const notHomePage: boolean = navLinks.some((link) => link.href === pathname);
 
-  const navbarClass = isFaqPage ? 'navbar navbar-faq faq-links' : 'navbar';
+  const getNavbarClass = (): string => {
+    const baseClass = 'navbar';
+    const pageSpecificClass = navLinks.find((link) => link.href === pathname)?.label.toLowerCase();
+    return pageSpecificClass ? `${baseClass} navbar-links ${pageSpecificClass}-link` : baseClass;
+  };
 
-  const logoSrc = isFaqPage ? '/images/svg/devfest-logo.svg' : '/images/svg/devfest--logo.svg';
+  const logoSrc: string = notHomePage
+    ? '/images/svg/devfest-logo.svg'
+    : '/images/svg/devfest--logo.svg';
+  const menuIcon: string = notHomePage
+    ? '/images/icons/faq-menu-icon.svg'
+    : '/images/icons/menu.svg';
+  const closeIcon: string = notHomePage
+    ? '/images/icons/close-icon.png'
+    : '/images/icons/close-icon.svg';
 
-  const closeIcon = isFaqPage ? '/images/icons/close-icon.png' : '/images/icons/close-icon.svg';
-  const Menu = isFaqPage ? '/images/icons/faq-menu-icon.svg' : '/images/icons/menu.svg';
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = (): void => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className={`${navbarClass} navbar ${isMenuOpen ? 'menu-open' : ''}`}>
+    <nav className={`${getNavbarClass()} ${isMenuOpen ? 'menu-open' : ''}`}>
       <Link href='/' className='navbar__logo'>
         <Image src={logoSrc} alt='DevFest Logo' width={137} height={49} />
       </Link>
 
       <div className='navbar__menu-icon' onClick={toggleMenu}>
         <Image
-          src={isMenuOpen ? `${closeIcon}` : `${Menu}`}
+          src={isMenuOpen ? closeIcon : menuIcon}
           alt={isMenuOpen ? 'Close Menu' : 'Open Menu'}
           width={30}
           height={30}
@@ -57,7 +71,7 @@ const Navbar = () => {
         </Link>
         <Image
           className='navbar__tickets-btn__icon'
-          src={'/images/icons/ticket.svg'}
+          src='/images/icons/ticket.svg'
           alt='Ticket'
           width={24}
           height={24}

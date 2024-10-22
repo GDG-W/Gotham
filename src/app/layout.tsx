@@ -5,12 +5,14 @@ import localFont from 'next/font/local';
 import { GeistSans } from 'geist/font/sans';
 import '../styles/index.scss';
 import { Metadata } from 'next';
+// import Navbar from '@/components/home/Navbar';
+// import Footer from '@/components/home/Footer';
 
 export const metadata: Metadata = {
-  title: 'DevFest 2024 | Coming Soon',
+  title: 'DevFest Lagos 2024',
   description: 'The Biggest Tech Festival in Nigeria',
   keywords: 'devfest, devfest lagos, coming soon, date, venue',
-  metadataBase: new URL('https://devfest-coming-soon.vercel.app/'), // synonymous to the base URL
+  metadataBase: new URL('https://deploy-preview-42--devfestlagos.netlify.app/'), // synonymous to the base URL
 };
 
 const GeneralSans = localFont({
@@ -45,8 +47,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ReactQueryProvider>
           {/* Your layout content, including header, main content, footer, etc goes here. */}
-
+          {/* <Navbar /> */}
           {children}
+          {/* <Footer /> */}
         </ReactQueryProvider>
       </body>
       <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
