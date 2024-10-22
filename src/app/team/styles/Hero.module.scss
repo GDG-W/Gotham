@@ -1,0 +1,102 @@
+@import '/src/styles/core/variables';
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
+
+.HeroWrapper {
+  padding: 5rem 17.6rem;
+  background: $yellow-primary-100;
+
+  h2 {
+    font-size: 11.5rem;
+    line-height: 8.6rem;
+    color: black;
+    text-align: center;
+
+    @include media('<=1200px') {
+      font-size: 10rem;
+    }
+
+    @include media('<=900px') {
+      font-size: 8rem;
+      line-height: 7rem;
+    }
+    @include media('<=tablet') {
+      font-size: 7rem;
+      line-height: 6rem;
+    }
+    @include media('<=500px') {
+      font-size: 5rem;
+      line-height: 4rem;
+    }
+  }
+
+  .creativeGroup {
+    margin: auto;
+    margin-top: -2.5rem;
+    position: relative;
+    width: 350px;
+
+    .imageCards {
+      position: relative;
+      margin: auto;
+      width: fit-content;
+
+      svg {
+        position: relative;
+        z-index: 10;
+      }
+
+      .mobileGroupCards {
+        display: none;
+      }
+
+      @include media('<=tablet') {
+        .mobileGroupCards {
+          display: block;
+          margin: auto;
+        }
+        .desktopGroupCards {
+          display: none;
+        }
+      }
+    }
+
+    .FoomayCursor,
+    .AiCursor,
+    .TtaCursor {
+      position: absolute;
+      z-index: 20;
+      top: 0;
+      left: 0;
+      transition: all 0.5s ease;
+
+      .mobileIcon {
+        display: none;
+      }
+
+      @include media('<=tablet') {
+        .mobileIcon {
+          display: block;
+        }
+
+        .desktopIcon {
+          display: none;
+        }
+      }
+    }
+
+    @include media('<=tablet') {
+      width: 389px;
+      margin-top: -1rem;
+      max-width: calc(100vw - 6rem);
+    }
+  }
+
+  @include media('<1380px') {
+    padding: 5rem 0rem;
+  }
+
+  @include media('<=phone') {
+    padding: 5rem 2.5rem;
+  }
+}
