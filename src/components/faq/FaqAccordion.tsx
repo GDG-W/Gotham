@@ -49,14 +49,20 @@ const FAQAccordion: React.FC = () => {
         {mockData[activeCategory].map((item) => (
           <div key={item.id} className={`faqs-item ${openItems[item.id] ? 'open' : ''}`}>
             <button className='faqs-question' onClick={() => toggleItem(item.id)}>
-              {item.question}
+              <div className='items'>
+                {item.id + 1}. <span>{item.question}</span>
+              </div>
               {openItems[item.id] ? (
                 <ChevronUp className='chevron-icon' />
               ) : (
                 <ChevronDown className='chevron-icon' />
               )}
             </button>
-            {openItems[item.id] && <div className='faqs-answer'>{item.answer}</div>}
+            {openItems[item.id] && (
+              <div className='faqs-answer'>
+                <p>{item.answer}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
