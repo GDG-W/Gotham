@@ -3,436 +3,751 @@
   background-color: var(--dv-light-yellow);
 }
 
+%button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  @include body2-medium;
+  column-gap: 8px;
+  border-radius: 32px;
+  border: none;
+  text-decoration: none;
+
+  @include media('<=tablet') {
+    @include body3-medium;
+  }
+}
+
+%button-primary {
+  @extend %button;
+  background: $core-yellow;
+}
+
+%button-secondary {
+  @extend %button;
+  background: transparent;
+  border: 1px solid $yellow-primary-100;
+  color: $background-light;
+}
+
 .home {
   min-height: 100vh;
+  overflow: hidden;
+  width: 100vw;
 
-  /* START OF BANNER STYLES */
-  .home-banner {
-    background-color: var(--dv-light-yellow);
-    padding-top: 3rem;
-
-    .notify-block {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 16px;
-      background-color: #ffffff;
-      box-shadow: 0px 5px 4px 7px rgba(157, 143, 143, 0.05);
-      padding: 1.5rem 2.5rem;
-      margin-bottom: 6rem;
-
-      button {
-        @include media('<=phone') {
-          display: none;
-        }
-      }
-
-      @include media('<=phone') {
-        display: block;
-        margin-bottom: 4.5rem;
-      }
-    }
-
-    .hero-text-container {
-      max-width: 650px;
-      margin: 0 auto;
-      position: relative;
-
-      .hashtag-container {
-        position: absolute;
-        top: -3rem;
-        left: -4.5rem;
-
-        @include media('<=tablet') {
-          display: none;
-        }
-      }
-
-      .asterisk-container {
-        position: absolute;
-        right: 0;
-        top: 6rem;
-
-        @include media('<=tablet') {
-          display: none;
-        }
-      }
-
-      h2 {
-        text-align: center;
-        opacity: 0;
-        transform: translateY(32px);
-        animation: fadeInUpSplit 2s cubic-bezier(0.7, 0, 0.25, 1) forwards;
-      }
-
-      @keyframes fadeInUpSplit {
-        from {
-          opacity: 0;
-          transform: translateY(32px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      p {
-        font-weight: 200;
-        text-align: center;
-        margin: 1.5rem 0 1.2rem 0;
-        color: #474343;
-        padding: 0 1.8rem;
-        opacity: 0;
-        animation: fadeInUp 2s cubic-bezier(0.7, 0, 0.25, 1) forwards;
-
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-          }
-
-          to {
-            opacity: 1;
-          }
-        }
-
-        @include media('<=tablet') {
-          padding: 0;
-        }
-      }
-    }
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 100px 20px 40px;
+    overflow: hidden;
 
     @include media('<=tablet') {
-      padding-top: 1.5rem;
+      min-height: 70vh;
     }
 
-    .arithmetic-container {
-      margin-top: 3rem;
+    &__overlay {
+      background: $overlay;
+      position: absolute;
       width: 100%;
-      height: 57px;
-      @include centerCoverBg();
-    }
-  }
-
-  /* END OF BANNER STYLES */
-
-  /* START OF BIG TECH FESTIVAL STYLES */
-
-  .big-tech-festival-wrapper {
-    padding: 6rem 0 4rem;
-    overflow: hidden;
-
-    .text-content {
-      background-color: #ffffff;
-      max-width: 710px;
-
-      p {
-        color: var(--dv-gray);
-        font-weight: 200;
-        margin-top: 1.5rem;
-      }
+      height: 100%;
+      z-index: -1;
+      top: 0;
     }
 
-    .image-gallery {
-      margin-top: 3rem;
-      overflow: hidden;
-
-      .single-img-container {
-        width: 400px;
-        height: 420px;
-        margin: 0 1rem;
-        overflow: hidden;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-
-        @include media('<=phone') {
-          height: 320px;
-          width: 320px;
-          margin: 0 0.5rem;
-        }
-      }
-    }
-
-    @include media('<=phone') {
-      padding: 5rem 0;
-    }
-  }
-
-  /* END OF BIG TECH FESTIVAL STYLES */
-
-  /* START OF HIGHLIGHT STYLES */
-
-  .highlights-wrapper {
-    background-color: var(--dv-green);
-    padding: 7rem 0 6rem;
-
-    p {
-      color: var(--dv-gray);
-      font-weight: 300;
-    }
-
-    h2 {
-      // max-width: 600px;
-      margin-top: 1rem;
-    }
-
-    @include media('<=phone') {
-      padding: 5rem 0 3rem;
-    }
-
-    .highlights-img {
-      margin-top: 4rem;
+    &__bg-image {
+      position: absolute;
       width: 100%;
-      height: 500px;
-      @include centerCoverBg();
-      border-radius: 25px;
-      position: relative;
+      height: 100%;
+      z-index: -1;
 
       @include media('<=tablet') {
-        height: 400px;
-      }
-
-      .play-icon {
-        position: absolute;
-        cursor: pointer;
-        height: 100%;
-        width: 100%;
-        top: 0;
-
-        img {
-          &:hover {
-            transform: translateY(-1.5px);
-            @include buttonTransition();
-          }
-        }
+        width: 300% !important;
+        left: -100% !important;
       }
     }
 
-    .highlights-modal {
-      padding: 0;
-    }
+    &__presents {
+      padding: 12px 27.5px;
+      background: $yellow-primary-100;
+      border: 1px solid $grey-20;
+      border-radius: 32px;
+      @include body4-medium;
+      margin-bottom: 32px;
 
-    .video-iframe-wrapper {
-      height: 35rem;
-
-      @include media('<=phone') {
-        height: 25rem;
+      @include media('<=tablet') {
+        @include body5-medium;
+        margin-bottom: 24px;
       }
     }
 
-    iframe {
-      border-radius: 12px;
-      height: 100%;
-    }
-  }
-
-  /* END OF BANNER STYLES */
-
-  /* START OF CELEBRATION STYLES */
-
-  .celebration-wrapper {
-    padding: 7rem 0;
-    overflow: hidden;
-    background-color: var(--dv-yellow);
-
-    @include media('<=phone') {
-      padding-bottom: 4rem;
-    }
-
-    .celebration-content {
-      margin: 0 auto;
-      max-width: 731px;
+    &__title {
+      font-size: 184px;
+      line-height: 90%;
+      font-weight: 600;
+      color: $yellow-primary-100;
+      max-width: 88%;
       text-align: center;
+      margin-bottom: 32px;
 
-      p {
-        font-weight: 200;
-        color: var(--dv-gray);
-        margin: 1rem 0;
+      @include media('<=tablet') {
+        @include header-h1;
       }
     }
 
-    .topics-wrapper {
-      margin-top: 9rem;
+    &__buttons {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
+      column-gap: 12px;
+      margin-bottom: 70px;
+    }
+
+    &__get-tickets {
+      width: 185px;
+      @extend %button-primary;
+    }
+
+    &__download-app {
+      width: 185px;
+      @extend %button-secondary;
+      color: white;
+    }
+
+    &__details {
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
       justify-content: center;
-      gap: 0.6rem;
-
-      @include media('<=phone') {
-        margin-top: 5rem;
+      width: 100%;
+      @include media('<=tablet') {
+        display: none;
       }
+    }
 
-      .topic-pill {
-        padding: 28px 32px;
+    &__details-divider {
+      height: 124px;
+      width: 1px;
+      background: white;
+      margin: 0 60px;
+    }
+
+    .hero-detail {
+      display: flex;
+
+      &__icon-wrapper {
+        width: 64px;
+        height: 64px;
+        border-radius: 4px;
+        background: $yellow-primary-100;
+        font-size: 52px;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.3rem;
-        border-radius: 144px;
+        margin-right: 12px;
+      }
 
-        @include media('<=tablet') {
-          padding: 18px 22px;
-        }
+      &__label {
+        @include body2-regular;
+        color: $background-light;
+        margin-bottom: 2px;
+      }
 
-        @include media('<=phone') {
-          padding: 12px 14px;
-        }
-
-        p {
-          font-size: 22px;
-          font-weight: 600;
-
-          @include media('<=tablet') {
-            font-size: 16px;
-          }
-
-          @include media('<=phone') {
-            font-size: 14px;
-          }
-        }
+      &__value {
+        @include title1-semibold;
+        color: $background-light;
       }
     }
   }
 
-  /* END OF CELEBRATION STYLES */
-
-  /* START OF SUBSCRIPTION STYLES */
-  .subscription-wrapper {
-    background-color: var(--dv-light-yellow);
-    padding-top: 7rem;
-    position: relative;
-    z-index: 700;
-
-    .subscription-content {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 3rem;
-
-      > div {
-        width: 50%;
-      }
-
-      .subscription-form-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .intro-text {
-          font-weight: 300;
-          color: var(--dv-gray);
-        }
-
-        form {
-          margin-top: 3rem;
-          display: flex;
-          flex-direction: column;
-          row-gap: 1rem;
-          max-width: 400px;
-        }
-
-        @include media('>phone', '<=desktop') {
-          h2 {
-            font-size: 46px;
-            line-height: 56px;
-          }
-        }
-
-        @include media('<=tablet') {
-          flex-direction: column;
-
-          .event-gallery-container {
-            display: none;
-          }
-        }
-      }
-
-      .event-gallery-container {
-        height: 645px;
-        width: 550px;
-        position: relative;
-
-        .event-img-one {
-          position: absolute;
-          bottom: 0;
-          z-index: 400;
-          transform: rotate(-12deg);
-        }
-
-        .event-img-two {
-          position: absolute;
-          bottom: 1.5rem;
-          right: 2rem;
-          z-index: 300;
-          transform: rotate(12deg);
-        }
-
-        .event-img-three {
-          position: absolute;
-          z-index: 200;
-          top: 2.2rem;
-          left: -1.5rem;
-          transform: rotate(-12deg);
-        }
-
-        .event-img-four {
-          position: absolute;
-          z-index: 100;
-          right: 3.5rem;
-          transform: scaleX(-1) rotate(-12deg);
-        }
-
-        @include media('<=desktop') {
-          display: none;
-        }
-      }
-
-      @include media('<=desktop') {
-        > div {
-          max-width: 480px;
-        }
-      }
-
-      @include media('>tablet', '<=desktop') {
-        > div {
-          width: 60%;
-        }
-      }
-
-      @include media('<=tablet') {
-        > div {
-          width: 100%;
-        }
-      }
-    }
-
-    .arithmetic-container {
-      margin-top: 6rem;
-      width: 100%;
-      height: 57px;
-      @include centerCoverBg();
-    }
+  .tickets {
+    background: $yellow-primary-100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px 20px 126px;
 
     @include media('<=tablet') {
-      padding-top: 10rem;
+      padding-bottom: 0;
+    }
+
+    &__pill {
+      padding: 12px 26px;
+      border-radius: 32px;
+      border: 1px solid $grey-20;
+      color: $background-dark;
+      @include body4-medium;
+      margin-bottom: 8px;
+
+      @include media('<=tablet') {
+        @include body5-medium;
+        margin-bottom: 16px;
+      }
+    }
+
+    &__title {
+      @include header-h3;
+      color: $background-dark;
+      max-width: 656px;
+      margin-bottom: 16px;
+      text-align: center;
+
+      @include media('<=tablet') {
+        @include header-h6;
+        margin-bottom: 8px;
+      }
+    }
+
+    &__description {
+      @include body2-medium;
+      color: $grey-50;
+      max-width: 656px;
+      text-align: center;
+      margin-bottom: 24px;
+
+      @include media('<=tablet') {
+        @include body3-medium;
+        margin-bottom: 12px;
+        max-width: 320px;
+      }
+    }
+
+    &__get-tickets {
+      @extend %button-primary;
+      margin-bottom: 40px;
+      width: 185px;
+    }
+
+    .ticket-group-wrapper {
+      position: relative;
+      margin-top: -120px;
+    }
+
+    .ticket {
+      background: white;
+      padding-top: 12px;
+      width: fit-content;
+      margin: 0 auto;
+      overflow: hidden;
+      z-index: 2;
+      position: relative;
+
+      // todo: upgrade the responsiveness styling with something more sophisticated. I'm sick rn so I can't really think forgive me :(
+      --transform-scale: 0.5;
+
+      @include media('<=tablet') {
+        transform: scale(var(--transform-scale));
+      }
+
+      &.tilt-left {
+        position: absolute;
+        transform: rotate(-22deg) translate(-210px, -58px);
+
+        @include media('<=tablet') {
+          transform: rotate(-22deg) translate(-100px, -38px) scale(var(--transform-scale));
+        }
+      }
+
+      &.tilt-right {
+        position: absolute;
+        transform: rotate(10deg) translate(240px, -10px);
+        z-index: 3;
+
+        @include media('<=tablet') {
+          transform: rotate(14deg) translate(120px, -30px) scale(var(--transform-scale));
+        }
+      }
+
+      &__top-image-wrapper {
+        padding: 0 12px;
+      }
+
+      &__top-image {
+        padding: 11px;
+        background: var(--dv-light-yellow);
+        position: relative;
+        margin: 0 auto 32px;
+        width: 264px;
+        height: 108px;
+      }
+
+      &__splitter {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 8px;
+        width: 110%;
+        transform: translateX(-5%);
+
+        &__dash {
+          width: 100%;
+          height: 6px;
+          background: $yellow-primary-80;
+          border-radius: 12px;
+          opacity: 36%;
+        }
+      }
+
+      &__details {
+        display: grid;
+        row-gap: 22px;
+        margin: 24px 0;
+        padding: 0 14px;
+      }
+
+      &__detail-label {
+        @include body4-medium;
+        color: $background-dark;
+      }
+
+      &__detail-value {
+        @include body3-semibold;
+        color: $background-dark;
+      }
+
+      &__ticket-qr {
+        margin: 12px auto 0;
+        display: block;
+      }
+
+      &__cubes {
+        display: flex;
+        column-gap: 12px;
+        justify-content: center;
+
+        &__tear {
+          height: 30px;
+          width: 30px;
+          background: $yellow-primary-100;
+          transform: translateY(50%);
+          border-radius: 100%;
+        }
+      }
     }
   }
 
-  .success-modal {
-    h5 {
-      @include typography(22px);
-      margin: 1rem 0;
+  .throwback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    width: 100vw;
+
+    @include media('<=tablet') {
+      height: unset;
+      padding: 40px 20px;
     }
 
-    p {
-      margin: 0 auto 2rem;
-      max-width: 412px;
-      font-weight: 300;
+    &__bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+    }
+
+    &__pill {
+      padding: 12px 27.5px;
+      background: $yellow-primary-100;
+      border: 1px solid $grey-20;
+      border-radius: 32px;
+      @include body4-medium;
+      margin-bottom: 8px;
+
+      @include media('<=tablet') {
+        @include body5-medium;
+        margin-bottom: 24px;
+      }
+    }
+
+    &__title {
+      @include header-h3;
+      color: $background-light;
+      margin-bottom: 16px;
+      max-width: 920px;
+      text-align: center;
+
+      @include media('<=tablet') {
+        @include header-h6;
+        margin-bottom: 12px;
+      }
+    }
+
+    &__description {
+      @include body2-regular;
+      margin-bottom: 16px;
+      color: $background-light;
+      max-width: 560px;
+      text-align: center;
+
+      @include media('<=tablet') {
+        @include body3-regular;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+
+      @include media('<=tablet') {
+        row-gap: 16px;
+        flex-direction: column;
+      }
+    }
+
+    &__highlights {
+      @extend %button-primary;
+      padding-left: 32px;
+      padding-right: 32px;
+
+      @include media('<=tablet') {
+        width: 100%;
+      }
+    }
+
+    &__photos {
+      @extend %button-secondary;
+      padding-left: 12px;
+      padding-right: 12px;
     }
   }
 
-  /* END OF SUBSCRIPTION STYLES */
+  .speakers {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__pill {
+      padding: 12px 26px;
+      border-radius: 32px;
+      border: 1px solid $grey-20;
+      color: $background-dark;
+      @include body4-medium;
+      margin-bottom: 8px;
+    }
+
+    &__title {
+      @include header-h3;
+      color: $background-dark;
+    }
+
+    &__controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 64px;
+    }
+
+    &__button {
+      padding: 12px 32px;
+      border-radius: 40px;
+      border: 1px solid $background-dark;
+      background: transparent;
+    }
+
+    &__description {
+      @include body2-medium;
+      color: $grey-50;
+      max-width: 510px;
+      text-align: center;
+    }
+
+    &__see-speakers {
+      @extend %button-primary;
+      padding: 0 16px;
+      margin-top: 48px;
+    }
+  }
+
+  .sponsors {
+    display: grid;
+    grid-template-columns: 1fr 0.65fr;
+    column-gap: 52px;
+    padding: 0 64px;
+    background: $background-dark;
+    min-height: 600px;
+    align-items: center;
+
+    &__pill {
+      padding: 12px 26px;
+      border-radius: 32px;
+      border: 1px solid $background-light;
+      color: $background-light;
+      @include body4-medium;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      @include header-h3;
+      color: $background-light;
+      margin-bottom: 16px;
+      max-width: 740px;
+      text-align: center;
+    }
+
+    &__description {
+      @include body2-medium;
+      color: $background-light;
+      text-align: center;
+      max-width: 580px;
+    }
+  }
+
+  .talks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+    background: $yellow-primary-100;
+
+    &__pill {
+      padding: 12px 26px;
+      border-radius: 32px;
+      border: 1px solid $grey-20;
+      color: $background-dark;
+      @include body4-medium;
+      margin-bottom: 8px;
+    }
+
+    &__title {
+      @include header-h3;
+      margin-bottom: 16px;
+      color: $background-dark;
+    }
+
+    &__description {
+      @include body2-medium;
+      color: $grey-50;
+      margin-bottom: 48px;
+      max-width: 640px;
+    }
+
+    &__dates {
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    &__date {
+      border-radius: 32px;
+      border: 1px solid $background-dark;
+      padding: 16px 30px;
+      @include body2-medium;
+      color: $grey-10;
+      cursor: pointer;
+      background: transparent;
+
+      &:hover,
+      &.active {
+        background: $core-yellow;
+        transition: 250ms;
+      }
+    }
+  }
+
+  .mobile-app {
+    padding: 240px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $background-dark;
+    position: relative;
+
+    &__mockup-1 {
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+    }
+
+    &__mockup-2 {
+      position: absolute;
+      top: 0;
+      right: 10%;
+    }
+
+    &__popout-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__popout-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__pill {
+      padding: 12px 26px;
+      border-radius: 32px;
+      border: 1px solid $background-light;
+      color: $background-light;
+      @include body4-medium;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    &__title {
+      @include header-h3;
+      color: $yellow-primary-100;
+      margin-bottom: 32px;
+      width: 498px;
+      text-align: center;
+    }
+
+    &__description {
+      @include body2-medium;
+      color: $grey-100;
+      text-align: center;
+      margin-bottom: 32px;
+      max-width: 498px;
+    }
+
+    &__download-app {
+      @extend %button-primary;
+      padding: 0 20px;
+    }
+  }
+
+  .faqs {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__pill {
+      padding: 12px 26px;
+      border-radius: 32px;
+      border: 1px solid $grey-20;
+      color: $background-dark;
+      @include body4-medium;
+      margin-bottom: 8px;
+    }
+
+    &__title {
+      @include header-h3;
+      color: $background-dark;
+      margin-bottom: 8px;
+    }
+
+    &__description {
+      @include body2-medium;
+      color: $grey-50;
+      margin-bottom: 32px;
+    }
+
+    &__more-questions {
+      @extend %button-primary;
+      padding: 0 24px;
+    }
+  }
+
+  .gdg-lagos {
+    display: flex;
+    align-items: center;
+    column-gap: 120px;
+    justify-content: center;
+    padding: 80px 140px;
+    background: $background-dark;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__pill {
+      padding: 12px 26px;
+      border-radius: 32px;
+      border: 1px solid $background-light;
+      color: $background-light;
+      @include body4-medium;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    &__title {
+      @include header-h3;
+      color: $yellow-primary-100;
+      margin-bottom: 32px;
+      width: 592px;
+      text-align: center;
+    }
+
+    &__description {
+      @include body2-medium;
+      color: $grey-100;
+      text-align: center;
+      margin-bottom: 32px;
+      max-width: 592px;
+    }
+
+    &__download-app {
+      @extend %button-primary;
+      width: 280px;
+    }
+  }
+
+  .generate-dp {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 60px;
+    background: $yellow-primary-100;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__pill {
+      padding: 12px 26px;
+      border-radius: 32px;
+      border: 1px solid $grey-20;
+      color: $grey-20;
+      @include body4-medium;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    &__title {
+      @include header-h3;
+      color: $background-dark;
+      margin-bottom: 32px;
+      width: 498px;
+      text-align: center;
+    }
+
+    &__description {
+      @include body2-medium;
+      color: $grey-50;
+      text-align: center;
+      margin-bottom: 32px;
+      max-width: 498px;
+    }
+
+    &__button {
+      @extend %button-primary;
+      width: 280px;
+    }
+  }
 }
