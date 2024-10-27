@@ -22,7 +22,7 @@ import DevsIcon from '../assets/pink-brackets.svg';
 import TwitterIcon from '../assets/X.svg';
 import LinkedinIcon from '../assets/Linkedin.svg';
 import InstagramIcon from '../assets/instagram.svg';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
 const sortMember = (member: TransformedItem, type: string) => {
@@ -70,6 +70,7 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [songDetails, setSongDetails] = useState<SongDetails | null>(null);
+  const flipBackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     try {
@@ -83,6 +84,24 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
       console.error('Invalid URL:', error);
     }
   }, [member.song]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (flipBackRef.current && !flipBackRef.current.contains(event.target as Node)) {
+        setIsFlipped(false);
+      }
+    };
+
+    if (isFlipped) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isFlipped]);
 
   return (
     <div className={styles.CardWrapper}>
@@ -104,12 +123,11 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
             </a>
             <div className={styles.memberBio}>
               <div
-                onClick={() => setIsFlipped(!isFlipped)}
+                onClick={() => setIsFlipped(true)}
                 className={styles.memberImage}
                 style={{
                   background: `${isHovered ? `url(${member.image})` : `linear-gradient(0deg, #EBE2CC, #EBE2CC), url(${member.image})`}`,
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center',
                 }}
               />
               <div className={styles.categoryIcon}>{sortMember(member, 'badge')}</div>
@@ -133,7 +151,11 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
             </div>
           </div>
           <div className={styles.flipBack}>
-            <div className={styles.flipBackInner} onClick={() => setIsFlipped(!isFlipped)}>
+            <div
+              className={styles.flipBackInner}
+              onClick={() => setIsFlipped(false)}
+              ref={flipBackRef}
+            >
               <div className={styles.memberQuotes}>
                 <div>
                   <p className={styles.textHeader}>Fun Fact</p>

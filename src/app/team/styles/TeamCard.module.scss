@@ -17,7 +17,7 @@
 
     .flipInner {
       transform-style: preserve-3d;
-      transition: transform 1s;
+      transition: transform 1.5s;
       width: 100%;
       height: 100%;
       position: relative;
@@ -80,7 +80,7 @@
             width: 100%;
             background-blend-mode: color;
             background-size: cover !important;
-            background-position: center !important;
+            background-position: top !important;
             transition:
               background-color 0.3s ease,
               opacity 0.3s ease;
@@ -192,7 +192,7 @@
             .flipBackImage {
               border-radius: 50%;
               object-fit: cover;
-              object-position: center;
+              object-position: top;
               filter: opacity(100%) saturate(10%) sepia(40%) saturate(1.5) brightness(1);
             }
           }
