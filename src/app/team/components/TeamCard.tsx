@@ -7,14 +7,14 @@ import YoutubeMusicIcon from '../assets/youtubemusic.svg';
 
 // badges
 import DesignerBadge from '../assets/designer-badge.svg';
-// import LeadsBadge from '../assets/leads-badge.svg';
+import LeadsBadge from '../assets/leads-badge.svg';
 import ContentBadge from '../assets/content-badge.svg';
 import OrganisersBadge from '../assets/organiser-badge.svg';
 import DevsBadge from '../assets/dev-badge.svg';
 
 // icons
 import DesignerIcon from '../assets/blue-arrow.svg';
-// import LeadsIcon from '../assets/green-hash.svg';
+import LeadsIcon from '../assets/green-hash.svg';
 import ContentIcon from '../assets/green-cursor.svg';
 import OrganisersIcon from '../assets/red-cross.svg';
 import DevsIcon from '../assets/pink-brackets.svg';
@@ -34,6 +34,8 @@ const sortMember = (member: TransformedItem, type: string) => {
     case member.category === 'GDG Organizer':
       return type === 'badge' ? <OrganisersBadge /> : <OrganisersIcon />;
     case member.category === 'Product':
+      return type === 'badge' ? <LeadsBadge /> : <LeadsIcon />;
+    case member.category === 'Content':
       return type === 'badge' ? <ContentBadge /> : <ContentIcon />;
 
     default:

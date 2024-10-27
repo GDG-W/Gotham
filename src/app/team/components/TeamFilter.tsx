@@ -4,7 +4,7 @@ import styles from '../styles/TeamFilter.module.scss';
 
 import AllIcon from '../assets/all-icon.svg';
 import BlueArrow from '../assets/blue-arrow.svg';
-// import GreenHash from '../assets/green-hash.svg';
+import GreenHash from '../assets/green-hash.svg';
 import GreenCursor from '../assets/content-badge.svg';
 import RedCross from '../assets/red-cross.svg';
 import PinkBrackets from '../assets/pink-brackets.svg';
@@ -12,10 +12,10 @@ import PinkBrackets from '../assets/pink-brackets.svg';
 const categories = [
   { title: 'all', icon: AllIcon, filter: 'all' },
   { title: 'Organisers', icon: RedCross, filter: 'GDG Organizer' },
-  // { title: 'Leads', icon: GreenHash, filter: 'Product' },
+  { title: 'Product', icon: GreenHash, filter: 'Product' },
   { title: 'Devs', icon: PinkBrackets, filter: 'Developer' },
   { title: 'Designers', icon: BlueArrow, filter: 'Designer' },
-  { title: 'Product', icon: GreenCursor, filter: 'Product' },
+  { title: 'Content', icon: GreenCursor, filter: 'Content' },
 ];
 
 const CategoryBtn = ({
