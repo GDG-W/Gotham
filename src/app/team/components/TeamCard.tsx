@@ -7,14 +7,14 @@ import YoutubeMusicIcon from '../assets/youtubemusic.svg';
 
 // badges
 import DesignerBadge from '../assets/designer-badge.svg';
-import LeadsBadge from '../assets/leads-badge.svg';
+// import LeadsBadge from '../assets/leads-badge.svg';
 import ContentBadge from '../assets/content-badge.svg';
 import OrganisersBadge from '../assets/organiser-badge.svg';
 import DevsBadge from '../assets/dev-badge.svg';
 
 // icons
 import DesignerIcon from '../assets/blue-arrow.svg';
-import LeadsIcon from '../assets/green-hash.svg';
+// import LeadsIcon from '../assets/green-hash.svg';
 import ContentIcon from '../assets/green-cursor.svg';
 import OrganisersIcon from '../assets/red-cross.svg';
 import DevsIcon from '../assets/pink-brackets.svg';
@@ -31,15 +31,13 @@ const sortMember = (member: TransformedItem, type: string) => {
       return type === 'badge' ? <DevsBadge /> : <DevsIcon />;
     case member.category === 'Designer':
       return type === 'badge' ? <DesignerBadge /> : <DesignerIcon />;
-    case member.category === 'Content':
-      return type === 'badge' ? <ContentBadge /> : <ContentIcon />;
     case member.category === 'GDG Organizer':
       return type === 'badge' ? <OrganisersBadge /> : <OrganisersIcon />;
     case member.category === 'Product':
-      return type === 'badge' ? <LeadsBadge /> : <LeadsIcon />;
+      return type === 'badge' ? <ContentBadge /> : <ContentIcon />;
 
     default:
-      return type === 'badge' ? <LeadsBadge /> : <LeadsIcon />;
+      return type === 'badge' ? <ContentBadge /> : <ContentIcon />;
   }
 };
 
@@ -141,7 +139,7 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
                 </div>
                 {member.note && (
                   <div>
-                    <p className={styles.textHeader}>Notes From Team Member</p>
+                    <p className={styles.textHeader}>Notes From A Team Member</p>
                     <p className={styles.textContent}>&#34;{member.note}&#34;</p>
                   </div>
                 )}
