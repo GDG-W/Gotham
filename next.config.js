@@ -16,6 +16,10 @@ const nextConfig = {
 
     return config;
   },
+
+  images: {
+    domains: ['ibb.co', 'i.ibb.co', 'photos.google.com', 'bit.ly'],
+  },
 };
 
 export default nextConfig;

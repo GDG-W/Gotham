@@ -1,5 +1,5 @@
 'use client';
-import { Dispatch, useState } from 'react';
+import React, { Dispatch } from 'react';
 import styles from '../styles/TeamFilter.module.scss';
 
 import AllIcon from '../assets/all-icon.svg';
@@ -10,12 +10,12 @@ import RedCross from '../assets/red-cross.svg';
 import PinkBrackets from '../assets/pink-brackets.svg';
 
 const categories = [
-  { title: 'all', icon: AllIcon },
-  { title: 'organisers', icon: RedCross },
-  { title: 'leads', icon: GreenHash },
-  { title: 'devs', icon: PinkBrackets },
-  { title: 'designers', icon: BlueArrow },
-  { title: 'content', icon: GreenCursor },
+  { title: 'all', icon: AllIcon, filter: 'all' },
+  { title: 'Organisers', icon: RedCross, filter: 'GDG Organizer' },
+  { title: 'Leads', icon: GreenHash, filter: 'Product' },
+  { title: 'Devs', icon: PinkBrackets, filter: 'Developer' },
+  { title: 'Designers', icon: BlueArrow, filter: 'Designer' },
+  { title: 'Content', icon: GreenCursor, filter: 'Content' },
 ];
 
 const CategoryBtn = ({
@@ -23,24 +23,28 @@ const CategoryBtn = ({
   selectedFilter,
   setSelectedFilter,
 }: {
-  category: { title: string; icon: React.FC<React.SVGProps<SVGSVGElement>> };
+  category: { title: string; icon: React.FC<React.SVGProps<SVGSVGElement>>; filter: string };
   selectedFilter: string;
   setSelectedFilter: Dispatch<string>;
 }) => {
   return (
     <button
-      className={`${styles.categoryBtn} ${selectedFilter === category.title ? styles.active : ''}`}
-      onClick={() => setSelectedFilter(category.title)}
+      className={`${styles.categoryBtn} ${selectedFilter === category.filter ? styles.active : ''}`}
+      onClick={() => setSelectedFilter(category.filter)}
     >
-      {selectedFilter === category.title && <category.icon />}
+      {selectedFilter === category.filter && <category.icon />}
       <p>{category.title}</p>
     </button>
   );
 };
 
-const TeamFilter = () => {
-  const [selectedFilter, setSelectedFilter] = useState('all');
-
+const TeamFilter = ({
+  selectedCategory,
+  setSelectedCategory,
+}: {
+  selectedCategory: string;
+  setSelectedCategory: Dispatch<string>;
+}) => {
   return (
     <section className={styles.TeamFilterWrapper}>
       <div className={styles.heading}>
@@ -54,8 +58,8 @@ const TeamFilter = () => {
               <CategoryBtn
                 category={category}
                 key={category.title}
-                selectedFilter={selectedFilter}
-                setSelectedFilter={setSelectedFilter}
+                selectedFilter={selectedCategory}
+                setSelectedFilter={setSelectedCategory}
               />
             );
           })}

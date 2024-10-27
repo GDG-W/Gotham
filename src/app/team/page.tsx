@@ -1,13 +1,11 @@
-import DisplayedTeam from './components/DisplayedTeam';
 import Hero from './components/Hero';
-import TeamFilter from './components/TeamFilter';
+import Team from './components/Team';
 
 const TeamPage = () => {
   return (
     <main>
       <Hero />
-      <TeamFilter />
-      <DisplayedTeam />
+      <Team />
     </main>
   );
 };
