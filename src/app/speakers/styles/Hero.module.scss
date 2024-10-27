@@ -96,6 +96,16 @@
     }
   }
 
+  .placeHolder {
+    width: 636px;
+    height: 100%;
+
+    @include media('<=tablet') {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
   li {
     list-style: none;
   }

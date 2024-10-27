@@ -24,10 +24,6 @@ const Hero = () => {
     }
   }, []);
 
-  if (!screenWidth) {
-    return null;
-  }
-
   return (
     <section className={styles.headerWrapper}>
       <div className={styles.headerText}>
@@ -54,49 +50,56 @@ const Hero = () => {
           className={styles.yellowHashtag}
         />
       </div>
-      {/* DISPLAY VERTICAL OR HORIZONTAL SLIDERS BASED ON SCREEN WIDTH */}
-      {screenWidth > 768 ? (
-        // Vertical React fast Marquee is buggy. Hence a manual implementation...
-        <div
-          className={styles.verticalMarquee}
-          aria-label='Scrolling images of DevFest 2024 Speakers'
-        >
-          <ul className={`${styles.marqueeContent} ${styles.marqueeContent_up}`}>
-            {[...speakersSlideData.slice(0, 3), ...speakersSlideData.slice(0, 3)].map(
-              (speaker, index) => {
-                return (
-                  <li className={styles.marqueeItem} key={index}>
-                    <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
-                    <div className={styles.speakerName}>{speaker.name}</div>
-                  </li>
-                );
-              },
-            )}
-          </ul>
-          <ul className={`${styles.marqueeContent} ${styles.marqueeContent_down}`}>
-            {[...speakersSlideData.slice(3), ...speakersSlideData.slice(3)].map(
-              (speaker, index) => {
-                return (
-                  <li className={styles.marqueeItem} key={index}>
-                    <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
-                    <div className={styles.speakerName}>{speaker.name}</div>
-                  </li>
-                );
-              },
-            )}
-          </ul>
-        </div>
+      {/* DISPLAY VERTICAL OR HORIZONTAL SLIDERS BASED ON SCREEN WIDTHH */}
+      {screenWidth ? (
+        screenWidth > 768 ? (
+          // Vertical React fast Marquee is buggy. Hence a manual implementation...
+          <div
+            className={styles.verticalMarquee}
+            aria-label='Scrolling images of DevFest 2024 Speakers'
+          >
+            <ul className={`${styles.marqueeContent} ${styles.marqueeContent_up}`}>
+              {[...speakersSlideData.slice(0, 3), ...speakersSlideData.slice(0, 3)].map(
+                (speaker, index) => {
+                  return (
+                    <li className={styles.marqueeItem} key={index}>
+                      <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
+                      <div className={styles.speakerName}>{speaker.name}</div>
+                    </li>
+                  );
+                },
+              )}
+            </ul>
+            <ul className={`${styles.marqueeContent} ${styles.marqueeContent_down}`}>
+              {[...speakersSlideData.slice(3), ...speakersSlideData.slice(3)].map(
+                (speaker, index) => {
+                  return (
+                    <li className={styles.marqueeItem} key={index}>
+                      <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
+                      <div className={styles.speakerName}>{speaker.name}</div>
+                    </li>
+                  );
+                },
+              )}
+            </ul>
+          </div>
+        ) : (
+          <Marquee speed={20} aria-label='Scrolling images of DevFest 2024 Speakers'>
+            {speakersSlideData.map((speaker, index) => {
+              return (
+                <div
+                  className={`${styles.marqueeItem} ${styles.horizontalMarqueeItem}`}
+                  key={index}
+                >
+                  <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
+                  <div className={styles.speakerName}>{speaker.name}</div>
+                </div>
+              );
+            })}
+          </Marquee>
+        )
       ) : (
-        <Marquee speed={20} aria-label='Scrolling images of DevFest 2024 Speakers'>
-          {speakersSlideData.map((speaker, index) => {
-            return (
-              <div className={`${styles.marqueeItem} ${styles.horizontalMarqueeItem}`} key={index}>
-                <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
-                <div className={styles.speakerName}>{speaker.name}</div>
-              </div>
-            );
-          })}
-        </Marquee>
+        <div className={styles.placeHolder}></div>
       )}
     </section>
   );
