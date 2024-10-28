@@ -68,7 +68,12 @@ const Hero = () => {
               ].map((speaker, index) => {
                 return (
                   <li className={styles.marqueeItem} key={index}>
-                    <Image src={speaker.image} fill alt={speaker.name + "'s image"} priority />
+                    <Image
+                      src={speaker.image}
+                      fill
+                      alt={speaker.name + "'s image"}
+                      loading='eager'
+                    />
                     <div className={styles.speakerName}>{speaker.name}</div>
                   </li>
                 );
@@ -81,7 +86,12 @@ const Hero = () => {
               ].map((speaker, index) => {
                 return (
                   <li className={styles.marqueeItem} key={index}>
-                    <Image src={speaker.image} fill alt={speaker.name + "'s image"} priority />
+                    <Image
+                      src={speaker.image}
+                      fill
+                      alt={speaker.name + "'s image"}
+                      loading='eager'
+                    />
                     <div className={styles.speakerName}>{speaker.name}</div>
                   </li>
                 );
