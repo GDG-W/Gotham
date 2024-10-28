@@ -1,0 +1,156 @@
+@import '/src/styles/utils/breakpoints';
+
+.scheduleItem {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  width: 50vw;
+  height: auto;
+
+  @include media('<=phone') {
+    width: 100%;
+  }
+
+  @include media('<=tablet') {
+    width: 80vw;
+  }
+}
+
+.timeSlot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 28px;
+  color: #333;
+  min-width: 150px;
+  font-weight: 400;
+
+  @include media('<=phone') {
+    font-size: 12px;
+    min-width: 100px;
+  }
+
+  @include media('<=tablet') {
+    font-size: 18px;
+    min-width: 100px;
+  }
+}
+
+.line {
+  width: 1px;
+  background-color: #000;
+  margin: 0 auto;
+  flex-grow: 1;
+  align-self: stretch;
+  min-height: 50px;
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.location {
+  display: inline-block;
+  padding: 12px 8px;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+  min-width: 100px;
+  text-align: center;
+}
+
+.event {
+  font-size: 28px;
+  font-weight: 400;
+  color: #333;
+
+  @include media('<=phone') {
+    font-size: 12px;
+  }
+
+  @include media('<=tablet') {
+    font-size: 18px;
+  }
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+
+  @include media('<=tablet') {
+    width: 80%;
+  }
+
+  @include media('<=phone') {
+    width: 30%;
+  }
+}
+
+.contain2 {
+  width: 100%;
+
+  @include media('<=phone') {
+    font-size: 12px;
+    min-width: 100px;
+  }
+
+  @include media('<=tablet') {
+    font-size: 18px;
+  }
+}
+
+.entrance {
+  background-color: #000;
+  color: #fff;
+}
+
+.room1 {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.allHalls {
+  background-color: #000;
+  color: #fff;
+}
+
+.room2 {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.outside {
+  background-color: #000;
+  color: #fff;
+}
+
+.break {
+  background-color: #000;
+  color: #fff;
+}
+
+.room3 {
+  background-color: #ff9800;
+  color: #000;
+}
+
+.room4 {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.closing {
+  background-color: #000;
+  color: #fff;
+}
