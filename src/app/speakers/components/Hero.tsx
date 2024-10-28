@@ -91,7 +91,6 @@ const Hero = () => {
                       fill
                       alt={speaker.name + "'s image"}
                       loading='eager'
-                      priority
                     />
                     <div className={styles.speakerName}>{speaker.name}</div>
                   </li>
@@ -107,13 +106,7 @@ const Hero = () => {
                   className={`${styles.marqueeItem} ${styles.horizontalMarqueeItem}`}
                   key={index}
                 >
-                  <Image
-                    src={speaker.image}
-                    fill
-                    alt={speaker.name + "'s image"}
-                    loading='eager'
-                    priority
-                  />
+                  <Image src={speaker.image} fill alt={speaker.name + "'s image"} loading='eager' />
                   <div className={styles.speakerName}>{speaker.name}</div>
                 </div>
               );
