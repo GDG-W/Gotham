@@ -162,10 +162,10 @@
     }
 
     .marqueeContent_up {
-      animation: vertical_scroll 30s forwards linear infinite;
+      animation: vertical_scroll 80s forwards linear infinite;
     }
     .marqueeContent_down {
-      animation: vertical_scroll 30s reverse linear infinite;
+      animation: vertical_scroll 80s reverse linear infinite;
     }
 
     .marqueeContent_down:hover,

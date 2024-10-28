@@ -1,10 +1,13 @@
 'use client';
 import Image from 'next/image';
 import styles from '../styles/Hero.module.scss';
-import { speakersSlideData } from '../mockData/mock';
 import { useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
+import { speakerData } from '../data/speakerData';
 
+const speakersSlideData = speakerData.map((speaker) => {
+  return { image: speaker.image_url, name: speaker.name };
+});
 const Hero = () => {
   const [screenWidth, setScreenWidth] = useState<number | null>(null);
 
@@ -59,32 +62,34 @@ const Hero = () => {
             aria-label='Scrolling images of DevFest 2024 Speakers'
           >
             <ul className={`${styles.marqueeContent} ${styles.marqueeContent_up}`}>
-              {[...speakersSlideData.slice(0, 3), ...speakersSlideData.slice(0, 3)].map(
-                (speaker, index) => {
-                  return (
-                    <li className={styles.marqueeItem} key={index}>
-                      <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
-                      <div className={styles.speakerName}>{speaker.name}</div>
-                    </li>
-                  );
-                },
-              )}
+              {[
+                ...speakersSlideData.slice(0, speakersSlideData.length / 2),
+                ...speakersSlideData.slice(0, speakersSlideData.length / 2),
+              ].map((speaker, index) => {
+                return (
+                  <li className={styles.marqueeItem} key={index}>
+                    <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
+                    <div className={styles.speakerName}>{speaker.name}</div>
+                  </li>
+                );
+              })}
             </ul>
             <ul className={`${styles.marqueeContent} ${styles.marqueeContent_down}`}>
-              {[...speakersSlideData.slice(3), ...speakersSlideData.slice(3)].map(
-                (speaker, index) => {
-                  return (
-                    <li className={styles.marqueeItem} key={index}>
-                      <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
-                      <div className={styles.speakerName}>{speaker.name}</div>
-                    </li>
-                  );
-                },
-              )}
+              {[
+                ...speakersSlideData.slice(speakersSlideData.length / 2),
+                ...speakersSlideData.slice(speakersSlideData.length / 2),
+              ].map((speaker, index) => {
+                return (
+                  <li className={styles.marqueeItem} key={index}>
+                    <Image src={speaker.image} fill alt={speaker.name + "'s image"} />
+                    <div className={styles.speakerName}>{speaker.name}</div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ) : (
-          <Marquee speed={20} aria-label='Scrolling images of DevFest 2024 Speakers'>
+          <Marquee speed={60} aria-label='Scrolling images of DevFest 2024 Speakers'>
             {speakersSlideData.map((speaker, index) => {
               return (
                 <div

@@ -1,15 +1,13 @@
 import FAQs from '@/components/shared/FAQS';
-import DaysAndFilter from './components/DaysAndFilter';
 import Hero from './components/Hero';
-import SpeakersList from './components/SpeakersList';
 import Subscribe from '@/components/shared/Subscribe';
+import Speakers from './components/Speakers';
 
 const SpeakersPage = () => {
   return (
     <main className='speakers-main'>
       <Hero />
-      <DaysAndFilter />
-      <SpeakersList />
+      <Speakers />
       <FAQs />
       <Subscribe />
     </main>

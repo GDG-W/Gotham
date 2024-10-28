@@ -10,6 +10,9 @@ export type Speaker = {
     linkedin?: string;
     twitter: string;
   };
+  day?: number;
+  track: string;
+  session_title: string;
 };
 
 export const speakerData: Speaker[] = Object.values(speakers);

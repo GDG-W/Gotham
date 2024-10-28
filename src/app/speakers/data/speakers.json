@@ -5,11 +5,14 @@
     "title": "Lead Mobile Engr, Shuttlers Mobility. Google Developer Expert Flutter & Dart",
     "bio": "Samuel Abada is a Google Developer Expert for Flutter and Dart and leads the mobile engineering efforts at Shuttlers Mobility. With 8 years of experience in the software industry, Samuel has spent the last 6 years focusing on mobile development, particularly with Flutter. He is a co-organizer of the Flutter Lagos and Flutter Akure communities, as well as the Google Developer Groups, Akure. Passionate about open-source technologies and building developer tooling, Samuel enjoys sharing knowledge through technical articles and speaking at events and conferences. Outside of coding, Samuel is an avid gamer, lover of anime.",
     "image_url": "https://i.ibb.co/BZb4QG7/sam-gde-badge.png",
+    "day": 1,
     "links": {
       "github": "https://github.com/mastersam07",
       "linkedin": "https://www.linkedin.com/in/abada-samuel/",
       "twitter": "https://twitter.com/mastersam_"
-    }
+    },
+    "track": "Mobile",
+    "session_title": "OTA Flutter Updates with Shorebird: From Setup to Production Success"
   },
   "ngesa-marvin": {
     "id": "ngesa-marvin",
@@ -17,11 +20,14 @@
     "title": "GDE - ML, Device Manager - Safaricom PLC",
     "bio": "Engineering Manager / Machine Learning Engineer specializing in signal and image processing, specifically in the field of computer vision. He started his Cloud ML journey as an Intel AI Innovator and later joined Liquid Telecom as an IoT Solutions Engineer. He is currently the Device Manager – Cloud & AIoT at Safaricom PLC and an Arm AI Ambassador. He is also a Google Developer Expert for ML. When not building products, he loves to teach and share knowledge with others. He believes ML education should be free and accessible to all. As of late, he has been working on sensor data analysis from IoT devices to help manag Device lifecycles and drive the right customer experience. He founded Nairobi AI and leads Machine Learning efforts in communities such as GDG Nairobi and Tiny ML Kenya.",
     "image_url": "https://i.ibb.co/GW6BYhT/7640693.jpg",
+    "day": 1,
     "links": {
       "github": "https://github.com/ngesa254",
       "linkedin": "https://www.linkedin.com/in/engngesamarvin",
       "twitter": "https://x.com/ngesa254"
-    }
+    },
+    "track": "ML / AI",
+    "session_title": "Building Advanced Assistants (Agentic RAGs) with Gemma 2 and Llama Index"
   },
   "yves-kalume": {
     "id": "yves-kalume",
@@ -29,11 +35,14 @@
     "title": "Software Engineer, Android GDE",
     "bio": "I'm a Software Engineer specialized in building exceptional mobile experiences for the Android Platform.",
     "image_url": "https://i.ibb.co/j6D9mjJ/Yves-Kalume.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/KalumeYves",
-      "linkedin": "//www.linkedin.com/in/yveskalume",
+      "linkedin": "https://www.linkedin.com/in/yveskalume",
       "github": "https://github.com/yveskalume"
-    }
+    },
+    "track": "Mobile",
+    "session_title": "Experiment Your Way to Success: A/B Testing for Your Android Apps"
   },
   "laju-etchie": {
     "id": "laju-etchie",
@@ -41,10 +50,13 @@
     "title": "Responsible AI Engagement Manager At Google",
     "bio": "Laju works with the Google Research team as a Responsible AI Engagement Manager At Google.",
     "image_url": "https://i.ibb.co/dWLcrbW/Laju-s-Profile-Picture.jpg",
+    "day": 1,
     "links": {
       "linkedin": "https://www.linkedin.com/in/laju-etchie-mba",
       "twitter": "https://x.com/lajuetchie_"
-    }
+    },
+    "track": "ML / AI",
+    "session_title": "Responsible AI for Generative Models: Designing for Responsibility"
   },
   "obumuneme-nwabude": {
     "id": "obumuneme-nwabude",
@@ -52,34 +64,43 @@
     "title": "",
     "bio": "Obum is a Google Developer Expert (GDE) in the Dart & Flutter category. He is also a Full-Stack Blockchain and Web developer with professional frontend, backend, and web3 experiences. He has worked as a mobile developer with LokDon, Coders Triangle and VorbTech Innovative Solutions. He has written several articles on Flutter in various publications and he volunteers in tech communities.",
     "image_url": "https://i.ibb.co/dWLcrbW/Laju-s-Profile-Picture.jpg",
+    "day": 1,
     "links": {
       "linkedin": "https://linkedin.com/in/obumnwabude",
       "twitter": "https://x.com//obumnwabude"
-    }
+    },
+    "track": "Mobile",
+    "session_title": "How to Build Android Bubbles in Flutter"
   },
   "samson-goddy": {
     "id": "samson-goddy",
     "name": "Samson Goddy",
     "title": "OSS Program Manager, Hedera Hashgraph",
-    "bio": "Samson Goddy is seasoned open source program manager and DevRel professional with over a decade of working with multi-cultural teams and extensive expertise in community building, advocacy, and strategic partnerships around the developer's communities. Co-founder of Open Source Community Africa (OSCA), and currently doing Open Source work with Hedera Hashgraph, focusing on nurturing the community around Hedera's innovative hashgraph consensus algorithm. He is a Github star, while currently serving on the board of Open Source Collective.",
+    "bio": "Samson Goddy is a seasoned open source program manager and DevRel professional with over a decade of experience working with multi-cultural teams and extensive expertise in community building, advocacy, and strategic partnerships around the developer's communities. Co-founder of Open Source Community Africa (OSCA), and currently doing Open Source work with Hedera Hashgraph, focusing on nurturing the community around Hedera's innovative hashgraph consensus algorithm. He is a Github star, while currently serving on the board of Open Source Collective.",
     "image_url": "https://i.ibb.co/cJmqV8r/image.jpg",
+    "day": 1,
     "links": {
       "linkedin": "https://www.linkedin.com/in/samsongoddy/",
       "twitter": "https://x.com/samson_goddy",
       "github": "https://github.com/samswag"
-    }
+    },
+    "track": "Web 3",
+    "session_title": "Decentralization is Not Open Source: Unraveling the Misconceptions"
   },
   "gift-ojeabulu": {
     "id": "gift-ojeabulu",
     "name": "Gift Ojeabulu",
-    "title": "Co-founder of Data Community Africa, ML Developer Relations and Community Engagement Specialist at iterative.ai.",
+    "title": "Co-founder of Data Community Africa, ML Developer and Relations Specialist at iterative.ai.",
     "bio": "Gift Ojeabulu is a distinguished Data scientist, Co-founder of Data Community Africa, and Board member at DevNetwork. His professional expertise lies in machine learning, focusing particularly on sports analytics and developer relations. As a dedicated AI and Python advocate, Gift has made significant strides in empowering African data communities. He spearheaded the African Data Community Newsletter, a widely read publication reaching audiences across 45 countries and 8 U.S. states, with over 2,200 subscribers. This initiative has evolved over time, spawning impactful projects like MLOps Lagos and a full-fledged non-profit organization known for DatafestAfrica. Gift's commitment to advancing technology in Africa extends to his leadership of the MLOps community in Lagos. This initiative concentrates on cutting-edge areas of practical machine learning operations (MLOps) and Large Language Models (LLMs) use cases in organizations, fostering innovation, promoting open source in AI, and facilitating knowledge sharing in the region.",
     "image_url": "https://i.ibb.co/wpPZdnH/IMG-1951-2-3.jpg",
+    "day": 1,
     "links": {
       "linkedin": "https://www.linkedin.com/in/gift-ojabu/",
       "twitter": "https://twitter.com/GiftOjeabulu_",
       "github": "https://github.com/Gift-Ojeabulu"
-    }
+    },
+    "track": "Developer Relations",
+    "session_title": "The Role of Developer Relations in the Success of AI/ML Products"
   },
   "confidence-okoghenun": {
     "id": "confidence-okoghenun",
@@ -87,11 +108,14 @@
     "title": "Senior Developer Advocate @ Cloudflare",
     "bio": "Confidence is a Senior Developer Advocate at Cloudflare, where he plays a pivotal role in connecting developers with the company's cutting-edge technologies. With over five years of hands-on experience as a software engineer, Confidence has a deep understanding of the developer ecosystem, enabling him to effectively support enterprise clients and teams in utilizing Cloudflare's solutions for optimal success. In his role, Confidence is passionate about exploring new technologies, providing expert guidance, and staying at the forefront of industry trends. He is dedicated to fostering meaningful connections and empowering developers throughout their software development journey.",
     "image_url": "https://i.ibb.co/KW5wRyX/yellow-1.jpg",
+    "day": 1,
     "links": {
       "linkedin": "https://www.linkedin.com/in/megaconfidence/",
       "twitter": "https://x.com/megaconfidence",
       "github": "https://github.com/megaconfidence/"
-    }
+    },
+    "track": "Web",
+    "session_title": "Building Web Apps That Work Offline and Beyond"
   },
   "segun-olumide": {
     "id": "segun-olumide",
@@ -99,22 +123,28 @@
     "title": "Technical Writer at Kuda",
     "bio": "I am a technical writer and community leader passionate about making a difference in developers' lives and contributing to the technology industry's growth. My interest in community development began early in my career. I have successfully led multiple communities, helping members navigate the industry's ever-changing landscape while fostering an environment of learning and growth. My writing background has been a significant asset in these endeavours, allowing me to craft compelling content that addresses the community's needs.",
     "image_url": "https://i.ibb.co/g9g93HS/PXL-20220707-150811554.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/wonexo",
       "linkedin": "https://www.linkedin.com/in/wonexo/",
       "github": "https://github.com/wonexo"
-    }
+    },
+    "track": "Developer Relations",
+    "session_title": "Enhancing Developer Engagement through Effective Technical Writing"
   },
   "emike-dania": {
     "id": "emike-dania",
-    "name": "Emike Dania ",
-    "title": "Exercise Physiologist, Physical Education Specialist & Corporate Wellness Consultant/CEO of Dania Fitness.",
-    "bio": "Emike Dania Abubakar is an Exercise Physiologist (Ph.D in view), as well as a certified Zumba instructor with 9 years experience ranging across Personal/Group fitness training, Corporate Wellness,  Fitness testing/assessments, Fitness consulting for Gym Setup, Team Building & Staff recruitment, Physical Education & Exercise Science Research. She is passionate about helping individuals live healthier active lives, and providing fitness solutions for corporate organizations to improve their staff health, welfare & productivity through effective industry techniques, quality fitness services, and customized flexible processes (both virtual and on-site).",
+    "name": "Emike Dania",
+    "title": "Exercise Physiologist, Physical Education Specialist & CEO, Dania Fitness.",
+    "bio": "Emike Dania Abubakar is an Exercise Physiologist (Ph.D in view), as well as a certified Zumba instructor with 9 years experience ranging across Personal/Group fitness training, Corporate Wellness, Fitness testing/assessments, Fitness consulting for Gym Setup, Team Building & Staff recruitment, Physical Education & Exercise Science Research. She is passionate about helping individuals live healthier active lives, and providing fitness solutions for corporate organizations to improve their staff health, welfare & productivity through effective industry techniques, quality fitness services, and customized flexible processes (both virtual and on-site).",
     "image_url": "https://i.ibb.co/9tVnVRK/PRO-1086.jpg",
+    "day": 1,
     "links": {
       "linkedin": "https://www.linkedin.com/in/emike-dania-73b900141?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       "twitter": "https://x.com/eimeekay?s=21&t=Q8_GOzKaURWr_djprjTGBQ"
-    }
+    },
+    "track": "Health & Wellness",
+    "session_title": "The Role of Corporate Wellness in Enhancing Productivity"
   },
   "oluwaseyi-ajadi": {
     "id": "oluwaseyi-ajadi",
@@ -122,23 +152,29 @@
     "title": "Quality Assurance Engineer and Penetration Tester",
     "bio": "With over five years of experience in Quality Assurance, penetration testing, and automation, I bring a thorough and meticulous approach to software testing. My expertise spans the entire software lifecycle, from design sessions to post-live maintenance, ensuring that quality is embedded at every stage of development. I am committed to making quality an integral part of every process and placing security at the forefront of all development practices. By implementing strategies that prevent bugs from the outset, I ensure robust and secure software delivery.",
     "image_url": "https://i.ibb.co/R4hsz18/PXL-20230902-114958222-1.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://twitter.com/OluwaseyiAjadi4",
       "linkedin": "https://www.linkedin.com/in/seyiqse/",
       "github": "https://github.com/BlazinArtemis"
-    }
+    },
+    "track": "Cybersecurity",
+    "session_title": "Embedding Quality and Security in the Development Lifecycle"
   },
   "tobiloba-adedeji": {
     "id": "tobiloba-adedeji",
     "name": "Tobiloba Adedeji",
-    "title": "Developer Relations Engineet at Fleek",
+    "title": "Developer Relations Engineer at Fleek",
     "bio": "Hi there! My name is Tobiloba Adedeji, and I am a software engineer with a passion for creating top-quality software that enhances the user experience and helps businesses achieve their goals. With a keen eye for detail and a focus on scalability, I work tirelessly to ensure that my software solutions are accessible to as many people as possible. In addition to my work as a software engineer, I am an active contributor and maintainer of numerous open-source projects. Through my contributions, I strive to make a positive impact on the developer community and help to advance the state of technology for everyone. If you're interested in working with a dedicated and experienced software engineer who is passionate about creating great software and giving back to the community, please don't hesitate to reach out to me. I would love to connect with you!",
     "image_url": "https://i.ibb.co/Jr1tpLz/toby-2.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/toby_solutions",
       "linkedin": "https://www.linkedin.com/in/tobiloba-adedeji/",
       "github": "https://github.com/tobySolutions"
-    }
+    },
+    "track": "Developer Relations",
+    "session_title": "Building and Scaling Open Source Communities in Developer Relations"
   },
   "uche-azubuko": {
     "id": "uche-azubuko",
@@ -146,23 +182,29 @@
     "title": "Lead Frontend Engineer, OneLiquidity",
     "bio": "Uchechukwu Azubuko is a tech expert who drives innovation and positive change. He is the Lead Frontend Engineer at OneLiquidity, crafting highly impactful fintech and blockchain solutions. Uchechukwu also empowers the developer community as a co-organizer of Vue.js Nigeria and a creator of educational content for Vue Mastery. Additionally, he is committed to mentoring young women and ensuring they thrive by exposing them to digital technology.",
     "image_url": "https://i.ibb.co/1MRDjFH/uchechukwu-azubuko-avatar.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://twitter.com/UcheAzubuko",
       "linkedin": "https://www.linkedin.com/in/ucheazubuko",
       "github": "https://github.com/UcheAzubuko"
-    }
+    },
+    "track": "Web",
+    "session_title": "Building Scalable Frontend Architectures in Fintech"
   },
   "ayo-kehinde-samuel": {
     "id": "ayo-kehinde-samuel",
     "name": "Ayo Kehinde Samuel",
     "title": "Lead Generative AI Engineer @ Clive AI, USA | Conference Speaker",
-    "bio": "Ayo Kehinde Samuel also known as Sam Ayo, is a proud father & husband, Lead AI engineer, Senior Software engineer, AI Innovator and conference speaker with professional expertise spanning across various fields where he applies machine learning and AI to automate processes, design systems and expand existing one.",
+    "bio": "Ayo Kehinde Samuel, also known as Sam Ayo, is a proud father & husband, Lead AI engineer, Senior Software engineer, AI Innovator and conference speaker with professional expertise spanning across various fields where he applies machine learning and AI to automate processes, design systems and expand existing ones.",
     "image_url": "https://i.ibb.co/Lr7fYFq/Sam-Ayo-2.png",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/officialsamayo",
       "linkedin": "https://linkedin.com/in/sam-ayo",
       "github": "https://github.com/Stosan"
-    }
+    },
+    "track": "ML / AI",
+    "session_title": "Advancing Generative AI for Business Automation"
   },
   "ololade-adesuyi": {
     "id": "ololade-adesuyi",
@@ -170,54 +212,71 @@
     "title": "UI/UX Designer | Product Design Expert | Design Advocate",
     "bio": "Ololade Adesuyi is a seasoned UI/UX Designer with over 4 years of hands-on experience in creating user-centric digital experiences. Currently a Product Design Lead at Tappi, Ololade has a rich background in product design, usability, and digital transformation. She has contributed significantly to the tech community, volunteering as a Design Mentor and speaking at various tech events and conferences. Her expertise lies in designing intuitive and engaging user interfaces that not only meet but exceed user expectations. With a passion for gamification in UX, Ololade continuously explores innovative ways to enhance user engagement through playful design elements.",
     "image_url": "https://i.ibb.co/tms3yh6/Ololade-Adesuyi.jpg",
+    "day": 1,
     "links": {
       "twitter": "twitter.com/thislolade",
       "linkedin": "linkedin.com/in/ololade-adesuyi"
-    }
+    },
+    "track": "Product",
+    "session_title": "Gamification in UX: Engaging Users through Playful Design"
   },
   "ogunrekun-ayoola": {
     "id": "ogunrekun-ayoola",
-    "name": "Ogunrekun Ayoola ",
+    "name": "Ogunrekun Ayoola",
     "title": "Broadcaad, Junior Backend Developer",
-    "bio": "I am a Junior Backend Developer at Broadcaad, a fast growing startup, with a strong foundation in the MERN stack. I honed my technical skills and knowledge at Yaba College of Technology (YABATECH). I am passionate about backend development and enjoy working on complex projects that challenge my overall problem-solving abilities. My  expertise includes creating robust APIs, optimizing backend performance, and ensuring seamless integration across different services. I am committed to continuous learning and always eager to embrace new technologies and methodologies in the tech industry.",
-    "image_url": "https://i.ibb.co/Yy23Bdf/Snapchat-1905052089.jpg",
+    "bio": "I am a Junior Backend Developer at Broadcaad, a fast-growing startup, with a strong foundation in the MERN stack. I honed my technical skills and knowledge at Yaba College of Technology (YABATECH). I am passionate about backend development and enjoy working on complex projects that challenge my overall problem-solving abilities. My expertise includes creating robust APIs, optimizing backend performance, and ensuring seamless integration across different services. I am committed to continuous learning and always eager to embrace new technologies and methodologies in the tech industry.",
+    "image_url": "https://i.ibb.co/cbDm9HK/Snapchat-1905052089.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://twitter.com/AyoolaOgunrekun?s=09",
       "linkedin": "www.linkedin.com/ayoolaogunrekun",
       "github": "www.github.com/OgunrekunAyoola"
-    }
+    },
+    "track": "Backend Development",
+    "session_title": "Building Efficient APIs with the MERN Stack"
   },
   "ezekiel-kingsley": {
     "id": "ezekiel-kingsley",
-    "name": "Nkorom Ezekiel Kingsley ",
-    "title": "Security Analyst ",
-    "bio": "I’m a cybersecurity professional with a diverse background in the field. Having completed internships with industry giants such as Mastercard and IBM, I have gained valuable experience and insights into cybersecurity practices and technologies. Following these internships, I contributed to SigmaPay, further honing their skills in the industry. Currently, I’m enrolled in the Google Cybersecurity course to stay at the forefront of emerging trends and technologies. I have also made notable contributions to the cybersecurity community by speaking at various events, including Rustlang Conf42. Presently, I serve as a Cybersecurity Analyst at USCO (Unified Scientific and Creative Operations), where we leverage our expertise to protect and secure digital assets. With a robust background and ongoing commitment to learning and sharing knowledge, I will continue to make significant strides in the cybersecurity landscape and speaking at this event would help me greatly. ",
+    "name": "Nkorom Ezekiel Kingsley",
+    "title": "Security Analyst",
+    "bio": "I’m a cybersecurity professional with a diverse background in the field. Having completed internships with industry giants such as Mastercard and IBM, I have gained valuable experience and insights into cybersecurity practices and technologies. Following these internships, I contributed to SigmaPay, further honing my skills in the industry. Currently, I’m enrolled in the Google Cybersecurity course to stay at the forefront of emerging trends and technologies. I have also made notable contributions to the cybersecurity community by speaking at various events, including Rustlang Conf42. Presently, I serve as a Cybersecurity Analyst at USCO (Unified Scientific and Creative Operations), where we leverage our expertise to protect and secure digital assets. With a robust background and ongoing commitment to learning and sharing knowledge, I will continue to make significant strides in the cybersecurity landscape.",
     "image_url": "https://i.ibb.co/nQBn2RC/IMG-0027.jpg",
-    "links": { "twitter": "https://twitter.com/Kaychukwudinma" }
+    "day": 1,
+    "links": {
+      "twitter": "https://twitter.com/Kaychukwudinma"
+    },
+    "track": "Cybersecurity",
+    "session_title": "Leveraging Emerging Cybersecurity Trends for Digital Safety"
   },
   "jeffery": {
     "id": "jeffery",
     "name": "Jeffery Abdulateef-Adoga",
     "title": "Senior Product Designer at Andela, Design Director at Urban Effect Media",
     "bio": "Jeffery Abdulateef Adoga is a distinguished product designer, entrepreneur, and mentor with over a decade of experience in the digital technology sector. With a strong background in computer science and a deep passion for innovative design, Jeffery has consistently demonstrated his ability to merge creativity with technology to solve complex problems and drive business success. Throughout his career, Jeffery has been at the forefront of designing and launching cutting-edge digital products that have significantly impacted the tech landscape in Africa and beyond. His expertise spans various industries, including fintech, healthcare, and telecommunications, where he has led high-performing teams in creating user-centred solutions that enhance user experience and drive engagement. Jeffery's professional journey includes pivotal roles at renowned organisations such as Reliance Health, Interswitch Group, and Antigravity. At Reliance Health, he was instrumental in developing a seamless prescription access flow for the company's telemedicine app, directly benefiting thousands of users across Nigeria. His strategic design initiatives at Interswitch Group led to the successful training of entry-level designers and the establishment of a robust design system that streamlined operations and improved efficiency.",
-    "image_url": "https://ibb.co/FXDtZ53",
+    "image_url": "https://i.ibb.co/hcmvQB9/Jeffery-Portrait.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/_japelandmore_",
       "linkedin": "https://linkedin.com/in/jefferya",
       "github": "https://github.com/japelandmore"
-    }
+    },
+    "track": "Product",
+    "session_title": "Creating Impactful Design Systems for Emerging Markets"
   },
   "anita-ihuman": {
     "id": "anita-ihuman",
     "name": "Anita Ihuman",
     "title": "Developer Advocate",
     "bio": "Anita is a developer advocate and a technical writer specializing in cloud native and DevOps engineering. She is championing the growth and adoption of cloud-native solutions in Africa as an organizer of Kubernetes Community Days(KCD) Nigeria and the CNCF Abuja community group. She is an Open source evangelist and has led great efforts in around DEI, Documentation, and Community growth as a member of CHAOSS Board of directors. She has spoken at various international conferences, like KubeCon, DevConf.cz, FOSSBackstage, FOSDEM, and many more. ",
-    "image_url": "https://drive.google.com/file/d/1HuVZJF3lEknuKvKLZQaws91HFWUYYBVS/view?usp=drive_link",
+    "image_url": "https://i.ibb.co/mBCkZzg/IMG-2109.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/Anita_ihuman",
       "linkedin": "https://www.linkedin.com/in/anita-ihuman/",
       "github": "https://github.com/Anita-ihuman"
-    }
+    },
+    "track": "Web",
+    "session_title": "Leveling up the Kubernetes Development Experience with Remocal development"
   },
   "adejoke-haastrup": {
     "id": "adejoke-haastrup",
@@ -225,11 +284,14 @@
     "title": "Sendbox, Developer Relations Engineer",
     "bio": "Adejoke Haastrup is a seasoned software engineer with expertise in building and integrating complex systems. She is the founder of Kidsthatcode, an initiative dedicated to inspiring the next generation by encouraging kids to start coding early. Currently, she leads Developer Relations at Sendbox, where she focuses on building integrations and creating technical content that helps engineers understand the product better, while also providing comprehensive developer support.",
     "image_url": "https://i.ibb.co/Q66xp12/adejoke-profilpic.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/jastrup7",
       "linkedin": "https://www.linkedin.com/in/haastrup-adejoke-543665120/",
       "github": "https://github.com/jhaastrup"
-    }
+    },
+    "track": "Developer Relations",
+    "session_title": "Creating Developer-Centric Content: How to Write for a Technical Audience"
   },
   "john-ohio": {
     "id": "john-ohio",
@@ -237,11 +299,14 @@
     "title": "Design Lead, SeamlessHR",
     "bio": "I am John Ohio, a Product Design Lead at SeamlessHR and a Senior Product Designer specializing in Enterprise Design Systems, UX Strategy, and Design Operations. My superpower is connection – I'm passionate about collaborating with people, understanding their perspectives, and translating those needs into impactful designs. With a focus on outcomes over outputs, I am dedicated to creating usable, functional digital products that truly satisfy users. My expertise extends beyond my daily work. I'm an active contributor to the tech community. I am ready to share practical insights on how Design Thinking can elevate problem-solving across various fields",
     "image_url": "https://i.ibb.co/MNwFdfJ/avatar.png",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/jon__ohio",
       "linkedin": "https://linkedin.com/in/jon4ohio",
       "github": "https://github.com/jon4ohio"
-    }
+    },
+    "track": "Product",
+    "session_title": "Design Thinking for Problem-Solving: Beyond UX Design"
   },
   "olivier-leplus": {
     "id": "olivier-leplus",
@@ -249,22 +314,28 @@
     "title": "Developer Advocate at AWS and Google Developer Expert in Web Technologies",
     "bio": "Developer Advocate at AWS and Google Developer Expert in Web Technologies. I love to share knowledge among developers and meet people in general.",
     "image_url": "https://i.ibb.co/2FSrxdn/avatar2.png",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/olivierleplus",
       "linkedin": "https://www.linkedin.com/in/olivierleplus/"
-    }
+    },
+    "track": "Web",
+    "session_title": "CSS Rises from the Ashes: (Re)Become Friends with Your Stylesheet"
   },
   "robert-john": {
     "id": "robert-john",
     "name": "Robert John",
     "title": "Arm Innovator | Edge Impulse Expert | Google Developer Expert",
     "bio": "Robert has worked with databases and developed enterprise software for over two decades. He works with everything data on the Google Cloud Platform, from engineering to visualization and Machine Learning. He started working with embedded systems and TinyML three years ago and is eager to see the widespread adoption of embedded systems in Africa. In the past, Robert worked as a software engineer, building systems for finance, telecommunications, and utilities/energy vending. Robert's vision extends beyond his current work. He eagerly anticipates a future where Africans will not only use but also design and build their own embedded systems with Machine Learning capabilities. Robert is a proactive contributor to the developer ecosystem. He shares his knowledge and insights by speaking at events,  hosting meetups and code labs, and creating tutorials. His written work, published on platforms like Hackster.io, Medium, and his personal blog, covers a range of topics including data visualization, ML, and Google Cloud Platform (GCP). He also serves as a mentor at the Google for Startups Africa Accelerator programme and co-organizes the GDG Cloud developer community in Kaduna, Nigeria",
-    "image_url": "https://i.ibb.co/mvNsfdw/R5.jpg",
+    "image_url": "https://i.ibb.co/4Yk3NTZ/R5.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/robert_thas",
       "linkedin": "https://www.linkedin.com/in/robert-john-b137952b/",
       "github": "https://www.instagram.com/robertthasjohn"
-    }
+    },
+    "track": "ML / AI",
+    "session_title": "Scale Out Your DevOps with T2A Machine Types"
   },
   "lois-bassey": {
     "id": "lois-bassey",
@@ -272,11 +343,14 @@
     "title": "Software x DevOps Engineer & Founder @Codevixens",
     "bio": "Lois Bassey is a seasoned software engineer and DevOps professional with over 5 years of hands-on experience in backend development and cloud infrastructure. She’s worked on building and maintaining scalable systems, while also gaining solid expertise in DevOps practices like continuous integration, deployment, and automation.Beyond her technical roles, Lois is the founder of Codevixens, a tech organization that empowers women in technology. As a program director, she has created and led various successful tech educational programs, helping over 6,000 people build the skills they need to thrive in the tech world. Through her mentorship, Lois is passionate about guiding others on their own journeys into tech.Lois brings a mix of technical expertise and a passion for teaching, and she’s excited to share her experience and knowledge at this event.",
     "image_url": "https://i.ibb.co/bvLbbgB/Picture-Choice-4.jpg",
+    "day": 1,
     "links": {
       "twitter": "https://x.com/That_lady_dev",
       "linkedin": "https://www.linkedin.com/in/lois-bassey-291870174/",
       "github": "https://github.com/ThatLadyDev"
-    }
+    },
+    "track": "Cloud",
+    "session_title": "Building a Multi-tenant SaaS with Microservices on Kubernetes"
   },
   "motunrayo-koyejo": {
     "id": "motunrayo-koyejo",
@@ -284,10 +358,13 @@
     "title": "Software Engineer ",
     "bio": "Motunrayo Koyejo is an accomplished backend engineer with over 4 years of experience in crafting secure and scalable financial applications. Known for her innovative approach to solving complex challenges, she brings a practical and results-oriented perspective to every project. Beyond her technical work, Motunrayo is a dedicated mentor, guiding the next generation of engineers through volunteer initiatives. Her commitment to excellence and clear communication make her a sought-after speaker for technical conferences and events",
     "image_url": "https://i.ibb.co/LN7whY0/Copy-of-IMG-7389.jpg",
+    "day": 1,
     "links": {
       "twitter": "x.com/Motushbae",
       "linkedin": "https://www.linkedin.com/in/motunrayokoyejo",
       "github": "https://github.com/motunrayokoyejo"
-    }
+    },
+    "track": "Web",
+    "session_title": "Implementing OAuth 2.0 for Secure API Access"
   }
 }
