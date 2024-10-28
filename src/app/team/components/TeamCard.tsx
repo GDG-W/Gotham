@@ -15,7 +15,7 @@ import DevsBadge from '../assets/dev-badge.svg';
 // icons
 import DesignerIcon from '../assets/blue-arrow.svg';
 import LeadsIcon from '../assets/green-hash.svg';
-import ContentIcon from '../assets/green-cursor.svg';
+import ContentIcon from '../assets/content-badge.svg';
 import OrganisersIcon from '../assets/red-cross.svg';
 import DevsIcon from '../assets/pink-brackets.svg';
 
