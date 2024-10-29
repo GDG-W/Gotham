@@ -72,15 +72,12 @@
     gap: 1rem;
     width: 100%;
     max-width: 836px;
-    pointer-events: none;
 
     li {
       border: 1px solid black;
       border-radius: 1em;
       padding: 1rem 2rem;
       display: flex;
-      cursor: pointer;
-      pointer-events: auto;
       justify-content: space-between;
       display: flex;
       flex-direction: column;
@@ -91,6 +88,7 @@
       .item-question {
         display: flex;
         align-items: center;
+        cursor: pointer;
         justify-content: space-between;
         user-select: none;
         @include body2-medium();
@@ -141,7 +139,7 @@
       .item-answer {
         opacity: 1;
         height: fit-content;
-        transition: opacity ease 100ms;
+        transition: opacity ease 200ms;
       }
 
       .arrow-icon {

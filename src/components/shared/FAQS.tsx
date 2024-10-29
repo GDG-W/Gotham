@@ -38,12 +38,8 @@ const FaqItem = ({
   const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <li
-      key={index}
-      className={`faq-accordion-item ${isOpened && 'is-opened'}`}
-      onClick={() => setIsOpened(!isOpened)}
-    >
-      <div className='item-question'>
+    <li key={index} className={`faq-accordion-item ${isOpened && 'is-opened'}`}>
+      <div className='item-question' onClick={() => setIsOpened(!isOpened)}>
         <p>
           {index + 1}. {faq.question}
         </p>
