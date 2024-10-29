@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { Speaker } from '../data/speakerData';
