@@ -1,0 +1,50 @@
+@import '/src/styles/core/variables';
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
+
+.speakersListWrapper {
+  background: $yellow-primary-100;
+  padding: 48px 44px;
+
+  li {
+    list-style: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  .speakersList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 1rem;
+
+    @include media('<1300px') {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+    @include media('<=850px') {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  .loadBtn {
+    background: inherit;
+    @include body4-medium();
+    padding: 0.8rem 1.5rem;
+    border-radius: 2em;
+    margin: 3rem auto;
+    margin-bottom: 0;
+    color: black;
+    width: fit-content;
+    display: block;
+    border: 1px solid $grey-20;
+  }
+
+  @include media('<=tablet') {
+    padding: 40px 20px;
+  }
+}
