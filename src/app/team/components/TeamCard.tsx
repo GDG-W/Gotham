@@ -166,12 +166,12 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
               <div className={styles.memberQuotes}>
                 <div>
                   <p className={styles.textHeader}>Fun Fact</p>
-                  <p className={styles.textContent}>&#34;{member.fact}&#34;</p>
+                  <p className={styles.textContent}>{member.fact}</p>
                 </div>
                 {member.experience && (
                   <div>
                     <p className={styles.textHeader}>DevFest Volunteer Experience</p>
-                    <p className={styles.textContent}>&#34;{member.experience}&#34;</p>
+                    <p className={styles.textContent}>{member.experience}</p>
                   </div>
                 )}
               </div>
@@ -192,7 +192,7 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
       <div className={styles.cardDetails}>
         <p className={styles.name}>{member.name}</p>
         <p className={styles.category}>{member.category}</p>
-        <p className={styles.quote}>&#34;{member.quote}&#34;</p>
+        <p className={styles.quote}>{member.quote}</p>
       </div>
     </div>
   );
