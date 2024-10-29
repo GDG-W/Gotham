@@ -11,6 +11,7 @@
   row-gap: 3rem;
   padding: 0 2.5rem;
   padding-bottom: 18rem;
+  max-width: 100%;
 
   @include media('<1200px') {
     grid-template-columns: repeat(2, 1fr);
