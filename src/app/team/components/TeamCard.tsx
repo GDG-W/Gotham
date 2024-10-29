@@ -36,10 +36,18 @@ const sortMember = (member: TransformedItem, type: string) => {
     case member.category === 'Product':
       return type === 'badge' ? <LeadsBadge /> : <LeadsIcon />;
     case member.category === 'Content':
-      return type === 'badge' ? <ContentBadge /> : <ContentIcon />;
+      return type === 'badge' ? (
+        <ContentBadge />
+      ) : (
+        <ContentIcon style={{ transform: 'rotate(8deg)' }} />
+      );
 
     default:
-      return type === 'badge' ? <ContentBadge /> : <ContentIcon />;
+      return type === 'badge' ? (
+        <ContentBadge />
+      ) : (
+        <ContentIcon style={{ transform: 'rotate(8deg)' }} />
+      );
   }
 };
 
@@ -56,7 +64,6 @@ const fetchSongDetails = async (videoId: string): Promise<SongDetails | null> =>
       `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`,
     );
     const title = response.data.items[0].snippet.title;
-    // console.log(response.data.items[0].snippet);
     const songTitle = title.split('-')[0].trim();
     const artist = response.data.items[0].snippet.tags[0];
     return { songTitle, artist };
@@ -161,10 +168,10 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
                   <p className={styles.textHeader}>Fun Fact</p>
                   <p className={styles.textContent}>&#34;{member.fact}&#34;</p>
                 </div>
-                {member.note && (
+                {member.experience && (
                   <div>
-                    <p className={styles.textHeader}>Notes From A Team Member</p>
-                    <p className={styles.textContent}>&#34;{member.note}&#34;</p>
+                    <p className={styles.textHeader}>DevFest Volunteer Experience</p>
+                    <p className={styles.textContent}>&#34;{member.experience}&#34;</p>
                   </div>
                 )}
               </div>
