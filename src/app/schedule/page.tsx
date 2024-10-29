@@ -7,8 +7,10 @@ import { Button } from './components/button';
 import ScheduleItem from './components/scheduleData';
 import { scheduleData, saturdayScheduleData } from './mock/schedule';
 import Reservation from './components/reservation';
+import { notFound } from 'next/navigation';
 
 const SchedulePage = () => {
+  notFound(); //re-routes to not found
   const [currentSchedule, setCurrentSchedule] = useState(scheduleData);
 
   const handleDayClick = (day: string) => {
