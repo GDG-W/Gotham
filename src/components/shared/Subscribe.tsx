@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Subscribe = () => {
   return (
@@ -10,10 +11,10 @@ const Subscribe = () => {
           Get updated on all our activities, events, webinars. Be the first to know what the GDG
           Lagos community is up to.
         </p>
-        <button className='subscribe-btn'>
+        <Link href={'/community'} className='subscribe-btn'>
           <p>Let{"'"}s go</p>
           <Image src='/images/svg/arrow-right.svg' alt='Right Arrow' width={17} height={17} />
-        </button>
+        </Link>
       </div>
       <Image
         src='/images/png/subscribe-selfie.png'

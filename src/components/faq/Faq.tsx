@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import FAQAccordion from './FaqAccordion';
-import Community from './Community';
+import Subscribe from '../shared/Subscribe';
+// import Community from './Community';
 
 const Faq = () => {
   return (
@@ -14,7 +15,8 @@ const Faq = () => {
       </div>
 
       <FAQAccordion />
-      <Community />
+      <Subscribe />
+      {/* <Community /> */}
     </div>
   );
 };

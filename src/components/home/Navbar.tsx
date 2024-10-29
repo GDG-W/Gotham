@@ -12,7 +12,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { href: '/speakers', label: 'Speakers' },
-  { href: '/schedule', label: 'Schedule' },
+  { href: '/not-found', label: 'Schedule' },
   { href: '/team', label: 'Team' },
   { href: '/faqs', label: 'FAQs' },
 ];
