@@ -33,7 +33,6 @@
 
   .faqs-items {
     width: 700px;
-    margin: 0 auto;
     border: none;
 
     .faqs-item {
@@ -41,7 +40,7 @@
       overflow: hidden;
       border: 1px solid #000;
       border-radius: 15px;
-      transition: all 0.3s ease;
+      transition: ease 300ms;
 
       .faqs-question {
         width: 100%;
@@ -49,6 +48,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        user-select: none;
         background-color: transparent;
         border: none;
         text-align: left;
@@ -56,33 +56,40 @@
         font-weight: 600;
         color: #333;
         font-size: 16px;
+        transition: all 0.3s ease-in-out;
 
         .chevron-icon {
           flex-shrink: 0;
           width: 24px;
           height: 24px;
-          transition:
-            transform 0.3s ease,
-            opacity 0.3s ease;
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
+        }
+        .items {
+          display: flex;
+          gap: 8px;
         }
       }
 
       .faqs-answer {
-        padding: 0 20px 15px 30px;
+        padding: 0 10px 15px 3.3rem;
         overflow: hidden;
         font-size: 14px;
         color: $grey-50;
-        line-height: 1.5;
-        transition:
-          max-height 0.3s ease,
-          background-color 0.3s ease,
-          padding 0.3s ease;
+        transition: all 0.3s ease;
+
+        p {
+          width: 90%;
+        }
       }
 
       &.open {
         .faqs-question,
         .faqs-answer {
           background-color: $yellow-primary-90;
+        }
+        .faqs-question {
+          padding: 14px 30px 3px 2rem;
         }
         .faqs-answer {
           max-height: 1000px;
@@ -123,6 +130,12 @@
         .faqs-question {
           max-width: 450px;
           font-size: 15px;
+        }
+        .faqs-answer {
+          span {
+            width: 270px;
+            text-align: left;
+          }
         }
       }
     }

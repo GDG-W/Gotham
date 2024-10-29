@@ -18,7 +18,14 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['ibb.co', 'i.ibb.co', 'photos.google.com', 'bit.ly', 'avatars.githubusercontent.com', 'drive.google.com'],
+    domains: [
+      'ibb.co',
+      'i.ibb.co',
+      'photos.google.com',
+      'bit.ly',
+      'avatars.githubusercontent.com',
+      'drive.google.com',
+    ],
   },
 };
 
