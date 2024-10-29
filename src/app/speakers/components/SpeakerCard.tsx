@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Speaker } from '../data/speakerData';
 import styles from '../styles/SpeakerCard.module.scss';
 import Image from 'next/image';
@@ -61,12 +61,12 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
             <p>SPEAKERS SOCIALS</p>
             <div className={styles.socialLinksContainer}>
               {speaker.links.twitter && (
-                <a href={speaker.links.twitter}>
+                <a href={speaker.links.twitter} target='_blank' rel='noreferrer'>
                   <Image src={'/images/svg/X-icon.svg'} alt='x icon' width={24} height={24} />
                 </a>
               )}
               {speaker.links.linkedin && (
-                <a href={speaker.links.linkedin}>
+                <a href={speaker.links.linkedin} target='_blank' rel='noreferrer'>
                   <Image
                     src={'/images/svg/Linkedin-icon.svg'}
                     alt='linkdin icon'
@@ -76,7 +76,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
                 </a>
               )}
               {speaker.links.github && (
-                <a href={speaker.links.github}>
+                <a href={speaker.links.github} target='_blank' rel='noreferrer'>
                   <Image
                     src={'/images/svg/github-icon.svg'}
                     alt='linkdin icon'
