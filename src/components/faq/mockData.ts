@@ -132,13 +132,13 @@ export const mockData: FAQData = {
       question:
         'I purchased a one-day ticket, but now I want to attend both days. Can I upgrade my ticket?',
       answer:
-        'Yes, you can upgrade your one-day ticket to a two-day ticket through this platform (depending on availability). Please note that this feature is in development. Check back later.',
+        'Yes, you can upgrade your one-day ticket to a two-day ticket through this platform (depending on availability). This feature is now available',
     },
     {
       id: 10,
       question: 'How do I upgrade my ticket?',
       answer:
-        "Look for the 'Upgrade Ticket' option within your ticket purchase history in your User Profile. Follow the on-screen instructions to complete the upgrade process. Please note that this feature is in development. Check back later.",
+        "Look for the 'Upgrade Ticket' option within your ticket purchase history in your User Profile. Follow the on-screen instructions to complete the upgrade process. This feature is now available.",
     },
     {
       id: 11,
