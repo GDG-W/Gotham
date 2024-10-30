@@ -1,36 +1,44 @@
 'use client';
+import { Speaker } from '../data/speakerData';
 import styles from '../styles/DaysAndFilter.module.scss';
-import { speakerData } from '../data/speakerData';
-import { Dispatch } from 'react';
-
-const categories = speakerData.reduce(
-  (acc: string[], speaker) => {
-    if (!acc.includes(speaker.track)) {
-      acc.push(speaker.track);
-    }
-    return acc;
-  },
-  ['All'],
-);
+import React, { Dispatch } from 'react';
 
 const DaysAndFilter = ({
   selectedFilters,
   setSelectedFilters,
+  speakerData,
 }: {
-  selectedFilters: { day: number; category: string };
-  setSelectedFilters: Dispatch<{ day: number; category: string }>;
+  selectedFilters: { day: number | string; category: string };
+  speakerData: Speaker[];
+  setSelectedFilters: Dispatch<{ day: string | number; category: string }>;
 }) => {
+  const categories = speakerData.reduce(
+    (acc: string[], speaker) => {
+      if (!acc.includes(speaker.track)) {
+        acc.push(speaker.track);
+      }
+      return acc;
+    },
+    ['All'],
+  );
+
   const handleFilter = (key: string) => {
     setSelectedFilters({ ...selectedFilters, category: key });
   };
 
-  const handleDays = (day: number) => {
+  const handleDays = (day: number | string) => {
     setSelectedFilters({ ...selectedFilters, day });
   };
 
   return (
     <section className={styles.DayFilterWrapper}>
       <div className={styles.DayBtnsContainer}>
+        <button
+          onClick={() => handleDays('All')}
+          className={`${styles.dayBtn} ${selectedFilters.day === 'All' ? styles.activeDayBtn : ''}`}
+        >
+          <p>All</p>
+        </button>
         <button
           onClick={() => handleDays(1)}
           className={`${styles.dayBtn} ${selectedFilters.day === 1 ? styles.activeDayBtn : ''}`}

@@ -117,11 +117,11 @@
 
         @media (max-width: 768px) {
           width: 80%;
-          @include body5-regular();
+          @include body4-regular();
         }
 
         @media (max-width: 430px) {
-          width: 80%;
+          width: 100%;
           padding-left: 0rem;
         }
       }

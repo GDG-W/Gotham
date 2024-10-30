@@ -32,7 +32,13 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
           <div className={styles.frontHead}>
             <p>{speaker.name.slice(0, 1)}</p>
             <div className={styles.speakerImageWrap} style={{ position: 'relative' }}>
-              <Image src={speaker.image_url} fill alt={speaker.name + "'s Image"} />
+              <Image
+                src={speaker.image_url}
+                fill
+                alt={speaker.name + "'s Image"}
+                loading='eager'
+                style={{ objectFit: 'cover', minHeight: '100%' }}
+              />
             </div>
           </div>
           <div className={styles.frontContent}>
@@ -53,9 +59,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
           <div className={styles.content}>
             <div className={styles.speakerName}>{speaker.name}</div>
             <div className={styles.career}>{speaker.title}</div>
-            <div className={styles.bio}>
-              {speaker.bio.length > 520 ? speaker.bio.slice(0, 520) + '...' : ''}
-            </div>
+            <div className={styles.bio}>{speaker.shortbio || ''}</div>
           </div>
           <div className={styles.socialsWrapper}>
             <p>SPEAKERS SOCIALS</p>
