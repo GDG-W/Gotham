@@ -24,7 +24,7 @@ export const mockData: FAQData = {
       id: 3,
       question: 'What should I expect at Devfest Lagos 2024?',
       answer:
-        "DevFest Lagos 2024 is obviously going to be bigger and better! This time, you'll not only learn from industry experts, or  connect with like-minded professionals, or even network with potential collaborators, or gain insights into the latest trends and innovations in technology, but you'll have an unforgettable experience with lots of fun, relaxation, and  memories to last a lifetime.",
+        'DevFest Lagos 2024 is obviously going to be bigger and better! This time, the focus goes beyond learning from industry experts, or  connecting with like-minded professionals, or gaining insights into the latest trends and innovations in technology, but also enjoying an unforgettable experience with lots of fun, relaxation, and  memories to last a lifetime.',
     },
     {
       id: 4,
