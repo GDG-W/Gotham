@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { ScheduleData } from '../types/schedule';
-import styles from '../styles/Schedule.module.scss';
-import EventBlock from '../components/EventBlock';
+import styles from '../styles/schedule.module.scss';
+import EventBlock from './EventBlock';
 import EventCategory from './EventCategory';
 
 type ScheduleProps = {
