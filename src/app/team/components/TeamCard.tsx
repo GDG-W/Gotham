@@ -1,108 +1,198 @@
 'use client';
 import styles from '../styles/TeamCard.module.scss';
 import Image from 'next/image';
+import { TransformedItem } from '../data/parsedTeamData';
 
 import YoutubeMusicIcon from '../assets/youtubemusic.svg';
 
 // badges
-// import DesignerBadge from '../assets/designer-badge.svg';
-// import LeadsBadge from '../assets/leads-badge.svg';
-// import ContentBadge from '../assets/content-badge.svg';
+import DesignerBadge from '../assets/designer-badge.svg';
+import LeadsBadge from '../assets/leads-badge.svg';
+import ContentBadge from '../assets/content-badge.svg';
 import OrganisersBadge from '../assets/organiser-badge.svg';
-// import DevsBadge from '../assets/dev-badge.svg';
+import DevsBadge from '../assets/dev-badge.svg';
 
 // icons
-// import DesignerIcon from '../assets/blue-arrow.png';
+import DesignerIcon from '../assets/blue-arrow.svg';
 import LeadsIcon from '../assets/green-hash.svg';
-// import ContentIcon from '../assets/green-cursor.svg';
-// import OrganisersIcon from '../assets/red-cross.svg';
-// import DevsIcon from '../assets/pink-brackets.png';
+import ContentIcon from '../assets/content-badge.svg';
+import OrganisersIcon from '../assets/red-cross.svg';
+import DevsIcon from '../assets/pink-brackets.svg';
 
 import TwitterIcon from '../assets/X.svg';
-import FacebookIcon from '../assets/Facebook.svg';
 import LinkedinIcon from '../assets/Linkedin.svg';
 import InstagramIcon from '../assets/instagram.svg';
-import { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
 
-const TeamCard = () => {
+const sortMember = (member: TransformedItem, type: string) => {
+  switch (true) {
+    case member.category === 'Developer':
+      return type === 'badge' ? <DevsBadge /> : <DevsIcon />;
+    case member.category === 'Designer':
+      return type === 'badge' ? <DesignerBadge /> : <DesignerIcon />;
+    case member.category === 'GDG Organizer':
+      return type === 'badge' ? <OrganisersBadge /> : <OrganisersIcon />;
+    case member.category === 'Product':
+      return type === 'badge' ? <LeadsBadge /> : <LeadsIcon />;
+    case member.category === 'Content':
+      return type === 'badge' ? (
+        <ContentBadge />
+      ) : (
+        <ContentIcon style={{ transform: 'rotate(8deg)' }} />
+      );
+
+    default:
+      return type === 'badge' ? (
+        <ContentBadge />
+      ) : (
+        <ContentIcon style={{ transform: 'rotate(8deg)' }} />
+      );
+  }
+};
+
+const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_KEY;
+
+interface SongDetails {
+  songTitle: string;
+  artist: string;
+}
+
+const fetchSongDetails = async (videoId: string): Promise<SongDetails | null> => {
+  try {
+    const response = await axios.get(
+      `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`,
+    );
+    const title = response.data.items[0].snippet.title;
+    const songTitle = title.split('-')[0].trim();
+    const artist = response.data.items[0].snippet.tags[0];
+    return { songTitle, artist };
+  } catch (error) {
+    console.error('Error fetching song details:', error);
+    return null;
+  }
+};
+
+const TeamCard = ({ member }: { member: TransformedItem }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [songDetails, setSongDetails] = useState<SongDetails | null>(null);
+  const flipBackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    try {
+      const videoId = new URL(member.song).searchParams.get('v');
+      if (videoId) {
+        fetchSongDetails(videoId).then((details) => {
+          setSongDetails(details);
+        });
+      }
+    } catch (error) {
+      console.error('Invalid URL:', error);
+    }
+  }, [member.song]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (flipBackRef.current && !flipBackRef.current.contains(event.target as Node)) {
+        setIsFlipped(false);
+      }
+    };
+
+    if (isFlipped) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isFlipped]);
 
   return (
     <div className={styles.CardWrapper}>
       <div className={styles.flipCard}>
         <div
           className={`${styles.flipInner} ${isFlipped ? styles.isFlipped : ''}`}
-          onClick={() => setIsFlipped(!isFlipped)}
+          onMouseOver={() => setIsHovered(true)}
+          onMouseOut={() => setIsHovered(false)}
         >
           <div className={styles.flipFront}>
-            <div className={styles.lockedIn}>
+            <a href={member.song} target='_blank' rel='noreferrer' className={styles.lockedIn}>
               <p>My #Locked-in Vibe</p>
               <div className={styles.vibe}>
                 <YoutubeMusicIcon />
-                <p>Uhh Yeah - Asake</p>
+                <p>
+                  {songDetails?.songTitle} - {songDetails?.artist}
+                </p>
               </div>
-            </div>
+            </a>
             <div className={styles.memberBio}>
-              <Image
-                src={'/images/png/testImage.png'}
-                height={480}
-                width={437}
+              <div
+                onClick={() => setIsFlipped(true)}
                 className={styles.memberImage}
-                alt="sodiq akinjobi's image"
+                style={{
+                  background: `${isHovered ? `url(${member.image})` : `linear-gradient(0deg, #EBE2CC, #EBE2CC), url(${member.image})`}`,
+                  backgroundSize: 'cover',
+                }}
               />
-              <div className={styles.categoryIcon}>
-                <OrganisersBadge />
-              </div>
+              <div className={styles.categoryIcon}>{sortMember(member, 'badge')}</div>
               <div className={styles.socials}>
-                <a href='#'>
-                  <TwitterIcon />
-                </a>
-                <a href='#'>
-                  <LinkedinIcon />
-                </a>
-                <a href='#'>
-                  <InstagramIcon />
-                </a>
-                <a href='#'>
-                  <FacebookIcon />
-                </a>
+                {member.twitter && (
+                  <a href={member.twitter} target='_blank' rel='noreferrer'>
+                    <TwitterIcon />
+                  </a>
+                )}
+                {member.linkedin && (
+                  <a href={member.linkedin} target='_blank' rel='noreferrer'>
+                    <LinkedinIcon />
+                  </a>
+                )}
+                {member.instagram && (
+                  <a href={member.instagram} target='_blank' rel='noreferrer'>
+                    <InstagramIcon />
+                  </a>
+                )}
               </div>
             </div>
           </div>
           <div className={styles.flipBack}>
-            <div className={styles.flipBackInner}>
+            <div
+              className={styles.flipBackInner}
+              onClick={() => setIsFlipped(false)}
+              ref={flipBackRef}
+            >
               <div className={styles.memberQuotes}>
                 <div>
                   <p className={styles.textHeader}>Fun Fact</p>
-                  <p className={styles.textContent}>
-                    &#34;I learnt the art of 1 arm pushups at NYSC camp&#34;
-                  </p>
+                  <p className={styles.textContent}>{member.fact}</p>
                 </div>
-                <div>
-                  <p className={styles.textHeader}>Words to live by</p>
-                  <p className={styles.textContent}>&#34;Always be kind, Regardless&#34;</p>
-                </div>
+                {member.experience && (
+                  <div>
+                    <p className={styles.textHeader}>DevFest Volunteer Experience</p>
+                    <p className={styles.textContent}>{member.experience}</p>
+                  </div>
+                )}
               </div>
               <div className={styles.extraIcons}>
                 <Image
-                  src={'/images/png/testImage.png'}
-                  alt="sodiq's image"
+                  src={member.image}
+                  alt={member.name + "'s image"}
                   height={64}
                   width={64}
                   className={styles.flipBackImage}
                 />
-                <LeadsIcon />
+                {sortMember(member, 'icon')}
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.cardDetails}>
-        <p className={styles.name}>sodiq akinjobi</p>
-        <p className={styles.category}>organizer</p>
-        <p className={styles.quote}>
-          &#34;Being a president doesn&#39;t stop me from serving another country&#34;
-        </p>
+        <p className={styles.name}>{member.name}</p>
+        <p className={styles.category}>{member.category}</p>
+        <p className={styles.quote}>{member.quote}</p>
       </div>
     </div>
   );

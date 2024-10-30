@@ -7,7 +7,7 @@
   align-items: center;
   padding: 0px 40px;
   gap: 46px;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   max-height: 900px;
   justify-content: space-around;
@@ -96,6 +96,16 @@
     }
   }
 
+  .placeHolder {
+    width: 636px;
+    height: 100%;
+
+    @include media('<=tablet') {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
   li {
     list-style: none;
   }
@@ -152,10 +162,10 @@
     }
 
     .marqueeContent_up {
-      animation: vertical_scroll 30s forwards linear infinite;
+      animation: vertical_scroll 80s forwards linear infinite;
     }
     .marqueeContent_down {
-      animation: vertical_scroll 30s reverse linear infinite;
+      animation: vertical_scroll 80s reverse linear infinite;
     }
 
     .marqueeContent_down:hover,

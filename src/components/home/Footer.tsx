@@ -32,7 +32,7 @@ const Footer = () => {
       <div className='footer__links'>
         <div className='footer__link text-base'>
           {footerLinks.map((link, index) => (
-            <Link key={index} href={link.link} target='__blank'>
+            <Link key={index} href={link.link}>
               {link.title}
             </Link>
           ))}
@@ -40,7 +40,7 @@ const Footer = () => {
 
         <div className='footer__link text-base'>
           {footerLinks2.map((link, index) => (
-            <Link key={index} href={link.href} target='__blank'>
+            <Link key={index} href={link.href}>
               {link.title}
             </Link>
           ))}
