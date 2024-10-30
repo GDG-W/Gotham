@@ -131,17 +131,10 @@ export const mockData: FAQData = {
       id: 9,
       question:
         'I purchased a one-day ticket, but now I want to attend both days. Can I upgrade my ticket?',
-      answer:
-        'Yes, you can upgrade your one-day ticket to a two-day ticket through this platform (depending on availability). This feature is now available',
+      answer: `Yes, you can now upgrade your one-day ticket to a two-day ticket by simply visiting <a href="https://tickets.devfestlagos.com/login">https://tickets.devfestlagos.com/login</a>.`,
     },
     {
       id: 10,
-      question: 'How do I upgrade my ticket?',
-      answer:
-        "Look for the 'Upgrade Ticket' option within your ticket purchase history in your User Profile. Follow the on-screen instructions to complete the upgrade process. This feature is now available.",
-    },
-    {
-      id: 11,
       question: 'Will I receive a new ticket after upgrading?',
       answer:
         'Yes, once your upgrade is complete, you will receive a new ticket reflecting your two-day access to the event.',

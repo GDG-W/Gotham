@@ -60,7 +60,7 @@ const FAQAccordion: React.FC = () => {
             </button>
             {openItems[item.id] && (
               <div className='faqs-answer'>
-                <p>{item.answer}</p>
+                <p dangerouslySetInnerHTML={{ __html: item.answer }} />
               </div>
             )}
           </div>
