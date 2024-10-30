@@ -4,6 +4,7 @@ export type Speaker = {
   name: string;
   title: string;
   bio: string;
+  shortbio: string;
   image_url: string;
   links: {
     github?: string;

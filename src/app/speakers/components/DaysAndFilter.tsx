@@ -1,25 +1,27 @@
 'use client';
+import { Speaker } from '../data/speakerData';
 import styles from '../styles/DaysAndFilter.module.scss';
-import { speakerData } from '../data/speakerData';
 import { Dispatch } from 'react';
-
-const categories = speakerData.reduce(
-  (acc: string[], speaker) => {
-    if (!acc.includes(speaker.track)) {
-      acc.push(speaker.track);
-    }
-    return acc;
-  },
-  ['All'],
-);
 
 const DaysAndFilter = ({
   selectedFilters,
   setSelectedFilters,
+  speakerData,
 }: {
   selectedFilters: { day: number; category: string };
+  speakerData: Speaker[];
   setSelectedFilters: Dispatch<{ day: number; category: string }>;
 }) => {
+  const categories = speakerData.reduce(
+    (acc: string[], speaker) => {
+      if (!acc.includes(speaker.track)) {
+        acc.push(speaker.track);
+      }
+      return acc;
+    },
+    ['All'],
+  );
+
   const handleFilter = (key: string) => {
     setSelectedFilters({ ...selectedFilters, category: key });
   };

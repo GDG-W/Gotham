@@ -17,15 +17,20 @@ const Speakers = () => {
     let filteredData = sortedSpeakerData.filter((item) => item.day === selectedFilters.day);
 
     if (selectedFilters.category !== 'All') {
-      filteredData = filteredData.filter((item) => item.track === selectedFilters.category);
+      filteredData = filteredData.filter((item) => item.track == selectedFilters.category);
     }
 
-    setDisplayedData(filteredData);
+    if (filteredData.length === 0) setSelectedFilters({ ...selectedFilters, category: 'All' });
+    else setDisplayedData(filteredData);
   }, [selectedFilters]);
 
   return (
     <>
-      <DaysAndFilter selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />
+      <DaysAndFilter
+        selectedFilters={selectedFilters}
+        setSelectedFilters={setSelectedFilters}
+        speakerData={sortedSpeakerData.filter((item) => item.day === selectedFilters.day)}
+      />
       <SpeakersList speakerData={displayedData} />
     </>
   );
