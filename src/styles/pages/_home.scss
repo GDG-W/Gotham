@@ -219,11 +219,16 @@
       @extend %button-primary;
       margin-bottom: 40px;
       width: 185px;
+      z-index: 3;
     }
 
     .ticket-group-wrapper {
       position: relative;
-      margin-top: -120px;
+      margin-top: -20px;
+
+      @include media('<=tablet') {
+        margin-top: -120px;
+      }
     }
 
     .ticket {
