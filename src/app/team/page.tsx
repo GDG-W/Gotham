@@ -1,14 +1,18 @@
-import DisplayedTeam from './components/DisplayedTeam';
 import Hero from './components/Hero';
-import TeamFilter from './components/TeamFilter';
+import Team from './components/Team';
+import Navbar from '@/components/home/Navbar';
+import Footer from '@/components/home/Footer';
 
 const TeamPage = () => {
   return (
-    <main>
-      <Hero />
-      <TeamFilter />
-      <DisplayedTeam />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Team />
+      </main>
+      <Footer />
+    </>
   );
 };
 export default TeamPage;

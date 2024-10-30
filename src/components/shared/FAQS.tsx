@@ -1,27 +1,28 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const faqs = [
   {
-    question: 'So, what is DevFest Lagos 2023?',
+    question: 'What is Devfest?',
     answer:
-      'DevFest Lagos 2023 will be held on November 24th and 25th, 2023, starting at 9:00 AM each day. The venue is Landmark, Oniru, Lagos.',
+      'DevFest is an annual developer conference organized by Google Developers Groups (GDGs) across the world. The event brings together tech-enthusiasts, developers, and industry experts to share knowledge, experience, and innovation.',
   },
   {
-    question: 'When and where is DevFest Lagos 2023 taking place?',
+    question: 'What is Devfest Lagos 2024?',
     answer:
-      'DevFest Lagos 2023 will be held on November 24th and 25th, 2023, starting at 9:00 AM each day. The venue is Landmark, Oniru, Lagos.',
+      "DevFest Lagos 2024 is a dynamic two-day festival that'll convene tech enthusiasts, from beginners to experts, and everyone in between in one place.",
   },
   {
-    question: 'How can i register for DevFest Lagos 2023?',
+    question: 'When & where will DevFest Lagos 2024 take place?',
     answer:
-      'DevFest Lagos 2023 will be held on November 24th and 25th, 2023, starting at 9:00 AM each day. The venue is Landmark, Oniru, Lagos.',
+      'DevFest Lagos 2024 will be held on the 15th and 16th of November 2024, with each day’s session kickstarting by 9:00 AM prompt at the Landmark Event Center, Oniru, Lagos.',
   },
   {
-    question: 'When and where is DevFest Lagos 2023 taking place?',
+    question: 'What should I expect at Devfest Lagos 2024?',
     answer:
-      'DevFest Lagos 2023 will be held on November 24th and 25th, 2023, starting at 9:00 AM each day. The venue is Landmark, Oniru, Lagos.',
+      'DevFest Lagos 2024 is obviously going to be bigger and better! This time, the focus goes beyond learning from industry experts, or  connecting with like-minded professionals, or gaining insights into the latest trends and innovations in technology, but also enjoying an unforgettable experience with lots of fun, relaxation, and  memories to last a lifetime.',
   },
 ];
 
@@ -38,12 +39,8 @@ const FaqItem = ({
   const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <li
-      key={index}
-      className={`faq-accordion-item ${isOpened && 'is-opened'}`}
-      onClick={() => setIsOpened(!isOpened)}
-    >
-      <div className='item-question'>
+    <li key={index} className={`faq-accordion-item ${isOpened && 'is-opened'}`}>
+      <div className='item-question' onClick={() => setIsOpened(!isOpened)}>
         <p>
           {index + 1}. {faq.question}
         </p>
@@ -75,7 +72,7 @@ const FAQs = () => {
           return <FaqItem index={index} faq={faq} key={index} />;
         })}
       </ul>
-      <button className='faq-action-btn'>
+      <Link href='/faqs' className='faq-action-btn'>
         <p>I still have more questions</p>
         <Image
           src={'/images/svg/message-question-icon.svg'}
@@ -83,7 +80,7 @@ const FAQs = () => {
           height={24}
           width={24}
         />
-      </button>
+      </Link>
     </section>
   );
 };

@@ -1,43 +1,53 @@
 'use client';
+import { Speaker } from '../data/speakerData';
 import styles from '../styles/DaysAndFilter.module.scss';
-import { categories } from '../mockData/mock';
-import { useState } from 'react';
+import React, { Dispatch } from 'react';
 
-const DaysAndFilter = () => {
-  const [selectedFilters, setSelectedFilters] = useState<string[]>(['All']);
-  const [selectedDay, setSelectedDay] = useState('friday');
+const DaysAndFilter = ({
+  selectedFilters,
+  setSelectedFilters,
+  speakerData,
+}: {
+  selectedFilters: { day: number | string; category: string };
+  speakerData: Speaker[];
+  setSelectedFilters: Dispatch<{ day: string | number; category: string }>;
+}) => {
+  const categories = speakerData.reduce(
+    (acc: string[], speaker) => {
+      if (!acc.includes(speaker.track)) {
+        acc.push(speaker.track);
+      }
+      return acc;
+    },
+    ['All'],
+  );
 
   const handleFilter = (key: string) => {
-    if (key === 'All') {
-      setSelectedFilters([key]);
-    } else {
-      setSelectedFilters((prevFilters) => {
-        if (prevFilters.includes(key)) {
-          return prevFilters.length !== 1
-            ? prevFilters.filter((filter) => filter !== key)
-            : ['All'];
-        }
-        return [...prevFilters.filter((filter) => filter !== 'All'), key];
-      });
-    }
+    setSelectedFilters({ ...selectedFilters, category: key });
   };
 
-  const handleDays = (day: string) => {
-    setSelectedDay(day);
+  const handleDays = (day: number | string) => {
+    setSelectedFilters({ ...selectedFilters, day });
   };
 
   return (
     <section className={styles.DayFilterWrapper}>
       <div className={styles.DayBtnsContainer}>
         <button
-          onClick={() => handleDays('friday')}
-          className={`${styles.dayBtn} ${selectedDay === 'friday' ? styles.activeDayBtn : ''}`}
+          onClick={() => handleDays('All')}
+          className={`${styles.dayBtn} ${selectedFilters.day === 'All' ? styles.activeDayBtn : ''}`}
+        >
+          <p>All</p>
+        </button>
+        <button
+          onClick={() => handleDays(1)}
+          className={`${styles.dayBtn} ${selectedFilters.day === 1 ? styles.activeDayBtn : ''}`}
         >
           <p>Day 1 - Friday</p>
         </button>
         <button
-          onClick={() => handleDays('saturday')}
-          className={`${styles.dayBtn} ${selectedDay === 'saturday' ? styles.activeDayBtn : ''}`}
+          onClick={() => handleDays(2)}
+          className={`${styles.dayBtn} ${selectedFilters.day === 2 ? styles.activeDayBtn : ''}`}
         >
           <p>Day 2 - Saturday</p>
         </button>
@@ -48,7 +58,7 @@ const DaysAndFilter = () => {
             return (
               <button
                 key={index}
-                className={`${styles.filterBtn} ${selectedFilters.includes(category) ? styles.activeFilterBtn : ''}`}
+                className={`${styles.filterBtn} ${selectedFilters.category === category ? styles.activeFilterBtn : ''}`}
                 onClick={() => handleFilter(category)}
               >
                 <p>{category}</p>

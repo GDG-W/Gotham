@@ -8,10 +8,12 @@ import { Button } from './components/button';
 import { ScheduleData } from './types/schedule';
 import data from './data/schedule.json';
 import Schedule from './components/Schedule';
+import { notFound } from 'next/navigation';
 
 const scheduleData = data as unknown as ScheduleData;
-
+        
 const SchedulePage = () => {
+  notFound(); //re-routes to not found
   const [currentSchedule, setCurrentSchedule] = useState(scheduleData);
 
   const handleDayClick = (day: string) => {
