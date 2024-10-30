@@ -151,7 +151,7 @@
           line-height: 1;
 
           @include media('<=desktop') {
-            font-size: 14px;
+            font-size: 16px;
           }
         }
 
@@ -161,7 +161,7 @@
           margin: 0.5rem 0;
 
           @include media('<=tablet') {
-            font-size: 12px;
+            // font-size: 12px;
             margin: 0.3rem 0;
           }
         }
