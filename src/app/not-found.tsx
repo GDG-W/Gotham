@@ -22,7 +22,7 @@ const NotFound = () => {
           </Link>
         </div>
         <div className={styles.ctaButton}>
-          <Link href='/' target='__blank'>
+          <Link href='/'>
             <Button backgroundColor={'transparent'} textColor='#000000' borderColor='#000000'>
               <p>Go Home</p>
               <Image src='/images/svg/home.svg' alt='Home' width={20} height={20} />
