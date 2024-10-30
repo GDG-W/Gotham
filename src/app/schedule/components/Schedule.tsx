@@ -3,6 +3,7 @@ import React from 'react';
 import { ScheduleData } from '../types/schedule';
 import styles from '../styles/Schedule.module.scss';
 import EventBlock from '../components/EventBlock';
+import EventCategory from './EventCategory';
 
 type ScheduleProps = {
   data: ScheduleData;
@@ -15,11 +16,9 @@ const Schedule = ({ data }: ScheduleProps) => {
         {data.general.map((block, index) => (
           <EventBlock key={index} block={block} type='general' />
         ))}
-        {/* <div className={styles.breakoutContainer}>
-          {data.breakouts.map((breakout, index) => (
-            <EventBlock key={index} block={breakout} type='breakout' />
-          ))}
-        </div> */}
+        <div className={styles.breakoutContainer}>
+          <EventCategory />
+        </div>
         {data.post_breakout.map((block, index) => (
           <EventBlock key={index} block={block} type='post_breakout' />
         ))}

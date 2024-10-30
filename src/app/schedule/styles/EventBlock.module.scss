@@ -1,11 +1,16 @@
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/variables';
+
 .eventBlock {
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
+  background: hsl(0, 56%, 91%);
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
 
   &.general {
-    background: #fff4e6;
+    background: #fff;
   }
 
   &.breakout {
@@ -18,11 +23,39 @@
 
   .time {
     font-weight: light;
+    font-size: 15px;
     color: #333;
+    padding-top: 10px;
+    margin-left: 9px;
   }
 
   .events {
     margin-top: 10px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1;
+
+    &.rowLayout {
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #fff;
+      }
+      .event {
+        &:has(.venue.room1) {
+          background-color: $green-primary-100;
+          padding: 20px 10px 20px 15px;
+        }
+
+        &:has(.venue.room2) {
+          background-color: $blue-primary-100;
+          padding: 20px 10px 20px 15px;
+
+          ul {
+            padding-top: 37px;
+          }
+        }
+      }
+    }
 
     .event {
       padding: 8px 0;
@@ -33,15 +66,68 @@
       }
 
       h3 {
-        font-size: 1.1em;
-        margin: 0;
-        color: #222;
+        font-size: 25px;
+        margin-left: 8px;
+        font-weight: 500;
+        padding-top: 8px;
+        color: $background-dark;
       }
 
       p {
         margin: 4px 0;
         font-size: 0.9em;
+        margin-left: 8px;
         color: #666;
+      }
+
+      .panelists {
+        ul {
+          display: flex;
+          gap: 10px;
+          font-weight: 600;
+          color: $background-dark;
+          padding-top: 10px;
+        }
+      }
+
+      .venue {
+        padding: 7px;
+        border-radius: 99px;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        max-width: 6rem;
+
+        span {
+          font-size: 14px;
+          font-weight: 400;
+        }
+        &.outside {
+          background-color: $grey-10;
+          border: 1px solid $grey-50;
+        }
+
+        &.room1 {
+          background-color: $core-green;
+          border: 1px solid $green-primary-40;
+        }
+
+        &.room2 {
+          background-color: $core-blue;
+          border: 1px solid $blue-primary-40;
+        }
+      }
+
+      .facilitator {
+        margin-top: 5px;
+        p {
+          font-size: 16px;
+          font-weight: 500;
+
+          span {
+            font-weight: normal;
+          }
+        }
       }
     }
   }

@@ -1,0 +1,115 @@
+@import '/src/styles/core/variables';
+
+.eventSchedule {
+  &__container {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__tab {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-bottom: 2rem;
+  }
+
+  &__events {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: $green-primary-100;
+  }
+
+  &__event {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    &-time {
+      margin: 4px 0;
+      font-size: 0.9em;
+      margin-left: 8px;
+      color: #666;
+    }
+
+    &-title {
+      font-size: 25px;
+      margin-left: 8px;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: $background-dark;
+    }
+  }
+}
+
+.room-category {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease;
+
+  &.active {
+    transform: scale(1.1);
+  }
+
+  &.inactive {
+    opacity: 0.8;
+  }
+}
+
+// Active and Inactive Colors for Each Room
+.room1 {
+  background-color: $core-green;
+  border: 1px solid $green-primary-40;
+  color: #fff;
+  font-size: 12px;
+  &.inactive {
+    opacity: 0.7;
+  }
+}
+
+.room2 {
+  background-color: $core-blue;
+  border: 1px solid $blue-primary-40;
+  color: #fff;
+  font-size: 12px;
+  &.inactive {
+    opacity: 0.7;
+  }
+}
+
+.room3 {
+  background-color: $core-yellow;
+  border: 1px solid $yellow-primary-40;
+  color: #fff;
+  font-size: 12px;
+  &.inactive {
+    opacity: 0.7;
+  }
+}
+
+.room4 {
+  background-color: $core-red;
+  border: 1px solid $red-primary-40;
+  color: #fff;
+  font-size: 12px;
+  &.inactive {
+    opacity: 0.7;
+  }
+}

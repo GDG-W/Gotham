@@ -1,4 +1,3 @@
-// types.ts
 export interface Venue {
   name: string;
   size: number[];
@@ -20,6 +19,13 @@ export interface Session extends Event {
 
 export interface ScheduleData {
   general: { duration: number; start_time: string; end_time: string; events: Event[] }[];
-  breakouts: { venue: Venue; duration: number; category: string; events: Session[] }[];
+  breakouts: {
+    venue: Venue;
+    duration: number;
+    category: string;
+    events: Session[];
+    start_time: string;
+    end_time: string;
+  }[];
   post_breakout: { duration: number; start_time: string; end_time: string; events: Event[] }[];
 }
