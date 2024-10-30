@@ -31,14 +31,22 @@
       border: 1px solid $grey-10;
       text-wrap: nowrap;
 
+      @include media('<=1100px') {
+        padding: 1rem 4rem;
+      }
+
       @include media('<=tablet') {
         @include body3-medium();
         padding: 1rem 2rem;
       }
 
-      @include media('<=400px') {
+      @include media('<=470px') {
         @include body4-medium();
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1.2rem;
+      }
+
+      @include media('<=340px') {
+        padding: 0.8rem 1rem;
       }
     }
     .activeDayBtn {
