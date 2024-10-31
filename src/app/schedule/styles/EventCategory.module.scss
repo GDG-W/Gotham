@@ -1,6 +1,13 @@
 @import '/src/styles/core/variables';
 @import '/src/styles/utils/breakpoints';
 
+$room-colors: (
+  'room1': rgba(220, 252, 231, 0.6),
+  'room2': rgba(219, 234, 254, 0.6),
+  'room3': rgba(254, 226, 226, 0.6),
+  'room4': rgba(224, 231, 255, 0.6),
+);
+
 .eventSchedule {
   &__container {
     width: 100%;
@@ -58,9 +65,31 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.eventSchedule__events {
+  &.room1-active {
     background-color: $green-primary-100;
   }
 
+  &.room2-active {
+    background-color: $blue-primary-100;
+  }
+
+  &.room3-active {
+    background-color: $yellow-primary-100;
+  }
+
+  &.room4-active {
+    background-color: $red-primary-90;
+  }
+}
+
+.eventSchedule {
   &__event {
     background-color: transparent;
     border-radius: 0.5rem;
@@ -91,6 +120,7 @@
       }
     }
   }
+
   &__event-facilitator {
     margin-left: 8px;
   }

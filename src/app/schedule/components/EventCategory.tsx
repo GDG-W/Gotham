@@ -70,7 +70,9 @@ const EventCategory = ({ currentDay }: EventCategoryProps) => {
       </div>
 
       {/* Events List */}
-      <div className={styles.eventSchedule__events}>
+      <div
+        className={`${styles.eventSchedule__events} ${styles[`room${selectedRoomCategory.charAt(5)}-active`]}`}
+      >
         {getEventsByRoomAndCategory(selectedRoomCategory, currentDay).map((event, index) => (
           <div
             key={`${currentDay}-${index}`}
