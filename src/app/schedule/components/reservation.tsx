@@ -20,7 +20,7 @@ const Reservation = () => {
         >
           MOBILE APP
         </Button>
-        <h3 className='text-4xl'>Reserve Your Sessions</h3>
+        <h3 className='text-3xl'>Reserve Your Sessions</h3>
         <p>
           Book sessions and get real time notifications seamlessly from the Devfest mobile app.
           Available on Apple and iOS App store.
