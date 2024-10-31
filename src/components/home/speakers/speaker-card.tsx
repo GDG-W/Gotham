@@ -104,7 +104,6 @@ export const SpeakerCard = ({
     >
       {speakerName}
       {speakerDetails}
-      {position === 'left' && speaker.id}
       <div className='speaker-image-container'>
         <img
           src={speaker.image_url}
@@ -113,7 +112,6 @@ export const SpeakerCard = ({
           style={{ objectPosition: imagePosition }}
         />
       </div>
-      {position === 'right' && speaker.id}
     </div>
   );
 };
