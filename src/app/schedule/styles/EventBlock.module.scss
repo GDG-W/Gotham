@@ -9,6 +9,18 @@
   max-width: 1000px;
   margin-bottom: 20px;
 
+  @include media('<=phone') {
+    width: 400px;
+  }
+
+  @include media('>=tablet') {
+    width: 800px;
+  }
+
+  @include media('>=desktop') {
+    width: 1000px;
+  }
+
   &.general {
     background: #fff;
   }
@@ -36,114 +48,162 @@
     grid-template-columns: 1;
 
     &.rowLayout {
-      @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        background-color: #fff;
-      }
-      .event {
-        &:has(.venue.room1) {
-          background-color: $green-primary-100;
-          padding: 20px 10px 20px 15px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: #fff;
+
+      @include media('<=phone') {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: scroll;
+        grid-template-columns: repeat(2, 700px);
+        grid-auto-flow: column;
+        grid-auto-columns: 280px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        white-space: nowrap;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+
+        &::-webkit-scrollbar {
+          display: none;
         }
+        -ms-overflow-style: none;
+      }
 
-        &:has(.venue.room2) {
-          background-color: $blue-primary-100;
-          padding: 20px 10px 20px 15px;
+      @include media('<=tablet') {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: scroll;
+        grid-template-columns: repeat(2, 880px);
+        grid-auto-flow: column;
+        grid-auto-columns: 280px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        white-space: nowrap;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
 
-          ul {
-            padding-top: 15px;
-          }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        -ms-overflow-style: none;
+      }
+    }
+  }
+
+  .event {
+    padding: 20px 10px 20px 15px;
+
+    &:has(.venue.room1) {
+      background-color: $green-primary-100;
+      padding: 20px 10px 20px 15px;
+    }
+
+    &:has(.venue.room2) {
+      background-color: $blue-primary-100;
+      padding: 20px 10px 20px 15px;
+
+      ul {
+        padding-top: 15px;
+      }
+    }
+  }
+}
+
+.event {
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  h3 {
+    font-size: 25px;
+    margin-left: 8px;
+    font-weight: 500;
+    padding-top: 8px;
+    color: $background-dark;
+
+    @include media('<=phone') {
+      font-size: 19px;
+    }
+  }
+
+  p {
+    margin: 4px 0;
+    font-size: 0.9em;
+    margin-left: 8px;
+    color: #666;
+  }
+
+  .panelists {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-weight: 500;
+      color: $background-dark;
+      padding-top: 15px;
+      max-width: 500px;
+      list-style: none;
+
+      @include media('>=tablet') {
+        max-width: 800px;
+      }
+
+      li {
+        position: relative;
+        padding-left: 12px;
+
+        &::before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
     }
+  }
 
-    .event {
-      padding: 8px 0;
-      border-top: 1px solid #eee;
+  .venue {
+    padding: 7px;
+    border-radius: 99px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 6rem;
 
-      &:first-child {
-        border-top: none;
-      }
+    span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    &.outside {
+      background-color: $grey-10;
+      border: 1px solid $grey-50;
+    }
 
-      h3 {
-        font-size: 25px;
-        margin-left: 8px;
-        font-weight: 500;
-        padding-top: 8px;
-        color: $background-dark;
-      }
+    &.room1 {
+      background-color: $core-green;
+      border: 1px solid $green-primary-40;
+    }
 
-      p {
-        margin: 4px 0;
-        font-size: 0.9em;
-        margin-left: 8px;
-        color: #666;
-      }
+    &.room2 {
+      background-color: $core-blue;
+      border: 1px solid $blue-primary-40;
+    }
+  }
 
-      .panelists {
-        ul {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          font-weight: 500;
-          color: $background-dark;
-          padding-top: 15px;
-          max-width: 500px;
-          list-style: none;
+  .facilitator {
+    margin-top: 5px;
+    p {
+      font-size: 16px;
+      font-weight: 500;
 
-          li {
-            position: relative;
-            padding-left: 12px;
-
-            &::before {
-              content: '•';
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-          }
-        }
-      }
-
-      .venue {
-        padding: 7px;
-        border-radius: 99px;
-        color: #fff;
-        text-align: center;
-        text-transform: uppercase;
-        max-width: 6rem;
-
-        span {
-          font-size: 14px;
-          font-weight: 400;
-        }
-        &.outside {
-          background-color: $grey-10;
-          border: 1px solid $grey-50;
-        }
-
-        &.room1 {
-          background-color: $core-green;
-          border: 1px solid $green-primary-40;
-        }
-
-        &.room2 {
-          background-color: $core-blue;
-          border: 1px solid $blue-primary-40;
-        }
-      }
-
-      .facilitator {
-        margin-top: 5px;
-        p {
-          font-size: 16px;
-          font-weight: 500;
-
-          span {
-            font-weight: normal;
-          }
-        }
+      span {
+        font-weight: normal;
       }
     }
   }

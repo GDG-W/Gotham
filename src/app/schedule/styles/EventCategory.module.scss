@@ -1,15 +1,48 @@
 @import '/src/styles/core/variables';
+@import '/src/styles/utils/breakpoints';
 
 .eventSchedule {
   &__container {
     width: 100%;
     max-width: 1000px;
     margin-bottom: 20px;
+
+    @include media('<=phone') {
+      width: 400px;
+    }
+
+    @include media('>=tablet') {
+      width: 800px;
+    }
+
+    @include media('>=desktop') {
+      width: 1000px;
+    }
   }
 
   &__tabs {
     display: flex;
     gap: 0.5rem;
+
+    @include media('<=phone') {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: scroll;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px;
+      padding-left: 20px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @include media('<=tablet') {
+      padding-left: 20px;
+    }
   }
 
   &__tab {
@@ -52,6 +85,10 @@
       font-weight: 500;
       margin-bottom: 0.5rem;
       color: $background-dark;
+
+      @include media('<=phone') {
+        font-size: 19px;
+      }
     }
   }
   &__event-facilitator {
@@ -60,12 +97,13 @@
 }
 
 .room-category {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border: none;
   font-weight: bold;
   cursor: pointer;
   color: #fff;
   transition: background-color 0.3s ease;
+  width: 100%;
 
   &.active {
     transform: scale(1.1);
@@ -76,7 +114,6 @@
   }
 }
 
-// Active and Inactive Colors for Each Room
 .room1 {
   background-color: $core-green;
   border: 1px solid $green-primary-40;

@@ -29,7 +29,7 @@
     }
 
     @include media('<=phone') {
-      width: 75%;
+      width: 80%;
 
       h1 {
         font-size: 45px;
@@ -39,39 +39,42 @@
     .top-left {
       position: absolute;
       top: 1rem;
-      left: 1rem;
+      left: -2.5rem;
       width: 65px;
       height: 75px;
 
       @include media('<=tablet') {
-        width: 60px;
+        width: 50px;
         height: auto;
+        left: -2rem;
       }
 
       @include media('<=phone') {
         width: 30px;
         height: auto;
-        top: 0;
+        top: 10px;
         left: -1.5rem;
       }
     }
 
     .bottom-right {
       position: absolute;
-      bottom: -4.5rem;
-      right: 5rem;
+      bottom: -5.5rem;
+      right: 1rem;
       width: 107px;
       height: 107px;
 
       @include media('<=tablet') {
         width: 85px;
         height: auto;
+        right: -0.7rem;
+        bottom: -3rem;
       }
 
       @include media('<=phone') {
         width: 50px;
         height: auto;
-        bottom: -2.5rem;
+        bottom: -2rem;
         right: 0rem;
       }
     }
