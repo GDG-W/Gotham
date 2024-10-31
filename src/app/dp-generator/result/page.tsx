@@ -59,20 +59,12 @@ export default function DPGResult() {
     }
   };
 
-  const handleShareOnX = () => {
-    const tweetText = 'Check out this amazing DP for DevFest!';
-    const imageUrl = 'https://i.ibb.co/hfhzZRy/Dr-Lamz-devfest-lagos-2024-2.png';
-    const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(imageUrl)}`;
-
-    window.open(twitterShareUrl, '_blank');
-  };
-
   const pictureBgStyle = {
     backgroundImage: ` url(${dpDataObj?.picture})`,
   };
 
   return (
-    <section className='viola-section'>
+    <section className='viola-section google_sans'>
       <div className='generate-wrapper'>
         <div className='container'>
           <div className='header-text'>
@@ -225,7 +217,7 @@ export default function DPGResult() {
               }
             />
             <Button
-              onClick={handleShareOnX}
+              // onClick={handleShareOnX}
               size='sm'
               label={
                 <Image src='/images/icons/share.svg' alt='Magic wand icon' width={28} height={28} />

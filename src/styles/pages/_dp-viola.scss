@@ -6,6 +6,8 @@
 }
 
 .viola-section {
+  font-family: var(--font-googleSans);
+
   .generate-wrapper {
     padding: 5rem 0 9rem;
 
@@ -170,6 +172,7 @@
         font-weight: 500;
         font-size: 2.5rem;
         width: 75%;
+        text-transform: uppercase;
         text-align: center;
       }
 
