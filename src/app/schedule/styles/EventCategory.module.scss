@@ -1,29 +1,26 @@
 @import '/src/styles/core/variables';
 @import '/src/styles/utils/breakpoints';
 
-$room-colors: (
-  'room1': rgba(220, 252, 231, 0.6),
-  'room2': rgba(219, 234, 254, 0.6),
-  'room3': rgba(254, 226, 226, 0.6),
-  'room4': rgba(224, 231, 255, 0.6),
-);
-
 .eventSchedule {
   &__container {
     width: 100%;
     max-width: 1000px;
+    margin: 0 auto;
     margin-bottom: 20px;
 
     @include media('<=phone') {
-      width: 400px;
+      width: 40%;
+      padding: 8px;
     }
 
     @include media('>=tablet') {
-      width: 800px;
+      width: 95%;
+      max-width: 800px;
     }
 
     @include media('>=desktop') {
-      width: 1000px;
+      width: 95%;
+      max-width: 1000px;
     }
   }
 
@@ -38,7 +35,6 @@ $room-colors: (
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
       padding-bottom: 4px;
-      padding-left: 20px;
 
       &::-webkit-scrollbar {
         display: none;
@@ -48,7 +44,6 @@ $room-colors: (
     }
 
     @include media('<=tablet') {
-      padding-left: 20px;
     }
   }
 
