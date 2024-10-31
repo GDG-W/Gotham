@@ -121,14 +121,14 @@ const Speakers = () => {
         <button className='speakers__button' onClick={onChangeSpeaker('left')}>
           <ArrowLeft width={25} />
         </button>
-        <p className='speakers__title'>Expert Speakers</p>
+        <p className='speakers__title'>Meet Our Speakers</p>
         <button className='speakers__button' onClick={onChangeSpeaker('right')}>
           <ArrowRight width={25} />
         </button>
       </div>
       <p className='speakers__description'>
-        We’ve upped the ante this year with 42 speakers, each ready to drop knowledge that will
-        leave you with more than just ideas.
+        We&#39;ve raised the bar this year with our impressive lineup of speakers, each prepared to
+        share valuable insights on different aspects of the tech community.
       </p>
       <div className='speakers-row'>
         {visibleSpeakers.previousSpeakers.map((speaker, index) => (
