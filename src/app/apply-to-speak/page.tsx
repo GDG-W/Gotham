@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Footer } from '@/components/shared';
+// import { Footer } from '@/components/shared';
 import styles from './apply.module.scss';
 
 const ApplyToSpeak = () => {
@@ -30,7 +30,7 @@ const ApplyToSpeak = () => {
           </iframe>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

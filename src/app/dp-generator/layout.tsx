@@ -1,9 +1,10 @@
 import React from 'react';
 import '../../styles/index.scss';
 import { Metadata } from 'next';
-import { Footer, Navbar } from '@/components/shared';
+import { Navbar } from '@/components/shared';
 import { DpProvider } from '@/context/dp-context';
 import { SEO } from '@/seo';
+import Footer from '@/components/home/Footer';
 
 export const metadata: Metadata = {
   title: 'DevFest 2024 | DP Generator',
@@ -24,7 +25,8 @@ export default function DPGLayout({ children }: { children: React.ReactNode }) {
       <div className=''>
         <Navbar />
         {children}
-        <Footer type='DpGen' />
+        <Footer />
+        {/* <Footer type='DpGen' /> */}
       </div>
     </DpProvider>
   );
