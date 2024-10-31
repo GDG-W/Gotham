@@ -399,5 +399,33 @@
     },
     "track": "Web",
     "session_title": "Implementing OAuth 2.0 for Secure API Access"
+  },
+  "daniel-di-bartolo": {
+    "id": "daniel-di-bartolo",
+    "name": "Daniel Di Bartolo Abada",
+    "title": "PM Lead at Google's Secure AI Framework",
+    "shortbio": "With nearly a decade of experience building products in tech, Daniel is currently the Product Lead for Google’s Secure AI Framework (saif.google). It’s where Google helps builders know how to defend AI systems security threats. Daniel lives in New York City where he enjoys cooking, photography, and going to rock concerts.",
+    "bio": "With nearly a decade of experience building products in tech, Daniel is currently the Product Lead for Google’s Secure AI Framework (saif.google). It’s where Google helps builders know how to defend AI systems security threats. Daniel lives in New York City where he enjoys cooking, photography, and going to rock concerts.",
+    "image_url": "https://i.ibb.co/qjhycfX/Daniel-Headshot.jpg",
+    "session_description": " ",
+    "day": 2,
+    "links": {},
+    "track": "ML / AI",
+    "session_title": "Top 15 Cybersecurity Risks of AI Systems"
+  },
+  "peter-ing": {
+    "id": "peter-ing",
+    "name": "Peter Ing",
+    "title": "Edge Impulse Expert and Arm Ambassador",
+    "shortbio": "Peter Ing is a mechatronics engineer with practical experience spanning many areas including automation, hardware, software development, embedded systems, and AI. He is also an Edge Impulse Expert and Arm Ambassador. Having a passion for technology and teaching others, and has been doing outreach from when he was a freshmen.  He is currently building developer communities across Africa to help build skills in STEM and AI while spreading the philosophy of 4IR. He holds a bachelor's degree in Electronic Engineering from the University of South Africa and is an advisory board member of the South African AI Association.",
+    "bio": "Peter Ing is a mechatronics engineer with practical experience spanning many areas including automation, hardware, software development, embedded systems, and AI. He is also an Edge Impulse Expert and Arm Ambassador. Having a passion for technology and teaching others, and has been doing outreach from when he was a freshmen.  He is currently building developer communities across Africa to help build skills in STEM and AI while spreading the philosophy of 4IR. He holds a bachelor's degree in Electronic Engineering from the University of South Africa and is an advisory board member of the South African AI Association.",
+    "image_url": "https://i.ibb.co/v4hqPJx/Peter-Ing.jpg",
+    "session_description": "Imagine holding an Android device and unleashing the power of large language models (LLMs) right in the palm of your hand—driven by the cutting-edge integration of Arm KleidiAI and Executorch. This synergy taps into XNNPACK to push the boundaries of AI performance on Arm CPUs, delivering smooth and powerful AI inference on mobile hardware.",
+    "day": 2,
+    "links": {
+      "linkedin": "https://za.linkedin.com/in/peter-ing-8baba8143l/"
+    },
+    "track": "ML / AI",
+    "session_title": "Building a GenAI App on Android Using the Executorch Framework"
   }
 }
