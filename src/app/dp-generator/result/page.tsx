@@ -166,7 +166,7 @@ export default function DPGResult() {
               <div className='row r2'>
                 <div className='col box-4'>
                   <div className='logo'>
-                    <Image src={'/images/svg/DF24-Logo.svg'} alt='DevFest Lagos Logo' fill />
+                    <Image src={'/images/png/devfest-lg-logo.png'} alt='DevFest Lagos Logo' fill />
                   </div>
                 </div>
                 <div className='col'>
