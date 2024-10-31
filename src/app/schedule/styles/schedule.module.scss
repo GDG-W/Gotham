@@ -11,10 +11,10 @@
   justify-content: center;
   flex-direction: column;
   gap: 5rem;
-  padding-top: 7rem;
+  padding-top: 1rem;
 
   @include media('<=phone') {
-    padding-top: 3rem;
+    padding-top: 1rem;
   }
 
   .container {

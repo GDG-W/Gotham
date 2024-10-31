@@ -12,6 +12,13 @@ type EventBlockProps = {
   type: 'general' | 'breakout' | 'post_breakout';
 };
 
+const formatFacilitatorName = (name: string) => {
+  return name
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
 const EventBlock = ({ block, type }: EventBlockProps) => {
   const shouldUseRowLayout = (startTime: string) => {
     return startTime === '9:50' || startTime === '10:35';
@@ -58,7 +65,7 @@ const EventBlock = ({ block, type }: EventBlockProps) => {
             {event.facilitator && (
               <div className={styles.facilitator}>
                 <p>
-                  Facilitator: <span>{event.facilitator}</span>
+                  Facilitator: <span>{formatFacilitatorName(event.facilitator)}</span>
                 </p>
               </div>
             )}
@@ -67,7 +74,7 @@ const EventBlock = ({ block, type }: EventBlockProps) => {
               <div className={styles.panelists}>
                 <ul>
                   {event.panelists.map((panelist, idx) => (
-                    <p key={idx}>• {panelist}</p>
+                    <li key={idx}>{panelist}</li>
                   ))}
                 </ul>
               </div>

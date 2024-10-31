@@ -10,19 +10,16 @@ import data from './data/schedule.json';
 import Schedule from './components/Schedule';
 // import { notFound } from 'next/navigation';
 
-const scheduleData = data as unknown as ScheduleData;
+type ScheduleDataByDay = {
+  'day-1': ScheduleData;
+  'day-2': ScheduleData;
+};
+
+const scheduleData = data as unknown as ScheduleDataByDay;
 
 const SchedulePage = () => {
   // notFound(); //re-routes to not found
-  const [currentSchedule, setCurrentSchedule] = useState(scheduleData);
-
-  const handleDayClick = (day: string) => {
-    if (day === 'friday') {
-      setCurrentSchedule(scheduleData);
-    } else if (day === 'saturday') {
-      setCurrentSchedule(scheduleData);
-    }
-  };
+  const [currentDay, setCurrentDay] = useState<'day-1' | 'day-2'>('day-1');
 
   return (
     <main className={`${styles.scheduleContainer}`}>
@@ -46,27 +43,27 @@ const SchedulePage = () => {
 
       <div className={`${styles['cta-button-container']}`}>
         <Button
-          backgroundColor={currentSchedule === scheduleData ? '#F9AB00' : 'transparent'}
+          backgroundColor={currentDay === 'day-1' ? '#F9AB00' : 'transparent'}
           textColor='#000000'
           borderColor='#000000'
           externalStyles={`${styles.ctaButton}`}
-          onClick={() => handleDayClick('friday')}
+          onClick={() => setCurrentDay('day-1')}
         >
           Day 1 - Friday
         </Button>
         <Button
-          backgroundColor={currentSchedule === scheduleData ? '#F9AB00' : 'transparent'}
+          backgroundColor={currentDay === 'day-2' ? '#F9AB00' : 'transparent'}
           borderColor='#000000'
           textColor='#000000'
           externalStyles={`${styles.ctaButton}`}
-          onClick={() => handleDayClick('saturday')}
+          onClick={() => setCurrentDay('day-2')}
         >
           Day 2 - Saturday
         </Button>
       </div>
 
       <div className={`${styles.scheduleItemsContainer}`}>
-        <Schedule data={scheduleData} />
+        <Schedule data={scheduleData} currentDay={currentDay} />
       </div>
 
       <Reservation />

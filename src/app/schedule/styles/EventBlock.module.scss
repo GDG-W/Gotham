@@ -18,7 +18,7 @@
   }
 
   &.post_breakout {
-    background: #e6f9e6;
+    background: #fff;
   }
 
   .time {
@@ -51,7 +51,7 @@
           padding: 20px 10px 20px 15px;
 
           ul {
-            padding-top: 37px;
+            padding-top: 15px;
           }
         }
       }
@@ -83,10 +83,26 @@
       .panelists {
         ul {
           display: flex;
+          flex-wrap: wrap;
           gap: 10px;
-          font-weight: 600;
+          font-weight: 500;
           color: $background-dark;
-          padding-top: 10px;
+          padding-top: 15px;
+          max-width: 500px;
+          list-style: none;
+
+          li {
+            position: relative;
+            padding-left: 12px;
+
+            &::before {
+              content: '•';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
         }
       }
 

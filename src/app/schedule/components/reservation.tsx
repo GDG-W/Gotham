@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import styles from '@/app/schedule/styles/Reservation.module.scss';
 import Image from 'next/image';
 import { Button } from './button';

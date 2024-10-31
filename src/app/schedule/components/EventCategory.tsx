@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import styles from '../styles/EventCategory.module.scss';
 import data from '../data/schedule.json';
 
-const EventCategory = () => {
+type EventCategoryProps = {
+  currentDay: 'day-1' | 'day-2';
+};
+
+const EventCategory = ({ currentDay }: EventCategoryProps) => {
   const [selectedRoomCategory, setSelectedRoomCategory] = useState<string>('room 1 - Speaker Led');
 
   const roomCategories = [
@@ -21,10 +25,17 @@ const EventCategory = () => {
     facilitator?: string;
   };
 
-  const getEventsByRoomAndCategory = (roomCategory: string): Event[] => {
+  const formatFacilitatorName = (name: string) => {
+    return name
+      .split('-')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
+
+  const getEventsByRoomAndCategory = (roomCategory: string, day: 'day-1' | 'day-2'): Event[] => {
     const [room, category] = roomCategory.split(' - ');
     return (
-      data.breakouts.find(
+      data[day].breakouts.find(
         (breakout) =>
           breakout.venue.name === room &&
           breakout.category.toLowerCase() === category.toLowerCase(),
@@ -60,9 +71,9 @@ const EventCategory = () => {
 
       {/* Events List */}
       <div className={styles.eventSchedule__events}>
-        {getEventsByRoomAndCategory(selectedRoomCategory).map((event, index) => (
+        {getEventsByRoomAndCategory(selectedRoomCategory, currentDay).map((event, index) => (
           <div
-            key={index}
+            key={`${currentDay}-${index}`}
             className={`${styles.eventSchedule__event} ${styles[`eventSchedule__event--${selectedRoomCategory.split('-')[0].trim()}`]}`}
           >
             <div className={styles['eventSchedule__event-time']}>
@@ -74,7 +85,9 @@ const EventCategory = () => {
             <h3 className={styles['eventSchedule__event-title']}>{event.title}</h3>
 
             {event.facilitator && (
-              <p className={styles['eventSchedule__event-facilitator']}>{event.facilitator}</p>
+              <p className={styles['eventSchedule__event-facilitator']}>
+                {formatFacilitatorName(event.facilitator)}
+              </p>
             )}
           </div>
         ))}

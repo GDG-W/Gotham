@@ -6,22 +6,31 @@ import EventBlock from './EventBlock';
 import EventCategory from './EventCategory';
 
 type ScheduleProps = {
-  data: ScheduleData;
+  data: {
+    'day-1': ScheduleData;
+    'day-2': ScheduleData;
+  };
+  currentDay: 'day-1' | 'day-2';
 };
 
-const Schedule = ({ data }: ScheduleProps) => {
+const Schedule = ({ data, currentDay }: ScheduleProps) => {
+  const currentSchedule = data[currentDay];
+
   return (
     <div className={styles.scheduleContainer}>
       <div className={styles.schedule}>
-        {data.general.map((block, index) => (
+        {currentSchedule.general.map((block, index) => (
           <EventBlock key={index} block={block} type='general' />
         ))}
         <div className={styles.breakoutContainer}>
-          <EventCategory />
+          <EventCategory currentDay={currentDay} />
         </div>
-        {data.post_breakout.map((block, index) => (
-          <EventBlock key={index} block={block} type='post_breakout' />
-        ))}
+
+        <div className={styles.postBreakoutContainer}>
+          {currentSchedule.post_breakout.map((block, index) => (
+            <EventBlock key={index} block={block} type='post_breakout' />
+          ))}
+        </div>
       </div>
     </div>
   );
