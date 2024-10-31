@@ -9,6 +9,9 @@
   max-width: 1000px;
   margin-bottom: 20px;
 
+  @media only screen and (max-width: 600px) {
+    width: 400px;
+  }
   @include media('<=phone') {
     width: 400px;
   }
