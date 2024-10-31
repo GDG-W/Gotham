@@ -136,9 +136,26 @@
       border: 10.92px solid #fffaeb;
       position: relative;
       overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
       img {
         object-fit: cover;
+      }
+    }
+
+    .img-shape-mask {
+      height: 180px;
+      width: 100px;
+      background-size: cover;
+      position: relative;
+      // z-index: 2;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        z-index: 1;
       }
     }
 
@@ -159,6 +176,13 @@
       img {
         position: absolute;
         object-fit: cover;
+      }
+
+      .arrow,
+      .Ellipses,
+      .double-quotes,
+      .forward-slash {
+        position: absolute;
       }
 
       .arrow {
@@ -211,8 +235,12 @@
 
     .box-4 {
       .logo {
+        position: relative;
+        // background-image: url('../../../public/images/png/devfest-lg-logo.png');
+        // background-size: contain;
+        // background-repeat: no-repeat;
         width: 600px;
-        height: auto;
+        height: 150px;
       }
     }
 
@@ -342,7 +370,7 @@
       .box-4 {
         .logo {
           width: 160px;
-          height: auto;
+          height: 47px;
         }
       }
 
