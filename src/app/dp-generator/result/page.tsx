@@ -46,12 +46,12 @@ export default function DPGResult() {
         // All images have loaded, proceed to capture the section with html2canvas
         html2canvas(sectionElement, { scale: 4, useCORS: true }).then((canvas) => {
           // Get the canvas as a data URL with maximum quality
-          const image = canvas.toDataURL('image/png', 1.0);
+          const image = canvas.toDataURL('image/jpeg', 1.0);
 
           // Create a download link for the captured image
           const downloadLink = document.createElement('a');
           downloadLink.href = image;
-          downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.png`;
+          downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.jpeg`;
           downloadLink.click();
           setIsLoading(false);
         });
