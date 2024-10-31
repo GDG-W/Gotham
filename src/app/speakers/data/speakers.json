@@ -409,7 +409,8 @@
     "image_url": "https://i.ibb.co/qjhycfX/Daniel-Headshot.jpg",
     "session_description": " ",
     "day": 2,
-    "links": {},
+    "links": {
+    },
     "track": "ML / AI",
     "session_title": "Top 15 Cybersecurity Risks of AI Systems"
   },
