@@ -1,11 +1,12 @@
 'use client';
 import { Button } from '@/components/shared';
 import Image from 'next/image';
-import html2canvas from 'html2canvas';
+// import html2canvas from 'html2canvas';
 import React from 'react';
 import { useDpObj } from '@/context/dp-context';
 import { getRandomFrame } from '@/utils/helper';
 import { useRouter } from 'next/navigation';
+import { toSvg } from 'html-to-image';
 
 export default function DPGResult() {
   const frames = ['frame-1', 'frame-2', 'frame-3', 'frame-4'];
@@ -25,43 +26,65 @@ export default function DPGResult() {
     if (sectionRef.current) {
       const sectionElement = sectionRef.current;
       setIsLoading(true);
-      const loadImages = () => {
-        const imageElements = Array.from(sectionElement.querySelectorAll('img, svg'));
 
-        return Promise.allSettled<void>(
-          imageElements.map((img) => {
-            return new Promise<void>((resolve) => {
-              if (img instanceof HTMLImageElement || img instanceof SVGImageElement) {
-                img.onload = () => resolve();
-                img.dispatchEvent(new Event('load'));
-              } else {
-                resolve();
-              }
-            });
-          }),
-        );
-      };
-
-      loadImages().then(() => {
-        // All images have loaded, proceed to capture the section with html2canvas
-        html2canvas(sectionElement, { scale: 4, useCORS: true }).then((canvas) => {
-          // Get the canvas as a data URL with maximum quality
-          const image = canvas.toDataURL('image/jpeg', 1.0);
-
-          // Create a download link for the captured image
+      toSvg(sectionElement)
+        .then((dataUrl) => {
+          // Create a download link for the captured SVG image
           const downloadLink = document.createElement('a');
-          downloadLink.href = image;
-          downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.jpeg`;
+          downloadLink.href = dataUrl;
+          downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.svg`;
           downloadLink.click();
           setIsLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error generating SVG:', error);
+          setIsLoading(false);
         });
-      });
     }
   };
 
-  const pictureBgStyle = {
-    backgroundImage: ` url(${dpDataObj?.picture})`,
-  };
+  // const handleDownload = () => {
+  //   if (sectionRef.current) {
+  //     const sectionElement = sectionRef.current;
+  //     setIsLoading(true);
+  //     const loadImages = () => {
+  //       const imageElements = Array.from(sectionElement.querySelectorAll('img, svg'));
+
+  //       return Promise.allSettled<void>(
+  //         imageElements.map((img) => {
+  //           return new Promise<void>((resolve) => {
+  //             if (img instanceof HTMLImageElement || img instanceof SVGImageElement) {
+  //               img.style.objectFit = 'cover';
+  //               img.onload = () => resolve();
+  //               img.dispatchEvent(new Event('load'));
+  //             } else {
+  //               resolve();
+  //             }
+  //           });
+  //         }),
+  //       );
+  //     };
+
+  //     loadImages().then(() => {
+  //       // All images have loaded, proceed to capture the section with html2canvas
+  //       html2canvas(sectionElement, { scale: 4, useCORS: true }).then((canvas) => {
+  //         // Get the canvas as a data URL with maximum quality
+  //         const image = canvas.toDataURL('image/jpeg', 1.0);
+
+  //         // Create a download link for the captured image
+  //         const downloadLink = document.createElement('a');
+  //         downloadLink.href = image;
+  //         downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.jpeg`;
+  //         downloadLink.click();
+  //         setIsLoading(false);
+  //       });
+  //     });
+  //   }
+  // };
+
+  // const pictureBgStyle = {
+  //   backgroundImage: ` url(${dpDataObj?.picture})`,
+  // };
 
   return (
     <section className='viola-section google_sans'>
@@ -143,16 +166,17 @@ export default function DPGResult() {
                   </svg> */}
 
                   {/* User picture */}
-                  <div style={pictureBgStyle} className='img-frame rounded-rectangle'></div>
+                  {/* <div style={pictureBgStyle} className='img-frame rounded-rectangle'></div> */}
 
-                  {/* <div className='img-frame rounded-rectangle'>
+                  <div className='img-frame rounded-rectangle'>
                     <Image
                       src={dpDataObj?.picture as string}
                       alt={dpDataObj?.name as string}
-                      fill
+                      width={120}
+                      height={190}
                       quality={100}
                     />
-                  </div> */}
+                  </div>
                 </div>
               </div>
               <div className='row r2'>

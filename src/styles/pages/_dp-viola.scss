@@ -325,6 +325,15 @@
         width: 120px;
         margin-left: 0.75rem;
         border: 3.28px solid #fffaeb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          width: 100% !important;
+        }
       }
 
       .box-1 {
