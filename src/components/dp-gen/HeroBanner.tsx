@@ -71,6 +71,23 @@ export const Banner = () => {
 
   return (
     <header>
+      <div className='name-badge-wrapper orange'>
+        <span className='name-badge'>Geektutor</span>
+        <Image src='/images/icons/yellow-cursor.svg' alt='Magic wand icon' width={20} height={20} />
+      </div>
+      <div className='name-badge-wrapper blue'>
+        <span className='name-badge'>Daniel</span>
+        <Image src='/images/icons/blue-cursor.svg' alt='Magic wand icon' width={20} height={20} />
+      </div>
+      <div className='name-badge-wrapper red'>
+        <Image src='/images/icons/red-cursor.svg' alt='Magic wand icon' width={20} height={20} />
+        <span className='name-badge'>Tsticks</span>
+      </div>
+      <div className='name-badge-wrapper green'>
+        <Image src='/images/icons/green-cursor.svg' alt='Magic wand icon' width={20} height={20} />
+        <span className='name-badge'>Ọ́mọ́lèrè</span>
+      </div>
+
       <div className='color-tiles-banner'>
         <div className='row-1 row'>
           {colorTiles.slice(0, 2).map((style, id) => (
