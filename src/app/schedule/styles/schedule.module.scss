@@ -11,7 +11,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 5rem;
-  padding-top: 1rem;
+  padding-top: 4rem;
 
   @include media('<=phone') {
     padding-top: 1rem;
@@ -24,7 +24,8 @@
     text-align: center;
 
     h1 {
-      font-size: 80px;
+      font-size: 6rem;
+      font-weight: 600;
       line-height: 1.3;
     }
 
