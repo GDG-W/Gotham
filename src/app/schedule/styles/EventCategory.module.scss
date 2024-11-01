@@ -1,36 +1,28 @@
 @import '/src/styles/core/variables';
 @import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
 
 .eventSchedule {
   &__container {
-    width: 90vw;
-    max-width: 900px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    flex: 1;
 
-    @media screen and (max-width: 434px) {
-      width: 95vw;
-      padding: 8px;
-      max-width: 95%;
-    }
-
-    @media screen and (min-width: 435px) and (max-width: 768px) {
-      width: 90vw;
+    @include media('<=desktop') {
       max-width: 85%;
     }
 
-    @media screen and (min-width: 769px) {
-      width: 85vw;
-      max-width: 900px;
+    @include media('<=850px') {
+      max-width: 100%;
     }
   }
 
   &__tabs {
     display: flex;
     gap: 0.75rem;
-    width: 100%;
+    align-items: center;
     overflow-x: auto;
-    padding: 0.5rem 0;
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -42,40 +34,57 @@
     // Ensure tabs maintain size across breakpoints
     @media screen and (max-width: 320px) {
       gap: 0.5rem;
-      padding: 0.5rem 0.25rem;
     }
 
     @media screen and (min-width: 321px) and (max-width: 480px) {
       gap: 0.6rem;
-      padding: 0.5rem 0.3rem;
     }
 
     @media screen and (min-width: 481px) and (max-width: 768px) {
       gap: 0.75rem;
-      padding: 0.5rem 0.4rem;
     }
 
     @media screen and (min-width: 769px) {
       gap: 1rem;
-      padding: 0.5rem 0.5rem;
     }
   }
 
   &__tab {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 9999px;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 500;
     transition: all 0.2s ease;
-    margin-bottom: 2rem;
+    text-align: center;
     flex: 0 0 auto; // Prevent shrinking
     white-space: nowrap; // Prevent text wrapping
+
+    @include media('<=tablet') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-wrap: wrap;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .categoryWord:nth-child(2) {
+      text-wrap: nowrap;
+    }
+
+    .categoryWord:nth-child(2)::before {
+      content: '-';
+
+      @include media('<850px') {
+        content: none;
+      }
+    }
   }
 
   &__events {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
     padding: 1rem;
@@ -85,7 +94,7 @@
 .room-category {
   flex: 0 0 auto; // Prevent shrinking
   min-width: 120px; // Minimum width for room tabs
-  padding: 0.75rem 1rem;
+  // padding: 0.75rem 1rem;
   border: none;
   font-weight: 600;
   cursor: pointer;
@@ -119,45 +128,40 @@
   }
 
   &.active {
-    transform: scale(1.05);
-    font-weight: 700;
+    // font-weight: 700;
   }
 
   &.inactive {
-    opacity: 0.75;
-    transform: scale(0.98);
+    opacity: 0.6;
   }
 }
 
 // Room-specific styles with consistent sizing
-@mixin room-style($background, $border) {
+@mixin room-style($background, $border, $inactive-bg) {
   background-color: $background;
-  border: 1px solid $border;
+  border: 3px solid $border;
   color: #fff;
 
   &.inactive {
-    opacity: 0.7;
-  }
-
-  &.active {
-    border-width: 2px;
+    background: $inactive-bg;
+    border: 3px solid $inactive-bg;
   }
 }
 
 .room1 {
-  @include room-style($core-green, $green-primary-40);
+  @include room-style($core-green, $green-primary-40, $green-primary-80);
 }
 
 .room2 {
-  @include room-style($core-blue, $blue-primary-40);
+  @include room-style($core-blue, $blue-primary-40, $blue-primary-80);
 }
 
 .room3 {
-  @include room-style($core-yellow, $yellow-primary-40);
+  @include room-style($core-yellow, $yellow-primary-40, $yellow-primary-80);
 }
 
 .room4 {
-  @include room-style($core-red, $red-primary-40);
+  @include room-style($core-red, $red-primary-40, $red-primary-80);
 }
 
 // Rest of your event styles remain the same
@@ -169,10 +173,10 @@
     background-color: $blue-primary-100;
   }
   &.room3-active {
-    background-color: $yellow-primary-100;
+    background-color: $yellow-primary-90;
   }
   &.room4-active {
-    background-color: $red-primary-90;
+    background-color: $red-primary-100;
   }
 }
 
@@ -180,23 +184,17 @@
   &__event {
     background-color: transparent;
     border-radius: 0.5rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 0;
     transition: box-shadow 0.2s ease;
 
     @media screen and (max-width: 480px) {
       padding: 1rem;
     }
 
-    &:hover {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
-
     &-time {
       margin: 4px 0;
-      font-size: 0.9em;
+      @include body2-medium();
       margin-left: 8px;
-      color: #666;
 
       @media screen and (max-width: 480px) {
         font-size: 0.85em;
@@ -204,20 +202,21 @@
     }
 
     &-title {
-      font-size: 25px;
+      font-size: 2rem;
       margin-left: 8px;
       font-weight: 500;
       margin-bottom: 0.5rem;
       color: $background-dark;
 
-      @media screen and (max-width: 480px) {
-        font-size: 19px;
+      @include media('<=tablet') {
+        @include title1-medium();
       }
     }
   }
 
   &__event-facilitator {
     margin-left: 8px;
+    font-weight: 600;
 
     @media screen and (max-width: 480px) {
       font-size: 0.9em;

@@ -1,7 +1,6 @@
 import React from 'react';
-
 import { ScheduleData } from '../types/schedule';
-import styles from '../styles/schedule.module.scss';
+import styles from '../styles/ScheduleItem.module.scss';
 import EventBlock from './EventBlock';
 import EventCategory from './EventCategory';
 
@@ -18,18 +17,40 @@ const Schedule = ({ data, currentDay }: ScheduleProps) => {
 
   return (
     <div className={styles.scheduleContainer}>
+      <div className={styles.scheduleHeader}>
+        <p>SECTIONS</p>
+        <p>SCHEDULE</p>
+      </div>
       <div className={styles.schedule}>
-        {currentSchedule.general.map((block, index) => (
-          <EventBlock key={index} block={block} type='general' />
-        ))}
-        <div className={styles.breakoutContainer}>
+        <div className={styles.sectionsContainer}>
+          <div className={styles.sectionLine}>
+            <p>GENERAL</p>
+            <div className={styles.sectionLineSpan}></div>
+          </div>
+          <div className={styles.generalContainer}>
+            {currentSchedule.general.map((block, index) => (
+              <EventBlock key={index} block={block} type='general' />
+            ))}
+          </div>
+        </div>
+        <div className={styles.sectionsContainer}>
+          <div className={styles.sectionLine}>
+            <p>BREAKOUTS</p>
+            <div className={styles.sectionLineSpan}></div>
+          </div>
           <EventCategory currentDay={currentDay} />
         </div>
 
-        <div className={styles.postBreakoutContainer}>
-          {currentSchedule.post_breakout.map((block, index) => (
-            <EventBlock key={index} block={block} type='post_breakout' />
-          ))}
+        <div className={styles.sectionsContainer}>
+          <div className={styles.sectionLine}>
+            <p>POST BREAKOUTS</p>
+            <div className={styles.sectionLineSpan}></div>
+          </div>
+          <div className={styles.postBreakoutContainer}>
+            {currentSchedule.post_breakout.map((block, index) => (
+              <EventBlock key={index} block={block} type='post_breakout' />
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -63,7 +63,13 @@ const EventCategory = ({ currentDay }: EventCategoryProps) => {
               onClick={() => setSelectedRoomCategory(roomCategory)}
               className={`${styles['eventSchedule__tab']} ${isActive ? styles.active : styles.inactive} ${styles[`room${index + 1}`]}`}
             >
-              {roomCategory.toUpperCase()}
+              {roomCategory.split('-').map((word) => {
+                return (
+                  <span className={styles.categoryWord} key={word}>
+                    {word.toUpperCase()}
+                  </span>
+                );
+              })}
             </button>
           );
         })}
