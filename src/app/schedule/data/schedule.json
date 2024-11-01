@@ -52,21 +52,16 @@
       "end_time": "10:30",
       "events": [
         {
-          "title": "Engineering Excellence - Elevating Education Quality in Africa by Andela",
-          "facilitator": "ada-oyom",
+          "title": "TBD",
+          "facilitator": "TBD",
           "venue": {
             "name": "room 1",
             "size": [1000]
-          },
-          "panelists": [
-            "Sultan 'HackSultan' Akintunde",
-            "Andela",
-            "Seni Sulyman"
-          ]
+          }
         },
         {
-          "title": "Hackathon / Award Ceremony / Product Demo",
-          "facilitator": null,
+          "title": "TBD",
+          "facilitator": "TBD",
           "venue": {
             "name": "room 2",
             "size": [900]
@@ -80,26 +75,20 @@
       "end_time": "11:15",
       "events": [
         {
-          "title": "Product-Led Growth - Innovating Market Leadership By",
-          "facilitator": "mercy-akamo",
+          "title": "TBD",
+          "facilitator": "TBD",
           "venue": {
             "name": "room 1",
             "size": [1000]
-          },
-          "panelists": ["Odunayo Eweniyi", "Lola Aworanti-Ekugo", "Nkem Begho"]
+          }
         },
         {
-          "title": "Scaling from Africa - Strategies for Global Expansion by Paystack",
-          "facilitator": null,
+          "title": "TBD",
+          "facilitator": "TBD",
           "venue": {
             "name": "room 2",
             "size": [900]
-          },
-          "panelists": [
-            "Anil Atmaramani",
-            "Paystack",
-            "Folarin Oreoluwa Aiyegbusi"
-          ]
+          }
         }
       ]
     },
@@ -190,24 +179,32 @@
           "duration": 45,
           "start_time": "14:40",
           "end_time": "15:25",
-          "title": "Introduction to Gemini APIs",
-          "facilitator": "segun-olumide"
+          "title": "CSS Rises from the Ashes: (Re)Become Friends with Your Stylesheet",
+          "facilitator": "olivier-leplus"
         },
         {
           "session_id": 4,
           "duration": 45,
           "start_time": "15:30",
           "end_time": "16:15",
-          "title": "Building Resilient APIs: Strategies for Handling API Attacks",
-          "facilitator": "adeyanju-michael"
+          "title": "The Role of Developer Relations in the Success of AI/ML Products",
+          "facilitator": "gift-ojeabulu"
         },
         {
           "session_id": 5,
           "duration": 45,
           "start_time": "16:20",
           "end_time": "17:05",
-          "title": "The role of Developer Relations in the Success of AI/ML Products",
-          "facilitator": "gift-ojeabulu"
+          "title": "Building a Multi-Tenant SaaS with Microservices on Kubernetes",
+          "facilitator": "adeyanju-michael"
+        },
+        {
+          "session_id": 6,
+          "duration": 45,
+          "start_time": "17:05",
+          "end_time": "17:50",
+          "title": "Cybersecurity Awareness For Small And Medium Enterprises",
+          "facilitator": "nkorom-kingsley"
         }
       ]
     },
@@ -224,15 +221,15 @@
           "duration": 60,
           "start_time": "13:00",
           "end_time": "14:00",
-          "title": "Building and consuming gRPC services with Node.js",
-          "facilitator": "ogunrekun-ayoola"
+          "title": "Design Thinking for Problem-Solving: Beyond UX Design",
+          "facilitator": "john-ohio"
         },
         {
           "session_id": 2,
           "duration": 60,
           "start_time": "14:05",
           "end_time": "15:05",
-          "title": "Build your own cli: an introduction to TDD in Rust",
+          "title": "Build your own CLI: an introduction to TDD in Rust",
           "facilitator": "kehinde-adeleke"
         },
         {
@@ -248,8 +245,8 @@
           "duration": 40,
           "start_time": "16:15",
           "end_time": "17:15",
-          "title": "Design Thinking for Problem-Solving: Beyond UX Design",
-          "facilitator": "john-ohio"
+          "title": "Prompt Engineering: Gemini And A Well Designed System Prompts is All You Need.",
+          "facilitator": "ayo-kehinde-samuel"
         }
       ]
     },
@@ -266,16 +263,16 @@
           "duration": 45,
           "start_time": "13:00",
           "end_time": "13:45",
-          "title": "TBD",
-          "facilitator": "sodiq-akinjobi"
+          "title": "Creating Developer-Centric Content: How to Write for a Technical Audience",
+          "facilitator": "adejoke-haastrup"
         },
         {
           "session_id": 2,
           "duration": 45,
           "start_time": "13:50",
           "end_time": "14:35",
-          "title": "Cybersecurity Awareness For Small And Medium Enterprises ",
-          "facilitator": "nkorom-kingsley"
+          "title": "Introduction to Gemini API",
+          "facilitator": "segun-olumide"
         },
         {
           "session_id": 3,
@@ -290,8 +287,8 @@
           "duration": 45,
           "start_time": "15:30",
           "end_time": "16:15",
-          "title": "CSS Rises from the Ashes: (Re)Become Friends with Your Stylesheet",
-          "facilitator": "Olivier Leplus"
+          "title": "Building Resilient APIs: Strategies for Handling API Attacks",
+          "facilitator": "lois-bassey"
         }
       ]
     },
@@ -304,11 +301,11 @@
       "category": "workshops",
       "events": [
         {
-          "session_id": 3,
+          "session_id": 1,
           "duration": 60,
-          "start_time": "15:30",
-          "end_time": "16:15",
-          "title": "Resume Reviews"
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "title": "Office Hours with GDE's - GDG & GDE Program"
         }
       ]
     }
@@ -388,13 +385,13 @@
           },
           "panelists": [
             "Seyi Akamo, Co-Founder TUROG",
-            "CBN/NFIU/SEC",
-            "Omoniyi Kolade, SeerBit"
+            "GeegPay",
+            "SeerBit"
           ]
         },
         {
           "title": "Engineering Excellence – Elevating Education Quality in Africa by Andela",
-          "facilitator": null,
+          "facilitator": "Ada Oyom",
           "venue": {
             "name": "room 2",
             "size": [900]
@@ -420,19 +417,17 @@
             "name": "room 1",
             "size": [1000]
           },
-          "panelists": ["Odunayo Eweniyi", "Lola Aworanti-Ekugo", "Nkem Begho"]
+          "panelists": ["Daniel Di Bartolo", "Peter Ing", "FlutterFlow" ]
         },
         {
-          "title": "X",
+          "title": "TBD",
           "facilitator": null,
           "venue": {
             "name": "room 2",
             "size": [900]
           },
           "panelists": [
-            "Anil Atmaramani",
-            "Paystack",
-            "Folarin Oreoluwa Aiyegbusi"
+            "TBD"
           ]
         }
       ]
@@ -516,32 +511,40 @@
           "duration": 45,
           "start_time": "13:50",
           "end_time": "14:35",
-          "title": "X",
-          "facilitator": "confidence-okoghenun"
+          "title": "Top 15 Cybersecurity Risks of AI Systems",
+          "facilitator": "daniel-di-bartolo"
         },
         {
           "session_id": 3,
           "duration": 45,
           "start_time": "14:40",
           "end_time": "15:25",
-          "title": "Introduction to Gemini APIs",
-          "facilitator": "segun-olumide"
+          "title": "Gamification in UX: Creating Engaging User Experiences Through Play",
+          "facilitator": "ololade-adesuyi"
         },
         {
           "session_id": 4,
           "duration": 45,
           "start_time": "15:30",
           "end_time": "16:15",
-          "title": "Building Resilient APIs: Strategies for Handling API Attacks",
-          "facilitator": "adeyanju-michael"
+          "title": "Decentralization is Not Open Source: Unraveling the Misconceptions",
+          "facilitator": "samson-goddy"
         },
         {
           "session_id": 5,
           "duration": 45,
           "start_time": "16:20",
           "end_time": "17:05",
-          "title": "The role of Developer Relations in the Success of AI/ML Products",
-          "facilitator": "gift-ojeabulu"
+          "title": "Active Living in a Digital World: The Antidote to Sitting",
+          "facilitator": "emike-dania"
+        },
+        {
+          "session_id": 6,
+          "duration": 45,
+          "start_time": "17:10",
+          "end_time": "17:55",
+          "title": "The WHY Bucket - Cultivating a Culture of Continuous Curiosity Within Product Organisations",
+          "facilitator": "Jeffery Abdulateef-Adog"
         }
       ]
     },
@@ -582,8 +585,8 @@
           "duration": 40,
           "start_time": "16:15",
           "end_time": "17:15",
-          "title": "X",
-          "facilitator": "john-ohio"
+          "title": "Implementing OAuth 2.0 for Secure API Access",
+          "facilitator": "motunrayo-koyejo"
         }
       ]
     },
@@ -608,8 +611,8 @@
           "duration": 45,
           "start_time": "13:50",
           "end_time": "14:35",
-          "title": "Creating Developer-Centric Content: How to Write for a Technical Audience",
-          "facilitator": "adejoke-haastrup"
+          "title": "Building a GenAI App on Android Using the Executorch Framework",
+          "facilitator": "peter-ing"
         },
         {
           "session_id": 3,
@@ -624,8 +627,8 @@
           "duration": 45,
           "start_time": "15:30",
           "end_time": "16:15",
-          "title": "Building a GenAI App on Android Using the Executorch Framework",
-          "facilitator": "peter-ing"
+          "title": "TBD",
+          "facilitator": "sodiq-akinjobi"
         }
       ]
     },
@@ -638,11 +641,27 @@
       "category": "workshops",
       "events": [
         {
+          "session_id": 1,
+          "duration": 120,
+          "start_time": "13:00",
+          "end_time": "15:00",
+          "title": "How to Build Android Bubbles in Flutter",
+          "facilitator": "obumuneme-nwabude"
+        },
+        {
+          "session_id": 2,
+          "duration": 120,
+          "start_time": "15:00",
+          "end_time": "16:00",
+          "title": "Building Advanced Assistants (Agentic RAGs) with Gemma 2 and Llama Index",
+          "facilitator": "ngesa-marvin"
+        },
+        {
           "session_id": 3,
           "duration": 60,
-          "start_time": "15:30",
-          "end_time": "16:15",
-          "title": "Resume Reviews"
+          "start_time": "17:00",
+          "end_time": "18:00",
+          "title": "10 Onsight Hiring Partners\n60 Interviews"
         }
       ]
     }
@@ -650,11 +669,11 @@
   "post_breakout": [
     {
       "duration": 60,
-      "start_time": "17:00",
-      "end_time": "18:00",
+      "start_time": "18:00",
+      "end_time": "21:00",
       "events": [
         {
-          "title": "Networking",
+          "title": "DevFest Lagos After Party",
           "facilitator": null
         }
       ]
