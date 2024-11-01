@@ -4,7 +4,7 @@ import React from 'react';
 import styles from '../styles/Button.module.scss';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  backgroundColor?: string;
+  backgroundColor: string;
   textColor?: string;
   borderColor?: string;
   variant?: 'default' | 'outlined';
