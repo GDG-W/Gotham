@@ -5,26 +5,27 @@
   padding: 10px;
   border-radius: 4px;
   background: hsl(0, 56%, 91%);
-  width: 100%;
-  max-width: 1000px;
+  width: 90vw;
+  max-width: 900px;
   margin: 0 auto;
   margin-bottom: 20px;
 
   @include media('<=phone') {
-    width: 95%;
+    width: 95vw;
     padding: 8px;
     max-width: 380px;
   }
 
   @include media('>=tablet') {
-    width: 95%;
+    width: 90vw;
     max-width: 800px;
   }
 
   @include media('>=desktop') {
-    width: 95%;
-    max-width: 1000px;
+    width: 85vw;
+    max-width: 900px;
   }
+
   &.general {
     background: #fff;
   }

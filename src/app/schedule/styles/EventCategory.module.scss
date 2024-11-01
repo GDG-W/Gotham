@@ -3,28 +3,27 @@
 
 .eventSchedule {
   &__container {
-    width: 100%;
-    max-width: 1000px;
+    width: 90vw;
+    max-width: 900px;
     margin: 0 auto;
     margin-bottom: 20px;
 
     @include media('<=phone') {
-      width: 95%;
+      width: 95vw;
       padding: 8px;
       max-width: 380px;
     }
 
     @include media('>=tablet') {
-      width: 95%;
+      width: 90vw;
       max-width: 800px;
     }
 
     @include media('>=desktop') {
-      width: 95%;
-      max-width: 1000px;
+      width: 85vw;
+      max-width: 900px;
     }
   }
-
   &__tabs {
     display: flex;
     gap: 0.5rem;
@@ -61,7 +60,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1.5rem;
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
   }
