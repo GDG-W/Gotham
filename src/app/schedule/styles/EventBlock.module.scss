@@ -11,8 +11,9 @@
   margin-bottom: 20px;
 
   @include media('<=phone') {
-    width: 40%;
+    width: 95%;
     padding: 8px;
+    max-width: 380px;
   }
 
   @include media('>=tablet') {
