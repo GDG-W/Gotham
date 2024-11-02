@@ -9,7 +9,7 @@ export type Speaker = {
   links: {
     github?: string;
     linkedin?: string;
-    twitter?: string;
+    twitter: string;
   };
   day?: number;
   track: string;
