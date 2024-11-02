@@ -10,6 +10,7 @@ import throwbackImage from '@/assets/images/homepage-throwback.png';
 import homeHero from '@/assets/images/home-hero.png';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
+import Speakers from '@/components/home/speakers/speakers';
 
 const Ticket = ({ className = '' }: { className?: string }) => (
   <div className={`ticket ${className}`}>
@@ -168,6 +169,7 @@ const Homepage = () => {
             </a>
           </div>
         </section>
+        <Speakers />
       </div>
       <Footer />
     </>
