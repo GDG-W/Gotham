@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import styles from '@/app/schedule/styles/Reservation.module.scss';
 import Image from 'next/image';
 import { Button } from './button';
@@ -19,7 +20,7 @@ const Reservation = () => {
         >
           MOBILE APP
         </Button>
-        <h3 className='text-3xl'>Reserve Your Sessions</h3>
+        <h3>Reserve Your Sessions</h3>
         <p>
           Book sessions and get real time notifications seamlessly from the Devfest mobile app.
           Available on Apple and iOS App store.

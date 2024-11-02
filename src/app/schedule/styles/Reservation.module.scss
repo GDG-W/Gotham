@@ -1,7 +1,9 @@
 @import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
 
 .reservationContainer {
   background-color: #34a853;
+  margin-top: 7.65rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +16,7 @@
   overflow: hidden;
   padding: 2rem;
 
-  @include media('<=phone') {
+  @include media('<=550px') {
     flex-direction: row;
     min-height: 400px;
     gap: 0;
@@ -31,7 +33,7 @@
     flex-direction: column;
     gap: 1rem;
     width: 90%;
-    max-width: 328px;
+    max-width: 500px;
     text-align: center;
     z-index: 1;
 
@@ -42,24 +44,48 @@
     .btnContent {
       font-size: 1rem;
 
-      @include media('<=phone') {
-        font-size: 12px;
+      @include media('<=550px') {
+        @include body5-medium();
+      }
+    }
+
+    h3 {
+      @include header-h3();
+
+      @include media('<=550px') {
+        @include header-h6();
       }
     }
 
     p {
-      font-size: 0.9rem;
-      font-weight: lighter;
+      @include body2-medium();
+
+      @include media('<=550px') {
+        @include body3-regular();
+      }
     }
 
     .download {
       font-size: 1rem;
+      font-weight: 500;
       display: flex;
       gap: 8px;
       align-items: center;
       justify-content: center;
       border: none;
       margin-top: 3px;
+
+      @include media('<=550px') {
+        gap: 4px;
+        p {
+          @include body3-medium();
+        }
+
+        img {
+          height: 1rem;
+          width: 1rem;
+        }
+      }
     }
   }
 
@@ -69,36 +95,31 @@
     width: 300px;
     height: 325px;
 
-    @include media('<=phone') {
+    @include media('<=550px') {
       width: 25%;
     }
 
     @include media('<=tablet') {
       width: 25%;
-      height: 380px;
     }
   }
 
   .phoneBottom {
-    bottom: 0;
+    bottom: -1rem;
     left: 2%;
 
     @include media('<=phone') {
       left: 2%;
-      bottom: 0;
-      height: 180px;
-      transform: translateY(50%);
     }
 
     @include media('<=tablet') {
       left: 2%;
-      bottom: 0;
     }
 
     @include media('<=1024px') {
       left: 2%;
       width: 20%;
-      transform: translateY(50%);
+      height: fit-content;
     }
   }
 
@@ -119,6 +140,7 @@
     @include media('<=1024px') {
       right: 2%;
       width: 20%;
+      height: fit-content;
     }
   }
 
