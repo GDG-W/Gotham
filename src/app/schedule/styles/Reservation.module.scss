@@ -16,7 +16,7 @@
   overflow: hidden;
   padding: 2rem;
 
-  @include media('<=phone') {
+  @include media('<=550px') {
     flex-direction: row;
     min-height: 400px;
     gap: 0;
@@ -95,36 +95,31 @@
     width: 300px;
     height: 325px;
 
-    @include media('<=phone') {
+    @include media('<=550px') {
       width: 25%;
     }
 
     @include media('<=tablet') {
       width: 25%;
-      height: 380px;
     }
   }
 
   .phoneBottom {
-    bottom: 0;
+    bottom: -1rem;
     left: 2%;
 
     @include media('<=phone') {
       left: 2%;
-      bottom: 0;
-      height: 180px;
-      transform: translateY(50%);
     }
 
     @include media('<=tablet') {
       left: 2%;
-      bottom: 0;
     }
 
     @include media('<=1024px') {
       left: 2%;
       width: 20%;
-      transform: translateY(50%);
+      height: fit-content;
     }
   }
 
@@ -145,6 +140,7 @@
     @include media('<=1024px') {
       right: 2%;
       width: 20%;
+      height: fit-content;
     }
   }
 
