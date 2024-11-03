@@ -31,7 +31,7 @@ const sortMember = (member: TransformedItem, type: string) => {
       return type === 'badge' ? <DevsBadge /> : <DevsIcon />;
     case member.category === 'Designer':
       return type === 'badge' ? <DesignerBadge /> : <DesignerIcon />;
-    case member.category === 'GDG Organizer':
+    case member.category === 'GDG Organiser':
       return type === 'badge' ? <OrganisersBadge /> : <OrganisersIcon />;
     case member.category === 'Product':
       return type === 'badge' ? <LeadsBadge /> : <LeadsIcon />;
@@ -164,10 +164,12 @@ const TeamCard = ({ member }: { member: TransformedItem }) => {
               ref={flipBackRef}
             >
               <div className={styles.memberQuotes}>
-                <div>
-                  <p className={styles.textHeader}>Fun Fact</p>
-                  <p className={styles.textContent}>{member.fact}</p>
-                </div>
+                {member.fact && (
+                  <div>
+                    <p className={styles.textHeader}>Fun Fact</p>
+                    <p className={styles.textContent}>{member.fact}</p>
+                  </div>
+                )}
                 {member.experience && (
                   <div>
                     <p className={styles.textHeader}>DevFest Volunteer Experience</p>

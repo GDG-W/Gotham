@@ -11,7 +11,7 @@ import PinkBrackets from '../assets/pink-brackets.svg';
 
 const categories = [
   { title: 'all', icon: AllIcon, filter: 'all' },
-  { title: 'Organisers', icon: RedCross, filter: 'GDG Organizer' },
+  { title: 'Organisers', icon: RedCross, filter: 'GDG Organiser' },
   { title: 'Product', icon: GreenHash, filter: 'Product' },
   { title: 'Devs', icon: PinkBrackets, filter: 'Developer' },
   { title: 'Designers', icon: BlueArrow, filter: 'Designer' },

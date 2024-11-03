@@ -33,7 +33,7 @@ const SchedulePage = () => {
               height={82}
               className={`${styles['top-left']} responsive-image`}
             />
-            <h1 className=''>Explore our very demure schedule</h1>
+            <h1 className=''>Explore Our Very Demure Schedule</h1>
             <Image
               src='/images/svg/path.svg'
               alt='hash'
