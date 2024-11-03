@@ -1,7 +1,5 @@
 import React from 'react';
-import ArrowLeft from '@/assets/icons/arrow-left.svg';
 import ArrowRight from '@/assets/icons/arrow-right.svg';
-import Speakers from '@/assets/icons/speakers.svg';
 import Talk from '@/components/home/Talk';
 import Image from 'next/image';
 import appMockup1 from '@/assets/images/app-mockup-1.png';
@@ -22,26 +20,6 @@ import Footer from '@/components/home/Footer';
 const HomepageRemainingContent = () => {
   return (
     <>
-      <section className='speakers'>
-        <div className='speakers__pill'>SPEAKERS</div>
-        <div className='speakers__controls'>
-          <button className='speakers__button'>
-            <ArrowLeft />
-          </button>
-          <p className='speakers__title'>Expert Speakers</p>
-          <button className='speakers__button'>
-            <ArrowRight />
-          </button>
-        </div>
-        <p className='speakers__description'>
-          We’ve upped the ante this year with 42 speakers, each ready to drop knowledge that will
-          leave you with more than just ideas.
-        </p>
-        <button className='speakers__see-speakers'>
-          See all Speakers
-          <Speakers />
-        </button>
-      </section>
       <section className='sponsors'>
         <div className='sponsors__details'>
           <p className='sponsors__pill'>SPONSORS</p>
@@ -116,7 +94,7 @@ const HomepageRemainingContent = () => {
           </p>
           <button className='gdg-lagos__download-app'>
             Let&apos;s go
-            <ArrowRight />
+            <ArrowRight width={25} />
           </button>
         </div>
         <Image src={stayUpdated} alt='Speakers taking a selfie with the audience' />
