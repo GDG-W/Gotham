@@ -204,7 +204,7 @@
             "start_time": "17:05",
             "end_time": "17:50",
             "title": "Cybersecurity Awareness For Small And Medium Enterprises",
-            "facilitator": "nkorom-kingsley"
+            "facilitator": "nkorom-ezekiel-kingsley"
           }
         ]
       },
@@ -393,10 +393,9 @@
               "size": [900]
             },
             "panelists": [
-              "Sultan 'HackSultan' Akintunde (Co-founder, TalentQL)",
-              "GoMyCode",
-              "Seni Sulyman",
-              "Andela"
+              "Emmanuel Ogunsola (Head of Product, Altschool)",
+              "Babatunde Olaifa ( CEO, GoMyCode)",
+              "Moniepoint"
             ]
           }
         ]
@@ -407,13 +406,13 @@
         "end_time": "11:15",
         "events": [
           {
-            "title": "AI for Good: Driving Innovation with Responsibility  by Arm",
+            "title": "AI for Good: Driving Innovation with Responsibility",
             "facilitator": "olayinka-peter",
             "venue": {
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": ["Daniel Di Bartolo", "Peter Ing", "FlutterFlow"]
+            "panelists": ["Daniel Di Bartolo, Google", "Peter Ing, ARM", "FlutterFlow"]
           },
           {
             "title": "TBD",
@@ -538,7 +537,7 @@
             "start_time": "17:10",
             "end_time": "17:55",
             "title": "The WHY Bucket - Cultivating a Culture of Continuous Curiosity Within Product Organisations",
-            "facilitator": "Jeffery Abdulateef-Adog"
+            "facilitator": "jeffery-abdulateef-adoga"
           }
         ]
       },
