@@ -6,7 +6,7 @@ import React from 'react';
 import { useDpObj } from '@/context/dp-context';
 import { getRandomFrame } from '@/utils/helper';
 import { useRouter } from 'next/navigation';
-import { toJpeg } from 'html-to-image';
+import { toPng } from 'html-to-image';
 
 export default function DPGResult() {
   const frames = ['frame-1', 'frame-2', 'frame-3', 'frame-4'];
@@ -27,18 +27,18 @@ export default function DPGResult() {
       const sectionElement = sectionRef.current;
       setIsLoading(true);
 
-      // Capture the element as a JPEG image
-      toJpeg(sectionElement, { quality: 1.0 }) // 1.0 ensures the highest quality
+      // Capture the element as a PNG image
+      toPng(sectionElement, { quality: 1.0 }) // `clarity` (quality is for Jpeg)
         .then((dataUrl) => {
-          // Create a download link for the captured JPEG image
+          // Create a download link for the captured PNG image
           const downloadLink = document.createElement('a');
           downloadLink.href = dataUrl;
-          downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.jpeg`;
+          downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.png`;
           downloadLink.click();
           setIsLoading(false);
         })
         .catch((error) => {
-          console.error('Error generating JPEG:', error);
+          console.error('Error generating PNG:', error);
           setIsLoading(false);
         });
     }
