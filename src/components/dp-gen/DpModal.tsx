@@ -54,7 +54,11 @@ export const DPModal: React.FC<IDpModalProps> = ({
           <h5 className='title'> Share your DP in 3 easy steps!</h5>
           <div className='step_indicators'>
             {generateXNumberArray(3).map((_, id) => (
-              <span key={id} className={`line ${id <= step ? 'active' : ''}`}></span>
+              <span
+                key={id}
+                onClick={() => setStep(id)}
+                className={`line ${id <= step ? 'active' : ''}`}
+              ></span>
             ))}
           </div>
 

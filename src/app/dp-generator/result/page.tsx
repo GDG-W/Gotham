@@ -122,16 +122,11 @@ export default function DPGResult() {
 
                   {/* Picture center */}
                   <div className='col box-3'>
-                    {/* User picture */}
-                    {/* <div style={pictureBgStyle} className='img-frame rounded-rectangle'></div> */}
-
                     <div className='img-frame rounded-rectangle'>
                       <Image
                         src={dpDataObj?.picture as string}
                         alt={dpDataObj?.name as string}
                         fill
-                        // width={120}
-                        // height={190}
                         quality={100}
                       />
                     </div>
