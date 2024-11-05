@@ -46,12 +46,12 @@ export default function DPGResult() {
       };
 
       loadImages().then(() => {
-        // All images have loaded, proceed to capture the section with html2canvas
+        // All images have loaded, proceed to download
         html2canvas(sectionElement, { scale: 4, useCORS: true }).then((canvas) => {
-          // Get the canvas as a data URL with maximum quality
+          // maximum quality = 1
           const image = canvas.toDataURL('image/png', 1.0);
 
-          // Create a download link for the captured image
+          // Create a download link
           const downloadLink = document.createElement('a');
           downloadLink.href = image;
           downloadLink.download = `${dpDataObj?.name}-devfest-lagos-2024.png`;
@@ -63,10 +63,6 @@ export default function DPGResult() {
       });
     }
   };
-
-  // const pictureBgStyle = {
-  //   backgroundImage: ` url(${dpDataObj?.picture})`,
-  // };
 
   const handleClose = () => setShowModal(false);
 
