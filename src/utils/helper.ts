@@ -18,3 +18,7 @@ export const getRandomFrame = (length: number = 4) => {
   const randomIndex = Math.floor(Math.random() * length);
   return randomIndex;
 };
+
+export const generateXNumberArray = (num: number) => {
+  return Array.from({ length: num }, (_, idx) => idx);
+};

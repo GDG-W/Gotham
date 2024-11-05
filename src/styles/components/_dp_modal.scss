@@ -1,5 +1,213 @@
-.dp_modal {
+.dp_modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: var(--generalSans);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  height: 100%;
+  transition: 0.3s all ease;
+}
+
+.modal_container {
+  transition: 0.3s all ease;
   border: 6.87px solid rgba(255, 255, 255, 1);
   box-shadow: -12px 8px 60.1px 0px rgba(0, 0, 0, 0.13);
   padding: 2.5rem;
+  position: relative;
+  z-index: 1000;
+  width: 850px;
+  height: fit-content;
+  margin: auto 0.75rem;
+  background-color: rgba(255, 250, 235, 1);
+
+  @include media('<=big_tablet') {
+    width: 550px;
+    padding: 1.5rem;
+  }
+
+  @include media('<=phone') {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.modal_content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-family: var(--font-geist-sans);
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+
+    @include media('<=big_tablet') {
+      font-size: 1.5rem;
+    }
+
+    @include media('<=phone') {
+      font-size: 1rem;
+      line-height: 26px;
+    }
+  }
+
+  .step_indicators {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1.5rem auto;
+    width: 80%;
+
+    @include media('<=tablet') {
+      margin: 1rem auto;
+      width: 100%;
+    }
+
+    .line {
+      width: 100%;
+      height: 8px;
+      border-radius: 2222px;
+      background: #cccccc;
+      transition: 0.3s all ease;
+
+      @include media('<=tablet') {
+        height: 5px;
+        border-radius: 50px;
+      }
+
+      &.active {
+        background: #1e1e1e;
+      }
+    }
+  }
+
+  .bg_img {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+    margin: 50px auto;
+
+    @include media('<=big_tablet') {
+      width: 100%;
+      height: 200px;
+    }
+
+    @include media('<=phone') {
+      margin: 2rem auto 2.5rem;
+      height: 150px;
+    }
+  }
+
+  .step_procedure {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    gap: 1rem;
+    font-family: var(--font-geist-sans);
+
+    @include media('<=big_tablet') {
+      font-size: 1.25rem;
+    }
+
+    @include media('<=phone') {
+      width: 100%;
+    }
+
+    &.text_center {
+      align-items: center;
+
+      .title {
+        text-align: center;
+      }
+    }
+
+    .title {
+      font-family: var(--font-geist-sans);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: left;
+
+      @include media('<=big_tablet') {
+        font-size: 1.5rem;
+      }
+
+      @include media('<=phone') {
+        font-size: 1.15rem;
+        line-height: 26px;
+      }
+    }
+
+    .details {
+      color: #1c1c1c;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+
+      @include media('<=big_tablet') {
+        font-size: 1.15rem;
+      }
+
+      @include media('<=phone') {
+        font-size: 1rem;
+        line-height: 16px;
+      }
+    }
+
+    .btn-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 1.875rem;
+
+      @include media('<=big_tablet') {
+        gap: 1rem;
+      }
+
+      button {
+        width: 100%;
+        height: 64px;
+        color: var($background-light);
+        border: 3px solid rgba(30, 30, 30, 1);
+
+        .btn_label {
+          display: inline-flex !important;
+          align-items: center;
+          gap: 0.5rem;
+
+          @include media('<=big_tablet') {
+            font-size: 0.875rem;
+          }
+        }
+
+        &:first-child {
+          color: rgba(30, 30, 30, 1);
+          background-color: var(--dv-light-yellow);
+        }
+
+        @include media('<=big_tablet') {
+          height: 40px;
+          padding: 0.5rem !important;
+
+          img {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
 }
