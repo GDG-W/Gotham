@@ -1,3 +1,12 @@
+@keyframes breathe {
+  from {
+    transform: scale(1.35);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .dp-gen {
   header {
     display: flex;
@@ -376,6 +385,11 @@
 
     .wand {
       cursor: pointer;
+
+      img {
+        transition: 0.3s all ease;
+        animation: breathe 1.5s linear infinite;
+      }
     }
 
     .flex-wrapper {

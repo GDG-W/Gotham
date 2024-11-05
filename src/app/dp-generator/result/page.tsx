@@ -58,17 +58,21 @@ export default function DPGResult() {
           downloadLink.click();
           localStorage.setItem(dpDataObj?.name as string, `1`);
           setIsLoading(false);
-          setShowModal(true);
+          setTimeout(() => {
+            setShowModal(true);
+          }, 1500);
         });
       });
     }
   };
 
-  const handleClose = () => setShowModal(false);
+  const handleClose = () => {
+    setShowModal(false);
+  };
 
   const handleXShare = () => {
-    const text = '#devFestLagos2024 #devFestLagos';
-    const url = 'https://devfestlagps.com/dp-generator';
+    const text = '#DevFestLagos2024';
+    const url = 'https://devfestlagos.com/dp-generator';
     localStorage.setItem(dpDataObj?.name as string, `2`);
     const twitterUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
     setShowModal(true);

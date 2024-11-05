@@ -25,6 +25,8 @@
   height: fit-content;
   margin: auto 0.75rem;
   background-color: rgba(255, 250, 235, 1);
+  display: flex;
+  flex-direction: column;
 
   @include media('<=big_tablet') {
     width: 550px;
@@ -42,8 +44,8 @@
 
     @include media('<=phone') {
       img {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
       }
     }
   }

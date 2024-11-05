@@ -22,8 +22,8 @@ const stepLists = [
     details: 'Make sure to use #devFestLagos2024 #devFestLagos',
   },
   {
-    title: 'You stand a chance of getting extra merch at DevFest Lagos 2024',
-    details: 'Your tweeted DP is your evidence🌝',
+    title: 'Swags could be up for grabs!',
+    details: 'Your shared DP with the hashtag #DevFestLagos2024 is your evidence🌝',
   },
 ];
 
@@ -38,21 +38,29 @@ export const DPModal: React.FC<IDpModalProps> = ({
   const [step, setStep] = React.useState<number>(1);
 
   React.useEffect(() => {
-    // check if user has downloaded
-    const initalStep = localStorage.getItem(userName);
-    if (initalStep) setStep(Number(initalStep));
-  }, []);
+    if (open) {
+      // check if user has downloaded
+      const initalStep = localStorage.getItem(userName);
+      if (initalStep) setStep(Number(initalStep));
+    }
+  }, [open]);
 
   if (!open) return null;
 
   const handleNext = () => setStep(step + 1);
 
   return (
-    <div className='dp_modal_overlay' onClick={onClose}>
+    <div
+      className='dp_modal_overlay'
+      onClick={() => {
+        onClose();
+        setStep(0);
+      }}
+    >
       <div className='modal_container' onClick={(e) => e.stopPropagation()}>
         <div onClick={onClose} className='close_icon'>
           <Image
-            src='/images/icon/rafiki.svg'
+            src='/images/icons/circle-close-icon.svg'
             alt='close icon'
             quality={100}
             width={35}

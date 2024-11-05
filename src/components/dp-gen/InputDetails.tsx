@@ -141,6 +141,7 @@ export const InputDetails = () => {
 
                 <Textfield
                   id='hook'
+                  maxLength={40}
                   value={formValues.hook}
                   className='text-field'
                   placeholder='Input hook'

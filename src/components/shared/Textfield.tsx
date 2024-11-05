@@ -3,7 +3,7 @@ import type { FieldError } from 'react-hook-form';
 import React from 'react';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-interface TextfieldProps {
+interface TextfieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   id: string;
   className?: string;
   type?: string;
