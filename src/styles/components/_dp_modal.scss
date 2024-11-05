@@ -35,6 +35,18 @@
     width: 100%;
     padding: 1rem;
   }
+
+  .close_icon {
+    margin-left: auto;
+    cursor: pointer;
+
+    @include media('<=phone') {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 }
 
 .modal_content {

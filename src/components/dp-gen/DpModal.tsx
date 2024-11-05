@@ -50,6 +50,15 @@ export const DPModal: React.FC<IDpModalProps> = ({
   return (
     <div className='dp_modal_overlay' onClick={onClose}>
       <div className='modal_container' onClick={(e) => e.stopPropagation()}>
+        <div onClick={onClose} className='close_icon'>
+          <Image
+            src='/images/icon/rafiki.svg'
+            alt='close icon'
+            quality={100}
+            width={35}
+            height={35}
+          />
+        </div>
         <div className='modal_content'>
           <h5 className='title'> Share your DP in 3 easy steps!</h5>
           <div className='step_indicators'>

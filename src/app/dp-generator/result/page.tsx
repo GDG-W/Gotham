@@ -71,8 +71,8 @@ export default function DPGResult() {
     const url = 'https://devfestlagps.com/dp-generator';
     localStorage.setItem(dpDataObj?.name as string, `2`);
     const twitterUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-    window.open(twitterUrl, '_blank');
     setShowModal(true);
+    window.open(twitterUrl, '_blank');
   };
 
   return (
