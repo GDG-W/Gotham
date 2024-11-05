@@ -186,6 +186,7 @@
       .double-quotes,
       .forward-slash {
         position: absolute;
+        overflow: hidden;
       }
 
       .arrow {
