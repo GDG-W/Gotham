@@ -1,0 +1,151 @@
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
+
+.reservationContainer {
+  background-color: #34a853;
+  margin-top: 7.65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 600px;
+  width: 100%;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+
+  @include media('<=550px') {
+    flex-direction: row;
+    min-height: 400px;
+    gap: 0;
+  }
+
+  @include media('<=tablet') {
+    flex-direction: row;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 1;
+
+    @include media('<=phone') {
+      gap: 0.5rem;
+    }
+
+    .btnContent {
+      font-size: 1rem;
+
+      @include media('<=550px') {
+        @include body5-medium();
+      }
+    }
+
+    h3 {
+      @include header-h3();
+
+      @include media('<=550px') {
+        @include header-h6();
+      }
+    }
+
+    p {
+      @include body2-medium();
+
+      @include media('<=550px') {
+        @include body3-regular();
+      }
+    }
+
+    .download {
+      font-size: 1rem;
+      font-weight: 500;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      margin-top: 3px;
+
+      @include media('<=550px') {
+        gap: 4px;
+        p {
+          @include body3-medium();
+        }
+
+        img {
+          height: 1rem;
+          width: 1rem;
+        }
+      }
+    }
+  }
+
+  .phoneBottom,
+  .phoneTop {
+    position: absolute;
+    width: 300px;
+    height: 325px;
+
+    @include media('<=550px') {
+      width: 25%;
+    }
+
+    @include media('<=tablet') {
+      width: 25%;
+    }
+  }
+
+  .phoneBottom {
+    bottom: -1rem;
+    left: 2%;
+
+    @include media('<=phone') {
+      left: 2%;
+    }
+
+    @include media('<=tablet') {
+      left: 2%;
+    }
+
+    @include media('<=1024px') {
+      left: 2%;
+      width: 20%;
+      height: fit-content;
+    }
+  }
+
+  .phoneTop {
+    top: 0;
+    right: 2%;
+
+    @include media('<=phone') {
+      right: 2%;
+      width: 25%;
+    }
+
+    @include media('<=tablet') {
+      right: 2%;
+      width: 25%;
+    }
+
+    @include media('<=1024px') {
+      right: 2%;
+      width: 20%;
+      height: fit-content;
+    }
+  }
+
+  .responsiveImage {
+    width: 100%;
+    height: auto;
+  }
+}

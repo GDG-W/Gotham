@@ -1,0 +1,259 @@
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/variables';
+@import '/src/styles/core/typography';
+
+.eventBlock {
+  border-radius: 4px;
+  background: rgb(245, 219, 219);
+
+  @include media('<=850px') {
+    width: 100%;
+  }
+
+  &.general {
+    background: #fff;
+  }
+
+  &.breakout {
+    background: #e6f7ff;
+  }
+
+  &.post_breakout {
+    background: #fff;
+  }
+
+  // make it appear grid-like in desktop
+  &.rowGrid {
+    & + .rowGrid {
+      margin-top: -12px;
+
+      @include media('<=850px') {
+        margin-top: 0;
+      }
+
+      .rowLayout {
+        padding-top: 0 !important;
+
+        @include media('<=850px') {
+          padding-top: 0.75rem !important;
+        }
+      }
+    }
+  }
+
+  .time {
+    @include body2-medium();
+    padding-top: 10px;
+    margin-left: 9px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
+  }
+
+  .events {
+    display: grid;
+    gap: 1rem;
+
+    &.rowLayout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 0.25rem;
+
+      .event {
+        max-width: 100%;
+        text-wrap: wrap;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        white-space: normal;
+
+        h3 {
+          font-size: 2rem;
+          text-wrap: wrap;
+
+          @include media('<=tablet') {
+            @include title1-medium();
+          }
+        }
+      }
+
+      // Horizontal scrolling for smaller screens
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        grid-template-columns: repeat(2, minmax(76vw, 1fr));
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(76vw, 1fr);
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        white-space: nowrap;
+        border-radius: 0.5rem;
+        // padding-bottom: 1rem;
+        // padding-right: 1rem;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        -ms-overflow-style: none;
+      }
+
+      @media screen and (min-width: 769px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .event {
+    padding: 20px 10px 20px 15px;
+
+    &:has(.venue.room1) {
+      background-color: $green-primary-100;
+      // padding: 0.75rem;
+      // padding: 20px 10px 20px 15px;
+    }
+
+    &:has(.venue.room2) {
+      background-color: $blue-primary-100;
+      // padding: 20px 10px 20px 15px;
+
+      ul {
+        padding-top: 15px;
+      }
+    }
+  }
+}
+
+.event {
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  h3 {
+    // font-size: clamp(19px, 4vw, 25px);
+    font-size: 1.75rem;
+    margin-left: 8px;
+    font-weight: 500;
+    padding-top: 8px;
+    color: $background-dark;
+
+    @include media('<=tablet') {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    margin: 4px 0;
+    font-size: 0.9em;
+    margin-left: 8px;
+    color: #666;
+  }
+
+  .panelists {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 8px;
+      gap: 8px;
+      font-weight: 500;
+      color: $background-dark;
+      padding-top: 15px;
+      max-width: 100%;
+      list-style: none;
+
+      @media screen and (min-width: 769px) {
+        max-width: 800px;
+      }
+
+      li {
+        position: relative;
+        text-wrap: wrap;
+      }
+
+      li:not(:first-child) {
+        padding-left: 14px;
+      }
+
+      li:not(:first-child)::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .venue {
+    width: fit-content;
+    padding: 0.75rem 1.25rem;
+    display: grid;
+    place-items: center;
+    border-radius: 99px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    &.outside {
+      background-color: $grey-10;
+      border: 3px solid $grey-50;
+    }
+
+    &.room1 {
+      background-color: $core-green;
+      border: 3px solid $green-primary-40;
+      padding: 0.75rem 2rem;
+      text-wrap: nowrap;
+
+      @include media('<=tablet') {
+        padding: 0.63rem 2rem;
+      }
+    }
+
+    &.room2 {
+      background-color: $core-blue;
+      border: 3px solid $blue-primary-40;
+      padding: 0.75rem 2rem;
+      text-wrap: nowrap;
+
+      @include media('<=tablet') {
+        padding: 0.63rem 2rem;
+      }
+    }
+
+    @include media('<=tablet') {
+      padding: 0.63rem 1.3rem;
+    }
+  }
+
+  .facilitator {
+    margin-top: 5px;
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+
+      @media screen and (max-width: 480px) {
+        font-size: 14px;
+      }
+
+      span {
+        font-weight: normal;
+      }
+    }
+  }
+
+  @include media('<=tablet') {
+    border-radius: 0.5rem;
+  }
+}

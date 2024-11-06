@@ -1,0 +1,87 @@
+@import '/src/styles/core/variables';
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
+
+.scheduleContainer {
+  margin-top: 4rem;
+  width: 100%;
+
+  @include media('<850px') {
+    margin-top: 0;
+  }
+
+  .scheduleHeader {
+    border-bottom: 1px solid $grey-70;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 3rem;
+
+    p {
+      @include title2-medium();
+      color: $grey-50;
+    }
+
+    @include media('<=850px') {
+      display: none;
+    }
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .generalContainer,
+  .postBreakoutContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include media('<=850px') {
+      width: 100%;
+    }
+  }
+
+  .sectionsContainer {
+    display: flex;
+    gap: 3.6rem;
+
+    @include media('<=1100px') {
+      gap: 2rem;
+    }
+
+    .sectionLine {
+      display: flex;
+      flex-direction: column;
+      width: 80px;
+      gap: 12px;
+      align-items: center;
+      position: relative;
+
+      p {
+        @include body2-medium();
+        font-size: 14px;
+        color: $grey-50;
+        width: max-content;
+        text-wrap: nowrap;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+      }
+
+      .sectionLineSpan {
+        border-right: 1px solid black;
+        height: 100%;
+        margin-top: 34px;
+      }
+
+      @include media('<=850px') {
+        display: none;
+      }
+    }
+  }
+}

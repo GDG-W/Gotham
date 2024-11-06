@@ -9,10 +9,10 @@ import { GoogleSans, GeneralSans } from '@/utils/font';
 // import Footer from '@/components/home/Footer';
 
 export const metadata: Metadata = {
-  title: 'DevFest 2024 | Coming Soon',
+  title: 'DevFest Lagos 2024',
   description: 'The Biggest Tech Festival in Nigeria',
   keywords: 'devfest, devfest lagos, coming soon, date, venue',
-  metadataBase: new URL('https://devfest-coming-soon.vercel.app/'), // synonymous to the base URL
+  metadataBase: new URL('https://deploy-preview-42--devfestlagos.netlify.app/'), // synonymous to the base URL
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
