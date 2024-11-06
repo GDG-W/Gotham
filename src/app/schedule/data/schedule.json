@@ -60,7 +60,7 @@
             }
           },
           {
-            "title": "TBD",
+            "title": "Building Resilience Systems - Flexibility and Adaptability",
             "facilitator": "TBD",
             "venue": {
               "name": "room 2",
@@ -83,7 +83,7 @@
             }
           },
           {
-            "title": "TBD",
+            "title": "Empowering Development at Every Scale with FlutterFlow",
             "facilitator": "TBD",
             "venue": {
               "name": "room 2",
@@ -377,25 +377,23 @@
         "end_time": "10:30",
         "events": [
           {
-            "title": "Balancing Innovation, Agility & Compliance by SeerBit",
+            "title": "Balancing Innovation, Agility & Compliance",
             "facilitator": null,
             "venue": {
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": ["Seyi Akamo, Co-Founder TUROG", "GeegPay", "SeerBit"]
+            "panelists": ["PANEL"]
           },
           {
-            "title": "Engineering Excellence – Elevating Education Quality in Africa by Andela",
-            "facilitator": "Ada Oyom",
+            "title": "Engineering Excellence – Elevating Education Quality in Africa",
+            "facilitator": "TBD",
             "venue": {
               "name": "room 2",
               "size": [900]
             },
             "panelists": [
-              "Emmanuel Ogunsola (Head of Product, Altschool)",
-              "Babatunde Olaifa ( CEO, GoMyCode)",
-              "Moniepoint"
+              "PANEL"
             ]
           }
         ]
@@ -407,12 +405,12 @@
         "events": [
           {
             "title": "AI for Good: Driving Innovation with Responsibility",
-            "facilitator": "olayinka-peter",
+            "facilitator": "TBD",
             "venue": {
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": ["Daniel Di Bartolo, Google", "Peter Ing, ARM", "FlutterFlow"]
+            "panelists": ["PANEL"]
           },
           {
             "title": "TBD",
@@ -421,7 +419,7 @@
               "name": "room 2",
               "size": [900]
             },
-            "panelists": ["TBD"]
+            "panelists": ["PANEL"]
           }
         ]
       },
