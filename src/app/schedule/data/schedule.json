@@ -60,7 +60,7 @@
             }
           },
           {
-            "title": "TBD",
+            "title": "Building Resilience Systems - Flexibility and Adaptability",
             "facilitator": "TBD",
             "venue": {
               "name": "room 2",
@@ -83,7 +83,7 @@
             }
           },
           {
-            "title": "TBD",
+            "title": "Empowering Development at Every Scale with FlutterFlow",
             "facilitator": "TBD",
             "venue": {
               "name": "room 2",
@@ -383,7 +383,7 @@
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": ["TBD"]
+            "panelists": ["PANEL"]
           },
           {
             "title": "Engineering Excellence – Elevating Education Quality in Africa",
@@ -393,7 +393,7 @@
               "size": [900]
             },
             "panelists": [
-              "TBD"
+              "PANEL"
             ]
           }
         ]
@@ -410,7 +410,7 @@
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": ["TBD"]
+            "panelists": ["PANEL"]
           },
           {
             "title": "TBD",
@@ -419,7 +419,7 @@
               "name": "room 2",
               "size": [900]
             },
-            "panelists": ["TBD"]
+            "panelists": ["PANEL"]
           }
         ]
       },
