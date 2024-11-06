@@ -1,11 +1,15 @@
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
+
+  @include media('<=big_tablet') {
+    padding: 0 1.5rem;
+  }
 
   @include media('<=tablet') {
-    padding: 0 14px;
+    padding: 0 1rem;
   }
 }
 

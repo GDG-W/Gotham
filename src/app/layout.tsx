@@ -1,10 +1,10 @@
 import React from 'react';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ReactQueryProvider from '@/lib/reactQuery/providers';
-import localFont from 'next/font/local';
 import { GeistSans } from 'geist/font/sans';
 import '../styles/index.scss';
 import { Metadata } from 'next';
+import { GoogleSans, GeneralSans } from '@/utils/font';
 // import Navbar from '@/components/home/Navbar';
 // import Footer from '@/components/home/Footer';
 
@@ -15,35 +15,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://deploy-preview-42--devfestlagos.netlify.app/'), // synonymous to the base URL
 };
 
-const GeneralSans = localFont({
-  src: [
-    {
-      path: '../fonts/GeneralSans-Regular.woff',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/GeneralSans-Medium.woff',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/GeneralSans-Semibold.woff',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/GeneralSans-Bold.woff',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-generalSans',
-});
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' className={`${GeistSans.variable} ${GeneralSans.variable}`}>
+    <html
+      lang='en'
+      className={`${GeistSans.variable} ${GeneralSans.variable} ${GoogleSans.variable}`}
+    >
       <body>
         <ReactQueryProvider>
           {/* Your layout content, including header, main content, footer, etc goes here. */}

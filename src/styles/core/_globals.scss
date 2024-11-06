@@ -93,6 +93,7 @@
 html,
 body {
   max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -105,4 +106,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.google_sans {
+  font-family: var('--font-googleSans');
 }
