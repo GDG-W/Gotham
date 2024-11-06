@@ -19,7 +19,7 @@ const stepLists = [
   },
   {
     title: 'Tweet it on X',
-    details: 'Make sure to use #devFestLagos2024 #devFestLagos',
+    details: 'Make sure to use #DevFestLagos2024',
   },
   {
     title: 'Swags could be up for grabs!',
