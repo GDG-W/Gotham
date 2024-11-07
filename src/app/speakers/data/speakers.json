@@ -431,5 +431,39 @@
     },
     "track": "ML / AI",
     "session_title": "Building a GenAI App on Android Using the Executorch Framework"
+  },
+  "adeyanju-michael": {
+    "id": "adeyanju-michael",
+    "name": "Adeyanju Michael",
+    "title": "Penetration Tester",
+    "shortbio": "Micheal is an Information Security Engineer at a leading provider of innovative, data-driven, end-to-end technology platforms in Africa. He also works as a Penetration Tester, applying his skills and knowledge in ethical hacking, vulnerability assessment, network security, and web development.",
+    "bio": "Michael is an Information Security Engineer at a leading provider of innovative, data-driven, end-to-end technology platforms in Africa. He also works as a Penetration Tester, applying his skills and knowledge in ethical hacking, vulnerability assessment, network security, and web development.",
+    "image_url": "https://i.ibb.co/z8YTwKh/superprof.png",
+    "session_description": "In today’s digital landscape, APIs are integral to application functionality, but they also present significant security challenges. This session will delve into effective strategies for building resilient APIs that can withstand and mitigate various types of attacks. We will cover essential techniques for designing APIs with built-in defenses.",
+    "day": 1,
+    "links": {
+      "twitter": "http://twitter.com/hackrowd",
+      "linkedin": "https://www.linkedin.com/in/adeyanju-michael/",
+      "github": "https://github.com/HackrowdSec"
+    },
+    "track": "Cybersecurity",
+    "session_title": "Building a Multi-Tenant SaaS with Microservices on Kubernetes"
+  },
+"kehinde-adeleke": {
+    "id": "kehinde-adeleke",
+    "name": "Kehinde Adeleke",
+    "title": "Software Engineer, Kepler",
+    "shortbio": "Kehinde creates beautiful things at the intersection of art, design and engineering.",
+    "bio": "Kehinde creates beautiful things at the intersection of art, design and engineering.",
+    "image_url": "https://i.ibb.co/d4CxPZ3/headshot.jpg",
+    "session_description": "Grep is a popular command line tool for searching for matches in a file. Learn Rust with Test driven development by building your own grep cli.",
+    "day": 1,
+    "links": {
+      "twitter": "https://x.com/adeleke5140",
+      "linkedin": "https://www.linkedin.com/in/adeleke5140/",
+       "github": "https://github.com/adeleke5140"
+    },
+    "track": "Cloud",
+    "session_title": "Build your own CLI: an introduction to TDD in Rust"
   }
 }
