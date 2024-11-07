@@ -465,5 +465,22 @@
     },
     "track": "Cloud",
     "session_title": "Build your own CLI: an introduction to TDD in Rust"
+  },
+  "sodiq-akinjobi": {
+    "id": "sodiq-akinjobi",
+    "name": "Sodiq Akinjobi",
+    "title": "Developer Ecosystem Community Manager",
+    "shortbio": "Sodiq Akinjobi is a seasoned Program Manager with over 5 years of experience in global tech. He has a background in engineering and is currently pursuing an MBA. His expertise lies in community management, developer relations, and program scaling. He's currently at Google, where he's powering developer growth in Africa through community engagement, education, and resource allocation.",
+    "bio": "Sodiq Akinjobi is a seasoned Program Manager with over 5 years of experience in global tech. He has a background in engineering and is currently pursuing an MBA. His expertise lies in community management, developer relations, and program scaling. He's currently at Google, where he's powering developer growth in Africa through community engagement, education, and resource allocation.",
+    "image_url": "https://i.ibb.co/1r5qRPz/1-DYz74u-Ovu9w-Im-Dv-Lk-URylg.webp",
+    "session_description": "As a follow up to my workshop at DevFest Lagos 2023, I'd be doing a deep dive into how to be excel as a lazy person. If you're looking for a more detailed description, then looks like you aren't lazy.",
+    "day": 1,
+    "links": {
+      "twitter": "https://x.com/geektutor",
+      "linkedin": "https://www.linkedin.com/in/geektutor/",
+       "github": "https://github.com/geektutor"
+    },
+    "track": "Cloud",
+    "session_title": "The Lazy Person's Guide to Productivity 2.0"
   }
 }
