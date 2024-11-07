@@ -12,7 +12,7 @@ export const footerLinks = [
     title: 'FAQs',
   },
   {
-    link: '/dp',
+    link: '/dp-generator',
     title: 'DP Generator',
   },
 ];
