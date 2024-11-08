@@ -1,7 +1,7 @@
 export const hookLines = [
   'Looking very mindful and demure',
   'Aura for aura',
-  'With my Okatu bestie',
+  'With my Otaku bestie',
   'I am a chosen DevFest who are you?',
   'To unlock my domain expansion',
   "And that's on period ",
