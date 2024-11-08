@@ -47,17 +47,25 @@
     .subscribe-title {
       color: #fff6e0;
       @include title1-semibold();
+      font-family: var(--font-generalSans);
+      font-weight: 600;
 
       @media (min-width: 768px) {
         @include header-h5();
+        font-family: var(--font-generalSans);
+        font-weight: 600;
       }
 
       @media (min-width: 1024px) {
         @include header-h4();
+        font-family: var(--font-generalSans);
+        font-weight: 600;
       }
 
       @media (min-width: 1440px) {
         @include header-h3();
+        font-family: var(--font-generalSans);
+        font-weight: 600;
       }
     }
     .subscribe-text {

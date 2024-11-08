@@ -11,6 +11,16 @@ import homeHero from '@/assets/images/home-hero.png';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import Speakers from '@/components/home/speakers/speakers';
+import Sponsors from '@/components/home/Sponsors/Sponsors';
+import Subscribe from '@/components/shared/Subscribe';
+import DpGeneratorSection from '@/components/home/DpGeneratorSection/DpGeneratorSection';
+import appMockup1 from '@/assets/images/app-mockup-1.png';
+import appMockup2 from '@/assets/images/app-mockup-2.png';
+import PopoutLeft from '@/assets/icons/pill-popout-left.svg';
+import PopoutRight from '@/assets/icons/pill-popout-right.svg';
+import DownloadIcon from '@/assets/icons/download.svg';
+import FAQs from '@/components/shared/FAQS';
+import Talks from '@/components/home/Talks/Talks';
 
 const Ticket = ({ className = '' }: { className?: string }) => (
   <div className={`ticket ${className}`}>
@@ -170,6 +180,41 @@ const Homepage = () => {
           </div>
         </section>
         <Speakers />
+        <Sponsors />
+        <Talks />
+        <section className='mobile-app'>
+          <Image
+            src={appMockup1}
+            alt='App Mockup'
+            width={303}
+            height={450}
+            className='mobile-app__mockup-1'
+          />
+          <Image
+            src={appMockup2}
+            alt='App Mockup'
+            width={303}
+            height={450}
+            className='mobile-app__mockup-2'
+          />
+          <PopoutLeft className='mobile-app__popout-left' />
+          <PopoutRight className='mobile-app__popout-right' />
+          <div className='mobile-app__content'>
+            <p className='mobile-app__pill'>MOBILE APP</p>
+            <p className='mobile-app__title'>No Loose Guard! Get Notified First!</p>
+            <p className='mobile-app__description'>
+              The DevFest Lagos mobile app is your inside connect—real-time updates, booking
+              sessions, and more, all in your pocket keeping you two steps ahead.
+            </p>
+            <button className='mobile-app__download-app'>
+              Download the mobile app
+              <DownloadIcon />
+            </button>
+          </div>
+        </section>
+        <FAQs />
+        <Subscribe />
+        <DpGeneratorSection />
       </div>
       <Footer />
     </>
