@@ -137,7 +137,7 @@ export const mockData: FAQData = {
       id: 10,
       question: 'Will I receive a new ticket after upgrading?',
       answer:
-        'No, your original ticket has been upgraded to a 2-day access ticket. You can confirm this on the dashboard.',
+        'No, your original ticket will be upgraded to a 2-day access ticket. You can confirm this on the dashboard.',
     },
   ],
 };
