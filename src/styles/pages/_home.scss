@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   height: 52px;
+  color: black;
   @include body2-medium;
   column-gap: 8px;
   border-radius: 32px;
@@ -711,10 +712,21 @@
       @extend %button-primary;
       padding: 0 20px;
 
+      .mobile-text {
+        display: none;
+      }
+
       @include media('<=850px') {
         @include body3-medium;
         gap: 8px;
         padding: 12px 16px;
+
+        .desktop-text {
+          display: none;
+        }
+        .mobile-text {
+          display: block;
+        }
       }
     }
   }

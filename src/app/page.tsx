@@ -207,7 +207,8 @@ const Homepage = () => {
               sessions, and more, all in your pocket keeping you two steps ahead.
             </p>
             <button className='mobile-app__download-app'>
-              Download the mobile app
+              <p className='desktop-text'>Download the mobile app</p>
+              <p className='mobile-text'>Download App</p>
               <DownloadIcon />
             </button>
           </div>

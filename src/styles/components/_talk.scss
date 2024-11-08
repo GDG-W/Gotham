@@ -98,6 +98,11 @@
 
     @include media('<=850px') {
       @include title2-semibold;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
