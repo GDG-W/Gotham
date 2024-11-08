@@ -15,7 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    images: ['/images/png/side-frame.png'],
+    images: [
+      {
+        url: '/dp-opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'DevFest Lagos Banner',
+      },
+    ],
     type: 'website',
   },
 };
