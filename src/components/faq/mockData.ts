@@ -97,7 +97,7 @@ export const mockData: FAQData = {
       id: 3,
       question: 'Can I buy tickets for other people?',
       answer:
-        'Absolutely!  You can purchase tickets for others, but keep in mind they will need to check their emails to claim their tickets. Please note that this feature is in development. Check back later.',
+        'Absolutely!  You can purchase tickets for others, but keep in mind they will need to check their emails to claim their tickets.',
     },
     {
       id: 4,
@@ -137,7 +137,7 @@ export const mockData: FAQData = {
       id: 10,
       question: 'Will I receive a new ticket after upgrading?',
       answer:
-        'Yes, once your upgrade is complete, you will receive a new ticket reflecting your two-day access to the event.',
+        'No, your original ticket has been upgraded to a 2-day access ticket. You can confirm this on the dashboard.',
     },
   ],
 };
