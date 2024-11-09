@@ -86,6 +86,7 @@ export const SpeakerCard = ({
         <div className='speaker-image-container'>
           <Image
             src={speaker.image_url}
+            loading='eager'
             className='speaker-image'
             alt={speaker.name + ' image'}
             fill
@@ -110,6 +111,7 @@ export const SpeakerCard = ({
         <Image
           src={speaker.image_url}
           className='speaker-image'
+          loading='eager'
           alt={speaker.name + ' image'}
           fill
           style={{ objectPosition: imagePosition }}

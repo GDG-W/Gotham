@@ -9,38 +9,11 @@ const SponsorList = () => {
     <>
       {sponsorData.map((item, index) => (
         <div className={styles.sponsorItem} key={index}>
-          <Image src={item.logo} alt={item.name + 'logo'} height={32} width={180} />
+          <Image src={item.logo} alt={item.name + 'logo'} height={32} width={180} loading='eager' />
         </div>
       ))}
     </>
   );
-
-  // <>
-  //   <div className={styles.sponsorItem}>
-  //     <AbegLogo />
-  //   </div>
-  //   <div className={styles.sponsorItem}>
-  //     <AndelaLogo />
-  //   </div>
-  //   <div className={styles.sponsorItem}>
-  //     <DearDesignerLogo />
-  //   </div>
-  //   <div className={styles.sponsorItem}>
-  //     <FourthCanvasLogo />
-  //   </div>
-  //   <div className={styles.sponsorItem}>
-  //     <KorapayLogo />
-  //   </div>
-  //   <div className={styles.sponsorItem}>
-  //     <PatriciaLogo />
-  //   </div>
-  //   <div className={styles.sponsorItem}>
-  //     <SerahKassimLogo />
-  //   </div>
-  //   <div className={styles.sponsorItem}>
-  //     <WalletsAfricaLogo />
-  //   </div>
-  // </>,
 };
 
 const Sponsors = () => {
