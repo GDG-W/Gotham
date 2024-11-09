@@ -12,6 +12,18 @@
         "link": "https://seerbit.com/"
     },
     {
+        "name": "GeegPay",
+        "level": "Gold",
+        "logo": "https://devfestlagos.com/app-assets/geegpay.png",
+        "link": "https://www.geegpay.africa/"
+    },
+    {
+        "name": "Arm",
+        "level": "Silver",
+        "logo": "https://devfestlagos.com/app-assets/arm.png",
+        "link": "https://arm.com/"
+    },
+    {
         "name": "Cleva",
         "level": "Silver",
         "logo": "https://devfestlagos.com/app-assets/cleva.png",
