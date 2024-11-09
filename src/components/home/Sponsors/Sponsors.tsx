@@ -1,15 +1,37 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import styles from './sponsors.module.scss';
-import sponsorData from './sponsors.json';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 
 const SponsorList = () => {
+  const [sponsorData, setSponsorData] = useState<
+    { link: string; logo: string; name: string }[] | null
+  >(null);
+
+  useEffect(() => {
+    fetch('/app-assets/sponsors.json')
+      .then((response) => response.json())
+      .then((data) => setSponsorData(data))
+      .catch((error) => console.error('Error fetching sponsor data:', error));
+  }, []);
+
+  if (!sponsorData) return null;
+
   return (
     <>
       {sponsorData.map((item, index) => (
         <div className={styles.sponsorItem} key={index}>
-          <Image src={item.logo} alt={item.name + 'logo'} height={32} width={180} loading='eager' />
+          <a href={item.link} target='_blank' rel='noreferrer'>
+            <Image
+              src={item.logo}
+              alt={item.name + 'logo'}
+              height={32}
+              width={180}
+              loading='eager'
+              className={`${item.name === 'Cleva' ? styles.cleva : ''}`}
+            />
+          </a>
         </div>
       ))}
     </>
