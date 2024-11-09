@@ -202,11 +202,11 @@
 
 .speaker-image {
   position: absolute;
-  width: var(--lg-speaker-size);
-  height: 100%;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%);
+  width: var(--lg-speaker-size) !important;
+  height: 100% !important;
+  left: 50% !important;
+  top: 0 !important;
+  transform: translate(-50%) !important;
   transition: 450ms;
   object-fit: cover;
   object-position: 0 0;

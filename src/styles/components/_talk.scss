@@ -54,6 +54,7 @@
   &__room {
     @extend %pill;
     color: $background-dark;
+    text-wrap: nowrap;
   }
 
   &__speaker {

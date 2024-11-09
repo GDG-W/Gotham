@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Google",
+    "level": "Platinum",
+    "logo": "/app-assets/googlelogo.png",
+    "link": "https://developers.google.com/"
+  },
+  {
+    "name": "SeerBit",
+    "level": "Gold",
+    "logo": "/app-assets/Seerbit.png",
+    "link": "https://seerbit.com/"
+  },
+  {
+    "name": "Cleva",
+    "level": "Silver",
+    "logo": "/app-assets/cleva.png",
+    "link": "https://getcleva.com/"
+  },
+  {
+    "name": "FlutterFlow",
+    "level": "Silver",
+    "logo": "/app-assets/FlutterFlowLogo.svg",
+    "link": "https://www.flutterflow.io/"
+  },
+  {
+    "name": "Andela",
+    "level": "Bronze",
+    "logo": "/app-assets/logo_andela.svg",
+    "link": "https://www.andela.com/"
+  }
+]

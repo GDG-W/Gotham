@@ -1,45 +1,46 @@
 import React from 'react';
 import styles from './sponsors.module.scss';
-
-import AbegLogo from './assets/abeg.svg';
-import AndelaLogo from './assets/andela.svg';
-import DearDesignerLogo from './assets/deardesigner.svg';
-import FourthCanvasLogo from './assets/fourthcanvas.svg';
-import KorapayLogo from './assets/korapay.svg';
-import PatriciaLogo from './assets/patricia.svg';
-import SerahKassimLogo from './assets/serahkassimlogo.svg';
-import WalletsAfricaLogo from './assets/walletsafrica.svg';
+import sponsorData from './sponsors.json';
 import Marquee from 'react-fast-marquee';
+import Image from 'next/image';
 
 const SponsorList = () => {
   return (
     <>
-      <div className={styles.sponsorItem}>
-        <AbegLogo />
-      </div>
-      <div className={styles.sponsorItem}>
-        <AndelaLogo />
-      </div>
-      <div className={styles.sponsorItem}>
-        <DearDesignerLogo />
-      </div>
-      <div className={styles.sponsorItem}>
-        <FourthCanvasLogo />
-      </div>
-      <div className={styles.sponsorItem}>
-        <KorapayLogo />
-      </div>
-      <div className={styles.sponsorItem}>
-        <PatriciaLogo />
-      </div>
-      <div className={styles.sponsorItem}>
-        <SerahKassimLogo />
-      </div>
-      <div className={styles.sponsorItem}>
-        <WalletsAfricaLogo />
-      </div>
+      {sponsorData.map((item, index) => (
+        <div className={styles.sponsorItem} key={index}>
+          <Image src={item.logo} alt={item.name + 'logo'} height={32} width={180} />
+        </div>
+      ))}
     </>
   );
+
+  // <>
+  //   <div className={styles.sponsorItem}>
+  //     <AbegLogo />
+  //   </div>
+  //   <div className={styles.sponsorItem}>
+  //     <AndelaLogo />
+  //   </div>
+  //   <div className={styles.sponsorItem}>
+  //     <DearDesignerLogo />
+  //   </div>
+  //   <div className={styles.sponsorItem}>
+  //     <FourthCanvasLogo />
+  //   </div>
+  //   <div className={styles.sponsorItem}>
+  //     <KorapayLogo />
+  //   </div>
+  //   <div className={styles.sponsorItem}>
+  //     <PatriciaLogo />
+  //   </div>
+  //   <div className={styles.sponsorItem}>
+  //     <SerahKassimLogo />
+  //   </div>
+  //   <div className={styles.sponsorItem}>
+  //     <WalletsAfricaLogo />
+  //   </div>
+  // </>,
 };
 
 const Sponsors = () => {

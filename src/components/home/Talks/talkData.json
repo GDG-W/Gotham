@@ -43,14 +43,14 @@
   ],
   "day-2": [
     {
-      "start_time": "13:50",
-      "end_time": "14:35",
-      "title": "Top 15 Cybersecurity Risks of AI Systems",
+      "start_time": "14:40",
+      "end_time": "15:25",
+      "title": "Gamification in UX: Creating Engaging User Experiences Through Play",
       "venue": "room 1",
-      "speaker_name": "Daniel Di Bartolo",
-      "speaker_image": "https://i.ibb.co/qjhycfX/Daniel-Headshot.jpg",
-      "session_description": "",
-      "shortbio": "With nearly a decade of experience building products in tech, Daniel is currently the Product Lead for Google’s Secure AI Framework (saif.google). It’s where Google helps builders know how to defend AI systems security threats. Daniel lives in New York City where he enjoys cooking, photography, and going to rock concerts."
+      "speaker_name": "Ololade Adesuyi",
+      "speaker_image": "https://i.ibb.co/tms3yh6/Ololade-Adesuyi.jpg",
+      "session_description": "Gamification is transforming the way we design user experiences by integrating game mechanics into non-gaming environments. \nThis session will explore the principles of gamification in UX design, illustrating how these techniques can be used to create more engaging and enjoyable user experiences. Attendees will learn practical strategies for incorporating gamification into their projects to enhance user interaction and satisfaction",
+      "shortbio": "Ololade Adesuyi is a seasoned UI/UX Designer with over 4 years of hands-on experience in creating user-centric digital experiences. Currently a Product Design Lead at Tappi, Ololade has a rich background in product design, usability, and digital transformation. She has contributed significantly to the tech community, volunteering as a Design Mentor and speaking at various tech events and conferences. Her expertise lies in designing intuitive, engaging user interfaces that not only meet but exceed user expectations."
     },
     {
       "start_time": "15:30",
