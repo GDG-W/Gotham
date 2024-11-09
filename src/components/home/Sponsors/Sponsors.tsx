@@ -45,7 +45,7 @@ const Sponsors = () => {
         <div className={styles.sponsorsPill}>
           <p>SPONSORS</p>
         </div>
-        <h2> It’s Not Set Without Our Sponsors</h2>
+        <h2> It’s Not Set Without Our Partners and Sponsors</h2>
         <p className={styles.sponsorsText}>
           DevFest Lagos 2023 was lit! But this year, we’re not just doing a repeat—we’re raising the
           bar higher with their support.
