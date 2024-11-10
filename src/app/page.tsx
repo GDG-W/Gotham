@@ -21,6 +21,7 @@ import PopoutRight from '@/assets/icons/pill-popout-right.svg';
 import DownloadIcon from '@/assets/icons/download.svg';
 import FAQs from '@/components/shared/FAQS';
 import Talks from '@/components/home/Talks/Talks';
+import Link from 'next/link';
 
 const Ticket = ({ className = '' }: { className?: string }) => (
   <div className={`ticket ${className}`}>
@@ -206,11 +207,11 @@ const Homepage = () => {
               The DevFest Lagos mobile app is your inside connect—real-time updates, booking
               sessions, and more, all in your pocket keeping you two steps ahead.
             </p>
-            <button className='mobile-app__download-app'>
+            <Link href={'/app'} className='mobile-app__download-app'>
               <p className='desktop-text'>Download the mobile app</p>
               <p className='mobile-text'>Download App</p>
               <DownloadIcon />
-            </button>
+            </Link>
           </div>
         </section>
         <FAQs />
