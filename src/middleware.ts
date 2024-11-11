@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  console.log('Middleware executed');
   const userAgent = request.headers.get('user-agent') || '';
-  console.log('User Agent:', userAgent);
 
   if (request.nextUrl.pathname === '/app') {
     if (/android/i.test(userAgent)) {
@@ -18,9 +16,14 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  if (request.nextUrl.pathname === '/feedback') {
+    // Redirect to a different link for /feedback
+    return NextResponse.redirect('https://google.com');
+  }
+
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: '/app/:path*',
+  matcher: ['/app/:path*', '/feedback/:path*'],
 };
