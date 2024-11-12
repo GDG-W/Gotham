@@ -17,13 +17,16 @@ export function middleware(request: NextRequest) {
   }
 
   if (request.nextUrl.pathname === '/feedback') {
-    // Redirect to a different link for /feedback
     return NextResponse.redirect('https://google.com');
+  }
+
+  if (request.nextUrl.pathname === '/hiring') {
+    return NextResponse.redirect('http://olympus.devfestlagos.com');
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ['/app/:path*', '/feedback/:path*'],
+  matcher: ['/app/:path*', '/feedback/:path*', '/hiring/:path*'],
 };
