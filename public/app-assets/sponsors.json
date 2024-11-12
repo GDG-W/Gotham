@@ -6,6 +6,12 @@
     "link": "https://developers.google.com/"
   },
   {
+    "name": "Moniepoint",
+    "level": "Gold",
+    "logo": "/app-assets/MoniepointLogo.png",
+    "link": "https://www.moniepoint.com/"
+  },
+  {
     "name": "SeerBit",
     "level": "Gold",
     "logo": "/app-assets/Seerbit.png",
