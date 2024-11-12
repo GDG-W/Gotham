@@ -6,18 +6,18 @@ export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/app') {
     if (/android/i.test(userAgent)) {
       // Redirect to external Android link
-      return NextResponse.redirect('https://devfestlagos.com/404');
+      return NextResponse.redirect('https://android.com');
     } else if (/iphone|ipad|ipod/i.test(userAgent)) {
       // Redirect to external iOS link
-      return NextResponse.redirect('https://apps.apple.com/us/app/devfest-lagos-2024/id6737826901');
+      return NextResponse.redirect('https://ios.com');
     } else {
       // Redirect to a different link for other devices
-      return NextResponse.redirect('https://devfestlagos.com/');
+      return NextResponse.redirect('https://wikipedia.com');
     }
   }
 
   if (request.nextUrl.pathname === '/feedback') {
-    return NextResponse.redirect('https://devfestlagos.com/404');
+    return NextResponse.redirect('https://google.com');
   }
 
   if (request.nextUrl.pathname === '/hiring') {
