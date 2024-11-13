@@ -16,6 +16,40 @@
     "track": "Web",
     "session_title": "Building Green Web Applications: A Pathway to Sustainable Digital Experiences"
   },
+  "buchi-michelle-okonicha": {
+    "id": "buchi-michelle-okonicha",
+    "name": "Buchi Michelle Okonicha",
+    "title": "Software Engineer / GDE, Web",
+    "shortbio": "Buchi Michelle Okonicha is a software engineer, google developer expert for web technologies,  a women techmakers ambassador, a girls talk ambassador, and co-founder of Aricah, a tech community for tech newbies. Her more than 34 articles can be found on dev.to, hashnode, medium, and tealfeed and she also gives back through mentorship at various organizations like TCN women in tech program, sheCodeAfrica, and one-on-one with Buchi.",
+    "bio": "Buchi Michelle Okonicha is a software engineer, google developer expert for web technologies,  a women techmakers ambassador, a girls talk ambassador, and co-founder of Aricah, a tech community for tech newbies. Her more than 34 articles can be found on dev.to, hashnode, medium, and tealfeed and she also gives back through mentorship at various organizations like TCN women in tech program, sheCodeAfrica, and one-on-one with Buchi.",
+    "image_url": "https://i.ibb.co/kKqXFMK/headshot-yc.jpg",
+    "session_description": "The web is rapidly evolving with more improvements. from being a static site to becoming interactive to moving towards mobile-like web apps with progressive web apps and web apis. We will dive into the world of the web, the exciting new updates to PWA, web assembly and also expand on the different web apis for robust web applications you did not know existed.",
+    "day": 2,
+    "links": {
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/buchi-michelle-okonicha-0a3b2b194//",
+      "twitter": "https:/https://x.com/mchelleOkonicha"
+    },
+    "track": "Web",
+    "session_title": "A Deep Dive into Modern Web APIs and the Progression of Web Applications."
+  },
+  "eric-muli": {
+    "id": "eric-muli",
+    "name": "Eric Muli",
+    "title": "Technical Support Engineer at FlutterFlow",
+    "shortbio": " Eric is a Technical Support Engineer at FlutterFlow and a senior Flutter engineer. With extensive experience in Flutter engineering, he also serves as the co-lead for the Flutter Kenya Developers Community, where he mentors developers and fosters community growth in Flutter development.",
+    "bio": " Eric is a Technical Support Engineer at FlutterFlow and a senior Flutter engineer. With extensive experience in Flutter engineering, he also serves as the co-lead for the Flutter Kenya Developers Community, where he mentors developers and fosters community growth in Flutter development.",
+    "image_url": "https://i.ibb.co/ZSkFD8p/Screenshot-2022-11-10-at-20-58-45-2-90.png",
+    "session_description": "Discover how FlutterFlow 5.0 empowers creators at every level, from personal projects to enterprise solutions. Explore new features and real success stories, and learn how to seamlessly turn ideas into impactful apps.",
+    "day": 1,
+    "links": {
+      "github": "https://github.com/mulieriq",
+      "linkedin": "https://www.linkedin.com/in/ericmuli/",
+      "twitter": "https://x.com/muli_eriq"
+    },
+    "track": "Mobile",
+    "session_title": "Empowering Development at Every Scale with FlutterFlow."
+  },
   "samuel-abada": {
     "id": "samuel-abada",
     "name": "Samuel Abada",
