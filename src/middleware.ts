@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect('https://apps.apple.com/us/app/devfest-lagos-2024/id6737826901');
     } else {
       // Redirect to a different link for other devices
-      return NextResponse.redirect('https://devfestlagos.com/');
+      return NextResponse.redirect('https://devfestlagos.com');
     }
   }
 
