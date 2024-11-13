@@ -447,7 +447,7 @@
       "github": "https://github.com/HackrowdSec"
     },
     "track": "Cybersecurity",
-    "session_title": "Building a Multi-Tenant SaaS with Microservices on Kubernetes"
+    "session_title": "Building Resilient APIs: Strategies for Handling API Attacks"
   },
   "kehinde-adeleke": {
     "id": "kehinde-adeleke",
