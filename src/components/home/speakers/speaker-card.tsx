@@ -4,6 +4,7 @@ import { classNames } from '@/utils/classNames';
 import LinkedinIcon from '@/assets/icons/linkedin.svg';
 import TwitterIcon from '@/assets/icons/twitter-icon.svg';
 import GithubIcon from '@/assets/icons/github.svg';
+import Image from 'next/image';
 
 interface SpeakerCardProps {
   speaker: SpeakerDataType;
@@ -83,10 +84,12 @@ export const SpeakerCard = ({
         {speakerName}
         {speakerDetails}
         <div className='speaker-image-container'>
-          <img
+          <Image
             src={speaker.image_url}
+            loading='eager'
             className='speaker-image'
-            alt=''
+            alt={speaker.name + ' image'}
+            fill
             style={{ objectPosition: imagePosition }}
           />
         </div>
@@ -105,10 +108,12 @@ export const SpeakerCard = ({
       {speakerName}
       {speakerDetails}
       <div className='speaker-image-container'>
-        <img
+        <Image
           src={speaker.image_url}
           className='speaker-image'
-          alt=''
+          loading='eager'
+          alt={speaker.name + ' image'}
+          fill
           style={{ objectPosition: imagePosition }}
         />
       </div>

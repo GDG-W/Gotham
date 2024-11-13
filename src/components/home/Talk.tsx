@@ -21,11 +21,18 @@ const Talk = ({
   title,
   hideLine,
 }: Props) => {
+  const formatTime = (time: string) => {
+    const [hours, minutes] = time.split(':');
+    const period = Number(hours) >= 12 ? 'PM' : 'AM';
+    const formattedHours = Number(hours) % 12 || 12;
+    return `${formattedHours}:${minutes} ${period}`;
+  };
+
   return (
     <div className='talk'>
       <div className='talk__side'>
         <p className='talk__time'>
-          {startTime} <br /> {endTime}
+          {formatTime(startTime)} <br /> {formatTime(endTime)}
         </p>
         {!hideLine && <p className='talk__timeline' />}
       </div>
@@ -36,7 +43,7 @@ const Talk = ({
         </div>
         <div className='talk__content'>
           <img src={speakerImage} alt={speakerName} className='talk__image' />
-          <div>
+          <div className='talk__text'>
             <p className='talk__title'>{title}</p>
             <p className='talk__description'>{description}</p>
           </div>

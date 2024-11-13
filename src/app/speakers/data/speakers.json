@@ -85,8 +85,8 @@
   "samson-goddy": {
     "id": "samson-goddy",
     "name": "Samson Goddy",
-    "title": "OSS Program Manager, Hedera Hashgraph",
-    "shortbio": "Samson Goddy is a seasoned open source program manager and DevRel professional with over a decade of experience working with multicultural teams, excelling in community building, advocacy, and strategic partnerships within developer communities. Co-founder of Open Source Community Africa (OSCA), and is currently involved in open source work with Hedera Hashgraph, focusing on community growth around its hashgraph consensus algorithm. Samson is also a GitHub Star and serves on the board of the Open Source Collective.",
+    "title": "Co-founder Open Source Community Africa (OSCA)",
+    "shortbio": "Samson Goddy is a seasoned open source program manager and DevRel professional with over a decade of experience working with multicultural teams, excelling in community building, advocacy, and strategic partnerships within developer communities. Co-founder of Open Source Community Africa (OSCA), focusing on community growth around its hashgraph consensus algorithm. Samson is also a GitHub Star and serves on the board of the Open Source Collective.",
     "bio": "Samson Goddy is a seasoned open source program manager and DevRel professional with over a decade of experience working with multi-cultural teams and extensive expertise in community building, advocacy, and strategic partnerships around the developer's communities. Co-founder of Open Source Community Africa (OSCA), and currently doing Open Source work with Hedera Hashgraph, focusing on nurturing the community around Hedera's innovative hashgraph consensus algorithm. He is a Github star, while currently serving on the board of Open Source Collective.",
     "image_url": "https://i.ibb.co/cJmqV8r/image.jpg",
     "session_description": "In the rapidly evolving landscape of technology, two buzzwords have dominated conversations: \"decentralization\" and \"open source\". While often mentioned in the same breath and perceived as interchangeable, they represent fundamentally different concepts with distinct implications for the future of digital infrastructure. \nThis talk aims to clarify the misconceptions surrounding decentralization and open source, exploring how a project can be decentralized but not necessarily open source, and vice versa.",
@@ -449,7 +449,7 @@
     "track": "Cybersecurity",
     "session_title": "Building a Multi-Tenant SaaS with Microservices on Kubernetes"
   },
-"kehinde-adeleke": {
+  "kehinde-adeleke": {
     "id": "kehinde-adeleke",
     "name": "Kehinde Adeleke",
     "title": "Software Engineer, Kepler",
@@ -461,7 +461,7 @@
     "links": {
       "twitter": "https://x.com/adeleke5140",
       "linkedin": "https://www.linkedin.com/in/adeleke5140/",
-       "github": "https://github.com/adeleke5140"
+      "github": "https://github.com/adeleke5140"
     },
     "track": "Cloud",
     "session_title": "Build your own CLI: an introduction to TDD in Rust"
@@ -478,7 +478,7 @@
     "links": {
       "twitter": "https://x.com/geektutor",
       "linkedin": "https://www.linkedin.com/in/geektutor/",
-       "github": "https://github.com/geektutor"
+      "github": "https://github.com/geektutor"
     },
     "track": "Cloud",
     "session_title": "The Lazy Person's Guide to Productivity 2.0"

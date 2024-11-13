@@ -21,7 +21,7 @@ const Subscribe = () => {
         </a>
       </div>
       <Image
-        src='/images/png/subscribe-selfie.png'
+        src='/images/png/stay-updated.png'
         alt='Some of our hosts taking a selfie at a previous event'
         className='subscribe-image'
         height={304}

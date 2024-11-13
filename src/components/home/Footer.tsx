@@ -72,7 +72,8 @@ const Footer = () => {
             Community Guidelines
           </Link>
         </div>
-
+      </div>
+      <div className='footer__logo-container'>
         <div className='footer__logo'>
           <div>
             <Image
@@ -87,7 +88,6 @@ const Footer = () => {
             <p>{`DevFest Lagos ${currentYear}`}</p>
           </div>
         </div>
-
         <div className='footer__copyright'>
           <p>© {`${currentYear} DevFestLagos. All Rights Reserved.`}</p>
         </div>

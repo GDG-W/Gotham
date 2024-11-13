@@ -3,15 +3,25 @@
   column-gap: 28px;
   margin-bottom: 16px;
 
+  @include media('<=850px') {
+    gap: 4px;
+  }
+
   &__side {
     display: flex;
     flex-direction: column;
+    min-width: 64px;
   }
 
   &__time {
     @include header-h5;
     color: $grey-50;
     padding-top: 8px;
+
+    @include media('<=850px') {
+      @include body2-medium();
+      padding-top: 4px;
+    }
   }
 
   &__timeline {
@@ -33,11 +43,18 @@
     border: 1px solid $grey-20;
     @include body4-medium;
     border-radius: 32px;
+
+    @include media('<=850px') {
+      padding: 8px 19px;
+      font-size: 12px;
+      line-height: normal;
+    }
   }
 
   &__room {
     @extend %pill;
     color: $background-dark;
+    text-wrap: nowrap;
   }
 
   &__speaker {
@@ -50,6 +67,10 @@
     display: flex;
     align-items: flex-start;
     padding-bottom: 24px;
+
+    @include media('<=850px') {
+      padding-bottom: 0;
+    }
   }
 
   &__image {
@@ -59,18 +80,48 @@
     width: 111px;
     height: 169px;
     margin-right: 12px;
+    object-fit: cover;
+  }
+
+  &__text {
+    max-width: 560px;
+    flex: 1;
+
+    @include media('<=850px') {
+      max-width: auto;
+    }
   }
 
   &__title {
     @include header-h5;
     color: $grey-50;
     margin-bottom: 12px;
-    max-width: 420px;
+
+    @include media('<=850px') {
+      @include title2-semibold;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   &__description {
     @include body2-medium;
     color: $grey-50;
     max-width: 556px;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+
+    @include media('<=850px') {
+      @include body4-medium;
+      max-width: 100%;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }

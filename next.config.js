@@ -25,6 +25,7 @@ const nextConfig = {
       'bit.ly',
       'avatars.githubusercontent.com',
       'drive.google.com',
+      'devfestlagos.com',
     ],
   },
 };

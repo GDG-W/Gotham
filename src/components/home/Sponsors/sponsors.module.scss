@@ -1,0 +1,146 @@
+@import '/src/styles/core/variables';
+@import '/src/styles/utils/breakpoints';
+@import '/src/styles/core/typography';
+
+.sponsorsWrapper {
+  background: black;
+  color: $grey-100;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 6rem 0;
+
+  @include media('<=850px') {
+    padding: 4.5rem 0;
+    gap: 2.5rem;
+  }
+  @include media('<=550px') {
+    padding: 3rem 0;
+    gap: 1.5rem;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 53%;
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+
+    @include media('<1100px') {
+      width: 70%;
+    }
+    .sponsorsPill {
+      @include body4-medium();
+      display: grid;
+      place-items: center;
+      border: 1px solid $grey-100;
+      padding: 0.75rem 1.1rem;
+      border-radius: 2em;
+
+      @include media('<=850px') {
+        @include body5-medium();
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    h2 {
+      font-family: var(--font-generalSans);
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 70px;
+
+      @include media('<=850px') {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+
+    .sponsorsText {
+      @include body2-regular();
+      width: 76%;
+      margin: 0 auto;
+
+      @include media('<=850px') {
+        @include body3-regular();
+        width: 100%;
+      }
+    }
+  }
+
+  .sponsorItem {
+    background: white;
+    width: 18rem;
+    border-radius: 4em;
+    height: 4.7rem;
+
+    a {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        height: 40px;
+        width: 80%;
+        object-fit: contain;
+      }
+
+      .cleva {
+        object-fit: cover;
+        height: 50px;
+      }
+    }
+  }
+
+  .sponsorsList {
+    width: 67%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    @include media('<1380px') {
+      width: 80%;
+    }
+    @include media('<1280px') {
+      width: 95%;
+    }
+
+    @include media('<=850px') {
+      display: none;
+    }
+  }
+
+  .sponsorsMarquee {
+    display: none;
+
+    @include media('<=850px') {
+      display: flex;
+    }
+
+    .horizontalSponsorsList {
+      display: flex;
+      width: 100%;
+      margin-top: 0.3rem;
+
+      .sponsorItem {
+        margin: 0 0.5rem;
+        height: 3.5rem;
+        width: 10rem;
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        img {
+          height: 30px;
+        }
+      }
+    }
+  }
+}
