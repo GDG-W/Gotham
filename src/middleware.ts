@@ -20,6 +20,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect('https://google.com');
   }
 
+  if (request.nextUrl.pathname === '/bus') {
+    return NextResponse.redirect(
+      'https://docs.google.com/document/d/1ilDBsUlxZwG86HtvYIuuZ3-v0Z_YMWnajaCaVQREqog/edit?usp=sharing',
+    );
+  }
+
   if (request.nextUrl.pathname === '/hiring') {
     return NextResponse.redirect('http://olympus.devfestlagos.com');
   }
