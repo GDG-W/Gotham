@@ -163,48 +163,40 @@
               "duration": 45,
               "start_time": "13:00",
               "end_time": "13:45",
-              "title": "Experiment Your Way To Success: A/B Testing for your Android Apps",
-              "facilitator": "yves-kalume"
+              "title": "Building Web Apps That Work Offline and Beyond",
+              "facilitator": "confidence-okoghenun"
             },
             {
               "session_id": 2,
               "duration": 45,
               "start_time": "13:50",
               "end_time": "14:35",
-              "title": "Building Web Apps That Work Offline and Beyond",
-              "facilitator": "confidence-okoghenun"
+              "title": "CSS Rises from the Ashes: (Re)Become Friends with Your Stylesheet",
+              "facilitator": "olivier-leplus"
             },
             {
               "session_id": 3,
               "duration": 45,
               "start_time": "14:40",
               "end_time": "15:25",
-              "title": "CSS Rises from the Ashes: (Re)Become Friends with Your Stylesheet",
-              "facilitator": "olivier-leplus"
+              "title": "The Role of Developer Relations in the Success of AI/ML Products",
+              "facilitator": "gift-ojeabulu"
             },
             {
               "session_id": 4,
               "duration": 45,
               "start_time": "15:30",
               "end_time": "16:15",
-              "title": "The Role of Developer Relations in the Success of AI/ML Products",
-              "facilitator": "gift-ojeabulu"
+              "title": "TBuilding Resilient APIs: Strategies for Handling API Attacks",
+              "facilitator": "adeyanju-michael"
             },
             {
               "session_id": 5,
               "duration": 45,
               "start_time": "16:20",
               "end_time": "17:05",
-              "title": "Building Resilient APIs: Strategies for Handling API Attacks",
-              "facilitator": "adeyanju-michael"
-            },
-            {
-              "session_id": 6,
-              "duration": 45,
-              "start_time": "17:05",
-              "end_time": "17:50",
-              "title": "Cybersecurity Awareness For Small And Medium Enterprises",
-              "facilitator": "nkorom-ezekiel-kingsley"
+              "title": "Building Green Web Applications: A Pathway to Sustainable Digital Experiences",
+              "facilitator": "mercy-oyelude"
             }
           ]
         },
@@ -221,8 +213,8 @@
               "duration": 60,
               "start_time": "13:00",
               "end_time": "14:00",
-              "title": "Design Thinking for Problem-Solving: Beyond UX Design",
-              "facilitator": "john-ohio"
+              "title": "Building a Multi-tenant SaaS with Microservices on Kubernetes",
+              "facilitator": "lois-bassey"
             },
             {
               "session_id": 2,
@@ -287,8 +279,8 @@
               "duration": 45,
               "start_time": "15:30",
               "end_time": "16:15",
-              "title": "Building Resilient APIs: Strategies for Handling API Attacks",
-              "facilitator": "lois-bassey"
+              "title": "Design Thinking for Problem-Solving: Beyond UX Design",
+              "facilitator": "john-ohio"
             }
           ]
         },
