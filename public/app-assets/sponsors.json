@@ -2,49 +2,49 @@
   {
     "name": "Google",
     "level": "Platinum",
-    "logo": "/app-assets/googlelogo.png",
+    "logo": "https://devfestlagos.com/app-assets/googlelogo.png",
     "link": "https://developers.google.com/"
   },
   {
     "name": "Moniepoint",
     "level": "Gold",
-    "logo": "/app-assets/MoniepointLogo.png",
+    "logo": "https://devfestlagos.com/app-assets/MoniepointLogo.png",
     "link": "https://www.moniepoint.com/"
   },
   {
     "name": "SeerBit",
     "level": "Gold",
-    "logo": "/app-assets/Seerbit.png",
+    "logo": "https://devfestlagos.com/app-assets/Seerbit.png",
     "link": "https://seerbit.com/"
   },
   {
     "name": "GeegPay",
     "level": "Gold",
-    "logo": "/app-assets/geegpay.png",
+    "logo": "https://devfestlagos.com/app-assets/geegpay.png",
     "link": "https://www.geegpay.africa/"
   },
   {
     "name": "Arm",
     "level": "Silver",
-    "logo": "/app-assets/arm.png",
+    "logo": "https://devfestlagos.com/app-assets/arm.png",
     "link": "https://arm.com/"
   },
   {
     "name": "Cleva",
     "level": "Silver",
-    "logo": "/app-assets/cleva.png",
+    "logo": "https://devfestlagos.com/app-assets/cleva.png",
     "link": "https://getcleva.com/"
   },
   {
     "name": "FlutterFlow",
     "level": "Silver",
-    "logo": "/app-assets/FlutterFlowLogo.svg",
+    "logo": "https://devfestlagos.com/app-assets/FlutterFlowLogo.svg",
     "link": "https://www.flutterflow.io/"
   },
   {
     "name": "Andela",
     "level": "Bronze",
-    "logo": "/app-assets/logo_andela.svg",
+    "logo": "https://devfestlagos.com/app-assets/logo_andela.svg",
     "link": "https://www.andela.com/"
   }
 ]
