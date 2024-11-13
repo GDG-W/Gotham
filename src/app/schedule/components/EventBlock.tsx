@@ -12,12 +12,12 @@ type EventBlockProps = {
   type: 'general' | 'breakout' | 'post_breakout';
 };
 
-// const formatFacilitatorName = (name: string) => {
-//   return name
-//     .split('-')
-//     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-//     .join(' ');
-// };
+const formatFacilitatorName = (name: string) => {
+  return name
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
 
 const EventBlock = ({ block, type }: EventBlockProps) => {
   const shouldUseRowLayout = (startTime: string) => {
@@ -62,13 +62,11 @@ const EventBlock = ({ block, type }: EventBlockProps) => {
               className={styles.time}
             >{`${formatTime(block.start_time)} - ${formatTime(block.end_time)}`}</div>
             <h3>{event.title}</h3>
-            {/* {event.facilitator && (
-              <div className={styles.facilitator}>
-                <p>
-                  Facilitator: <span>{formatFacilitatorName(event.facilitator)}</span>
-                </p>
-              </div>
-            )} */}
+            {event.facilitator && (
+              <p className={styles['eventSchedule__event-facilitator']}>
+                {formatFacilitatorName(event.facilitator)}
+              </p>
+            )}
 
             {event.panelists && Array.isArray(event.panelists) && (
               <div className={styles.panelists}>

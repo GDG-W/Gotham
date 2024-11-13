@@ -61,7 +61,7 @@
           },
           {
             "title": "Building Resilience Systems - Flexibility and Adaptability",
-            "facilitator": "TBD",
+            "facilitator": "Olaolu Akintoye (Engineering Manager, SeerBit)",
             "venue": {
               "name": "room 2",
               "size": [900]
@@ -76,7 +76,7 @@
         "events": [
           {
             "title": "Building Trust: Ensuring Quality and Security in Cross-Border Transactions",
-            "facilitator": "TBD",
+            "facilitator": "Adeyinka Alabi (QA Lead, GeegPay)",
             "venue": {
               "name": "room 1",
               "size": [1000]
@@ -84,7 +84,7 @@
           },
           {
             "title": "Empowering Development at Every Scale with FlutterFlow",
-            "facilitator": "TBD",
+            "facilitator": "Eric Muli (Technical Support Engineer, FlutterFlow)",
             "venue": {
               "name": "room 2",
               "size": [900]
@@ -187,7 +187,7 @@
             "duration": 45,
             "start_time": "15:30",
             "end_time": "16:15",
-            "title": "TBuilding Resilient APIs: Strategies for Handling API Attacks",
+            "title": "Building Resilient APIs: Strategies for Handling API Attacks",
             "facilitator": "adeyanju-michael"
           },
           {
@@ -355,7 +355,7 @@
         "events": [
           {
             "title": "Keynote",
-            "facilitator": null,
+            "facilitator": "Olumide Balogun (Director, West Africa - Google)",
             "venue": {
               "name": "room 1",
               "size": 1000
@@ -375,16 +375,24 @@
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": ["PANEL"]
+            "panelists": [
+              "Seyi Akamo | CTO, TUROG",
+              "Chesvic Hillary | Senior Software Engineer, GeegPay",
+              "Babajide Shoyebo | Senior PM, SeerBit"
+            ]
           },
           {
             "title": "Engineering Excellence – Elevating Education Quality in Africa",
-            "facilitator": "TBD",
+            "facilitator": "Ada Oyom (Founder, She Code Africa)",
             "venue": {
               "name": "room 2",
               "size": [900]
             },
-            "panelists": ["PANEL"]
+            "panelists": [
+              "Emmanuel Ogunsola (Head of Product, Altschool)",
+              "Babatunde Olaifa ( CEO, GoMyCode)",
+              "Oluwatobi Ogunware, Data Engineer, Moniepoint"
+            ]
           }
         ]
       },
@@ -395,12 +403,16 @@
         "events": [
           {
             "title": "AI for Good: Driving Innovation with Responsibility",
-            "facilitator": "TBD",
+            "facilitator": "Lekan Raheem (Machine Learning Engineer)",
             "venue": {
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": ["PANEL"]
+            "panelists": [
+              "Daniel Di Bartolo, Google",
+              "Peter Ing, Arm",
+              "Oscar Aguh Senior Software Engineer, Moniepoint"
+            ]
           },
           {
             "title": "TBD",
