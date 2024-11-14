@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/app') {
     if (/android/i.test(userAgent)) {
       // Redirect to external Android link
-      return NextResponse.redirect('https://devfestlagos.com/404');
+      return NextResponse.redirect('https://appdistribution.firebase.dev/i/59fbe05b813af9a8');
     } else if (/iphone|ipad|ipod/i.test(userAgent)) {
       // Redirect to external iOS link
       return NextResponse.redirect('https://apps.apple.com/us/app/devfest-lagos-2024/id6737826901');
