@@ -158,13 +158,11 @@
     ul {
       display: flex;
       flex-wrap: wrap;
-      margin-left: 8px;
-      gap: 8px;
       font-weight: 500;
+      gap: 5px;
       color: $background-dark;
       padding-top: 15px;
       max-width: 100%;
-      list-style: none;
 
       @media screen and (min-width: 769px) {
         max-width: 800px;
@@ -173,18 +171,7 @@
       li {
         position: relative;
         text-wrap: wrap;
-      }
-
-      li:not(:first-child) {
-        padding-left: 14px;
-      }
-
-      li:not(:first-child)::before {
-        content: '•';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        margin-left: 25px;
       }
     }
   }
@@ -235,25 +222,14 @@
       padding: 0.63rem 1.3rem;
     }
   }
+  .event-facilitator {
+    margin-left: 8px;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 1em;
 
-  .facilitator {
-    margin-top: 5px;
-
-    p {
-      font-size: 16px;
-      font-weight: 500;
-
-      @media screen and (max-width: 480px) {
-        font-size: 14px;
-      }
-
-      span {
-        font-weight: normal;
-      }
+    @media screen and (max-width: 480px) {
+      font-size: 0.9em;
     }
-  }
-
-  @include media('<=tablet') {
-    border-radius: 0.5rem;
   }
 }

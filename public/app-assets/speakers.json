@@ -1,4 +1,55 @@
 {
+  "mercy-oyelude": {
+    "id": "mercy-oyelude",
+    "name": "Mercy Oyelude",
+    "title": "Sabre Central and West Africa - Software Engineer",
+    "shortbio": "Oyelude Mercy is a frontend engineer and advocate for green software practices. With a background in web development, green coding, and API integration, Mercy has been at the forefront of promoting sustainable digital solutions. She has spoken at various tech events, including She Code Africa's Mid-Year Symposium, and regularly writes on green software topics on LinkedIn. Mercy is committed to driving change in the tech industry by advocating for low-carbon, efficient, and environmentally-friendly software solutions.",
+    "bio": "Oyelude Mercy is a frontend engineer and advocate for green software practices. With a background in web development, green coding, and API integration, Mercy has been at the forefront of promoting sustainable digital solutions. She has spoken at various tech events, including She Code Africa's Mid-Year Symposium, and regularly writes on green software topics on LinkedIn. Mercy is committed to driving change in the tech industry by advocating for low-carbon, efficient, and environmentally-friendly software solutions.",
+    "image_url": "https://i.ibb.co/JC2gpWr/mercy-oyelude.jpg",
+    "session_description": "As the digital landscape grows, so does its environmental impact. This talk delves into the principles and practices of building green web applications, focusing on energy-efficient coding, optimizing resource utilization, and reducing carbon footprints. Whether you're a developer, designer, or IT professional, learn how to contribute to a sustainable digital ecosystem through practical strategies and real-world examples. Takeaways:\n- Core principles of green software engineering.\n- Techniques to optimize web applications for energy efficiency.\n- Best practices for reducing the carbon footprint of web applications.\n- Tools and resources for implementing sustainable coding practices.",
+    "day": 1,
+    "links": {
+      "github": "https://github.com/Mercy-Iyanu",
+      "linkedin": "https://www.linkedin.com/in/mercy-oyelude/",
+      "twitter": "http://twitter.com/mercy_oyelude"
+    },
+    "track": "Web",
+    "session_title": "Building Green Web Applications: A Pathway to Sustainable Digital Experiences"
+  },
+  "buchi-michelle-okonicha": {
+    "id": "buchi-michelle-okonicha",
+    "name": "Buchi Michelle Okonicha",
+    "title": "Software Engineer / GDE, Web",
+    "shortbio": "Buchi Michelle Okonicha is a software engineer, google developer expert for web technologies,  a women techmakers ambassador, a girls talk ambassador, and co-founder of Aricah, a tech community for tech newbies. Her more than 34 articles can be found on dev.to, hashnode, medium, and tealfeed and she also gives back through mentorship at various organizations like TCN women in tech program, sheCodeAfrica, and one-on-one with Buchi.",
+    "bio": "Buchi Michelle Okonicha is a software engineer, google developer expert for web technologies,  a women techmakers ambassador, a girls talk ambassador, and co-founder of Aricah, a tech community for tech newbies. Her more than 34 articles can be found on dev.to, hashnode, medium, and tealfeed and she also gives back through mentorship at various organizations like TCN women in tech program, sheCodeAfrica, and one-on-one with Buchi.",
+    "image_url": "https://i.ibb.co/kKqXFMK/headshot-yc.jpg",
+    "session_description": "The web is rapidly evolving with more improvements. from being a static site to becoming interactive to moving towards mobile-like web apps with progressive web apps and web apis. We will dive into the world of the web, the exciting new updates to PWA, web assembly and also expand on the different web apis for robust web applications you did not know existed.",
+    "day": 2,
+    "links": {
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/buchi-michelle-okonicha-0a3b2b194//",
+      "twitter": "https:/https://x.com/mchelleOkonicha"
+    },
+    "track": "Web",
+    "session_title": "A Deep Dive into Modern Web APIs and the Progression of Web Applications."
+  },
+  "eric-muli": {
+    "id": "eric-muli",
+    "name": "Eric Muli",
+    "title": "Technical Support Engineer at FlutterFlow",
+    "shortbio": " Eric is a Technical Support Engineer at FlutterFlow and a senior Flutter engineer. With extensive experience in Flutter engineering, he also serves as the co-lead for the Flutter Kenya Developers Community, where he mentors developers and fosters community growth in Flutter development.",
+    "bio": " Eric is a Technical Support Engineer at FlutterFlow and a senior Flutter engineer. With extensive experience in Flutter engineering, he also serves as the co-lead for the Flutter Kenya Developers Community, where he mentors developers and fosters community growth in Flutter development.",
+    "image_url": "https://i.ibb.co/ZSkFD8p/Screenshot-2022-11-10-at-20-58-45-2-90.png",
+    "session_description": "Discover how FlutterFlow 5.0 empowers creators at every level, from personal projects to enterprise solutions. Explore new features and real success stories, and learn how to seamlessly turn ideas into impactful apps.",
+    "day": 1,
+    "links": {
+      "github": "https://github.com/mulieriq",
+      "linkedin": "https://www.linkedin.com/in/ericmuli/",
+      "twitter": "https://x.com/muli_eriq"
+    },
+    "track": "Mobile",
+    "session_title": "Empowering Development at Every Scale with FlutterFlow."
+  },
   "samuel-abada": {
     "id": "samuel-abada",
     "name": "Samuel Abada",
@@ -447,7 +498,7 @@
       "github": "https://github.com/HackrowdSec"
     },
     "track": "Cybersecurity",
-    "session_title": "Building a Multi-Tenant SaaS with Microservices on Kubernetes"
+    "session_title": "Building Resilient APIs: Strategies for Handling API Attacks"
   },
   "kehinde-adeleke": {
     "id": "kehinde-adeleke",
