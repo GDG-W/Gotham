@@ -20,6 +20,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect('https://google.com');
   }
 
+  if (request.nextUrl.pathname === '/speaker-feedback') {
+    return NextResponse.redirect('https://bit.ly/speaker-24-feedback');
+  }
+
+  if (request.nextUrl.pathname === '/wakanda') {
+    return NextResponse.redirect('https://wakanda.devfestlagos.com');
+  }
+
   if (request.nextUrl.pathname === '/bus') {
     return NextResponse.redirect(
       'https://docs.google.com/document/d/1ilDBsUlxZwG86HtvYIuuZ3-v0Z_YMWnajaCaVQREqog/edit?usp=sharing',
@@ -34,5 +42,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/app/:path*', '/feedback/:path*', '/bus/:path*', '/hiring/:path*'],
+  matcher: ['/app/:path*', '/feedback/:path*', '/speaker-feedback/:path*', '/wakanda/:path*', '/bus/:path*', '/hiring/:path*'],
 };
