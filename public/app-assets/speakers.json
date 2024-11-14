@@ -276,7 +276,7 @@
     "bio": "Ayo Kehinde Samuel, also known as Sam Ayo, is a proud father & husband, Lead AI engineer, Senior Software engineer, AI Innovator and conference speaker with professional expertise spanning across various fields where he applies machine learning and AI to automate processes, design systems and expand existing ones.",
     "image_url": "https://i.ibb.co/Lr7fYFq/Sam-Ayo-2.png",
     "session_description": "It's easy to build a prototype of agents and conversational AI, but it's still a lot of engineering work to get them to perform reliably. Understanding how to design system prompts that shape the LLM persona, behavior and response is the holy grail in prompt engineering.\nFor this session, we will have hands-on workshops in focus groups where participants will learn the design and implementation of domain specific system prompts that enhances not just Gemini but any open source LLM response. We'll explore how subtle changes in prompt structure can lead to significant improvements in AI output quality and relevance.\n\nParticipants will gain the following skills:\n• Fundamentals of prompt design and its impact on AI responses\n• Techniques for creating domain-specific system prompts\n• Strategies to maximize LLM performance through carefully crafted prompts\n• The importance of language structure and tense in prompt formulation\n• Types of prompt enhancements e.g FewShot, ManyShots, COT etc.\n\nThis workshop is tailored for Developers seeking to integrate AI more effectively into their applications, Data scientists aiming to optimize their interaction with LLMs, AI enthusiasts curious about the inner workings of language models, Business professionals looking to leverage AI for improved decision-making.",
-    "day": 2,
+    "day": 1,
     "links": {
       "twitter": "https://x.com/officialsamayo",
       "linkedin": "https://linkedin.com/in/sam-ayo",
@@ -358,7 +358,7 @@
     "bio": "Adejoke Haastrup is a seasoned software engineer with expertise in building and integrating complex systems. She is the founder of Kidsthatcode, an initiative dedicated to inspiring the next generation by encouraging kids to start coding early. Currently, she leads Developer Relations at Sendbox, where she focuses on building integrations and creating technical content that helps engineers understand the product better, while also providing comprehensive developer support.",
     "image_url": "https://i.ibb.co/Q66xp12/adejoke-profilpic.jpg",
     "session_description": "This session will focus on the nuances of writing for developers, including tips on simplifying complex concepts, structuring technical tutorials, and using code snippets effectively.",
-    "day": 2,
+    "day": 1,
     "links": {
       "twitter": "https://x.com/jastrup7",
       "linkedin": "https://www.linkedin.com/in/haastrup-adejoke-543665120/",

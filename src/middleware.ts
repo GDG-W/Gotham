@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/app') {
     if (/android/i.test(userAgent)) {
       // Redirect to external Android link
-      return NextResponse.redirect('https://devfestlagos.com/404');
+      return NextResponse.redirect('https://appdistribution.firebase.dev/i/59fbe05b813af9a8');
     } else if (/iphone|ipad|ipod/i.test(userAgent)) {
       // Redirect to external iOS link
       return NextResponse.redirect('https://apps.apple.com/us/app/devfest-lagos-2024/id6737826901');
@@ -18,6 +18,14 @@ export function middleware(request: NextRequest) {
 
   if (request.nextUrl.pathname === '/feedback') {
     return NextResponse.redirect('https://google.com');
+  }
+
+  if (request.nextUrl.pathname === '/speaker-feedback') {
+    return NextResponse.redirect('https://bit.ly/speaker-24-feedback');
+  }
+
+  if (request.nextUrl.pathname === '/wakanda') {
+    return NextResponse.redirect('https://wakanda.devfestlagos.com');
   }
 
   if (request.nextUrl.pathname === '/bus') {
@@ -34,5 +42,12 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/app/:path*', '/feedback/:path*', '/bus/:path*', '/hiring/:path*'],
+  matcher: [
+    '/app/:path*',
+    '/feedback/:path*',
+    '/speaker-feedback/:path*',
+    '/wakanda/:path*',
+    '/bus/:path*',
+    '/hiring/:path*',
+  ],
 };
