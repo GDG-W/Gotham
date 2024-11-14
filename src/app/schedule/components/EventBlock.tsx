@@ -63,7 +63,7 @@ const EventBlock = ({ block, type }: EventBlockProps) => {
             >{`${formatTime(block.start_time)} - ${formatTime(block.end_time)}`}</div>
             <h3>{event.title}</h3>
             {event.facilitator && (
-              <p className={styles['eventSchedule__event-facilitator']}>
+              <p className={styles['event-facilitator']}>
                 {formatFacilitatorName(event.facilitator)}
               </p>
             )}

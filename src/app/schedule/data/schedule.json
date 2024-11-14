@@ -355,7 +355,7 @@
         "events": [
           {
             "title": "Keynote",
-            "facilitator": "Olumide Balogun (Director, West Africa - Google)",
+            "facilitator": null,
             "venue": {
               "name": "room 1",
               "size": 1000
@@ -383,7 +383,7 @@
           },
           {
             "title": "Engineering Excellence – Elevating Education Quality in Africa",
-            "facilitator": "Ada Oyom (Founder, She Code Africa)",
+            "facilitator": null,
             "venue": {
               "name": "room 2",
               "size": [900]
@@ -403,7 +403,7 @@
         "events": [
           {
             "title": "AI for Good: Driving Innovation with Responsibility",
-            "facilitator": "Lekan Raheem (Machine Learning Engineer)",
+            "facilitator": null,
             "venue": {
               "name": "room 1",
               "size": [1000]
