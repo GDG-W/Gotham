@@ -61,7 +61,7 @@
           },
           {
             "title": "Building Resilience Systems - Flexibility and Adaptability",
-            "facilitator": "Olaolu Akintoye (Engineering Manager, SeerBit)",
+            "facilitator": null,
             "venue": {
               "name": "room 2",
               "size": [900]
@@ -76,7 +76,7 @@
         "events": [
           {
             "title": "Building Trust: Ensuring Quality and Security in Cross-Border Transactions",
-            "facilitator": "Adeyinka Alabi (QA Lead, GeegPay)",
+            "facilitator": null,
             "venue": {
               "name": "room 1",
               "size": [1000]
@@ -84,7 +84,7 @@
           },
           {
             "title": "Empowering Development at Every Scale with FlutterFlow",
-            "facilitator": "Eric Muli (Technical Support Engineer, FlutterFlow)",
+            "facilitator": "eric-muli",
             "venue": {
               "name": "room 2",
               "size": [900]
@@ -376,9 +376,9 @@
               "size": [1000]
             },
             "panelists": [
-              "Seyi Akamo | CTO, TUROG",
-              "Chesvic Hillary | Senior Software Engineer, GeegPay",
-              "Babajide Shoyebo | Senior PM, SeerBit"
+              "Seyi Akamo",
+              "Chesvic Hillary",
+              "Babajide Shoyebo"
             ]
           },
           {
@@ -389,9 +389,9 @@
               "size": [900]
             },
             "panelists": [
-              "Emmanuel Ogunsola (Head of Product, Altschool)",
-              "Babatunde Olaifa ( CEO, GoMyCode)",
-              "Oluwatobi Ogunware, Data Engineer, Moniepoint"
+              "Emmanuel Ogunsola",
+              "Babatunde Olaifa",
+              "Oluwatobi Ogunware"
             ]
           }
         ]
@@ -409,9 +409,9 @@
               "size": [1000]
             },
             "panelists": [
-              "Daniel Di Bartolo, Google",
-              "Peter Ing, Arm",
-              "Oscar Aguh Senior Software Engineer, Moniepoint"
+              "Daniel Di Bartolo",
+              "Peter Ing",
+              "Oscar Aguh"
             ]
           },
           {

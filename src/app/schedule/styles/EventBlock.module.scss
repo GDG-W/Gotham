@@ -156,10 +156,10 @@
 
   .panelists {
     ul {
-      display: inline-block;
+      display: flex;
       flex-wrap: wrap;
-      margin-left: 25px;
       font-weight: 500;
+      gap: 5px;
       color: $background-dark;
       padding-top: 15px;
       max-width: 100%;
@@ -171,7 +171,7 @@
       li {
         position: relative;
         text-wrap: wrap;
-        margin-top: 5px;
+        margin-left: 25px;
       }
     }
   }
