@@ -283,7 +283,6 @@
             "facilitator": "ayo-kehinde-samuel"
           }
         ]
-        
       },
       {
         "venue": {
@@ -376,11 +375,7 @@
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": [
-              "Seyi Akamo",
-              "Chesvic Hillary",
-              "Babajide Shoyebo"
-            ]
+            "panelists": ["Seyi Akamo", "Chesvic Hillary", "Babajide Shoyebo"]
           },
           {
             "title": "Engineering Excellence – Elevating Education Quality in Africa",
@@ -389,11 +384,7 @@
               "name": "room 2",
               "size": [900]
             },
-            "panelists": [
-              "Emmanuel Ogunsola",
-              "Babatunde Olaifa",
-              "Oluwatobi Ogunware"
-            ]
+            "panelists": ["Emmanuel Ogunsola", "Babatunde Olaifa", "Oluwatobi Ogunware"]
           }
         ]
       },
@@ -409,11 +400,7 @@
               "name": "room 1",
               "size": [1000]
             },
-            "panelists": [
-              "Daniel Di Bartolo",
-              "Peter Ing",
-              "Oscar Aguh"
-            ]
+            "panelists": ["Daniel Di Bartolo", "Peter Ing", "Oscar Aguh"]
           },
           {
             "title": "TBD",
@@ -535,8 +522,8 @@
           {
             "session_id": 6,
             "duration": 45,
-            "start_time": "17:10",
-            "end_time": "17:55",
+            "start_time": "17:05",
+            "end_time": "17:50",
             "title": "The WHY Bucket - Cultivating a Culture of Continuous Curiosity Within Product Organisations",
             "facilitator": "jeffery-abdulateef-adoga"
           }
@@ -578,7 +565,7 @@
             "session_id": 4,
             "duration": 45,
             "start_time": "15:30",
-            "end_time": "16:15",
+            "end_time": "16:30",
             "title": "The Lazy Person's Guide to Productivity 2.0",
             "facilitator": "sodiq-akinjobi"
           }
@@ -625,7 +612,6 @@
             "facilitator": "motunrayo-koyejo"
           }
         ]
-        
       },
       {
         "venue": {
