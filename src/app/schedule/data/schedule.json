@@ -202,7 +202,7 @@
       },
       {
         "venue": {
-          "name": "room 2",
+          "name": "room 3",
           "size": [500]
         },
         "duration": 240,
@@ -244,7 +244,7 @@
       },
       {
         "venue": {
-          "name": "room 3",
+          "name": "room 2",
           "size": [500]
         },
         "duration": 240,
