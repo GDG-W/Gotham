@@ -17,7 +17,8 @@ export function middleware(request: NextRequest) {
   }
 
   if (request.nextUrl.pathname === '/feedback') {
-    return NextResponse.redirect('https://google.com');
+    // prettier-ignore
+    return NextResponse.redirect('https://docs.google.com/forms/d/e/1FAIpQLSd09SQGZj7JI3vqL1XhnUSGvXVqvk3BI62R3gzy54yAKWRqug/viewform');
   }
 
   if (request.nextUrl.pathname === '/speaker-feedback') {
