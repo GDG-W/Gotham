@@ -202,53 +202,11 @@
       },
       {
         "venue": {
-          "name": "room 3",
-          "size": [500]
-        },
-        "duration": 240,
-        "category": "codelabs",
-        "events": [
-          {
-            "session_id": 1,
-            "duration": 60,
-            "start_time": "13:00",
-            "end_time": "14:00",
-            "title": "Building a Multi-tenant SaaS with Microservices on Kubernetes",
-            "facilitator": "lois-bassey"
-          },
-          {
-            "session_id": 2,
-            "duration": 60,
-            "start_time": "14:05",
-            "end_time": "15:05",
-            "title": "Build your own CLI: an introduction to TDD in Rust",
-            "facilitator": "kehinde-adeleke"
-          },
-          {
-            "session_id": 3,
-            "duration": 60,
-            "start_time": "15:10",
-            "end_time": "16:10",
-            "title": "CSS Rises from the Ashes: (Re)Become Friends with Your Stylesheet",
-            "facilitator": "olivier-leplus"
-          },
-          {
-            "session_id": 4,
-            "duration": 40,
-            "start_time": "16:15",
-            "end_time": "17:15",
-            "title": "Prompt Engineering: Gemini And A Well Designed System Prompts is All You Need.",
-            "facilitator": "ayo-kehinde-samuel"
-          }
-        ]
-      },
-      {
-        "venue": {
           "name": "room 2",
           "size": [500]
         },
         "duration": 240,
-        "category": "generic",
+        "category": "codelabs",
         "events": [
           {
             "session_id": 1,
@@ -283,6 +241,49 @@
             "facilitator": "john-ohio"
           }
         ]
+      },
+      {
+        "venue": {
+          "name": "room 3",
+          "size": [500]
+        },
+        "duration": 240,
+        "category": "generic",
+        "events": [
+          {
+            "session_id": 1,
+            "duration": 60,
+            "start_time": "13:00",
+            "end_time": "14:00",
+            "title": "Building a Multi-tenant SaaS with Microservices on Kubernetes",
+            "facilitator": "lois-bassey"
+          },
+          {
+            "session_id": 2,
+            "duration": 60,
+            "start_time": "14:05",
+            "end_time": "15:05",
+            "title": "Build your own CLI: an introduction to TDD in Rust",
+            "facilitator": "kehinde-adeleke"
+          },
+          {
+            "session_id": 3,
+            "duration": 60,
+            "start_time": "15:10",
+            "end_time": "16:10",
+            "title": "CSS Rises from the Ashes: (Re)Become Friends with Your Stylesheet",
+            "facilitator": "olivier-leplus"
+          },
+          {
+            "session_id": 4,
+            "duration": 40,
+            "start_time": "16:15",
+            "end_time": "17:15",
+            "title": "Prompt Engineering: Gemini And A Well Designed System Prompts is All You Need.",
+            "facilitator": "ayo-kehinde-samuel"
+          }
+        ]
+        
       },
       {
         "venue": {
@@ -551,48 +552,6 @@
         "events": [
           {
             "session_id": 1,
-            "duration": 60,
-            "start_time": "13:00",
-            "end_time": "14:00",
-            "title": "OTA Flutter Updates with Shorebird: From Setup to Production Success",
-            "facilitator": "samuel-abada"
-          },
-          {
-            "session_id": 2,
-            "duration": 60,
-            "start_time": "14:05",
-            "end_time": "15:05",
-            "title": "Scale Out Your DevOps with T2A Machine Types",
-            "facilitator": "robert-john"
-          },
-          {
-            "session_id": 3,
-            "duration": 60,
-            "start_time": "15:10",
-            "end_time": "16:10",
-            "title": "Using Upstash Vector and Semantic Cache To Lower Costs Of Using LLMs",
-            "facilitator": "tobiloba-adedeji"
-          },
-          {
-            "session_id": 4,
-            "duration": 40,
-            "start_time": "16:15",
-            "end_time": "17:15",
-            "title": "Implementing OAuth 2.0 for Secure API Access",
-            "facilitator": "motunrayo-koyejo"
-          }
-        ]
-      },
-      {
-        "venue": {
-          "name": "room 3",
-          "size": [500]
-        },
-        "duration": 240,
-        "category": "generic",
-        "events": [
-          {
-            "session_id": 1,
             "duration": 45,
             "start_time": "13:00",
             "end_time": "13:45",
@@ -624,6 +583,49 @@
             "facilitator": "sodiq-akinjobi"
           }
         ]
+      },
+      {
+        "venue": {
+          "name": "room 3",
+          "size": [500]
+        },
+        "duration": 240,
+        "category": "generic",
+        "events": [
+          {
+            "session_id": 1,
+            "duration": 60,
+            "start_time": "13:00",
+            "end_time": "14:00",
+            "title": "OTA Flutter Updates with Shorebird: From Setup to Production Success",
+            "facilitator": "samuel-abada"
+          },
+          {
+            "session_id": 2,
+            "duration": 60,
+            "start_time": "14:05",
+            "end_time": "15:05",
+            "title": "Scale Out Your DevOps with T2A Machine Types",
+            "facilitator": "robert-john"
+          },
+          {
+            "session_id": 3,
+            "duration": 60,
+            "start_time": "15:10",
+            "end_time": "16:10",
+            "title": "Using Upstash Vector and Semantic Cache To Lower Costs Of Using LLMs",
+            "facilitator": "tobiloba-adedeji"
+          },
+          {
+            "session_id": 4,
+            "duration": 40,
+            "start_time": "16:15",
+            "end_time": "17:15",
+            "title": "Implementing OAuth 2.0 for Secure API Access",
+            "facilitator": "motunrayo-koyejo"
+          }
+        ]
+        
       },
       {
         "venue": {
