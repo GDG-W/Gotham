@@ -350,8 +350,8 @@
       },
       {
         "duration": 30,
-        "start_time": "11:15",
-        "end_time": "11:45",
+        "start_time": "9:55",
+        "end_time": "10:25",
         "events": [
           {
             "title": "Keynote",
@@ -365,8 +365,8 @@
       },
       {
         "duration": 40,
-        "start_time": "9:50",
-        "end_time": "10:30",
+        "start_time": "10:25",
+        "end_time": "11:05",
         "events": [
           {
             "title": "AI for Good: Driving Innovation with Responsibility",
@@ -381,8 +381,8 @@
       },
       {
         "duration": 40,
-        "start_time": "10:35",
-        "end_time": "11:15",
+        "start_time": "11:05",
+        "end_time": "11:45",
         "events": [
           {
             "title": "Balancing Innovation, Agility & Compliance",
