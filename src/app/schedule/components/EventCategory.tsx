@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
 import styles from '../styles/EventCategory.module.scss';
-import data from '../data/schedule.json';
+// import data from '../data/schedule.json';
 
 type EventCategoryProps = {
   currentDay: 'day-1' | 'day-2';
+  data: {
+    venue: {
+      name: string;
+      size: number[];
+    };
+    duration: number;
+    category: string;
+    events: {
+      session_id: number;
+      duration: number;
+      start_time: string;
+      end_time: string;
+      title: string;
+      facilitator: string;
+    }[];
+  }[];
 };
 
-const EventCategory = ({ currentDay }: EventCategoryProps) => {
+const EventCategory = ({ currentDay, data }: EventCategoryProps) => {
   const [selectedRoomCategory, setSelectedRoomCategory] = useState<string>('room 1 - Speaker Led');
 
   const roomCategories = [
     'room 1 - Speaker Led',
-    'room 2 - codelabs',
-    'room 3 - generic',
+    'room 2 - generic',
+    'room 3 - codelabs',
     'room 4 - workshops',
   ];
 
@@ -22,7 +38,7 @@ const EventCategory = ({ currentDay }: EventCategoryProps) => {
     start_time: string;
     end_time: string;
     title: string;
-    facilitator?: string;
+    facilitator?: string | undefined;
   };
 
   const formatFacilitatorName = (name: string) => {
@@ -32,10 +48,10 @@ const EventCategory = ({ currentDay }: EventCategoryProps) => {
       .join(' ');
   };
 
-  const getEventsByRoomAndCategory = (roomCategory: string, day: 'day-1' | 'day-2'): Event[] => {
+  const getEventsByRoomAndCategory = (roomCategory: string): Event[] => {
     const [room, category] = roomCategory.split(' - ');
     return (
-      data[day].breakouts.find(
+      data.find(
         (breakout) =>
           breakout.venue.name === room &&
           breakout.category.toLowerCase() === category.toLowerCase(),
@@ -79,7 +95,7 @@ const EventCategory = ({ currentDay }: EventCategoryProps) => {
       <div
         className={`${styles.eventSchedule__events} ${styles[`room${selectedRoomCategory.charAt(5)}-active`]}`}
       >
-        {getEventsByRoomAndCategory(selectedRoomCategory, currentDay).map((event, index) => (
+        {getEventsByRoomAndCategory(selectedRoomCategory).map((event, index) => (
           <div
             key={`${currentDay}-${index}`}
             className={`${styles.eventSchedule__event} ${styles[`eventSchedule__event--${selectedRoomCategory.split('-')[0].trim()}`]}`}

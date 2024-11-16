@@ -15,6 +15,19 @@ type ScheduleProps = {
 const Schedule = ({ data, currentDay }: ScheduleProps) => {
   const currentSchedule = data[currentDay];
 
+  const getSection = (section: string) => {
+    switch (true) {
+      case section.split('-')[0] === 'general':
+        return 'GENERAL';
+        break;
+      case section.split('-')[0] === 'breakouts':
+        return 'BREAKOUTS';
+        break;
+      default:
+        return 'POST BREAKOUTS';
+    }
+  };
+
   return (
     <div className={styles.scheduleContainer}>
       <div className={styles.scheduleHeader}>
@@ -22,36 +35,34 @@ const Schedule = ({ data, currentDay }: ScheduleProps) => {
         <p>SCHEDULE</p>
       </div>
       <div className={styles.schedule}>
-        <div className={styles.sectionsContainer}>
-          <div className={styles.sectionLine}>
-            <p>GENERAL</p>
-            <div className={styles.sectionLineSpan}></div>
-          </div>
-          <div className={styles.generalContainer}>
-            {currentSchedule.general.map((block, index) => (
-              <EventBlock key={index} block={block} type='general' />
-            ))}
-          </div>
-        </div>
-        <div className={styles.sectionsContainer}>
-          <div className={styles.sectionLine}>
-            <p>BREAKOUTS</p>
-            <div className={styles.sectionLineSpan}></div>
-          </div>
-          <EventCategory currentDay={currentDay} />
-        </div>
-
-        <div className={styles.sectionsContainer}>
-          <div className={styles.sectionLine}>
-            <p>POST BREAKOUTS</p>
-            <div className={styles.sectionLineSpan}></div>
-          </div>
-          <div className={styles.postBreakoutContainer}>
-            {currentSchedule.post_breakout.map((block, index) => (
-              <EventBlock key={index} block={block} type='post_breakout' />
-            ))}
-          </div>
-        </div>
+        {Object.entries(currentSchedule).map(([key, events]) => {
+          const typedKey = key as keyof typeof currentSchedule;
+          return (
+            <div className={styles.sectionsContainer} key={key}>
+              <div className={styles.sectionLine}>
+                <p>{getSection(key)}</p>
+                <div className={styles.sectionLineSpan}></div>
+              </div>
+              {key.split('-')[0] === 'general' && (
+                <div className={styles.generalContainer}>
+                  {currentSchedule[typedKey].map((block, index) => (
+                    <EventBlock key={index} block={block} type='general' />
+                  ))}
+                </div>
+              )}
+              {key.split('-')[0] === 'breakouts' && (
+                <EventCategory currentDay={currentDay} data={events} />
+              )}
+              {key === 'post_breakout' && (
+                <div className={styles.postBreakoutContainer}>
+                  {currentSchedule.post_breakout.map((block, index) => (
+                    <EventBlock key={index} block={block} type='post_breakout' />
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
