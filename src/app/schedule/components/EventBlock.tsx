@@ -20,10 +20,6 @@ const formatFacilitatorName = (name: string) => {
 };
 
 const EventBlock = ({ block, type }: EventBlockProps) => {
-  const shouldUseRowLayout = (startTime: string) => {
-    return startTime === '9:50' || startTime === '10:35';
-  };
-
   const getVenueClass = (venueName?: string) => {
     if (!venueName) return '';
 
@@ -46,7 +42,7 @@ const EventBlock = ({ block, type }: EventBlockProps) => {
     return `${formattedHours}:${minutes} ${period}`;
   };
 
-  const isRowLayout = shouldUseRowLayout(block.start_time);
+  const isRowLayout = block.events.length > 1;
 
   return (
     <div className={`${styles.eventBlock} ${styles[type]} ${isRowLayout ? styles.rowGrid : ''}`}>
