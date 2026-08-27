@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "prettierrc": "prettier --write ."
   },
